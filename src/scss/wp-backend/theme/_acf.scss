@@ -1,0 +1,101 @@
+body.wp-admin {
+
+    // CONTENT
+    #wpbody-content {
+
+        #acf-field-group-wrap {
+
+            .footer {
+
+                &.-blue {
+                    background-color: $c1-menu-admin-background !important;
+
+                    a {
+                        transition: 0.2s ease-in-out !important;
+                        color: $c1-content-text !important;
+
+                        &:hover {
+                            color: $c1-content-accent !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .acf-fc-layout-handle {
+            background: $c1-content-bars !important;
+            border-color: $c1-content-bars !important;
+            color: $c1-content-text !important;
+        }
+
+        .ui-sortable {
+
+            .handle {
+                background: $c1-content-bars !important;
+                border-color: $c1-content-bars !important;
+
+                .acf-tbody {
+
+                    li, a, span, strong {
+                        color: $c1-content-text !important;
+                        text-shadow: none !important;
+
+                        &:hover {
+                            text-shadow: none !important;
+                        }
+                    }
+                }
+            }
+
+            .acf-fc-layout-controlls {
+
+                .acf-icon {
+
+                    &:hover {
+                        background: $c1-content-accent !important;
+                        color: $c1-content-text !important;
+                    }
+                }
+            }
+
+            a.dashicons {
+                transition: 0.2s ease-in-out !important;
+                color: $c1-content-text !important;
+
+                &:hover {
+                    color: $c1-content-accent !important;
+                }
+            }
+        }
+
+        .ui-sortable-handle {
+
+            span {
+                &.acf-fc-layout-order {
+                    color: $c2-content-text !important;
+                }
+            }
+        }
+
+        .acf-switch {
+
+            &.-on {
+                background: $c1-content-accent !important;
+
+                .acf-switch-slider {
+                        border-color: $c1-content-accent !important;
+                }
+            }
+        }
+    }
+
+    .acf-fc-popup {
+
+        a {
+            &:hover {
+                background: $c1-content-accent !important;
+                color: #fff !important;
+            }
+        }
+    }
+}

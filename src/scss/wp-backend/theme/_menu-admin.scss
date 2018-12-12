@@ -1,0 +1,83 @@
+body.wp-admin {
+
+    // ADMIN-MENU
+    #wpadminbar {
+
+        #wp-admin-bar-root-default,
+        #wp-admin-bar-top-secondary {
+            > li {
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    background: $c2-menu-admin-background !important;
+
+                    > a {
+                        background: $c2-menu-admin-background !important;
+                        color: $c1-menu-admin-link-hover !important;
+
+                        .ab-label {
+                            transition: 0.2s ease-in-out;
+                            color: $c1-menu-admin-link-hover !important;
+                        }
+
+                        &:before {
+                            color: $c1-menu-admin-link-hover !important;
+                        }
+
+                        .ab-icon {
+                            &:before {
+                                color: $c1-menu-admin-link-hover !important;
+                            }
+                        }
+                    }
+                }
+
+                > a {
+                    transition: 0.2s ease-in-out;
+                    color: $c1-menu-admin-link !important;
+
+                    &:focus {
+                        background: $c2-menu-admin-background !important;
+                    }
+
+                    &:before {
+                        transition: 0.2s ease-in-out;
+                        color: $c1-menu-admin-link !important;
+                    }
+
+                    .ab-label {
+                        transition: 0.2s ease-in-out;
+                        color: $c1-menu-admin-link !important;
+                    }
+
+                    .ab-icon {
+                        transition: 0.2s ease-in-out;
+
+                        &:before {
+                            color: $c1-menu-admin-link !important;
+                        }
+                    }
+                }
+
+                ul {
+                    background: $c2-menu-admin-background !important;
+
+                    li {
+
+                        &:hover {
+
+                            a {
+                                color: $c1-menu-admin-link-hover !important;
+                            }
+                        }
+
+                        a {
+                            transition: 0.2s ease-in-out;
+                            color: $c1-menu-admin-link !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+<div class="row">
+    <div class="col-12 col-md-6">
+        <label for="select_01" class="wpcf7-form__label">Select</label>
+        [select fm-select id:select_01 class:wpcf7-form__select "Office1|ls@dreiqbik.de" "Office2|mail@dreiqbik.de" "Office3|marketing@dreiqbik.de"]
+    </div>
+    <div class="col-12 col-md-6">
+        <div class="wpcf7-form__input-wrapper text">
+            <label for="text_01" class="wpcf7-form__label wpcf7-form__label--float">Input Text</label>
+            [text* fm-name id:text_01 class:wpcf7-form__input class:text placeholder "Ihr Vor- und Nachname"]
+        </div>
+    </div>
+    <div class="col-12 col-md-6">
+        <div class="wpcf7-form__input-wrapper email">
+            <label for="email" class="wpcf7-form__label wpcf7-form__label--float">Input E-Mail</label>
+            [email* fm-email id:email class:wpcf7-form__input class:email placeholder "beispiel@mail.com"]
+        </div>
+    </div>
+    <div class="col-12 col-md-6">
+        <div class="wpcf7-form__input-wrapper url">
+            <label for="url" class="wpcf7-form__label wpcf7-form__label--float">Input URL</label>
+            [url fm-url id:url url-688 class:wpcf7-form__input class:url placeholder "https://beispiel-url.de"]
+        </div>
+    </div>
+    <div class="col-12 col-md-6">
+        <div class="wpcf7-form__input-wrapper phone">
+            <label for="tel" class="wpcf7-form__label wpcf7-form__label--float">Input Phone</label>
+            [tel* fm-tel id:tel tel-234 class:wpcf7-form__input class:number class:phone placeholder "12345 / 334488"]
+        </div>
+    </div>
+    <div class="col-12 col-md-6">
+        <div class="wpcf7-form__input-wrapper number">
+            <label for="number_01" class="wpcf7-form__label wpcf7-form__label--float">Input Number</label>
+            [number* fm-number class:wpcf7-form__input class:number id:number_01 number-937 placeholder "Nur Zahlen"]
+        </div>
+    </div>
+    <div class="col-12 col-md-6">
+        <div class="wpcf7-form__input-wrapper date">
+            <label for="fm-date" class="wpcf7-form__label">Input Date</label>
+            [date* fm-date date-467 class:wpcf7-form__input class:date]
+        </div>
+    </div>
+    <div class="col-12 col-md-6">
+        <div class="wpcf7-form__input-wrapper text">
+            <label for="text_02" class="wpcf7-form__label wpcf7-form__label--float">Input Text</label>
+            [text fm-name2 id:text_02 class:wpcf7-form__input class:text placeholder "Weiterer Text"]
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="wpcf7-form__input-wrapper text">
+            <label for="subject" class="wpcf7-form__label wpcf7-form__label--float">Subject</label>
+            [text* fm-subject id:subject class:wpcf7-form__input class:text placeholder "Ihr Betreff"]
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="wpcf7-form__input-wrapper textarea">
+            <label for="fm-message" class="wpcf7-form__label wpcf7-form__label--float">Message</label>
+            [textarea* fm-message id:message class:wpcf7-form__input class:textarea placeholder "Ihre Nachricht"]
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="wpcf7-form__radio-wrapper">
+            <label for="fm-radio" class="wpcf7-form__label wpcf7-form__label--radio">Radio</label>
+            [radio fm-radio radio-649 default:1 "Option1" "Option2" "Option3"]
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="wpcf7-form__checkbox-wrapper">
+            <label for="fm-checkbox" class="wpcf7-form__label wpcf7-form__label--checkbox">Checkbox</label>
+            [checkbox fm-checkbox checkbox-944 "Checkbox1" "Checkbox2" "Checkbox3"]
+        </div>
+    </div>
+    <div class="col-12">
+        <label for="fm-file" class="wpcf7-form__label wpcf7-form__label--upload">Upload</label>
+        <label class="wpcf7-form__upload-wrapper">
+            <div class="wpcf7-form__upload-text">
+                Unterlagen auswählen
+            </div>
+            <div class="wpcf7-form__input-upload-wrapper">
+                [file file-915 limit:2097152 filetypes:PDF|DOC|DOCX class:wpcf7-form__input-upload]
+            </div>
+            <div class="wpcf7-form__icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1792" height="1792" viewBox="0 0 1792 1792"><path d="M1344 1472q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm256 0q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm128-224v320q0 40-28 68t-68 28h-1472q-40 0-68-28t-28-68v-320q0-40 28-68t68-28h427q21 56 70.5 92t110.5 36h256q61 0 110.5-36t70.5-92h427q40 0 68 28t28 68zm-325-648q-17 40-59 40h-256v448q0 26-19 45t-45 19h-256q-26 0-45-19t-19-45v-448h-256q-42 0-59-40-17-39 14-69l448-448q18-19 45-19t45 19l448 448q31 30 14 69z"/></svg>
+            </div>
+        </label>
+    </div>
+    <div class="col-12 col-md-12 col--no-hgap">
+        <div class="wpcf7-form__submit-wrapper">
+            [submit class:wpcf7-form__submit class:m_btn class:m_btn--dark "send"]
+        </div>
+    </div>
+</div>

@@ -1,0 +1,257 @@
+body.wp-admin {
+    background: $c1-content-background !important;
+    font-family: $font-1 !important;
+
+    #contextual-help-back,
+    .contextual-help-tabs .active {
+        background: $c1-content-background !important;
+    }
+
+    // CONTENT
+    #wpbody-content {
+
+        #wp-content-editor-tools {
+            background: transparent !important;
+        }
+
+        .ui-sortable-handle,
+        .menu-item-handle {
+            background: $c1-content-bars !important;
+            color: $c1-content-text !important;
+
+            h3,
+            span {
+                color: $c1-content-text !important;
+            }
+
+            .item-edit {
+
+                &:before {
+                    color: $c1-content-text !important;
+                }
+            }
+        }
+
+        .toggle-indicator {
+            &:before {
+                color: $c1-content-text !important;
+            }
+            &:focus {
+                outline: none !important;
+            }
+        }
+
+        .widgets-chooser-selected {
+            background: $c1-content-accent !important;
+        }
+
+        .update-nag,
+        .notice-warning,
+        .plugin-update,
+        .contextual-help-tabs .active {
+            border-left-color: $c1-content-accent !important;
+        }
+
+        .view-switch {
+
+            a.current {
+
+                &:before {
+                    color: $c1-content-accent !important;
+                }
+            }
+        }
+
+        a,
+        button.button-link {
+            transition: 0.2s ease-in-out !important;
+            color: $c1-content-link !important;
+
+            &:hover {
+                color: $c2-content-link-hover !important;
+            }
+        }
+
+        thead,
+        tfoot {
+            background: $c1-content-bars !important;
+
+            span,
+            label,
+            th {
+                color: $c1-content-text !important;
+
+                &:before {
+                    color: $c1-content-text !important;
+                }
+            }
+        }
+
+        tbody {
+
+            a {
+                transition: 0.2s ease-in-out !important;
+                color: $c1-content-link !important;
+
+                &:hover {
+                    color: $c2-content-link-hover !important;
+                }
+            }
+
+            .post-com-count {
+
+                &:after {
+                    transition: 0.2s ease-in-out !important;
+                    content: "";
+                    width: 0;
+                	height: 0;
+                	border-top: 5px solid $c1-content-bars;
+                	border-right: 5px solid transparent;
+                }
+
+                &:hover {
+
+                    span {
+                        background: $c1-content-accent !important;
+                    }
+
+                    &:after {
+                        border-top-color: $c1-content-accent !important;
+                    }
+                }
+
+                span {
+                    transition: 0.2s ease-in-out !important;
+                    background: $c1-content-bars !important;
+                }
+            }
+
+            .check-column {
+                border-left-color: $c1-content-accent !important;
+            }
+        }
+
+
+        .page-title-action,
+        input.button,
+        button.button {
+            transition: 0.2s ease-in-out !important;
+            background: $c1-content-button !important;
+            border-color: darken($c1-content-button, 5%) !important;
+            box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.3) !important;
+            text-shadow: none !important;
+            color: $c2-content-text !important;
+
+            &:after {
+                transition: 0.2s ease-in-out !important;
+                color: $c2-content-text !important;
+            }
+
+            &:hover {
+                background: $c2-content-button !important;
+                color: $c1-content-text !important;
+                border-color: darken($c2-content-button, 5%) !important;
+
+                &:after {
+                    color: $c1-content-text !important;
+                }
+
+                .wp-media-buttons-icon,
+                .dashicons {
+
+                    &:before {
+                        color: $c1-content-text !important;
+                    }
+                }
+            }
+
+            .wp-media-buttons-icon,
+            .dashicons {
+
+                &:before {
+                    transition: 0.2s ease-in-out !important;
+                }
+            }
+        }
+
+        a.button,
+        #save-post,
+        #publish {
+            transition: 0.2s ease-in-out !important;
+            background: $c2-content-button !important;
+            border-color: darken($c2-content-button, 5%) !important;
+            box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.3) !important;
+            text-shadow: none !important;
+            color: $c1-content-text !important;
+
+            &:hover {
+                box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.2) !important;
+                color: $c1-content-text !important;
+            }
+        }
+
+        button.widget-control-close {
+            transition: 0.2s ease-in-out !important;
+            color: $c1-content-link !important;
+
+            &:hover {
+                color: $c2-content-link-hover !important;
+            }
+        }
+
+        input[type=checkbox] {
+
+            &:before {
+                color: $c1-content-accent !important;
+            }
+        }
+
+        input[type=radio] {
+
+            &:checked {
+                &:before {
+                    background-color: $c1-content-accent !important;
+                }
+            }
+        }
+    }
+
+    // TINY_MCE
+    .mce-menu-item {
+        transition: 0.1s ease-in-out !important;
+
+        &.mce-active {
+            background: $c1-content-accent !important;
+
+            .mce-text {
+                color: $c1-content-text !important;
+            }
+        }
+
+        &:hover {
+            background: $c1-content-accent !important;
+
+            .mce-text {
+                color: $c1-content-text !important;
+            }
+        }
+
+        .mce-text {
+            transition: 0.1s ease-in-out !important;
+            color: $c2-content-text !important;
+            font-size: 1rem !important;
+        }
+    }
+
+    // FOOTER
+    #wpfooter {
+        a {
+            transition: 0.2s ease-in-out !important;
+            color: $c1-content-link !important;
+
+            &:hover {
+                color: $c2-content-link-hover !important;
+            }
+        }
+    }
+}

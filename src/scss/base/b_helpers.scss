@@ -1,0 +1,94 @@
+/******************************************************************
+
+    BASE: HELPERS
+        > CSS_JS_BREAKPOINTS
+        > FILEPATH
+        > MARGINS
+        > PADDINGS
+
+******************************************************************/
+
+
+/******************************************************************
+    CSS_JS_BREAKPOINTS
+******************************************************************/
+
+#h-breakpoint-js {
+    width: 0;
+
+    @include small {
+        width: $w-small-min;
+    }
+
+    @include medium {
+        width: $w-medium-min;
+    }
+
+    @include large {
+        width: $w-large-min;
+    }
+}
+
+
+/******************************************************************
+    FILEPATH
+******************************************************************/
+
+.h-file-path {
+    color: $c1-hint;
+    font-family: 'Consolas';
+    text-align: left;
+    margin: 0 0 1em;
+
+    &--highlight {
+        font-weight: 700;
+    }
+}
+
+
+/******************************************************************
+    MARGINS
+******************************************************************/
+
+.h {
+
+    &-no-mtop {
+        margin-top: 0 !important;
+    }
+
+    &-no-mright {
+        margin-right: 0 !important;
+    }
+
+    &-no-mbottom {
+        margin-bottom: 0 !important;
+    }
+
+    &-no-mleft {
+        margin-left: 0 !important;
+    }
+}
+
+
+/******************************************************************
+    PADDINGS
+******************************************************************/
+
+.h {
+
+    &-no-ptop {
+        padding-top: 0 !important;
+    }
+
+    &-no-pright {
+        padding-right: 0 !important;
+    }
+
+    &-no-pbottom {
+        padding-bottom: 0 !important;
+    }
+
+    &-no-pleft {
+        padding-left: 0 !important;
+    }
+}

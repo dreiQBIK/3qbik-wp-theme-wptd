@@ -1,0 +1,47 @@
+@import "../settings/set_variables";
+@import "../settings/set_fonts";
+@import "../settings/set_mixins";
+@import "../base/b_tinymce";
+
+body#tinymce {
+    width: 90%;
+    max-width: 1024px;
+    margin: 20px auto 40px;
+
+    h3 {
+        @include fontstyle(
+            $style: "04",
+            $scale: 0.8
+        );
+    }
+    h4 {
+        @include fontstyle(
+            $style: "04",
+            $scale: 0.8
+        );
+    }
+    h5 {
+        @include fontstyle(
+            $style: "04",
+            $scale: 0.8
+        );
+    }
+
+    p {
+        @include fontstyle(
+            $style: "03",
+            $scale: 0.8
+        );
+    }
+
+    ul, ol {
+        li {
+            @include fontstyle(
+                $style: "03",
+                $scale: 0.8
+            );
+        }
+    }
+
+    a {}
+}

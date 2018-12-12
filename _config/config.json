@@ -1,0 +1,30 @@
+{
+   "settings": {
+      "host": "3qbik-wp-theme-wptd.local"
+   },
+   "js": {
+      "pathSrc": ["../src/js/globals/**.js", "../src/js/**.js"],
+      "pathSrcVendor": "../src/js/vendor/**.js",
+      "pathSrcSeparate": "../src/js/separate-files/**.js",
+      "pathSrcSeparateVendor": "../src/js/separate-files/vendor/**.js",
+      "pathDest": "../assets/js",
+      "pathDestVendor": "../assets/js/vendor",
+      "pathDestSeparate": "../assets/js/separate",
+      "pathDestSeparateVendor": "../assets/js/separate/vendor",
+      "pathDestMaps": "../../maps"
+   },
+   "css": {
+      "pathSrc": ["../src/scss/style.scss"],
+      "pathSrcForMinify": "../style.css",
+      "pathSrcForLogin": "../src/scss/wp-backend/login/style-login.scss",
+      "pathSrcForLoginMinify": "../assets/css/style-login.css",
+      "pathSrcForTinymce": "../src/scss/wp-backend/style-tinymce.scss",
+      "pathSrcForTinymceMinify": "../assets/css/style-tinymce.css",
+      "pathSrcForTheme": "../src/scss/wp-backend/theme/style-theme.scss",
+      "pathSrcForThemeMinify": "../assets/css/style-theme.css",
+      "pathDest": "../",
+      "pathDestBackend": "../assets/css",
+      "pathDestMaps": "maps",
+      "pathDestBackendMaps": "../../maps"
+   }
+}

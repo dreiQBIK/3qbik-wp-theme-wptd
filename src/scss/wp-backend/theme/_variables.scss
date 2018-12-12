@@ -1,0 +1,34 @@
+// GENERAL
+$theme-font: $font-1;
+
+// MENU_ADMIN
+$c1-menu-admin-background: $c1-main; //dark
+$c2-menu-admin-background: $c2-main; //dark
+
+$c1-menu-admin-link      : $c-white; //light
+$c1-menu-admin-link-hover: $c1-second; //light
+
+
+// MENU_SIDE
+$c1-menu-side-text       : $c-white; //light
+$c1-menu-side-accent     : $c1-third; //dark
+
+$c1-menu-side-background : $c1-main; //dark
+$c2-menu-side-background : $c2-main; //dark
+$c3-menu-side-background : $c1-menu-side-accent; //dark
+
+
+// MENU_CONTENT
+$c1-content-text         : $c-white; //light
+$c2-content-text         : $c1-main; //dark
+$c1-content-accent       : $c1-third; //dark
+
+$c1-content-background   : $c3-main; //light
+$c1-content-bars         : $c2-main; //dark
+$c2-content-bars         : $c1-main; //dark
+
+$c1-content-button       : #f8f8f8; //light
+$c2-content-button       : $c1-content-accent; //dark
+
+$c1-content-link         : $c1-main; //dark
+$c2-content-link-hover   : $c1-content-accent; //dark

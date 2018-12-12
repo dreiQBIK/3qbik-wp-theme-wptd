@@ -1,0 +1,595 @@
+/******************************************************************
+
+    > COLORS
+    > SPACES
+    > GRID_GAPS
+	> GRID_WIDTH
+    > BREAKPOINTS
+
+******************************************************************/
+/******************************************************************
+	COLORS
+******************************************************************/
+/******************************************************************
+	SPACES
+        between sections vertically
+******************************************************************/
+/******************************************************************
+	GRID_GAPS
+        between columns horizontally use xgap
+        between columns vertically use ygap
+******************************************************************/
+/******************************************************************
+	GRID_WIDTH
+******************************************************************/
+/******************************************************************
+	BREAKPOINTS
+******************************************************************/
+/******************************************************************
+
+    SETTINGS: FONTS
+
+    USAGE:
+    @include fontstyle(
+        $style: false, $scale: 1,
+        $family: false, $weight: false, $color: false,
+        $fz-xs: false, $lh-xs: false, $mb-xs: false,
+        $fz-sm: false, $lh-sm: false, $mb-sm: false,
+        $fz-md: false, $lh-md: false, $mb-md: false,
+        $fz-lg: false, $lh-lg: false, $mb-lg: false,
+        $fz-xl: false, $lh-xl: false, $mb-xl: false
+    );
+
+    USAGE SHORT:
+    @include fontstyle("01");
+
+******************************************************************/
+/******************************************************************
+
+    SETTINGS: MIXINS
+        > BREAKPOINTS
+        > CLEARFIX
+        > FONT_SCALING
+
+******************************************************************/
+/******************************************************************
+    BREAKPOINTS
+        --> @include medium {...}
+******************************************************************/
+/******************************************************************
+    CLEARFIX
+        --> @include clearfix;
+******************************************************************/
+.tinymce {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  font-size: 1rem;
+}
+
+.tinymce ul, .tinymce ol {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  padding-left: 0;
+}
+
+.tinymce ul.center, .tinymce ol.center {
+  width: 100%;
+}
+
+@media only screen and (min-width: 481px) {
+  .tinymce ul.center, .tinymce ol.center {
+    width: 80%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.tinymce ul {
+  list-style: none;
+}
+
+.tinymce ul li {
+  position: relative;
+  margin-bottom: 0.5em;
+  padding-left: 1.2rem;
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  color: #202A35;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 481px) {
+  .tinymce ul li {
+    font-size: 1.15rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .tinymce ul li {
+    font-size: 1.15rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  .tinymce ul li {
+    font-size: 1.15rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  .tinymce ul li {
+    font-size: 1.2rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .tinymce ul li {
+    padding-left: 1.6rem;
+  }
+}
+
+.tinymce ul li:before {
+  content: "\2022";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  font-size: 1.8rem;
+  color: #ec764d;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 961px) {
+  .tinymce ul li:before {
+    font-size: 2rem;
+  }
+}
+
+.tinymce a {
+  transition: color 0.15 ease-in-out;
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  color: #ff855b;
+  text-decoration: none;
+}
+
+.tinymce a:visited {
+  color: #ff855b;
+}
+
+@media only screen and (min-width: 961px) {
+  .tinymce a:hover {
+    color: #ec764d;
+  }
+}
+
+.tinymce a:focus {
+  color: #ff855b;
+}
+
+.tinymce a:active {
+  color: #ff855b;
+}
+
+.tinymce h3, .tinymce h4, .tinymce h5, .tinymce p, .tinymce ul, .tinymce ol, .tinymce li, .tinymce a {
+  margin-top: 0;
+}
+
+.tinymce h3:last-child, .tinymce h4:last-child, .tinymce h5:last-child, .tinymce p:last-child, .tinymce ul:last-child, .tinymce ol:last-child, .tinymce li:last-child, .tinymce a:last-child {
+  margin-bottom: 0;
+}
+
+.tinymce h3.center, .tinymce h4.center, .tinymce h5.center, .tinymce p.center, .tinymce a.center {
+  text-align: center;
+}
+
+.tinymce h3 {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  color: #ec764d;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 481px) {
+  .tinymce h3 {
+    font-size: 1.5rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .tinymce h3 {
+    font-size: 1.8rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  .tinymce h3 {
+    font-size: 2rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  .tinymce h3 {
+    font-size: 2.2rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.tinymce h4 {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  color: #ec764d;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 481px) {
+  .tinymce h4 {
+    font-size: 1.5rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .tinymce h4 {
+    font-size: 1.8rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  .tinymce h4 {
+    font-size: 2rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  .tinymce h4 {
+    font-size: 2.2rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.tinymce h5 {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  color: #ec764d;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 481px) {
+  .tinymce h5 {
+    font-size: 1.5rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .tinymce h5 {
+    font-size: 1.8rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  .tinymce h5 {
+    font-size: 2rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  .tinymce h5 {
+    font-size: 2.2rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.tinymce p {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  color: #202A35;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 481px) {
+  .tinymce p {
+    font-size: 1.15rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .tinymce p {
+    font-size: 1.15rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  .tinymce p {
+    font-size: 1.15rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  .tinymce p {
+    font-size: 1.2rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.tinymce span.mce_brake {
+  display: block;
+  height: 2rem;
+  margin: 0;
+}
+
+.tinymce blockquote {
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 1.4rem;
+}
+
+.tinymce blockquote p {
+  color: #ec764d;
+}
+
+.tinymce strong {
+  font-weight: 700;
+}
+
+.tinymce em {
+  font-style: italic;
+}
+
+body#tinymce {
+  width: 90%;
+  max-width: 1024px;
+  margin: 20px auto 40px;
+}
+
+body#tinymce h3 {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  color: #ec764d;
+  font-weight: 700;
+  font-size: 1.04rem;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 481px) {
+  body#tinymce h3 {
+    font-size: 1.2rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  body#tinymce h3 {
+    font-size: 1.44rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  body#tinymce h3 {
+    font-size: 1.6rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  body#tinymce h3 {
+    font-size: 1.76rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+body#tinymce h4 {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  color: #ec764d;
+  font-weight: 700;
+  font-size: 1.04rem;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 481px) {
+  body#tinymce h4 {
+    font-size: 1.2rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  body#tinymce h4 {
+    font-size: 1.44rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  body#tinymce h4 {
+    font-size: 1.6rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  body#tinymce h4 {
+    font-size: 1.76rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+body#tinymce h5 {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  color: #ec764d;
+  font-weight: 700;
+  font-size: 1.04rem;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 481px) {
+  body#tinymce h5 {
+    font-size: 1.2rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  body#tinymce h5 {
+    font-size: 1.44rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  body#tinymce h5 {
+    font-size: 1.6rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  body#tinymce h5 {
+    font-size: 1.76rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+body#tinymce p {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  color: #202A35;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 481px) {
+  body#tinymce p {
+    font-size: 0.92rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  body#tinymce p {
+    font-size: 0.92rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  body#tinymce p {
+    font-size: 0.92rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  body#tinymce p {
+    font-size: 0.96rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+body#tinymce ul li, body#tinymce ol li {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  color: #202A35;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 481px) {
+  body#tinymce ul li, body#tinymce ol li {
+    font-size: 0.92rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  body#tinymce ul li, body#tinymce ol li {
+    font-size: 0.92rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1361px) {
+  body#tinymce ul li, body#tinymce ol li {
+    font-size: 0.92rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  body#tinymce ul li, body#tinymce ol li {
+    font-size: 0.96rem;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
+
+/*# sourceMappingURL=../../maps/style-tinymce.css.map */

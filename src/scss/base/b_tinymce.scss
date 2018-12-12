@@ -1,0 +1,64 @@
+
+.tinymce {
+    @import "b_list";
+    @import "b_links";
+
+    font-family: $font-2;
+    font-size: 1rem;
+
+    h3, h4, h5, p, ul, ol, li, a {
+        margin-top: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    h3, h4, h5, p, a {
+
+        &.center {
+            text-align: center;
+        }
+    }
+
+    h3 {
+        @include fontstyle("04");
+    }
+    h4 {
+        @include fontstyle("04");
+    }
+    h5 {
+        @include fontstyle("04");
+    }
+
+    p {
+        @include fontstyle("03");
+    }
+
+    span {
+        &.mce_brake {
+            display: block;
+            height: 2rem;
+            margin: 0;
+        }
+    }
+
+    blockquote {
+        position: relative;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 1.4rem;
+
+        p {
+            color: $c1-third;
+        }
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    em {
+        font-style: italic;
+    }
+}

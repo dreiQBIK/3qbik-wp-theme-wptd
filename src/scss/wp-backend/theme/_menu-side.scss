@@ -1,0 +1,179 @@
+body.wp-admin {
+
+    // SIDE-MENU
+    #adminmenuwrap,
+    #adminmenu,
+    #adminmenuback {
+        background: $c1-menu-side-background !important;
+
+        // SIDE-MENU LVL1
+        > li {
+
+            &:after {
+                display: none !important;
+            }
+
+            > a {
+                color: $c1-menu-side-text !important;
+                transition: 0.2s ease-in-out;
+
+                &.current {
+                    background-color: $c1-menu-side-accent !important;
+
+                    .update-plugins {
+                        background-color: $c1-menu-side-text !important;
+                        color: $c1-menu-side-accent !important;
+                    }
+                }
+
+                &:hover {
+                    background-color: $c1-menu-side-accent !important;
+                    color: $c1-menu-side-text !important;
+
+                    .wp-menu-image {
+
+                        &:before {
+                            color: $c1-menu-side-text !important;
+                        }
+                    }
+
+                    .update-plugins {
+                        background-color: $c1-menu-side-text !important;
+                        color: $c1-menu-side-accent !important;
+                    }
+                }
+
+                &:focus {
+                    background-color: transparent !important;
+                    color: $c1-menu-side-text !important;
+                }
+
+                //current
+                &.wp-has-current-submenu {
+                    background-color: $c1-menu-side-accent;
+                    color: $c1-menu-side-text;
+                    font-weight: 700;
+
+                    .wp-menu-image {
+
+                        &:before {
+                            color: $c1-menu-side-text !important;
+                        }
+                    }
+
+                    .update-plugins {
+                        background-color: $c1-menu-side-text !important;
+                        color: $c1-menu-side-accent !important;
+                        font-weight: 700 !important;
+                    }
+                }
+
+                // icons
+                .wp-menu-image {
+
+                    &:before {
+                        color: $c1-menu-side-text !important;
+                    }
+                }
+
+                .update-plugins {
+                    transition: 0.2s ease-in-out;
+                    background-color: $c1-menu-side-accent !important;
+                    color: $c1-menu-side-text !important;
+                    font-weight: 700 !important;
+                }
+            }
+
+            #collapse-button {
+
+                &:hover {
+                    .collapse-button-icon {
+                        color: lighten($c1-menu-side-accent, 10%) !important;
+                    }
+
+                    .collapse-button-label {
+                        color: lighten($c1-menu-side-accent, 10%) !important;
+                    }
+                }
+
+                .collapse-button-icon {
+                    transition: 0.1s ease-in-out;
+                    color: $c1-menu-side-text !important;
+                }
+
+                .collapse-button-label {
+                    transition: 0.2s ease-in-out;
+                    color: $c1-menu-side-text !important;
+                }
+            }
+
+            // dashicons
+            // https://developer.wordpress.org/resource/dashicons/#location
+            .dashicons-admin-appearance {
+                &:before {
+                    content: "\f333";
+                }
+            }
+        }
+    }
+
+    // SIDE-MENU LVL2 OPEN
+    li.wp-has-current-submenu {
+
+        .wp-submenu {
+            background: $c2-menu-side-background !important;
+
+            li {
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    background: lighten($c2-menu-side-background, 5%);
+                }
+
+                a {
+                    color: $c1-menu-side-text !important;
+
+                    &.current {
+                        color: lighten($c1-menu-side-accent, 10%) !important;
+                    }
+                }
+
+                &.wp-submenu-head {
+                    background-color: $c1-menu-side-accent !important;
+                }
+            }
+
+            .update-plugins {
+                background-color: $c1-menu-side-text !important;
+                color: $c2-menu-side-background !important;
+                font-weight: 700 !important;
+            }
+        }
+    }
+
+    // SIDE-MENU LVL2 HOVER
+    li.wp-not-current-submenu {
+
+        .wp-submenu {
+            background: $c3-menu-side-background !important;
+
+            li {
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    background: lighten($c3-menu-side-background, 5%);
+                }
+
+                a {
+                    color: $c1-menu-side-text !important;
+                }
+
+                .update-plugins {
+                    background-color: $c1-menu-side-text !important;
+                    color: $c1-menu-side-accent !important;
+                    font-weight: 700 !important;
+                }
+            }
+        }
+    }
+}

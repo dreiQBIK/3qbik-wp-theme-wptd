@@ -1,0 +1,38 @@
+{
+   "name": "wptd",
+   "version": "2.0",
+   "description": "WordPress with Timber, ACF and acf-builder",
+   "author": "dreiQBIK",
+   "license": "ISC",
+   "devDependencies": {
+      "@babel/core": "~7.1.6",
+      "@babel/preset-env": "~7.1.6",
+      "autoprefixer": "~9.4.0",
+      "babel-eslint": "~10.0.1",
+      "browser-sync": "~2.26.3",
+      "cssnano": "~4.1.7",
+      "eslint": "~5.9.0",
+      "eslint-config-airbnb": "~17.1.0",
+      "eslint-config-airbnb-base": "~13.1.0",
+      "eslint-plugin-import": "~2.14.0",
+      "eslint-plugin-prettier": "^3.0.0",
+      "gulp": "^4.0.0",
+      "gulp-babel": "~8.0.0",
+      "gulp-changed": "~3.2.0",
+      "gulp-concat": "~2.6.1",
+      "gulp-eslint": "~5.0.0",
+      "gulp-hub": "~0.8.0",
+      "gulp-load-plugins": "~1.5.0",
+      "gulp-plumber": "~1.2.0",
+      "gulp-postcss": "~8.0.0",
+      "gulp-rename": "~1.4.0",
+      "gulp-sass": "~4.0.2",
+      "gulp-sourcemaps": "~2.6.4",
+      "gulp-uglify": "~3.0.1",
+      "require-dir": "~1.1.0",
+      "sass-loader": "~7.1.0"
+   },
+   "dependencies": {
+      "node-sass": "~4.10.0"
+   }
+}

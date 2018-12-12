@@ -1,0 +1,62 @@
+.wpcf7-form {
+
+    &__upload-wrapper {
+        cursor: pointer;
+        transition: 0.15s ease-in-out;
+        display: inline-block;
+        background: $c1-third;
+        position: relative;
+        width: 100%;
+        max-width: 280px;
+        margin-top: 0.5rem;
+        padding: 0.2em 2em;
+        border-radius: 3px;
+        border-bottom: 3px solid $c2-third;
+        font-weight: 700;
+        color: $c-white;
+
+        &:hover {
+
+            @include medium {
+                outline: 0;
+                background-color: $c3-third;
+
+                svg {
+                    right: 20px;
+                    fill: $c-white;
+                }
+            }
+        }
+
+        svg {
+            position: absolute;
+            top: 11px;
+            right: 20px;
+            fill: $c-white;
+            width: 20px;
+            height: 20px;
+            margin-top: rem(4px);
+        }
+
+        .wpcf7-form-control-wrap {
+            position: static;
+        }
+
+        .wpcf7-not-valid-tip {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            font-size: rem(14px);
+        }
+    }
+
+    &__upload-text {
+        display: inline-block;
+        padding: rem(15px 20px);
+    }
+
+    &__input-upload {
+        display: none;
+    }
+}

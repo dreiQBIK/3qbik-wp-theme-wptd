@@ -1,0 +1,189 @@
+body {
+
+    &.login {
+        background-color: $c1-login-background;
+
+        //font -> for all elments
+        div, p, a, label, input {
+            font-family: $login-font;
+            font-weight: 400;
+        }
+
+        a {
+            transition: all 0.2s ease-in-out;
+        }
+
+        //login-card-wrapper -> position
+        #login {
+            width: 95%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 4%;
+
+            //logo -> file/size
+            h1 a {
+                background-image: $login-logo;
+                height: 100px;
+                width: 100px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+
+        //login-card -> background
+        form {
+            background-color: $c2-login-background;
+            margin-top: 3em;
+            padding: 3em;
+        }
+
+        label {
+
+            &[for=user_login],
+            &[for=user_pass],
+            &[for=rememberme] {
+                color: $c1-login-text;
+            }
+
+            &[for=user_login],
+            &[for=user_pass] {
+
+                input {
+                    padding: 10px;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        //input -> user/password
+        input {
+
+            &[type=text],
+            &[type=password] {
+                background: $c1-login-text;
+            }
+
+            &[type=text],
+            &[type=password] {
+                margin-top: 10px;
+            }
+        }
+
+        //checkbox -> forgetmenot
+        .forgetmenot {
+            margin-top: 20px;
+            margin-bottom: 20px !important;
+
+            input {
+
+                &[type=checkbox] {
+                    background: $c1-login-text;
+
+                    &:checked {
+                        position: relative;
+
+                        &:before {
+                            content: "\f147";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            color: $c1-login-accent;
+                        }
+                    }
+                }
+            }
+        }
+
+        //login button
+        .submit {
+
+            .button {
+                transition: all 0.2s ease-in-out;
+                background: none;
+                background-color: $c1-login-button;
+                color: $c1-login-button-text;
+                display: inline-block;
+                font-weight: 700;
+                text-transform: uppercase;
+                border: none;
+                border-bottom: 5px solid darken($c1-login-button, 5%);
+                border-radius: 5px;
+                padding: 1em 2em;
+                margin-top: 1em;
+                width: 100%;
+                height: auto;
+                text-shadow: none;
+                box-shadow: none;
+                float: none;
+
+                &:hover {
+                    outline: 0;
+                    background-color: $c1-login-button-hover;
+                    border-bottom: 5px solid $c1-login-button;
+                }
+            }
+        }
+
+        //links -> forget password/back to website
+        #nav a,
+        #backtoblog a {
+            color: $c1-login-link;
+
+            &:link {
+                color: $c1-login-link;
+            }
+            &:visited {
+                color: $c1-login-link;
+            }
+            &:hover {
+                color: $c1-login-link-hover;
+            }
+            &:active {
+                color: $c1-login-link;
+            }
+        }
+
+        //message -> foreget password
+        .message {
+            margin-top: 3em;
+            padding: 2em;
+            border-left: 5px solid $c2-login-accent;
+            background-color: $c2-login-background;
+            color: $c1-login-text;
+            font-size: 0.9rem;
+        }
+
+        //message -> wrong user/password
+        #login_error {
+            margin-top: 3em;
+            padding: 2em;
+            border-left: 5px solid $c2-login-accent;
+            background-color: $c2-login-background;
+            color: $c-white;
+            font-size: 0.9rem;
+            line-height: 1.4rem;
+
+            strong {
+                font-weight: 700;
+            }
+
+            a {
+                color: $c1-message-link;
+
+                &:link {
+                    color: $c1-message-link;
+                }
+                &:visited {
+                    color: $c1-message-link;
+                }
+                &:hover {
+                    color: $c1-message-link-hover;
+                }
+                &:active {
+                    color: $c1-message-link;
+                }
+            }
+        }
+    }
+}
