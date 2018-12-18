@@ -1,20 +1,4 @@
-
-/******************************************************************
-    _EXAMPLE.JS
-
-        > VARS
-        > EVENTS
-        > FUNCTIONS
-        > PUBLIC_FUNCTIONS
-
-        @USAGE
-        e.g. nMain.showNav();
-        e.g. $(window).on('scroll', global.debounce(nMain.hideNav, 1000));
-
-******************************************************************/
-
-
-var example = (function($) {
+const example = (function($) {
 
 
     /******************************************************************

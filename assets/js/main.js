@@ -1,36 +1,52 @@
-/******************************************************************
+"use strict";
 
-    > EVENTS
+var global = function ($) {
+  /******************************************************************
+        FUNCTIONS
+    ***************************************************************** */
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function () {
+      var context = this;
+      var args = arguments;
 
-******************************************************************/
+      var later = function later() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
 
-var choicesJS = (function($) {
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  }
 
-
-    /******************************************************************
-        EVENTS
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+  /** ****************************************************************
+        PUBLIC_FUNCTIONS
     ******************************************************************/
 
-    // Select via choices
-    $('select').each(function() {
-        new Choices(this, {
-            searchEnabled: false,
-            itemSelectText: '',
-        });
+
+  return {
+    debounce: debounce,
+    getRandomInt: getRandomInt
+  };
+}(jQuery);
+"use strict";
+
+var choicesJS = function ($) {
+  // Select via choices
+  $("select").each(function () {
+    new Choices(this, {
+      searchEnabled: false,
+      itemSelectText: ""
     });
-
-})(jQuery);
-
-// /******************************************************************
-//
-//     > VARS
-//     > EVENTS
-//     > FUNCTIONS
-//     > PUBLIC_FUNCTIONS
-//
-// ******************************************************************/
-//
-// var mForm = (function($) {
+  });
+}(jQuery);
+// const mForm = (function($) {
 //
 //
 //     /******************************************************************
@@ -92,188 +108,126 @@ var choicesJS = (function($) {
 //     }
 //
 // })(jQuery);
+"use strict";
+// const mBackToTop = (function($) {
+//    const $window = $(window);
+//    $window.on("scroll", function() {
+//       global.debounce(toggleBackToTop(), 2000);
+//    });
+//    $(document).on("click", ".m_back-to-top", function() {
+//       scrollToTop();
+//    });
+//    function toggleBackToTop() {
+//       const $button = $(".m_back-to-top");
+//       const scrollDistance = $(document).scrollTop();
+//       const windowHeight = $window.height();
+//       if (scrollDistance >= windowHeight) {
+//          $button.removeClass("is-hidden");
+//       } else {
+//          $button.addClass("is-hidden");
+//       }
+//    }
+//    function scrollToTop() {
+//       $("html, body").animate(
+//          {
+//             scrollTop: 0,
+//          },
+//          "swing"
+//       );
+//    }
+// })(jQuery);
+"use strict";
+"use strict";
+
+var nSite = function ($) {
+  /******************************************************************
+       VARS
+   ******************************************************************/
+  // get variables for setting js breakpoints equal to css breakpoints
+  var breakpointJS = $("body");
+  var breakpointCSSWidth = 961;
+  var breakpointJSWidth = breakpointJS.width(); // cache DOM elements
+
+  var $siteNavigation = $(".n_site");
+  var $siteNavigationBurger = $(".n_site-burger");
+  /******************************************************************
+       EVENTS
+   ******************************************************************/
+  // set js breakpoints equal to css breakpoints
+
+  $(window).resize(function () {
+    toggleNavAtBreakpoint();
+  }); // toggle nav on click on burger
+
+  $siteNavigationBurger.on("click", toggleNav);
+  /******************************************************************
+       FUNCTIONS
+   ******************************************************************/
+
+  function toggleNav() {
+    $siteNavigation.slideToggle("fast");
+    $siteNavigationBurger.toggleClass("active");
+  }
+
+  function showNav() {
+    $siteNavigation.show();
+    $siteNavigationBurger.hide();
+  }
+
+  function hideNav() {
+    $siteNavigation.hide();
+    $siteNavigationBurger.show();
+  } // checks for mobile device
 
 
-/******************************************************************
-
-    > VARS
-    > EVENTS
-    > FUNCTIONS
-    > PUBLIC_FUNCTIONS
-
-******************************************************************/
-
-
-var nSite = (function($) {
-
-
-    /******************************************************************
-        VARS
-    ******************************************************************/
-
-    // get variables for setting js breakpoints equal to css breakpoints
-    var breakpointJS = $('body');
-    var breakpointJSWidth = breakpointJS.width();
-    var breakpointCSSWidth = 961;
-
-    // cache DOM elements
-    var $siteNavigation = $('.n_site');
-    var $siteNavigationBurger = $('.n_site-burger');
-
-
-    /******************************************************************
-        EVENTS
-    ******************************************************************/
-
-
-    // set js breakpoints equal to css breakpoints
-    $(window).resize(function() {
-        toggleNavAtBreakpoint();
-    });
-
-    // toggle nav on click on burger
-    $siteNavigationBurger.on('click', toggleNav);
-
-
-    /******************************************************************
-        FUNCTIONS
-    ******************************************************************/
-
-    function toggleNav() {
-        $siteNavigation.slideToggle('fast');
-        $siteNavigationBurger.toggleClass('active');
+  function isMobile() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      return true;
     }
 
-    function showNav() {
-        $siteNavigation.show();
-        $siteNavigationBurger.hide();
+    return false;
+  } // toggle nav on mobile/desktop
+
+
+  function toggleNavAtBreakpoint() {
+    // set breakpoint
+    breakpointJSWidth = breakpointJS.width(); // check for mobile device and hide/show nav
+
+    if (!isMobile()) {
+      breakpointJSWidth >= breakpointCSSWidth ? showNav() : hideNav();
     }
-
-    function hideNav() {
-        $siteNavigation.hide();
-        $siteNavigationBurger.show();
-    }
-
-    // checks for mobile device
-    function isMobile() {
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            return true;
-        }
-        return false;
-    }
-
-    // toggle nav on mobile/desktop
-    function toggleNavAtBreakpoint() {
-        // set breakpoint
-        breakpointJSWidth = breakpointJS.width();
-
-        // check for mobile device and hide/show nav
-        if (!isMobile()) {
-            (breakpointJSWidth >= breakpointCSSWidth) ? showNav() : hideNav();
-        }
-    }
+  }
+  /******************************************************************
+       PUBLIC_FUNCTIONS
+   ******************************************************************/
 
 
-    /******************************************************************
-        PUBLIC_FUNCTIONS
-    ******************************************************************/
+  return {
+    showNav: showNav,
+    hideNav: hideNav
+  };
+}(jQuery);
+"use strict";
 
-    return {
-        showNav: showNav,
-        hideNav: hideNav
-    };
+var example = function ($) {
+  /******************************************************************
+      VARS
+  ******************************************************************/
+  // your code here
 
-})(jQuery);
+  /******************************************************************
+      EVENTS
+  ******************************************************************/
+  // your code here
 
+  /******************************************************************
+      FUNCTIONS
+  ******************************************************************/
+  // your code here
 
-/******************************************************************
-    _EXAMPLE.JS
-
-        > VARS
-        > EVENTS
-        > FUNCTIONS
-        > PUBLIC_FUNCTIONS
-
-        @USAGE
-        e.g. nMain.showNav();
-        e.g. $(window).on('scroll', global.debounce(nMain.hideNav, 1000));
-
-******************************************************************/
-
-
-var example = (function($) {
-
-
-    /******************************************************************
-        VARS
-    ******************************************************************/
-
-    // your code here
-
-
-    /******************************************************************
-        EVENTS
-    ******************************************************************/
-
-    // your code here
-
-
-    /******************************************************************
-        FUNCTIONS
-    ******************************************************************/
-
-    // your code here
-
-
-    /******************************************************************
-        PUBLIC_FUNCTIONS
-    ******************************************************************/
-
-    return {
-        // your code here
-    };
-
-})(jQuery);
-
-/******************************************************************
-    _GLOBAL.JS
-
-        > FUNCTIONS
-        > PUBLIC_FUNCTIONS
-
-******************************************************************/
-
-
-var global = (function($) {
-
-
-    /******************************************************************
-        FUNCTIONS
-    ******************************************************************/
-
-    function debounce(func, wait, immediate) {
-        var timeout;
-        return function() {
-            var context = this;
-            var args = arguments;
-            var later = function() {
-                timeout = null;
-                if (!immediate) func.apply(context, args);
-            };
-            var callNow = immediate && !timeout;
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-            if (callNow) func.apply(context, args);
-        };
-    }
-
-
-    /******************************************************************
-        PUBLIC_FUNCTIONS
-    ******************************************************************/
-
-    return {
-        debounce: debounce
-    };
-
-})(jQuery);
+  /******************************************************************
+      PUBLIC_FUNCTIONS
+  ******************************************************************/
+  return {// your code here
+  };
+}(jQuery);

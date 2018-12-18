@@ -5,8 +5,8 @@ const nSite = (function($) {
 
    // get variables for setting js breakpoints equal to css breakpoints
    const breakpointJS = $("body");
-   const breakpointJSWidth = breakpointJS.width();
    const breakpointCSSWidth = 961;
+   let breakpointJSWidth = breakpointJS.width();
 
    // cache DOM elements
    const $siteNavigation = $(".n_site");

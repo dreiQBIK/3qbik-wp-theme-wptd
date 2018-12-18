@@ -1,6 +1,6 @@
 {
    "name": "wptd",
-   "version": "2.0",
+   "version": "1.0.0",
    "description": "WordPress with Timber, ACF and acf-builder",
    "author": "dreiQBIK",
    "license": "ISC",
