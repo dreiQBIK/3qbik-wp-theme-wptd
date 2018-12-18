@@ -1,40 +1,38 @@
 .m_btn,
 a.m_btn {
-    cursor: pointer;
-    transition: 0.15s ease-in-out;
-    display: inline-block;
-    margin-top: 1em;
-    padding: 0.8em 2em;
-    border: none;
-    border-radius: 3px;
-    font-weight: 700;
-    text-transform: uppercase;
+   cursor: pointer;
+   transition: 0.15s ease-in-out;
+   display: inline-block;
+   margin-top: 1em;
+   padding: 0.8em 2em;
+   border: none;
+   border-radius: 3px;
+   font-weight: 700;
+   text-transform: uppercase;
 
-    &--light {
-        background-color: $c12-grey;
-        border-bottom: 3px solid  $c10-grey;
-        color: $c1-main;
+   &--light {
+      background-color: $c12-grey;
+      border-bottom: 3px solid $c10-grey;
+      color: $c1-main;
 
-        &:hover {
+      &:hover {
+         @include media-breakpoint-up(md) {
+            outline: 0;
+            background-color: $c11-grey;
+         }
+      }
+   }
 
-            @include medium {
-                outline: 0;
-                background-color: $c11-grey;
-            }
-        }
-    }
+   &--dark {
+      background-color: $c1-third;
+      border-bottom: 3px solid $c2-third;
+      color: $c-white;
 
-    &--dark {
-        background-color: $c1-third;
-        border-bottom: 3px solid $c2-third;
-        color: $c-white;
-
-        &:hover {
-
-            @include medium {
-                outline: 0;
-                background-color: $c3-third;
-            }
-        }
-    }
+      &:hover {
+         @include media-breakpoint-up(md) {
+            outline: 0;
+            background-color: $c3-third;
+         }
+      }
+   }
 }

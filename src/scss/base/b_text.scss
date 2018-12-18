@@ -1,42 +1,54 @@
-
-h1, h2, h3, h4, h5 {
-    font-family: $font-1;
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 0;
+h1,
+h2,
+h3,
+h4,
+h5 {
+   font-family: $f1-second;
+   font-weight: 700;
+   margin-top: 0;
+   margin-bottom: 0;
 }
 
 h1 {
-    @include fontstyle("01");
+   @include fontstyle("main-01");
 }
+
 h2 {
-    @include fontstyle("02");
+   @include fontstyle("second-01");
 }
-h3, h4, h5 {
-    @include fontstyle("04");
+
+h3,
+h4,
+h5 {
+   @include fontstyle("third-01");
 }
 
 p {
-    @include fontstyle("03");
-    margin-top: 0;
-    margin-bottom: 0.5em;
+   @include fontstyle("third-01");
+   margin-top: 0;
+   margin-bottom: 0.5em;
+
+   em {
+      font-family: $f2-third;
+      font-style: italic;
+   }
+
+   strong {
+      font-family: $f3-third;
+      font-weight: normal;
+   }
 }
 
-.heading {
+.heading-1 {
+   @include fontstyle("main-01");
+   text-transform: uppercase;
+}
 
-    &-1 {
-        @include fontstyle("01");
-    }
-    &-2 {
-        @include fontstyle("02");
-    }
-    &-3 {
-        @include fontstyle("04");
-    }
-    &-4 {
-        @include fontstyle("04");
-    }
-    &-5 {
-        @include fontstyle("04");
-    }
+.heading-2 {
+   @include fontstyle("main-02");
+   text-transform: uppercase;
+}
+.heading-3 {
+   @include fontstyle("main-03");
+   text-transform: uppercase;
 }

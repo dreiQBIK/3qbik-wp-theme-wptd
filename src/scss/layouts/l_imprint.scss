@@ -1,10 +1,9 @@
-.s_imprint {
+.l_imprint {
+   a {
+      border-bottom: 3px solid $c3-third;
 
-    a {
-        border-bottom: 3px solid $c3-third;
-
-        &:hover {
-            color: $c1-third;
-        }
-    }
+      &:hover {
+         color: $c1-third;
+      }
+   }
 }

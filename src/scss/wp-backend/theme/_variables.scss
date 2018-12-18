@@ -1,5 +1,5 @@
 // GENERAL
-$theme-font: $font-1;
+$theme-font: $f1-second;
 
 // MENU_ADMIN
 $c1-menu-admin-background: $c1-main; //dark
@@ -23,11 +23,11 @@ $c1-content-text         : $c-white; //light
 $c2-content-text         : $c1-main; //dark
 $c1-content-accent       : $c1-third; //dark
 
-$c1-content-background   : $c3-main; //light
+$c1-content-background   : lighten($c3-main, 70%); //light
 $c1-content-bars         : $c2-main; //dark
 $c2-content-bars         : $c1-main; //dark
 
-$c1-content-button       : #f8f8f8; //light
+$c1-content-button       : lighten($c3-main, 70%); //light
 $c2-content-button       : $c1-content-accent; //dark
 
 $c1-content-link         : $c1-main; //dark

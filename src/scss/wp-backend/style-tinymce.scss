@@ -1,47 +1,61 @@
+@import "../settings/set_functions";
 @import "../settings/set_variables";
-@import "../settings/set_fonts";
-@import "../settings/set_mixins";
+@import "../settings/mixins/mix_breakpoints";
+@import "../settings/mixins/mix_fonts";
 @import "../base/b_tinymce";
 
 body#tinymce {
-    width: 90%;
-    max-width: 1024px;
-    margin: 20px auto 40px;
+   width: 90%;
+   margin: 20px auto 40px;
 
-    h3 {
-        @include fontstyle(
-            $style: "04",
-            $scale: 0.8
-        );
-    }
-    h4 {
-        @include fontstyle(
-            $style: "04",
-            $scale: 0.8
-        );
-    }
-    h5 {
-        @include fontstyle(
-            $style: "04",
-            $scale: 0.8
-        );
-    }
+   h3 {
+      margin-top: 1em;
+      @include fontstyle($style: "third-02", $color: $c3-main);
+   }
 
-    p {
-        @include fontstyle(
-            $style: "03",
-            $scale: 0.8
-        );
-    }
+   h4 {
+      margin-top: 1em;
+      @include fontstyle($style: "third-03", $scale: 0.9, $color: $c3-main);
+   }
 
-    ul, ol {
-        li {
-            @include fontstyle(
-                $style: "03",
-                $scale: 0.8
-            );
-        }
-    }
+   h5 {
+      margin-top: 1em;
+      @include fontstyle($style: "third-04", $scale: 0.9, $color: $c3-main);
+   }
 
-    a {}
+   p {
+      @include fontstyle($style: "third-01", $scale: 0.9, $color: $c2-main);
+   }
+
+   ul,
+   ol {
+      li {
+         position: relative;
+
+         @include fontstyle($style: "third-01", $scale: 0.9);
+         color: $c2-main !important;
+
+         &:before {
+            content: "";
+            background: url(../../assets/img/icon-list-cube-3qbik-grey.svg)
+               no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 4px;
+            left: 0;
+            width: 0.85em;
+            height: 0.85em;
+            font-size: 1rem;
+         }
+      }
+   }
+
+   a {
+      color: $c1-main;
+      text-decoration: underline;
+
+      &:hover {
+         color: $c1-third;
+      }
+   }
 }

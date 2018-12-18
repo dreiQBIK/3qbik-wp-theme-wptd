@@ -1,4 +1,6 @@
+@import "../../settings/set_functions";
 @import "../../settings/set_variables";
-@import "../../settings/set_fonts";
+@import "../../settings/mixins/mix_breakpoints";
+@import "../../settings/mixins/mix_fonts";
 @import "_variables";
 @import "_content";

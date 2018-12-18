@@ -1,29 +1,33 @@
 /******************************************************************
-
-    > COLORS
-    > SPACES
-    > GRID_GAPS
-	> GRID_WIDTH
-    > BREAKPOINTS
-
-******************************************************************/
-/******************************************************************
 	COLORS
 ******************************************************************/
 /******************************************************************
-	SPACES
-        between sections vertically
-******************************************************************/
+		FONTS
+	******************************************************************/
 /******************************************************************
-	GRID_GAPS
-        between columns horizontally use xgap
-        between columns vertically use ygap
-******************************************************************/
+		SPACERS
+	******************************************************************/
 /******************************************************************
-	GRID_WIDTH
-******************************************************************/
+		GRID
+	******************************************************************/
 /******************************************************************
-	BREAKPOINTS
+
+    SETTINGS: FONTS
+
+    USAGE:
+    @include fontstyle(
+        $style: false, $scale: 1,
+        $family: false, $weight: false, $color: false,
+        $fz-xs: false, $lh-xs: false, $mb-xs: false,
+        $fz-sm: false, $lh-sm: false, $mb-sm: false,
+        $fz-md: false, $lh-md: false, $mb-md: false,
+        $fz-lg: false, $lh-lg: false, $mb-lg: false,
+        $fz-xl: false, $lh-xl: false, $mb-xl: false
+    );
+
+    USAGE SHORT:
+    @include fontstyle("main-01");
+
 ******************************************************************/
 /******************************************************************
 
@@ -41,15 +45,15 @@
     );
 
     USAGE SHORT:
-    @include fontstyle("01");
+    @include fontstyle("main-01");
 
 ******************************************************************/
 body.login {
-  background-color: #202A35;
+  background-color: #202a35;
 }
 
 body.login div, body.login p, body.login a, body.login label, body.login input {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "KlavikaWeb", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
 }
 
@@ -139,7 +143,7 @@ body.login .submit .button {
 
 body.login .submit .button:hover {
   outline: 0;
-  background-color: #ff855b;
+  background-color: #d96a44;
   border-bottom: 5px solid #ec764d;
 }
 

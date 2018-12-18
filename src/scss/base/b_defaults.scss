@@ -1,72 +1,72 @@
-/******************************************************************
-
-    BASE: DEFAULTS
-
-******************************************************************/
-
 html {
-    font-size: 16px;
-    line-height: 1.4em;
-    box-sizing: border-box;
-    -ms-overflow-style: scrollbar;
+   font-size: 16px;
+   line-height: 1.4em;
+   box-sizing: border-box;
+   -ms-overflow-style: scrollbar;
 }
 
 body {
-    position: relative;
-    color: $c1-main;
-    background-color: $c-white;
-    font-family: $font-2;
+   position: relative;
+   color: $c1-main;
+   background-color: $c-white;
+   overflow-x: hidden;
 
-    &:after {
-        content:"xs";
-        display: inline-block;
-        background: $c1-third;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        z-index: 100;
-        width: 50px;
-        padding: 0.5rem 0.7rem;
-        text-align: center;
-        color: $c-white;
+   @include fontstyle($style: "third-01");
 
-        @include small {
-            content:"sm";
-        }
-        @include medium {
-            content:"md";
-        }
-        @include large {
-            content:"lg";
-        }
-        @include xlarge {
-            content:"xl";
-        }
-    }
+   &.no-scroll {
+      overflow: hidden;
+   }
+
+   &:after {
+      content: "xs";
+      display: inline-block;
+      background: $c1-third;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      z-index: 100;
+      width: 50px;
+      padding: 0.5rem 0.7rem;
+      text-align: center;
+      color: $c-white;
+
+      @include media-breakpoint-up(sm) {
+         content: "sm";
+      }
+      @include media-breakpoint-up(md) {
+         content: "md";
+      }
+      @include media-breakpoint-up(lg) {
+         content: "lg";
+      }
+      @include media-breakpoint-up(xl) {
+         content: "xl";
+      }
+   }
 }
 
 @-ms-viewport {
-    width: device-width;
+   width: device-width;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+   box-sizing: inherit;
 }
 
 ::selection {
-    background: $c1-accent;
-    text-shadow: none;
+   background: $c1-accent;
+   text-shadow: none;
 }
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid $c11-grey;
-    margin: 1em 0;
-    padding: 0;
+   display: block;
+   height: 1px;
+   border: 0;
+   border-top: 1px solid $c11-grey;
+   margin: 1em 0;
+   padding: 0;
 }
 
 audio,
@@ -75,19 +75,19 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+   vertical-align: middle;
 }
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+   border: 0;
+   margin: 0;
+   padding: 0;
 }
 
 textarea {
-    resize: vertical;
+   resize: vertical;
 }
 
 address {
-    font-style: normal;
+   font-style: normal;
 }

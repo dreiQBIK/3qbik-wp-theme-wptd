@@ -1,64 +1,129 @@
-
 .tinymce {
-    @import "b_list";
-    @import "b_links";
+   @import "b_list";
+   @import "b_links";
 
-    font-family: $font-2;
-    font-size: 1rem;
+   font-family: $f1-third;
+   font-size: 1rem;
 
-    h3, h4, h5, p, ul, ol, li, a {
-        margin-top: 0;
+   h3,
+   h4,
+   h5,
+   p,
+   ul,
+   ol,
+   li,
+   a {
+      margin-top: 0;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-    h3, h4, h5, p, a {
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
 
-        &.center {
-            text-align: center;
-        }
-    }
+   h3,
+   h4,
+   h5,
+   p,
+   a {
+      &.center {
+         text-align: center;
+      }
+   }
 
-    h3 {
-        @include fontstyle("04");
-    }
-    h4 {
-        @include fontstyle("04");
-    }
-    h5 {
-        @include fontstyle("04");
-    }
+   h3 {
+      @include fontstyle("third-02");
+   }
+   h4 {
+      margin-top: 1em;
+      @include fontstyle("third-03");
+   }
+   h5 {
+      margin-top: 1em;
+      @include fontstyle($style: "third-04", $color: $c-white);
+   }
 
-    p {
-        @include fontstyle("03");
-    }
+   p {
+      margin: 0 0 0.5em !important;
+      @include fontstyle($style: "third-01");
+      color: lighten($c3-main, 30%);
 
-    span {
-        &.mce_brake {
-            display: block;
+      &:last-of-type {
+         margin-bottom: 0 !important;
+      }
+   }
+
+   span {
+      &.mce_brake {
+         display: block;
+         height: 1rem;
+         margin: 0;
+
+         @include media-breakpoint-up(md) {
             height: 2rem;
-            margin: 0;
-        }
-    }
+         }
+      }
+   }
 
-    blockquote {
-        position: relative;
-        margin-top: 0;
-        margin-left: 0;
-        margin-right: 0;
-        font-size: 1.4rem;
+   blockquote {
+      position: relative;
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 1.4rem;
 
-        p {
+      p {
+         color: $c1-third;
+      }
+   }
+
+   strong {
+      font-family: $f3-third;
+      font-weight: normal;
+   }
+
+   em {
+      font-family: $f2-third;
+   }
+
+   ul {
+      margin-top: 0.8em;
+
+      @include media-breakpoint-up(sm) {
+         margin-top: 1em;
+      }
+      @include media-breakpoint-up(md) {
+         margin-top: 1.3em;
+      }
+      @include media-breakpoint-up(lg) {
+         margin-top: 1.6em;
+      }
+
+      li {
+         margin-bottom: 0.2em;
+         font-family: $f3-third;
+         font-weight: normal;
+         color: $c3-main;
+      }
+   }
+
+   a {
+      transition: color 0.15 ease-in-out;
+      color: $c3-third;
+      text-decoration: none;
+
+      &:visited {
+         color: $c3-third;
+      }
+      &:hover {
+         @include media-breakpoint-up(md) {
             color: $c1-third;
-        }
-    }
-
-    strong {
-        font-weight: 700;
-    }
-
-    em {
-        font-style: italic;
-    }
+         }
+      }
+      &:focus {
+         color: $c3-third;
+      }
+      &:active {
+         color: $c3-third;
+      }
+   }
 }

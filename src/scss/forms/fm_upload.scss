@@ -17,7 +17,7 @@
 
         &:hover {
 
-            @include medium {
+            @include media-breakpoint-up(md) {
                 outline: 0;
                 background-color: $c3-third;
 

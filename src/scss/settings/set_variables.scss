@@ -1,132 +1,177 @@
 /******************************************************************
-
-    > COLORS
-    > SPACES
-    > GRID_GAPS
-	> GRID_WIDTH
-    > BREAKPOINTS
-
-******************************************************************/
-
-
-
-/******************************************************************
 	COLORS
 ******************************************************************/
 
-    //defaults
-	$c-black:  						#000000;
-	$c1-grey:   					#111111;
-	$c2-grey:   					#222222;
-	$c3-grey:   					#333333;
-	$c4-grey:   					#444444;
-	$c5-grey:   					#555555;
-	$c6-grey:   					#666666;
-	$c7-grey:   					#777777;
-	$c8-grey:   					#888888;
-	$c9-grey:   					#999999;
-	$c10-grey:   					#aaaaaa;
-	$c11-grey:   					#bbbbbb;
-	$c12-grey:   					#cccccc;
-	$c13-grey:   					#dddddd;
-	$c14-grey:   					#eeeeee;
-	$c-white:  						#ffffff;
+//defaults
+$c-black: #000000;
+$c1-grey: #111111;
+$c2-grey: #222222;
+$c3-grey: #333333;
+$c4-grey: #444444;
+$c5-grey: #555555;
+$c6-grey: #666666;
+$c7-grey: #777777;
+$c8-grey: #888888;
+$c9-grey: #999999;
+$c10-grey: #aaaaaa;
+$c11-grey: #bbbbbb;
+$c12-grey: #cccccc;
+$c13-grey: #dddddd;
+$c14-grey: #eeeeee;
+$c-white: #ffffff;
 
-    // project
-	$c1-main:						#202A35;
-	$c2-main:						#364250;
-	$c3-main:						#F5F8FB;
+// project
+$c1-main: #202a35;
+$c2-main: #364250;
+$c3-main: #f5f8fb;
 
-	$c1-second:						#fff191;
-	$c2-second:						#EEDE70;
+$c1-second: #fff191;
+$c2-second: #eede70;
 
-	$c1-third:						#ec764d;
-	$c2-third:						#d96a44;
-	$c3-third:						#ff855b;
+$c1-third: #ec764d;
+$c2-third: #d96a44;
+$c3-third: #ff855b;
 
-    // specials
-	$c1-accent: 					#ccd9e8;
-	$c1-hint:						$c1-third;
-	$c1-error:						#D6445C;
-	$c1-success:					#00b878;
+// specials
+$c1-accent: #ccd9e8;
+$c1-hint: $c1-third;
+$c1-error: #d6445c;
+$c1-success: #00b878;
 
-
-
-/******************************************************************
-	SPACES
-        between sections vertically
-******************************************************************/
-
-	$sp-xxs: 8px;
-    $sp-xs : 16px;
-    $sp-sm : 24px;
-    $sp-md : 32px;
-    $sp-lg : 48px;
-    $sp-xl : 64px;
-    $sp-xxl: 72px;
-
-
-/******************************************************************
-	GRID_GAPS
-        between columns horizontally use xgap
-        between columns vertically use ygap
-******************************************************************/
-
-	$xgap-xs: 			6px;	    // gaps between columns
-	$ygap-xs: 			12px;		// gaps between rows
-
-	$xgap-sm: 			7px;	    // gaps between columns
-	$ygap-sm: 			14px;		// gaps between rows
-
-	$xgap-md: 			8px;	    // gaps between columns
-	$ygap-md: 			16px;		// gaps between rows
-
-	$xgap-lg: 			10px;	    // gaps between columns
-	$ygap-lg: 			20px;		// gaps between rows
-
-    $xgap-xl: 			15px;	    // gaps between columns
-	$ygap-xl: 			30px;		// gaps between rows
-
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+   (
+      "c1-main": $c1-main,
+      "c2-main": $c2-main,
+      "c3-main": $c3-main,
+      "c1-second": $c1-second,
+      "c2-second": $c2-second,
+      "c1-third": $c1-third,
+      "c2-third": $c2-third,
+      "c1-accent": $c1-accent,
+      "c1-hint": $c1-hint,
+      "c1-error": $c1-error,
+      "c1-success": $c1-success,
+   ),
+   $theme-colors
+);
 
 /******************************************************************
-	GRID_WIDTH
-******************************************************************/
+		FONTS
+	******************************************************************/
 
-	$width-xs: 			90%;
-	$width-min-xs: 		0;
-	$width-max-xs: 		360px;
+$f1-main: "Open Sans", sans-serif;
 
-	$width-sm: 			90%;
-	$width-min-sm: 		0;
-	$width-max-sm: 		600px;
+$f1-second: "Open Sans", "Helvetica", "Arial", sans-serif;
 
-	$width-md: 			80%;
-	$width-min-md: 		0;
-	$width-max-md: 		1024;
-
-	$width-lg: 			70%;
-	$width-min-lg: 		0;
-	$width-max-lg: 		1400px;
-
-	$width-xl: 			60%;
-	$width-min-xl: 		0;
-	$width-max-xl: 		1920px;
-
-
+$f1-third: "Merriweather", "Times New Roman", serif;
+$f2-third: "Merriweather", "Times New Roman", serif;
+$f3-third: "Merriweather", "Times New Roman", serif;
+$f4-third: "Merriweather", "Times New Roman", serif;
 
 /******************************************************************
-	BREAKPOINTS
-******************************************************************/
+		SPACERS
+	******************************************************************/
 
-	$w-base-max: 		480px;
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
 
-	$w-small-min: 		481px;
-	$w-small-max: 		960px;
+// stylelint-disable
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+   (
+      0: 0,
+      1: (
+         $spacer * 0.25,
+      ),
+      2: (
+         $spacer * 0.5,
+      ),
+      3: $spacer,
+      4: (
+         $spacer * 1.5,
+      ),
+      5: (
+         $spacer * 3,
+      ),
+      6: (
+         $spacer * 5,
+      ),
+      7: (
+         $spacer * 8,
+      ),
+      8: (
+         $spacer * 10,
+      ),
+      9: (
+         $spacer * 15,
+      ),
+      10: (
+         $spacer * 18,
+      ),
+      grid: (
+         $spacer * 2,
+      ),
+   ),
+   $spacers
+);
 
-	$w-medium-min: 		961px;
-	$w-medium-max: 		1360px;
+/******************************************************************
+		GRID
+	******************************************************************/
 
-	$w-large-min: 		1361px;
-	$w-large-max: 		1920px;
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-grid-classes: true !default;
 
-	$w-xlarge-min: 		1921px;
+// Grid breakpoints
+$grid-breakpoints: (
+   xs: 0,
+   sm: 481px,
+   md: 961px,
+   lg: 1361px,
+   xl: 1921px,
+) !default;
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+// Grid containers default
+$container-widths: (
+   xs: 90%,
+   sm: 90%,
+   md: 80%,
+   lg: 75%,
+   xl: 70%,
+) !default;
+
+$container-max-widths: (
+   sm: 600px,
+   md: 1000px,
+   lg: 1400px,
+   xl: 1600px,
+) !default;
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+// Grid containers narrow
+$container-widths-narrow: (
+   sm: 600px,
+   md: 800px,
+   lg: 900px,
+   xl: 1200px,
+) !default;
+
+// Grid containers narrow
+$container-widths-wide: (
+   sm: 90%,
+   md: 90%,
+   lg: 90%,
+   xl: 90%,
+) !default;
+
+// Grid columns
+$grid-columns: 12 !default;
+$grid-gutter-width: ($spacer * 2) !default;

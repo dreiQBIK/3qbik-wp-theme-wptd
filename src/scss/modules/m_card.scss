@@ -1,33 +1,23 @@
-
-
 .m_card {
-    background-color: $c3-main;
+   background-color: $c3-main;
 
-    &__img {
-        width: 100%;
-        height: auto;
+   &__img {
+      width: 100%;
+      height: auto;
 
-        &-wrapper {
-            width: 100%;
-            height: auto;
-            margin: 0;
-            overflow: hidden;
+      &-wrapper {
+         width: 100%;
+         height: auto;
+         margin: 0;
+         overflow: hidden;
 
-            @include medium {
-                max-height: 300px;
-            }
-        }
-    }
+         @include media-breakpoint-up(md) {
+            max-height: 300px;
+         }
+      }
+   }
 
-    &__content {
-        padding: 1em 2em 2em;
-    }
-
-    &__heading {
-
-    }
-
-    &__text {
-
-    }
+   &__content {
+      padding: 1em 2em 2em;
+   }
 }

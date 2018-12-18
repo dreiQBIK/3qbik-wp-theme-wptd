@@ -1,63 +1,44 @@
 .wpcf7-form {
+   &__input-wrapper {
+      input,
+      textarea {
+         &.wpcf7-not-valid,
+         &.error {
+            border-bottom: 2px solid $c1-error !important;
+         }
 
-    &__input-wrapper {
+         &.valid {
+            border-bottom: 2px solid $c1-success !important;
+         }
+      }
+   }
 
-        // label {
-        //     color: $c1-error;
-        // }
+   .wpcf7-not-valid-tip,
+   .wpcf7-validation-errors,
+   label.error {
+      padding: 0;
+      border: 0 !important;
+      color: $c1-error !important;
+   }
 
-        input,
-        textarea {
-
-            &.wpcf7-not-valid,
-            &.error {
-                border-bottom: 2px solid  $c1-error !important;
-            }
-
-            &.valid {
-                border-bottom: 2px solid $c1-success !important;
-            }
-        }
-    }
-
-    .wpcf7-not-valid-tip,
-    .wpcf7-validation-errors,
-    label.error {
-        @include fontstyle(
-            $style: "03",
-            $scale: 0.6,
-            $weight: 700
-        );
-        padding: 0;
-        border: 0 !important;
-        color:  $c1-error !important;
-    }
-
-
-    &__checkbox-wrapper {
-
-        .error {
-            margin-top: 8px;
-        }
-    }
+   &__checkbox-wrapper {
+      .error {
+         margin-top: 8px;
+      }
+   }
 }
 
 .wpcf7-mail-sent-ng {
-    border: 0 !important;
-    color:  $c1-error;
+   border: 0 !important;
+   color: $c1-error;
 }
 
 .wpcf7-mail-sent-ok {
-    @include fontstyle(
-        $style: "03",
-        $scale: 0.6,
-        $weight: 700
-    );
-    background: $c3-main;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 3em 2em !important;
-    border: 0 !important;
-    border-bottom: 2px solid $c1-success !important;
-    color:  $c1-success;
+   background: $c3-main;
+   margin-left: 0 !important;
+   margin-right: 0 !important;
+   padding: 3em 2em !important;
+   border: 0 !important;
+   border-bottom: 2px solid $c1-success !important;
+   color: $c1-success;
 }

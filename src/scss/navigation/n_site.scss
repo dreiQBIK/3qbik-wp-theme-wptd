@@ -1,102 +1,100 @@
 .n_site {
-    display: none;
-    margin-top: 2em;
-    margin-bottom: 1.2em;
+   display: none;
+   margin-top: 2em;
+   margin-bottom: 1.2em;
 
-    @include medium {
-        display: block;
-    }
+   @include media-breakpoint-up(md) {
+      display: block;
+   }
 
-    ul {
-        list-style-type: none;
-        padding-left: 0;
-        margin: 0;
+   ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
 
-        li {
-            padding: 0.5em 0;
+      li {
+         padding: 0.5em 0;
 
-            @include medium {
-                display: inline-block;
-                padding: 0 1em;
-            }
+         @include media-breakpoint-up(md) {
+            display: inline-block;
+            padding: 0 1em;
+         }
 
-            &.current-menu-item {
-                color: $c1-second;
-            }
-        }
+         &.current-menu-item {
+            color: $c1-second;
+         }
+      }
 
-        a {
-            color: $c-white;
-        }
-    }
+      a {
+         color: $c-white;
+      }
+   }
 }
 
 .n_site-burger {
-    display: block;
-    position: absolute;
-    width: 40px;
-    height: 42px;
-    cursor: pointer;
-    right: 2.5%;
-    top: 0.7em;
-    transition: all 0.25s ease-in-out;
+   display: block;
+   position: absolute;
+   width: 40px;
+   height: 42px;
+   cursor: pointer;
+   right: 2.5%;
+   top: 0.7em;
+   transition: all 0.25s ease-in-out;
 
-    @include small {
-        right: 5%;
-    }
+   @include media-breakpoint-up(sm) {
+      right: 5%;
+   }
 
-    @include medium {
-        display: none;
-    }
+   @include media-breakpoint-up(md) {
+      display: none;
+   }
 
-    span,
-    span:before,
-    span:after {
-        content: '';
-        position: absolute;
-        display: block;
-        height: 5px;
-        width: 30px;
-        background: $c-white;
-        transition: all 0.15s ease-in-out;
-    }
+   span,
+   span:before,
+   span:after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 5px;
+      width: 30px;
+      background: $c-white;
+      transition: all 0.15s ease-in-out;
+   }
 
-    span {
-        left: 8px;
-        top: 18px;
-    }
+   span {
+      left: 8px;
+      top: 18px;
+   }
 
-    span:before {
-        top: -8px;
+   span:before {
+      top: -8px;
 
-        @include large {
-          top: -9px;
-        }
-    }
+      @include media-breakpoint-up(lg) {
+         top: -9px;
+      }
+   }
 
-    span:after {
-        bottom: -8px;
+   span:after {
+      bottom: -8px;
 
-        @include large {
-          bottom: -9px;
-        }
-    }
+      @include media-breakpoint-up(lg) {
+         bottom: -9px;
+      }
+   }
 
-    &.active {
-
-        span {
-          background-color: transparent;
-        }
-        span:before,
-        span:after {
-            top: 0;
-        }
-        span:before {
-
-            transform: rotate(45deg);
-        }
-        span:after {
-            transform: rotate(-45deg);
-        }
-    }
+   &.active {
+      span {
+         background-color: transparent;
+      }
+      span:before,
+      span:after {
+         top: 0;
+      }
+      span:before {
+         transform: rotate(45deg);
+      }
+      span:after {
+         transform: rotate(-45deg);
+      }
+   }
 }

@@ -1,4 +1,3 @@
-
 /******************************************************************
 STYLESHEET: STYLE
     This is the place where all scss files get imported.
@@ -12,9 +11,26 @@ STYLESHEET: STYLE
 
 // Settings
 @import "settings/set_typography";
+@import "settings/set_functions";
 @import "settings/set_variables";
-@import "settings/set_fonts";
-@import "settings/set_mixins";
+@import "settings/mixins/mix_breakpoints";
+@import "settings/mixins/mix_grid-framework";
+@import "settings/mixins/mix_grid";
+@import "settings/mixins/mix_fonts";
+@import "settings/mixins/mix_visibility";
+@import "settings/mixins/mix_clearfix";
+@import "settings/mixins/mix_text-emphasis";
+@import "settings/mixins/mix_text-hide";
+@import "settings/mixins/mix_text-truncate";
+@import "settings/set_grid";
+@import "settings/utilities/ut_display";
+@import "settings/utilities/ut_flex";
+@import "settings/utilities/ut_spacing";
+@import "settings/utilities/ut_visibility";
+@import "settings/utilities/ut_clearfix";
+@import "settings/utilities/ut_position";
+@import "settings/utilities/ut_text";
+@import "settings/utilities/ut_animations";
 
 // Vendor
 @import "vendor/fontawesome/fontawesome";
@@ -29,9 +45,6 @@ STYLESHEET: STYLE
 @import "layouts/l_404";
 
 // Base
-@import "base/_example-grid";
-@import "base/b_grid";
-@import "base/b_container";
 @import "base/b_defaults";
 @import "base/b_text";
 @import "base/b_links";
@@ -43,13 +56,11 @@ STYLESHEET: STYLE
 @import "modules/m_btn";
 @import "modules/m_card";
 @import "modules/m_form";
-@import "modules/m_search";
 
 // Navigation
 @import "navigation/n_site";
 
 // Overlays
-// @import "overlays/o_site";
 
 // Header
 @import "header/h_site";
@@ -58,7 +69,7 @@ STYLESHEET: STYLE
 @import "footer/f_site";
 
 // Forms
-@import "forms/fm_base";
-@import "forms/fm_choices";
-@import "forms/fm_upload";
-@import "forms/fm_validation";
+// @import "forms/fm_base";
+// @import "forms/fm_choices";
+// @import "forms/fm_upload";
+// @import "forms/fm_validation";

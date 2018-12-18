@@ -1,29 +1,33 @@
 /******************************************************************
-
-    > COLORS
-    > SPACES
-    > GRID_GAPS
-	> GRID_WIDTH
-    > BREAKPOINTS
-
-******************************************************************/
-/******************************************************************
 	COLORS
 ******************************************************************/
 /******************************************************************
-	SPACES
-        between sections vertically
-******************************************************************/
+		FONTS
+	******************************************************************/
 /******************************************************************
-	GRID_GAPS
-        between columns horizontally use xgap
-        between columns vertically use ygap
-******************************************************************/
+		SPACERS
+	******************************************************************/
 /******************************************************************
-	GRID_WIDTH
-******************************************************************/
+		GRID
+	******************************************************************/
 /******************************************************************
-	BREAKPOINTS
+
+    SETTINGS: FONTS
+
+    USAGE:
+    @include fontstyle(
+        $style: false, $scale: 1,
+        $family: false, $weight: false, $color: false,
+        $fz-xs: false, $lh-xs: false, $mb-xs: false,
+        $fz-sm: false, $lh-sm: false, $mb-sm: false,
+        $fz-md: false, $lh-md: false, $mb-md: false,
+        $fz-lg: false, $lh-lg: false, $mb-lg: false,
+        $fz-xl: false, $lh-xl: false, $mb-xl: false
+    );
+
+    USAGE SHORT:
+    @include fontstyle("main-01");
+
 ******************************************************************/
 /******************************************************************
 
@@ -41,17 +45,17 @@
     );
 
     USAGE SHORT:
-    @include fontstyle("01");
+    @include fontstyle("main-01");
 
 ******************************************************************/
 body.wp-admin {
-  background: #F5F8FB !important;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+  background: white !important;
+  font-family: "KlavikaWeb", "Helvetica", "Arial", sans-serif !important;
 }
 
 body.wp-admin #contextual-help-back,
 body.wp-admin .contextual-help-tabs .active {
-  background: #F5F8FB !important;
+  background: white !important;
 }
 
 body.wp-admin #wpbody-content #wp-content-editor-tools {
@@ -102,7 +106,7 @@ body.wp-admin #wpbody-content .view-switch a.current:before {
 body.wp-admin #wpbody-content a,
 body.wp-admin #wpbody-content button.button-link {
   transition: 0.2s ease-in-out !important;
-  color: #202A35 !important;
+  color: #202a35 !important;
 }
 
 body.wp-admin #wpbody-content a:hover,
@@ -135,7 +139,7 @@ body.wp-admin #wpbody-content tfoot th:before {
 
 body.wp-admin #wpbody-content tbody a {
   transition: 0.2s ease-in-out !important;
-  color: #202A35 !important;
+  color: #202a35 !important;
 }
 
 body.wp-admin #wpbody-content tbody a:hover {
@@ -172,18 +176,18 @@ body.wp-admin #wpbody-content .page-title-action,
 body.wp-admin #wpbody-content input.button,
 body.wp-admin #wpbody-content button.button {
   transition: 0.2s ease-in-out !important;
-  background: #f8f8f8 !important;
-  border-color: #ebebeb !important;
+  background: white !important;
+  border-color: #f2f2f2 !important;
   box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3) !important;
   text-shadow: none !important;
-  color: #202A35 !important;
+  color: #202a35 !important;
 }
 
 body.wp-admin #wpbody-content .page-title-action:after,
 body.wp-admin #wpbody-content input.button:after,
 body.wp-admin #wpbody-content button.button:after {
   transition: 0.2s ease-in-out !important;
-  color: #202A35 !important;
+  color: #202a35 !important;
 }
 
 body.wp-admin #wpbody-content .page-title-action:hover,
@@ -238,7 +242,7 @@ body.wp-admin #wpbody-content #publish:hover {
 
 body.wp-admin #wpbody-content button.widget-control-close {
   transition: 0.2s ease-in-out !important;
-  color: #202A35 !important;
+  color: #202a35 !important;
 }
 
 body.wp-admin #wpbody-content button.widget-control-close:hover {
@@ -275,13 +279,13 @@ body.wp-admin .mce-menu-item:hover .mce-text {
 
 body.wp-admin .mce-menu-item .mce-text {
   transition: 0.1s ease-in-out !important;
-  color: #202A35 !important;
+  color: #202a35 !important;
   font-size: 1rem !important;
 }
 
 body.wp-admin #wpfooter a {
   transition: 0.2s ease-in-out !important;
-  color: #202A35 !important;
+  color: #202a35 !important;
 }
 
 body.wp-admin #wpfooter a:hover {
@@ -372,7 +376,7 @@ body.wp-admin #wpadminbar #wp-admin-bar-top-secondary > li ul li a {
 body.wp-admin #adminmenuwrap,
 body.wp-admin #adminmenu,
 body.wp-admin #adminmenuback {
-  background: #202A35 !important;
+  background: #202a35 !important;
 }
 
 body.wp-admin #adminmenuwrap > li:after,
@@ -550,7 +554,7 @@ body.wp-admin li.wp-not-current-submenu .wp-submenu li .update-plugins {
 }
 
 body.wp-admin #wpbody-content #acf-field-group-wrap .footer.-blue {
-  background-color: #202A35 !important;
+  background-color: #202a35 !important;
 }
 
 body.wp-admin #wpbody-content #acf-field-group-wrap .footer.-blue a {
@@ -597,7 +601,7 @@ body.wp-admin #wpbody-content .ui-sortable a.dashicons:hover {
 }
 
 body.wp-admin #wpbody-content .ui-sortable-handle span.acf-fc-layout-order {
-  color: #202A35 !important;
+  color: #202a35 !important;
 }
 
 body.wp-admin #wpbody-content .acf-switch.-on {

@@ -1,0 +1,448 @@
+/******************************************************************
+
+    SETTINGS: FONTS
+
+    USAGE:
+    @include fontstyle(
+        $style: false, $scale: 1,
+        $family: false, $weight: false, $color: false,
+        $fz-xs: false, $lh-xs: false, $mb-xs: false,
+        $fz-sm: false, $lh-sm: false, $mb-sm: false,
+        $fz-md: false, $lh-md: false, $mb-md: false,
+        $fz-lg: false, $lh-lg: false, $mb-lg: false,
+        $fz-xl: false, $lh-xl: false, $mb-xl: false
+    );
+
+    USAGE SHORT:
+    @include fontstyle("main-01");
+
+******************************************************************/
+
+@mixin fontstyle(
+   $style: false,
+   $scale: 1,
+   $family: false,
+   $weight: false,
+   $color: false,
+   $fz-xs: false,
+   $lh-xs: false,
+   $mb-xs: false,
+   $fz-sm: false,
+   $lh-sm: false,
+   $mb-sm: false,
+   $fz-md: false,
+   $lh-md: false,
+   $mb-md: false,
+   $fz-lg: false,
+   $lh-lg: false,
+   $mb-lg: false,
+   $fz-xl: false,
+   $lh-xl: false,
+   $mb-xl: false
+) {
+   //settings
+   $family-default: $f1-second;
+   $weight-default: 700;
+   $color-default: $c1-main;
+
+   //base
+   $fz-xs-default: 1rem;
+   $lh-xs-default: 1.4em;
+   $mb-xs-default: 0.5em;
+   //small
+   $fz-sm-default: 1rem;
+   $lh-sm-default: 1.4em;
+   $mb-sm-default: 0.5em;
+   //medium
+   $fz-md-default: 1rem;
+   $lh-md-default: 1.4em;
+   $mb-md-default: 0.5em;
+   //large
+   $fz-lg-default: 1rem;
+   $lh-lg-default: 1.4em;
+   $mb-lg-default: 0.5em;
+   //xlarge
+   $fz-xl-default: 1rem;
+   $lh-xl-default: 1.4em;
+   $mb-xl-default: 0.5em;
+
+   // default heading h1
+   @if $style == "main-01" {
+      //settings
+      $family-default: $f1-main;
+      $weight-default: 700;
+      $color-default: $c-white;
+
+      //base
+      $fz-xs-default: 2rem;
+      $lh-xs-default: 1.3em;
+      $mb-xs-default: 0.5em;
+      //small
+      $fz-sm-default: 2.6rem;
+      $lh-sm-default: 1.2em;
+      $mb-sm-default: 0.5em;
+      //medium
+      $fz-md-default: 3.2rem;
+      $lh-md-default: 1.2em;
+      $mb-md-default: 0.5em;
+      //large
+      $fz-lg-default: 3.8rem;
+      $lh-lg-default: 1.2em;
+      $mb-lg-default: 0.5em;
+      //xlarge
+      $fz-xl-default: 4.2rem;
+      $lh-xl-default: 1.2em;
+      $mb-xl-default: 0.5em;
+   }
+      // default heading h2
+   @else if $style == "main-02" {
+      //settings
+      $family-default: $f1-main;
+      $weight-default: 700;
+      $color-default: $c1-main;
+
+      //base
+      $fz-xs-default: 1.4rem;
+      $lh-xs-default: 1.2em;
+      $mb-xs-default: 0.5em;
+      //small
+      $fz-sm-default: 1.6rem;
+      $lh-sm-default: 1.2em;
+      $mb-sm-default: 0.5em;
+      //medium
+      $fz-md-default: 1.8rem;
+      $lh-md-default: 1.2em;
+      $mb-md-default: 0.5em;
+      //large
+      $fz-lg-default: 2rem;
+      $lh-lg-default: 1.2em;
+      $mb-lg-default: 0.5em;
+      //xlarge
+      $fz-xl-default: 2rem;
+      $lh-xl-default: 1.2em;
+      $mb-xl-default: 0.5em;
+   }
+      // default heading h3
+   @else if $style == "main-03" {
+      //settings
+      $family-default: $f1-main;
+      $weight-default: 700;
+      $color-default: $c1-main;
+
+      //base
+      $fz-xs-default: 2rem;
+      $lh-xs-default: 1.2em;
+      $mb-xs-default: 0.5em;
+      //small
+      $fz-sm-default: 2.6rem;
+      $lh-sm-default: 1.2em;
+      $mb-sm-default: 0.5em;
+      //medium
+      $fz-md-default: 4.4rem;
+      $lh-md-default: 1.2em;
+      $mb-md-default: 0.5em;
+      //large
+      $fz-lg-default: 5rem;
+      $lh-lg-default: 1.2em;
+      $mb-lg-default: 0.5em;
+      //xlarge
+      $fz-xl-default: 5.2rem;
+      $lh-xl-default: 1.2em;
+      $mb-xl-default: 0.5em;
+   } @else if $style == "second-01" {
+      //settings
+      $family-default: $f1-second;
+      $weight-default: 700;
+      $color-default: $c1-second;
+
+      //base
+      $fz-xs-default: 1.6rem;
+      $lh-xs-default: 1.2em;
+      $mb-xs-default: 0.5em;
+      //small
+      $fz-sm-default: 2rem;
+      $lh-sm-default: 1.2em;
+      $mb-sm-default: 0.5em;
+      //medium
+      $fz-md-default: 2.2rem;
+      $lh-md-default: 1.2em;
+      $mb-md-default: 0.5em;
+      //large
+      $fz-lg-default: 2.4rem;
+      $lh-lg-default: 1.2em;
+      $mb-lg-default: 0.5em;
+      //xlarge
+      $fz-xl-default: 2.6rem;
+      $lh-xl-default: 1.4em;
+      $mb-xl-default: 0.5em;
+   } @else if $style == "second-02" {
+      //settings
+      $family-default: $f1-second;
+      $weight-default: 700;
+      $color-default: $c1-second;
+
+      //base
+      $fz-xs-default: 1.6rem;
+      $lh-xs-default: 1.2em;
+      $mb-xs-default: 0.5em;
+      //small
+      $fz-sm-default: 2rem;
+      $lh-sm-default: 1.2em;
+      $mb-sm-default: 0.5em;
+      //medium
+      $fz-md-default: 2rem;
+      $lh-md-default: 1.2em;
+      $mb-md-default: 0.5em;
+      //large
+      $fz-lg-default: 2rem;
+      $lh-lg-default: 1.2em;
+      $mb-lg-default: 0.5em;
+      //xlarge
+      $fz-xl-default: 2.2rem;
+      $lh-xl-default: 1.4em;
+      $mb-xl-default: 0.5em;
+   }
+      // default running text
+   @else if $style == "third-01" {
+      //settings
+      $family-default: $f1-third;
+      $weight-default: 400;
+      $color-default: $c-white;
+
+      //base
+      $fz-xs-default: 1rem;
+      $lh-xs-default: 1.5em;
+      $mb-xs-default: 0.5em;
+      //small
+      $fz-sm-default: 1rem;
+      $lh-sm-default: 1.5em;
+      $mb-sm-default: 0.5em;
+      //medium
+      $fz-md-default: 1.1rem;
+      $lh-md-default: 1.5em;
+      $mb-md-default: 0.5em;
+      //large
+      $fz-lg-default: 1.1rem;
+      $lh-lg-default: 1.5em;
+      $mb-lg-default: 0.5em;
+      //xlarge
+      $fz-xl-default: 1.2rem;
+      $lh-xl-default: 1.5em;
+      $mb-xl-default: 0.5em;
+   }
+      // default text h3
+   @else if $style == "third-02" {
+      //settings
+      $family-default: $f3-third;
+      $weight-default: normal;
+      $color-default: $c1-second;
+
+      //base
+      $fz-xs-default: 1.5rem;
+      $lh-xs-default: 1.5em;
+      $mb-xs-default: 0.5em;
+      //small
+      $fz-sm-default: 1.5rem;
+      $lh-sm-default: 1.5em;
+      $mb-sm-default: 0.5em;
+      //medium
+      $fz-md-default: 1.8rem;
+      $lh-md-default: 1.5em;
+      $mb-md-default: 0.5em;
+      //large
+      $fz-lg-default: 2.2rem;
+      $lh-lg-default: 1.5em;
+      $mb-lg-default: 0.5em;
+      //xlarge
+      $fz-xl-default: 2.2rem;
+      $lh-xl-default: 1.5em;
+      $mb-xl-default: 0.5em;
+   }
+      // default text h4
+   @else if $style == "third-03" {
+      //settings
+      $family-default: $f3-third;
+      $weight-default: normal;
+      $color-default: $c1-second;
+
+      //base
+      $fz-xs-default: 1.2rem;
+      $lh-xs-default: 1.5em;
+      $mb-xs-default: 0.5em;
+      //small
+      $fz-sm-default: 1.2rem;
+      $lh-sm-default: 1.5em;
+      $mb-sm-default: 0.5em;
+      //medium
+      $fz-md-default: 1.4rem;
+      $lh-md-default: 1.5em;
+      $mb-md-default: 0.5em;
+      //large
+      $fz-lg-default: 1.6rem;
+      $lh-lg-default: 1.5em;
+      $mb-lg-default: 0.5em;
+      //xlarge
+      $fz-xl-default: 1.6rem;
+      $lh-xl-default: 1.5em;
+      $mb-xl-default: 0.5em;
+   }
+      // default text h4
+   @else if $style == "third-04" {
+      //settings
+      $family-default: $f3-third;
+      $weight-default: normal;
+      $color-default: $c3-main;
+
+      //base
+      $fz-xs-default: 1.1rem;
+      $lh-xs-default: 1.5em;
+      $mb-xs-default: 0.5em;
+      //small
+      $fz-sm-default: 1.1rem;
+      $lh-sm-default: 1.5em;
+      $mb-sm-default: 0.5em;
+      //medium
+      $fz-md-default: 1.3rem;
+      $lh-md-default: 1.5em;
+      $mb-md-default: 0.5em;
+      //large
+      $fz-lg-default: 1.4rem;
+      $lh-lg-default: 1.5em;
+      $mb-lg-default: 0.5em;
+      //xlarge
+      $fz-xl-default: 1.4rem;
+      $lh-xl-default: 1.5em;
+      $mb-xl-default: 0.5em;
+   }
+      // card heading
+   @else if $style == "third-05" {
+      //settings
+      $family-default: $f3-third;
+      $weight-default: normal;
+      $color-default: $c1-second;
+
+      //base
+      $fz-xs-default: 1.3rem;
+      $lh-xs-default: 1.5em;
+      $mb-xs-default: 0.5em;
+      //small
+      $fz-sm-default: 1.3rem;
+      $lh-sm-default: 1.5em;
+      $mb-sm-default: 0.5em;
+      //medium
+      $fz-md-default: 1.4rem;
+      $lh-md-default: 1.5em;
+      $mb-md-default: 0.5em;
+      //large
+      $fz-lg-default: 1.5rem;
+      $lh-lg-default: 1.5em;
+      $mb-lg-default: 0.5em;
+      //xlarge
+      $fz-xl-default: 1.5rem;
+      $lh-xl-default: 1.5em;
+      $mb-xl-default: 0.5em;
+   }
+
+   @if $family {
+      font-family: $family;
+   } @else {
+      font-family: $family-default;
+   }
+
+   @if $color {
+      color: $color;
+   } @else {
+      color: $color-default;
+   }
+
+   @if $weight {
+      font-weight: $weight;
+   } @else {
+      font-weight: $weight-default;
+   }
+
+   @if $fz-xs {
+      font-size: $fz-xs * $scale;
+   } @else {
+      font-size: $fz-xs-default * $scale;
+   }
+   @if $lh-xs {
+      line-height: $lh-xs;
+   } @else {
+      line-height: $lh-xs-default;
+   }
+   @if $mb-xs {
+      margin-bottom: $mb-xs;
+   } @else {
+      margin-bottom: $mb-xs-default;
+   }
+
+   @include media-breakpoint-up(sm) {
+      @if $fz-sm {
+         font-size: $fz-sm * $scale;
+      } @else {
+         font-size: $fz-sm-default * $scale;
+      }
+      @if $lh-sm {
+         line-height: $lh-sm;
+      } @else {
+         line-height: $lh-sm-default;
+      }
+      @if $mb-sm {
+         margin-bottom: $mb-sm;
+      } @else {
+         margin-bottom: $mb-sm-default;
+      }
+   }
+   @include media-breakpoint-up(md) {
+      @if $fz-md {
+         font-size: $fz-md * $scale;
+      } @else {
+         font-size: $fz-md-default * $scale;
+      }
+      @if $lh-md {
+         line-height: $lh-md;
+      } @else {
+         line-height: $lh-md-default;
+      }
+      @if $mb-md {
+         margin-bottom: $mb-md;
+      } @else {
+         margin-bottom: $mb-md-default;
+      }
+   }
+   @include media-breakpoint-up(lg) {
+      @if $fz-lg {
+         font-size: $fz-lg * $scale;
+      } @else {
+         font-size: $fz-lg-default * $scale;
+      }
+      @if $lh-lg {
+         line-height: $lh-lg;
+      } @else {
+         line-height: $lh-lg-default;
+      }
+      @if $mb-lg {
+         margin-bottom: $mb-lg;
+      } @else {
+         margin-bottom: $mb-lg-default;
+      }
+   }
+   @include media-breakpoint-up(xl) {
+      @if $fz-xl {
+         font-size: $fz-xl * $scale;
+      } @else {
+         font-size: $fz-xl-default * $scale;
+      }
+      @if $lh-xl {
+         line-height: $lh-xl;
+      } @else {
+         line-height: $lh-xl-default;
+      }
+      @if $mb-xl {
+         margin-bottom: $mb-xl;
+      } @else {
+         margin-bottom: $mb-xl-default;
+      }
+   }
+}

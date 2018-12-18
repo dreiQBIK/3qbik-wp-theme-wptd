@@ -1,0 +1,401 @@
+// Breakpoint viewport sizes and media queries.
+//
+// Breakpoints are defined as a map of (name: minimum width), order from small to large:
+//
+//    (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+//
+// The map defined in the `$grid-breakpoints` global variable is used as the `$breakpoints` argument by default.
+
+// Name of the next breakpoint, or null for the last breakpoint.
+//
+//    >> breakpoint-next(sm)
+//    md
+//    >> breakpoint-next(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    md
+//    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))
+//    md
+@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+  $n: index($breakpoint-names, $name);
+  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+//
+//    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    576px
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+// Maximum breakpoint width. Null for the largest (last) breakpoint.
+// The maximum value is calculated as the minimum of the next one less 0.02px
+// to work around the limitations of `min-` and `max-` prefixes and viewports with fractional widths.
+// See https://www.w3.org/TR/mediaqueries-4/#mq-min-max
+// Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
+// See https://bugs.webkit.org/show_bug.cgi?id=178261
+//
+//    >> breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    767.98px
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $next: breakpoint-next($name, $breakpoints);
+  @return if($next, breakpoint-min($next, $breakpoints) - .02px, null);
+}
+
+// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash infront.
+// Useful for making responsive utilities.
+//
+//    >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    ""  (Returns a blank string)
+//    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    "-sm"
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media that spans multiple breakpoint widths.
+// Makes the @content apply between the min and max breakpoints
+@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($lower, $breakpoints);
+  $max: breakpoint-max($upper, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($lower, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-down($upper, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+// Media between the breakpoint's minimum and maximum widths.
+// No minimum for the smallest breakpoint, and no maximum for the largest one.
+// Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
+@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  $max: breakpoint-max($name, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($name, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-down($name, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+
+/******************************************************************
+
+    SETTINGS: FONTS
+
+    USAGE:
+    @include fontstyle(
+        $style: false, $scale: 1,
+        $family: false, $weight: false, $color: false,
+        $fz-xs: false, $lh-xs: false, $mb-xs: false,
+        $fz-sm: false, $lh-sm: false, $mb-sm: false,
+        $fz-md: false, $lh-md: false, $mb-md: false,
+        $fz-lg: false, $lh-lg: false, $mb-lg: false,
+        $fz-xl: false, $lh-xl: false, $mb-xl: false
+    );
+
+    USAGE SHORT:
+    @include fontstyle("main-01");
+
+******************************************************************/
+
+// FONTS
+$f1-main: 'FuturaLTPro-XBold', sans-serif;
+
+$f1-second: 'KlavikaWeb', 'Helvetica', 'Arial', sans-serif;
+
+$f1-third: 'OfficinaSansITCStd-Book', 'Helvetica', 'Arial', sans-serif;
+$f2-third: 'OfficinaSansITCStd-BookItalic', 'Helvetica', 'Arial', sans-serif;
+$f3-third: 'OfficinaSansITCStd-Bold', 'Helvetica', 'Arial', sans-serif;
+$f4-third: 'OfficinaSansITCStd-BoldItalic', 'Helvetica', 'Arial', sans-serif;
+
+@mixin fontstyle(
+  $style: false, $scale: 1,
+  $family: false, $weight: false, $color: false,
+  $fz-xs: false, $lh-xs: false, $mb-xs: false,
+  $fz-sm: false, $lh-sm: false, $mb-sm: false,
+  $fz-md: false, $lh-md: false, $mb-md: false,
+  $fz-lg: false, $lh-lg: false, $mb-lg: false,
+  $fz-xl: false, $lh-xl: false, $mb-xl: false
+) {
+
+  //settings
+  $family-default: $f1-second;
+  $weight-default: 700;
+  $color-default: $c1-main;
+
+  //base
+  $fz-xs-default: 1rem;
+  $lh-xs-default: 1.4em;
+  $mb-xs-default: 0.5em;
+  //small
+  $fz-sm-default: 1rem;
+  $lh-sm-default: 1.4em;
+  $mb-sm-default: 0.5em;
+  //medium
+  $fz-md-default: 1rem;
+  $lh-md-default: 1.4em;
+  $mb-md-default: 0.5em;
+  //large
+  $fz-lg-default: 1rem;
+  $lh-lg-default: 1.4em;
+  $mb-lg-default: 0.5em;
+  //xlarge
+  $fz-xl-default: 1rem;
+  $lh-xl-default: 1.4em;
+  $mb-xl-default: 0.5em;
+
+  @if $style == "main-01" {
+    //settings
+    $family-default: $f1-main;
+    $weight-default: 700;
+    $color-default: $c-white;
+
+    //base
+    $fz-xs-default: 2rem;
+    $lh-xs-default: 1.2em;
+    $mb-xs-default: 0.5em;
+    //small
+    $fz-sm-default: 2.6rem;
+    $lh-sm-default: 1.2em;
+    $mb-sm-default: 0.5em;
+    //medium
+    $fz-md-default: 3.2rem;
+    $lh-md-default: 1.2em;
+    $mb-md-default: 0.5em;
+    //large
+    $fz-lg-default: 3.8rem;
+    $lh-lg-default: 1.2em;
+    $mb-lg-default: 0.5em;
+    //xlarge
+    $fz-xl-default: 4.2rem;
+    $lh-xl-default: 1.2em;
+    $mb-xl-default: 0.5em;
+  } @else if $style == "second-01" {
+    //settings
+    $family-default: $f1-second;
+    $weight-default: 700;
+    $color-default: $c1-second;
+
+    //base
+    $fz-xs-default: 1.6rem;
+    $lh-xs-default: 1.2em;
+    $mb-xs-default: 0.5em;
+    //small
+    $fz-sm-default: 2rem;
+    $lh-sm-default: 1.2em;
+    $mb-sm-default: 0.5em;
+    //medium
+    $fz-md-default: 2.2rem;
+    $lh-md-default: 1.2em;
+    $mb-md-default: 0.5em;
+    //large
+    $fz-lg-default: 2.4rem;
+    $lh-lg-default: 1.2em;
+    $mb-lg-default: 0.5em;
+    //xlarge
+    $fz-xl-default: 2.6rem;
+    $lh-xl-default: 1.4em;
+    $mb-xl-default: 0.5em;
+  } @else if $style == "second-02" {
+    //settings
+    $family-default: $f1-second;
+    $weight-default: 700;
+    $color-default: $c1-second;
+
+    //base
+    $fz-xs-default: 1.6rem;
+    $lh-xs-default: 1.2em;
+    $mb-xs-default: 0.5em;
+    //small
+    $fz-sm-default: 2rem;
+    $lh-sm-default: 1.2em;
+    $mb-sm-default: 0.5em;
+    //medium
+    $fz-md-default: 2rem;
+    $lh-md-default: 1.2em;
+    $mb-md-default: 0.5em;
+    //large
+    $fz-lg-default: 2rem;
+    $lh-lg-default: 1.2em;
+    $mb-lg-default: 0.5em;
+    //xlarge
+    $fz-xl-default: 2.2rem;
+    $lh-xl-default: 1.4em;
+    $mb-xl-default: 0.5em;
+  } @else if $style == "third-01" {
+    //settings
+    $family-default: $f1-third;
+    $weight-default: 400;
+    $color-default: $c-white;
+
+    //base
+    $fz-lg-default: 1rem;
+    $lh-lg-default: 1.5em;
+    $mb-lg-default: 0.5em;
+    //small
+    $fz-lg-default: 1rem;
+    $lh-lg-default: 1.5em;
+    $mb-lg-default: 0.5em;
+    //medium
+    $fz-lg-default: 1.1rem;
+    $lh-lg-default: 1.5em;
+    $mb-lg-default: 0.5em;
+    //large
+    $fz-lg-default: 1.1rem;
+    $lh-lg-default: 1.5em;
+    $mb-lg-default: 0.5em;
+    //xlarge
+    $fz-xl-default: 1.2rem;
+    $lh-xl-default: 1.5em;
+    $mb-xl-default: 0.5em;
+  }
+
+  @if $family {
+    font-family: $family;
+  } @else {
+    font-family: $family-default;
+  }
+
+  @if $color {
+    color: $color;
+  } @else {
+    color: $color-default;
+  }
+
+  @if $weight {
+    font-weight: $weight;
+  } @else {
+    font-weight: $weight-default;
+  }
+
+  @if $fz-xs {
+    font-size: $fz-xs * $scale;
+  } @else {
+    font-size: $fz-xs-default * $scale;
+  }
+  @if $lh-xs {
+    line-height: $lh-xs;
+  } @else {
+    line-height: $lh-xs-default;
+  }
+  @if $mb-xs {
+    margin-bottom: $mb-xs;
+  } @else {
+    margin-bottom: $mb-xs-default;
+  }
+
+  @include media-breakpoint-up(sm) {
+    @if $fz-sm {
+      font-size: $fz-sm * $scale;
+    } @else {
+      font-size: $fz-sm-default * $scale;
+    }
+    @if $lh-sm {
+      line-height: $lh-sm;
+    } @else {
+      line-height: $lh-sm-default;
+    }
+    @if $mb-sm {
+      margin-bottom: $mb-sm;
+    } @else {
+      margin-bottom: $mb-sm-default;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    @if $fz-md {
+      font-size: $fz-md * $scale;
+    } @else {
+      font-size: $fz-md-default * $scale;
+    }
+    @if $lh-md {
+      line-height: $lh-md;
+    } @else {
+      line-height: $lh-md-default;
+    }
+    @if $mb-md {
+      margin-bottom: $mb-md;
+    } @else {
+      margin-bottom: $mb-md-default;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    @if $fz-lg {
+      font-size: $fz-lg * $scale;
+    } @else {
+      font-size: $fz-lg-default * $scale;
+    }
+    @if $lh-lg {
+      line-height: $lh-lg;
+    } @else {
+      line-height: $lh-lg-default;
+    }
+    @if $mb-lg {
+      margin-bottom: $mb-lg;
+    } @else {
+      margin-bottom: $mb-lg-default;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    @if $fz-xl {
+      font-size: $fz-xl * $scale;
+    } @else {
+      font-size: $fz-xl-default * $scale;
+    }
+    @if $lh-xl {
+      line-height: $lh-xl;
+    } @else {
+      line-height: $lh-xl-default;
+    }
+    @if $mb-xl {
+      margin-bottom: $mb-xl;
+    } @else {
+      margin-bottom: $mb-xl-default;
+    }
+  }
+}
+
