@@ -4,13 +4,21 @@ WordPress Theme with Timber, ACF and acf-builder
 
 ## Installing the Theme
 
-Install this theme as you would any other, and be sure the Timber plugin is activated. But hey, let's break it down into some bullets:
+Install this theme as you would any other, and be sure the Timber plugin is activated (see dependencies). But hey, let's break it down into some bullets:
 
 1. Make sure you have installed the plugin for the [Timber Library](https://wordpress.org/plugins/timber-library/) (and Advanced Custom Fields - they [play quite nicely](http://timber.github.io/timber/#acf-cookbook) together).
 2. Download the zip for this theme (or clone it) and move it to `wp-content/themes` in your WordPress installation.
 3. Rename the folder to something that makes sense for your website (generally no spaces and all lowercase).
 4. Activate the theme in Appearance > Themes.
 5. Do your thing! And read [the docs](https://timber.github.io/docs/).
+
+### Dependencies
+
+This theme is build with Timber and ACF (including acf-builder). **Therefore you need to install these plugins first, before you activate the theme!**
+
+-  ACF PRO
+-  Timber
+-  Yoast SEO (for title and description tags - they will not show up without it)
 
 ## What's here?
 
@@ -28,11 +36,3 @@ The [main Timber Wiki](https://timber.github.io/docs/) is super great, so refere
 
 -  [Twig for Timber Cheatsheet](http://notlaura.com/the-twig-for-timber-cheatsheet/)
 -  [Timber and Twig Reignited My Love for WordPress](https://css-tricks.com/timber-and-twig-reignited-my-love-for-wordpress/) on CSS-Tricks
-
-## Dependencies
-
-This theme is build with Timber and ACF (including acf-builder). _Therefore you need to install these plugins first, before you activate the theme!_
-
--  ACF PRO
--  Timber
--  Yoast SEO (for title and description tags - they will not show up without it)
