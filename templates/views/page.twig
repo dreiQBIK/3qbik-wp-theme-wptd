@@ -2,14 +2,13 @@
 
 {% block content %}
 
-    <div class="main__inner pt-large">
-        <header class="container">
-            <div class="container__inner">
-                <h1 class="heading-1">{{ post.title }}</h1>
-            </div>
-        </header>
+   <div class="main__inner l_page">
+      <header class="container l_page__header">
+         <h1 class="heading-1">{{ post.title }}</h1>
+      </header>
 
-        {% include '/partials/layouts/l_page_builder.twig' %}
-    </div>
+      {% include '/partials/layouts/l_page_builder.twig' %}
+
+   </div>
 
 {% endblock %}

@@ -5328,7 +5328,7 @@ template {
 }
 
 .text-c1-accent {
-  color: #879cb1 !important;
+  color: #96a9bb !important;
 }
 
 .text-c1-hint {
@@ -9160,6 +9160,18 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Brands';
 }
 
+.l_page {
+  background-color: #879cb1;
+}
+
+.l_page__header {
+  background-color: #788fa7;
+}
+
+.l_page > .container {
+  background-color: #788fa7;
+}
+
 .l_comments {
   background-color: #eeeeee;
   padding: 2em;
@@ -9359,7 +9371,7 @@ body:after {
 }
 
 ::selection {
-  background: #879cb1;
+  background: #96a9bb;
   text-shadow: none;
 }
 

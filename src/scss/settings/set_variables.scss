@@ -33,7 +33,7 @@ $c2-third: #d96a44;
 $c3-third: #ff855b;
 
 // specials
-$c1-accent: $c3-main;
+$c1-accent: lighten($c3-main, 5%);
 $c1-hint: $c1-third;
 $c1-error: #d6445c;
 $c1-success: #00b878;

@@ -1,0 +1,11 @@
+.l_page {
+   background-color: $c3-main;
+
+   &__header {
+      background-color: darken($c3-main, 5%);
+   }
+
+   > .container {
+      background-color: darken($c3-main, 5%);
+   }
+}

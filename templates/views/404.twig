@@ -2,16 +2,13 @@
 
 {% block content %}
 
-    <div class="main__inner pt-large l_404">
-        <header class="container sp-large">
-            <div class="container__inner container__inner--narrow">
-                <h1 class="heading-1">
-                    {{ __( '404 - Seite nicht gefunden', 'wptd' ) }}
-                </h1>
-                <a class="m_btn m_btn--dark" href="/">Zurück zur Startseite</a>
-            </div>
-        </header>
-    </div>
-
+   <div class="main__inner l_404">
+      <header class="container">
+         <h1 class="heading-1">
+            {{ __( '404 - Seite nicht gefunden', 'wptd' ) }}
+         </h1>
+         <a class="m_btn m_btn--dark" href="/">Zurück zur Startseite</a>
+      </header>
+   </div>
 
 {% endblock %}

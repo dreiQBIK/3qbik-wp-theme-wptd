@@ -149,17 +149,17 @@ body.login .submit .button:hover {
 
 body.login #nav a,
 body.login #backtoblog a {
-  color: #879cb1;
+  color: #96a9bb;
 }
 
 body.login #nav a:link,
 body.login #backtoblog a:link {
-  color: #879cb1;
+  color: #96a9bb;
 }
 
 body.login #nav a:visited,
 body.login #backtoblog a:visited {
-  color: #879cb1;
+  color: #96a9bb;
 }
 
 body.login #nav a:hover,
@@ -169,7 +169,7 @@ body.login #backtoblog a:hover {
 
 body.login #nav a:active,
 body.login #backtoblog a:active {
-  color: #879cb1;
+  color: #96a9bb;
 }
 
 body.login .message {
@@ -196,15 +196,15 @@ body.login #login_error strong {
 }
 
 body.login #login_error a {
-  color: #879cb1;
+  color: #96a9bb;
 }
 
 body.login #login_error a:link {
-  color: #879cb1;
+  color: #96a9bb;
 }
 
 body.login #login_error a:visited {
-  color: #879cb1;
+  color: #96a9bb;
 }
 
 body.login #login_error a:hover {
@@ -212,7 +212,7 @@ body.login #login_error a:hover {
 }
 
 body.login #login_error a:active {
-  color: #879cb1;
+  color: #96a9bb;
 }
 
 /*# sourceMappingURL=../../maps/style-login.css.map */
