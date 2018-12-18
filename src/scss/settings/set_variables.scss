@@ -21,9 +21,9 @@ $c14-grey: #eeeeee;
 $c-white: #ffffff;
 
 // project
-$c1-main: #202a35;
-$c2-main: #364250;
-$c3-main: #f5f8fb;
+$c1-main: #2c3e50;
+$c2-main: #384d62;
+$c3-main: #879cb1;
 
 $c1-second: #fff191;
 $c2-second: #eede70;
@@ -33,7 +33,7 @@ $c2-third: #d96a44;
 $c3-third: #ff855b;
 
 // specials
-$c1-accent: #ccd9e8;
+$c1-accent: $c3-main;
 $c1-hint: $c1-third;
 $c1-error: #d6445c;
 $c1-success: #00b878;
@@ -61,14 +61,14 @@ $theme-colors: map-merge(
 		FONTS
 	******************************************************************/
 
-$f1-main: "Open Sans", sans-serif;
+$f1-main: "FuturaLTPro-XBold", sans-serif;
 
-$f1-second: "Open Sans", "Helvetica", "Arial", sans-serif;
+$f1-second: "KlavikaWeb", "Helvetica", "Arial", sans-serif;
 
-$f1-third: "Merriweather", "Times New Roman", serif;
-$f2-third: "Merriweather", "Times New Roman", serif;
-$f3-third: "Merriweather", "Times New Roman", serif;
-$f4-third: "Merriweather", "Times New Roman", serif;
+$f1-third: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
+$f2-third: "OfficinaSansITCStd-BookItalic", "Helvetica", "Arial", sans-serif;
+$f3-third: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
+$f4-third: "OfficinaSansITCStd-BoldItalic", "Helvetica", "Arial", sans-serif;
 
 /******************************************************************
 		SPACERS

@@ -7,8 +7,8 @@ html {
 
 body {
    position: relative;
-   color: $c1-main;
-   background-color: $c-white;
+   color: $c-white;
+   background-color: $c2-main;
    overflow-x: hidden;
 
    @include fontstyle($style: "third-01");

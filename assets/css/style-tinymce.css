@@ -152,7 +152,7 @@
 }
 
 .tinymce a {
-  transition: color 0.15 ease-in-out;
+  transition: color 0.15s ease-in-out;
   color: #ff855b;
   text-decoration: none;
 }
@@ -338,7 +338,7 @@
   font-size: 1rem;
   line-height: 1.5em;
   margin-bottom: 0.5em;
-  color: white;
+  color: #e4e9ed;
 }
 
 @media (min-width: 481px) {
@@ -436,7 +436,7 @@
   margin-bottom: 0.2em;
   font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
-  color: #f5f8fb;
+  color: #879cb1;
 }
 
 .tinymce a {
@@ -471,7 +471,7 @@ body#tinymce {
 body#tinymce h3 {
   margin-top: 1em;
   font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-  color: #f5f8fb;
+  color: #879cb1;
   font-weight: normal;
   font-size: 1.5rem;
   line-height: 1.5em;
@@ -513,7 +513,7 @@ body#tinymce h3 {
 body#tinymce h4 {
   margin-top: 1em;
   font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-  color: #f5f8fb;
+  color: #879cb1;
   font-weight: normal;
   font-size: 1.08rem;
   line-height: 1.5em;
@@ -555,7 +555,7 @@ body#tinymce h4 {
 body#tinymce h5 {
   margin-top: 1em;
   font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-  color: #f5f8fb;
+  color: #879cb1;
   font-weight: normal;
   font-size: 0.99rem;
   line-height: 1.5em;
@@ -596,7 +596,7 @@ body#tinymce h5 {
 
 body#tinymce p {
   font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
-  color: #364250;
+  color: #384d62;
   font-weight: 400;
   font-size: 0.9rem;
   line-height: 1.5em;
@@ -644,7 +644,7 @@ body#tinymce ol li {
   font-size: 0.9rem;
   line-height: 1.5em;
   margin-bottom: 0.5em;
-  color: #364250 !important;
+  color: #384d62 !important;
 }
 
 @media (min-width: 481px) {
@@ -697,7 +697,7 @@ body#tinymce ol li:before {
 }
 
 body#tinymce a {
-  color: #202a35;
+  color: #2c3e50;
   text-decoration: underline;
 }
 

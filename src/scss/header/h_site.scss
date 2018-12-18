@@ -1,7 +1,9 @@
 .h_site {
-    background-color: $c1-main;
-    color: $c-white;
-    text-align: center;
-    min-height: 70px;
-    margin-top: 0;
+   background-color: $c1-main;
+   color: $c-white;
+   min-height: 70px;
+   margin-top: 0;
+   padding: 1rem 2rem;
+   display: flex;
+   justify-content: space-between;
 }

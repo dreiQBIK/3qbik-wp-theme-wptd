@@ -1,10 +1,15 @@
 .n_site {
    display: none;
-   margin-top: 2em;
-   margin-bottom: 1.2em;
 
    @include media-breakpoint-up(md) {
       display: block;
+   }
+
+   &-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 60px;
    }
 
    ul {
@@ -14,6 +19,11 @@
 
       li {
          padding: 0.5em 0;
+         margin: 0;
+
+         &:before {
+            display: none;
+         }
 
          @include media-breakpoint-up(md) {
             display: inline-block;
@@ -27,6 +37,15 @@
 
       a {
          color: $c-white;
+      }
+   }
+
+   &.is-active {
+      display: block;
+      margin-top: 80px;
+
+      @include media-breakpoint-up(md) {
+         margin-top: 0;
       }
    }
 }
@@ -82,7 +101,7 @@
       }
    }
 
-   &.active {
+   &.is-active {
       span {
          background-color: transparent;
       }

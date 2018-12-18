@@ -19,7 +19,6 @@ STYLESHEET: STYLE
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,600,400,300|Merriweather:700,400,300);
 html {
   line-height: 1.15;
   /* 1 */
@@ -395,11 +394,56 @@ template {
   }
 }
 
-/******************************************************************
+/* Futura Web XBold */
+@font-face {
+  font-family: "FuturaLTPro-XBold";
+  font-display: swap;
+  src: url("assets/fonts/futura/2FACC7_0_0.eot");
+  src: url("assets/fonts/futura/2FACC7_0_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/futura/2FACC7_0_0.woff2") format("woff2"), url("assets/fonts/futura/2FACC7_0_0.woff") format("woff"), url("assets/fonts/futura/2FACC7_0_0.ttf") format("truetype");
+}
 
-    SETTINGS: TYPOGRAPHY
+/* Klavika Web Bold */
+@font-face {
+  font-family: "KlavikaWeb";
+  font-display: swap;
+  src: url("assets/fonts/klavika/KlavikaWebBold/KlavikaWebBold.eot");
+  src: url("assets/fonts/klavika/KlavikaWebBold/KlavikaWebBold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/klavika/KlavikaWebBold/KlavikaWebBold.woff2") format("woff2"), url("assets/fonts/klavika/KlavikaWebBold/KlavikaWebBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
 
-******************************************************************/
+/* Officina Web Book */
+@font-face {
+  font-family: "OfficinaSansITCStd-Book";
+  font-display: swap;
+  src: url("assets/fonts/officina/officina-book/37F07C_1_0.eot");
+  src: url("assets/fonts/officina/officina-book/37F07C_1_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/officina/officina-book/37F07C_1_0.woff2") format("woff2"), url("assets/fonts/officina/officina-book/37F07C_1_0.woff") format("woff"), url("assets/fonts/officina/officina-book/37F07C_1_0.ttf") format("truetype");
+}
+
+/* Officina Web Book Italic */
+@font-face {
+  font-family: "OfficinaSansITCStd-BookItalic";
+  font-display: swap;
+  src: url("assets/fonts/officina/officina-book-italic/37F07C_4_0.eot");
+  src: url("assets/fonts/officina/officina-book-italic/37F07C_4_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/officina/officina-book-italic/37F07C_4_0.woff2") format("woff2"), url("assets/fonts/officina/officina-book-italic/37F07C_4_0.woff") format("woff"), url("assets/fonts/officina/officina-book-italic/37F07C_4_0.ttf") format("truetype");
+}
+
+/* Officina Web Bold */
+@font-face {
+  font-family: "OfficinaSansITCStd-Bold";
+  font-display: swap;
+  src: url("assets/fonts/officina/officina-bold/37F07C_3_0.eot");
+  src: url("assets/fonts/officina/officina-bold/37F07C_3_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/officina/officina-bold/37F07C_3_0.woff2") format("woff2"), url("assets/fonts/officina/officina-bold/37F07C_3_0.woff") format("woff"), url("assets/fonts/officina/officina-bold/37F07C_3_0.ttf") format("truetype");
+}
+
+/* Officina Web Bold Italic */
+@font-face {
+  font-family: "OfficinaSansITCStd-BoldItalic";
+  font-display: swap;
+  src: url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.eot");
+  src: url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.woff2") format("woff2"), url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.woff") format("woff"), url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.ttf") format("truetype");
+}
+
 /******************************************************************
 	COLORS
 ******************************************************************/
@@ -5256,15 +5300,15 @@ template {
 }
 
 .text-c1-main {
-  color: #202a35 !important;
+  color: #2c3e50 !important;
 }
 
 .text-c2-main {
-  color: #364250 !important;
+  color: #384d62 !important;
 }
 
 .text-c3-main {
-  color: #f5f8fb !important;
+  color: #879cb1 !important;
 }
 
 .text-c1-second {
@@ -5284,7 +5328,7 @@ template {
 }
 
 .text-c1-accent {
-  color: #ccd9e8 !important;
+  color: #879cb1 !important;
 }
 
 .text-c1-hint {
@@ -9125,7 +9169,7 @@ readers do not read off random characters that represent icons */
 .l_comments input,
 .l_comments textarea {
   border: none;
-  background-color: #f5f8fb;
+  background-color: #879cb1;
   border-bottom: 2px solid #dddddd;
   padding: 1em;
 }
@@ -9180,7 +9224,7 @@ readers do not read off random characters that represent icons */
 
 .widget_search .search-field {
   border: none;
-  background-color: #f5f8fb;
+  background-color: #879cb1;
   border-bottom: 2px solid #dddddd;
   padding: 1em;
 }
@@ -9219,8 +9263,8 @@ html {
 
 body {
   position: relative;
-  color: #202a35;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #384d62;
   overflow-x: hidden;
   font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
   color: #ffffff;
@@ -9315,7 +9359,7 @@ body:after {
 }
 
 ::selection {
-  background: #ccd9e8;
+  background: #879cb1;
   text-shadow: none;
 }
 
@@ -9592,7 +9636,7 @@ p strong {
 
 .heading-2 {
   font-family: "FuturaLTPro-XBold", sans-serif;
-  color: #202a35;
+  color: #2c3e50;
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 1.2em;
@@ -9634,7 +9678,7 @@ p strong {
 
 .heading-3 {
   font-family: "FuturaLTPro-XBold", sans-serif;
-  color: #202a35;
+  color: #2c3e50;
   font-weight: 700;
   font-size: 2rem;
   line-height: 1.2em;
@@ -9675,7 +9719,7 @@ p strong {
 }
 
 a {
-  transition: color 0.15 ease-in-out;
+  transition: color 0.15s ease-in-out;
   color: #ff855b;
   text-decoration: none;
 }
@@ -9932,7 +9976,7 @@ ul li:before {
 }
 
 .tinymce a {
-  transition: color 0.15 ease-in-out;
+  transition: color 0.15s ease-in-out;
   color: #ff855b;
   text-decoration: none;
 }
@@ -10118,7 +10162,7 @@ ul li:before {
   font-size: 1rem;
   line-height: 1.5em;
   margin-bottom: 0.5em;
-  color: white;
+  color: #e4e9ed;
 }
 
 @media (min-width: 481px) {
@@ -10216,7 +10260,7 @@ ul li:before {
   margin-bottom: 0.2em;
   font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
-  color: #f5f8fb;
+  color: #879cb1;
 }
 
 .tinymce a {
@@ -10260,7 +10304,7 @@ a.m_btn {
 a.m_btn--light {
   background-color: #cccccc;
   border-bottom: 3px solid #aaaaaa;
-  color: #202a35;
+  color: #2c3e50;
 }
 
 @media (min-width: 961px) {
@@ -10287,7 +10331,7 @@ a.m_btn--dark {
 }
 
 .m_card {
-  background-color: #f5f8fb;
+  background-color: #879cb1;
 }
 
 .m_card__img {
@@ -10314,14 +10358,19 @@ a.m_btn--dark {
 
 .n_site {
   display: none;
-  margin-top: 2em;
-  margin-bottom: 1.2em;
 }
 
 @media (min-width: 961px) {
   .n_site {
     display: block;
   }
+}
+
+.n_site-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 60px;
 }
 
 .n_site ul {
@@ -10332,6 +10381,11 @@ a.m_btn--dark {
 
 .n_site ul li {
   padding: 0.5em 0;
+  margin: 0;
+}
+
+.n_site ul li:before {
+  display: none;
 }
 
 @media (min-width: 961px) {
@@ -10347,6 +10401,17 @@ a.m_btn--dark {
 
 .n_site ul a {
   color: #ffffff;
+}
+
+.n_site.is-active {
+  display: block;
+  margin-top: 80px;
+}
+
+@media (min-width: 961px) {
+  .n_site.is-active {
+    margin-top: 0;
+  }
 }
 
 .n_site-burger {
@@ -10409,35 +10474,38 @@ a.m_btn--dark {
   }
 }
 
-.n_site-burger.active span {
+.n_site-burger.is-active span {
   background-color: transparent;
 }
 
-.n_site-burger.active span:before,
-.n_site-burger.active span:after {
+.n_site-burger.is-active span:before,
+.n_site-burger.is-active span:after {
   top: 0;
 }
 
-.n_site-burger.active span:before {
+.n_site-burger.is-active span:before {
   transform: rotate(45deg);
 }
 
-.n_site-burger.active span:after {
+.n_site-burger.is-active span:after {
   transform: rotate(-45deg);
 }
 
 .h_site {
-  background-color: #202a35;
+  background-color: #2c3e50;
   color: #ffffff;
-  text-align: center;
   min-height: 70px;
   margin-top: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .f_site {
-  background-color: #202a35;
+  background-color: #2c3e50;
   color: #ffffff;
   text-align: center;
+  padding: 1rem 2rem;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

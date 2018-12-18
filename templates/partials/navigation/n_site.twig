@@ -1,14 +1,14 @@
 <div class="n_site-wrapper">
-    <div class="n_site-burger">
-        <span class='n_site-burger__bar'></span>
-    </div>
-    <nav class="n_site">
-        <ul>
-        {% for item in menu.get_items %}
+   <div class="n_site-burger">
+      <span class='n_site-burger__bar'></span>
+   </div>
+   <nav class="n_site">
+      <ul>
+         {% for item in menu.get_items %}
             <li class="{{ item.classes | join(' ') }}">
-                <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+               <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
             </li>
-        {% endfor %}
-        </ul>
-    </nav>
+         {% endfor %}
+      </ul>
+   </nav>
 </div>

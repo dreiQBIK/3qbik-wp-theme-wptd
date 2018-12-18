@@ -165,18 +165,18 @@ var nSite = function ($) {
    ******************************************************************/
 
   function toggleNav() {
-    $siteNavigation.slideToggle("fast");
-    $siteNavigationBurger.toggleClass("active");
+    $siteNavigationBurger.toggleClass("is-active");
+    $siteNavigation.toggleClass("is-active");
   }
 
   function showNav() {
-    $siteNavigation.show();
-    $siteNavigationBurger.hide();
+    $siteNavigationBurger.addClass("is-active");
+    $siteNavigation.addClass("is-active");
   }
 
   function hideNav() {
-    $siteNavigation.hide();
-    $siteNavigationBurger.show();
+    $siteNavigationBurger.removeClass("is-active");
+    $siteNavigation.removeClass("is-active");
   } // checks for mobile device
 
 

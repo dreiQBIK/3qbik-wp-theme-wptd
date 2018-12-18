@@ -1,34 +1,28 @@
 {% block html_head_container %}
 
-{% include 'html-header.twig' %}
-	{% block head %}
-	{% endblock %}
-	</head>
+   {% include 'html-header.twig' %}
+   {% block head %}{% endblock %}
+</head>
 {% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig">
-		<div id="h-breakpoint-js"></div>
+<body class="{{body_class}}" data-template="base.twig">
 
+{% block header %}
+   {% include '/partials/header/h_site.twig' %}
+{% endblock %}
 
-		{% block header %}
-			{% include '/partials/header/h_site.twig' %}
-		{% endblock %}
+<main class="main">
 
+   {% block content %}
+      Sorry, no content
+   {% endblock %}
 
-		<main class="main">
+</main>
 
-			{% block content %}
-				Sorry, no content
-			{% endblock %}
+{% block footer %}
+   {% include '/partials/footer/f_site.twig' %}
+   {{ function('wp_footer') }}
+{% endblock %}
 
-		</main>
-
-
-		{% block footer %}
-			{% include '/partials/footer/f_site.twig' %}
-			{{ function('wp_footer') }}
-		{% endblock %}
-
-
-	</body>
+</body>
 </html>
