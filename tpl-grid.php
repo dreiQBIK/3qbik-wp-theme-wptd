@@ -12,4 +12,4 @@
 $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
-Timber::render( 'views/tpl-example-grid.twig', $context );
+Timber::render( 'views/tpl-grid.twig', $context );

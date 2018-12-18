@@ -45,11 +45,11 @@ $page_builder
                     'label'         => 'Abstand nach unten',
                     'instructions'  => 'Größe des Abstandes des gesamten Elementes nach unten/zum nächsten Element',
                     'wrapper'       => ['width' => 50],
-                    'default_value' => 'mb-2'
+                    'default_value' => 'pb-2'
                 ])
-                    ->addChoice('mb-1', 'Klein')
-                    ->addChoice('mb-2', 'Standard')
-                    ->addChoice('mb-4', 'Groß')
+                    ->addChoice('pb-1', 'Klein')
+                    ->addChoice('pb-2', 'Standard')
+                    ->addChoice('pb-4', 'Groß')
 
             // PB_HEADLINE
             ->addLayout('pb_headline', [
@@ -70,11 +70,11 @@ $page_builder
                         'label'         => 'Abstand nach unten',
                         'instructions'  => 'Größe des Abstandes des gesamten Elementes nach unten/zum nächsten Element',
                         'wrapper'       => ['width' => 50],
-                        'default_value' => 'mb-2'
+                        'default_value' => 'pb-2'
                     ])
-                        ->addChoice('mb-1', 'Klein')
-                        ->addChoice('mb-2', 'Standard')
-                        ->addChoice('mb-4', 'Groß')
+                        ->addChoice('pb-1', 'Klein')
+                        ->addChoice('pb-2', 'Standard')
+                        ->addChoice('pb-4', 'Groß')
 
     /* END_PAGE_BUILDER */
     ->endFlexibleContent()

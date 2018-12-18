@@ -9172,6 +9172,16 @@ readers do not read off random characters that represent icons */
   background-color: #788fa7;
 }
 
+.l_page .row {
+  border: 2px dashed #384d62;
+  margin-bottom: 1rem;
+}
+
+.l_page .row > div {
+  border: 2px solid #96a9bb;
+  margin-bottom: 1rem;
+}
+
 .l_comments {
   background-color: #eeeeee;
   padding: 2em;

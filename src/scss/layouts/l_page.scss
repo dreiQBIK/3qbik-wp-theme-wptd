@@ -8,4 +8,14 @@
    > .container {
       background-color: darken($c3-main, 5%);
    }
+
+   .row {
+      border: 2px dashed $c2-main;
+      margin-bottom: 1rem;
+
+      > div {
+         border: 2px solid $c1-accent;
+         margin-bottom: 1rem;
+      }
+   }
 }
