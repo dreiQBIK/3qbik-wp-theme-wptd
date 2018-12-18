@@ -1,6 +1,6 @@
 # wptd Theme
 
-WordPress with Timber and ACF (base version - without Composer)
+WordPress Theme with Timber, ACF and acf-builder
 
 ## Installing the Theme
 
@@ -10,7 +10,7 @@ Install this theme as you would any other, and be sure the Timber plugin is acti
 2. Download the zip for this theme (or clone it) and move it to `wp-content/themes` in your WordPress installation.
 3. Rename the folder to something that makes sense for your website (generally no spaces and all lowercase).
 4. Activate the theme in Appearance > Themes.
-5. Do your thing! And read [the docs](https://github.com/jarednova/timber/wiki).
+5. Do your thing! And read [the docs](https://timber.github.io/docs/).
 
 ## What's here?
 
@@ -20,17 +20,19 @@ Install this theme as you would any other, and be sure the Timber plugin is acti
 
 `inc/` contains all PHP functionality you want to add to your theme - these files get included in the `functions.php`.
 
-`inc/acf/` is where you register you ACF fields. -> Register in `functions.php`!
+`inc/acf/` is where you register you ACF fields. Don't forget to include register each file in the `functions.php`!
 
 ## Other Resources
 
-The [main Timber Wiki](https://github.com/jarednova/timber/wiki) is super great, so reference those often. Also, check out these articles and projects for more info:
+The [main Timber Wiki](https://timber.github.io/docs/) is super great, so reference those often. Also, check out these articles and projects for more info:
 
 -  [Twig for Timber Cheatsheet](http://notlaura.com/the-twig-for-timber-cheatsheet/)
 -  [Timber and Twig Reignited My Love for WordPress](https://css-tricks.com/timber-and-twig-reignited-my-love-for-wordpress/) on CSS-Tricks
 
 ## Dependencies
 
--  Yoast SEO for title and description tags
+This theme is build with Timber and ACF (including acf-builder). _Therefore you need to install these plugins first, before you activate the theme!_
+
 -  ACF PRO
 -  Timber
+-  Yoast SEO (for title and description tags - they will not show up without it)
