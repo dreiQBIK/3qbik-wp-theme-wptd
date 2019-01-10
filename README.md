@@ -4,13 +4,12 @@ WordPress Theme with Timber, ACF and acf-builder
 
 ## Installing the Theme
 
-Install this theme as you would any other, and be sure the Timber plugin is activated (see dependencies). But hey, let's break it down into some bullets:
+Install this theme and be sure the Timber plugin is activated (see dependencies):
 
-1. Make sure you have installed the plugin for the [Timber Library](https://wordpress.org/plugins/timber-library/) (and Advanced Custom Fields - they [play quite nicely](http://timber.github.io/timber/#acf-cookbook) together).
-2. Download the zip for this [theme](https://github.com/) (or clone it) and move it to `wp-content/themes` in your WordPress installation.
-3. Rename the folder to something that makes sense for your website (generally no spaces and all lowercase).
+1. Make sure you have installed the plugin for the [Timber Library](https://wordpress.org/plugins/timber-library/) and [Advanced Custom Fields](https://de.wordpress.org/plugins/advanced-custom-fields/)
+2. Download the zip for this [theme](https://github.com/) (or clone it) and move it to `wp-content/themes/custom-theme-name` in your WordPress installation.
+3. Rename the folder (custom-theme-name) to something that makes sense for your website (generally no spaces and all lowercase).
 4. Activate the theme in WordPress Backend > Appearance > Themes.
-5. Do your thing! And read [the Timber docs](https://timber.github.io/docs/).
 
 ### Dependencies
 
