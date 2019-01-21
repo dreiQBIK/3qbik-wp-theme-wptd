@@ -11,8 +11,8 @@ Install this theme and be sure the Timber plugin is activated (see dependencies)
 3. Rename the folder (custom-theme-name) to something that makes sense for your website (generally no spaces and all lowercase).
 4. Activate the theme in WordPress Backend > Appearance > Themes.
 5. Öffne deine Konsole in dem folgenden Pfad `wp-content/themes/custom-theme-name/_config`.
-5.1 Führe `npm install` aus um die Dependencies zu installieren.
-5.2 Führe `ncu` aus, um die Dependencies auf den neusten Stand zu bringen.
+  - Führe `npm install` aus um die Dependencies zu installieren.
+  - Führe `ncu` aus, um die Dependencies auf den neusten Stand zu bringen.
 
 ### Dependencies
 
