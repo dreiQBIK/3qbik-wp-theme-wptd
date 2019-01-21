@@ -10,9 +10,11 @@ Install this theme and be sure the Timber plugin is activated (see dependencies)
 2. Download the zip for this [theme](https://github.com/) (or clone it) and move it to `wp-content/themes/custom-theme-name` in your WordPress installation.
 3. Rename the folder (custom-theme-name) to something that makes sense for your website (generally no spaces and all lowercase).
 4. Activate the theme in WordPress Backend > Appearance > Themes.
-5. Öffne deine Konsole in dem folgenden Pfad `wp-content/themes/custom-theme-name/_config`.
-    - Führe `npm install` aus um die Dependencies zu installieren.
-    - Führe `ncu` aus, um die Dependencies auf den neusten Stand zu bringen.
+5. Open console in path `wp-content/themes/custom-theme-name/_config`.
+    - Use command `npm install` to install dependencies.
+    - Use command `ncu` to update dependencies.
+6. Open file `/wp-config.php` and add the line `define( 'WP_DEBUG', true );` at the end of the file.
+
 
 ### Dependencies
 
