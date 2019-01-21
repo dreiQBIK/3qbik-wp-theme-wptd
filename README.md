@@ -13,7 +13,7 @@ Install this theme and be sure the Timber plugin is activated (see dependencies)
 5. Open console in path `wp-content/themes/custom-theme-name/_config`.
     - Use command `npm install` to install dependencies.
     - Use command `ncu` to update dependencies.
-6. Open file `/wp-config.php` and add the line `define( 'WP_DEBUG', true );` at the end of the file.
+6. Open file `/wp-config.php` and add the line `define( 'WP_DEBUG', true );` underneath the line 64 `$table_prefix = 'wp_';`.
 
 
 ### Dependencies
