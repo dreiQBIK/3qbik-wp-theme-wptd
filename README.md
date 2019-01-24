@@ -4,23 +4,27 @@ WordPress Theme with Timber, ACF and acf-builder
 
 ## Installing the Theme
 
-Install this theme as you would any other, and be sure the Timber plugin is activated (see dependencies). But hey, let's break it down into some bullets:
+Install this theme and be sure the Timber plugin is activated (see dependencies):
 
-1. Make sure you have installed the plugin for the [Timber Library](https://wordpress.org/plugins/timber-library/) (and Advanced Custom Fields - they [play quite nicely](http://timber.github.io/timber/#acf-cookbook) together).
-2. Download the zip for this theme (or clone it) and move it to `wp-content/themes` in your WordPress installation.
-3. Rename the folder to something that makes sense for your website (generally no spaces and all lowercase).
-4. Activate the theme in Appearance > Themes.
-5. Do your thing! And read [the docs](https://timber.github.io/docs/).
+1. Make sure you have installed the plugin for the [Timber Library](https://wordpress.org/plugins/timber-library/) and [Advanced Custom Fields](https://de.wordpress.org/plugins/advanced-custom-fields/)
+2. Download the zip for this [theme](https://github.com/) (or clone it) and move it to `wp-content/themes/custom-theme-name` in your WordPress installation.
+3. Rename the folder (custom-theme-name) to something that makes sense for your website (generally no spaces and all lowercase).
+4. Activate the theme in WordPress Backend > Appearance > Themes.
+5. Open console in path `wp-content/themes/custom-theme-name/_config`.
+    - Use command `npm install` to install dependencies.
+    - Use command `ncu` to update dependencies.
+6. Open file `/wp-config.php` and add the line `define( 'WP_DEBUG', true );` underneath the line 64 `$table_prefix = 'wp_';`.
+
 
 ### Dependencies
 
 This theme is build with Timber and ACF (including acf-builder). **Therefore you need to install these plugins first, before you activate the theme!**
 
--  ACF PRO
--  Timber
--  Yoast SEO (for title and description tags - they will not show up without it)
+-  [ACF PRO](https://www.advancedcustomfields.com/pro/)
+-  [Timber](https://de.wordpress.org/plugins/timber-library/)
+-  [Yoast SEO](https://de.wordpress.org/plugins/wordpress-seo/) (for title and description tags - they will not show up without it)
 
-## What's here?
+## Theme folder structure
 
 `src/` is where you can keep your development front-end scripts, styles, or images.
 
@@ -32,7 +36,9 @@ This theme is build with Timber and ACF (including acf-builder). **Therefore you
 
 ## Other Resources
 
-The [main Timber Wiki](https://timber.github.io/docs/) is super great, so reference those often. Also, check out these articles and projects for more info:
-
+-  [Timber docs](https://timber.github.io/docs/)
 -  [Twig for Timber Cheatsheet](http://notlaura.com/the-twig-for-timber-cheatsheet/)
+-  [Twig Docs](https://twig.symfony.com/doc/2.x/functions/index.html)
+-  [ACF Docs](https://www.advancedcustomfields.com/resources/)
+-  [ACF Builder Docs](https://github.com/StoutLogic/acf-builder/wiki)
 -  [Timber and Twig Reignited My Love for WordPress](https://css-tricks.com/timber-and-twig-reignited-my-love-for-wordpress/) on CSS-Tricks
