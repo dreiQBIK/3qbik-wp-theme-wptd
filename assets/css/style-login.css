@@ -52,7 +52,11 @@ body.login {
   background-color: #2c3e50;
 }
 
-body.login div, body.login p, body.login a, body.login label, body.login input {
+body.login div,
+body.login p,
+body.login a,
+body.login label,
+body.login input {
   font-family: "KlavikaWeb", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
 }
@@ -83,20 +87,20 @@ body.login form {
   padding: 3em;
 }
 
-body.login label[for=user_login], body.login label[for=user_pass], body.login label[for=rememberme] {
+body.login label[for="user_login"], body.login label[for="user_pass"], body.login label[for="rememberme"] {
   color: #ffffff;
 }
 
-body.login label[for=user_login] input, body.login label[for=user_pass] input {
+body.login label[for="user_login"] input, body.login label[for="user_pass"] input {
   padding: 10px;
   font-size: 18px;
 }
 
-body.login input[type=text], body.login input[type=password] {
+body.login input[type="text"], body.login input[type="password"] {
   background: #ffffff;
 }
 
-body.login input[type=text], body.login input[type=password] {
+body.login input[type="text"], body.login input[type="password"] {
   margin-top: 10px;
 }
 
@@ -105,15 +109,15 @@ body.login .forgetmenot {
   margin-bottom: 20px !important;
 }
 
-body.login .forgetmenot input[type=checkbox] {
+body.login .forgetmenot input[type="checkbox"] {
   background: #ffffff;
 }
 
-body.login .forgetmenot input[type=checkbox]:checked {
+body.login .forgetmenot input[type="checkbox"]:checked {
   position: relative;
 }
 
-body.login .forgetmenot input[type=checkbox]:checked:before {
+body.login .forgetmenot input[type="checkbox"]:checked:before {
   content: "\f147";
   position: absolute;
   top: 0;

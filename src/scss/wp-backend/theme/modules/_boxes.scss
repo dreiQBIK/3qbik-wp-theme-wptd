@@ -17,3 +17,9 @@
 .js .postbox .handlediv:focus .toggle-indicator:before {
    box-shadow: 0 0 0 1px $c3-main-backend, 0 0 2px 1px $c3-main-backend;
 }
+
+// table colors
+.plugin-update-tr.active td,
+.plugins .active th.check-column {
+   border-left: 4px solid $c2-main-backend;
+}

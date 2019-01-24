@@ -3,6 +3,7 @@
 @import "../settings/mixins/mix_breakpoints";
 @import "../settings/mixins/mix_fonts";
 @import "../base/b_tinymce";
+@import "./theme/_variables";
 
 body#tinymce {
    margin: 1.2rem 1.5rem;

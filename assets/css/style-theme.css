@@ -1126,6 +1126,11 @@ a:hover {
   box-shadow: 0 0 0 1px #879cb1, 0 0 2px 1px #879cb1;
 }
 
+.plugin-update-tr.active td,
+.plugins .active th.check-column {
+  border-left: 4px solid #384d62;
+}
+
 a.acf-icon.-plus:hover {
   background-color: #384d62 !important;
 }
