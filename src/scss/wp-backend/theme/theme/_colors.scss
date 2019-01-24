@@ -1,0 +1,11 @@
+$base-color: $c1-second-backend;
+$icon-color: lighten($c3-main-backend, 15%);
+$highlight-color: $c3-main-backend;
+$notification-color: $c1-third-backend;
+$button-color: $c1-third-backend;
+
+$menu-submenu-text: lighten($c3-main-backend, 15%);
+$menu-submenu-focus-text: #fff;
+$menu-submenu-background: $c2-main-backend;
+
+@import "../_admin.scss";

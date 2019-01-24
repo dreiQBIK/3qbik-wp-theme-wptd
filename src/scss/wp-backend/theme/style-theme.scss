@@ -3,7 +3,9 @@
 @import "../../settings/mixins/mix_breakpoints";
 @import "../../settings/mixins/mix_fonts";
 @import "_variables";
-@import "_content";
-@import "_menu-admin";
-@import "_menu-side";
-@import "_acf";
+@import "_admin";
+@import "_mixins";
+@import "./theme/_colors";
+@import "./theme/_base";
+@import "./theme/_boxes";
+@import "./theme/_acf";

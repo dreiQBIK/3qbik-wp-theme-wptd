@@ -464,245 +464,28 @@
 }
 
 body#tinymce {
-  width: 90%;
-  margin: 20px auto 40px;
+  margin: 1.2rem 1.5rem;
 }
 
-body#tinymce h3 {
-  margin-top: 1em;
-  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-  color: #879cb1;
-  font-weight: normal;
-  font-size: 1.5rem;
-  line-height: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-@media (min-width: 481px) {
-  body#tinymce h3 {
-    font-size: 1.5rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 961px) {
-  body#tinymce h3 {
-    font-size: 1.8rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 1361px) {
-  body#tinymce h3 {
-    font-size: 2.2rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 1921px) {
-  body#tinymce h3 {
-    font-size: 2.2rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-body#tinymce h4 {
-  margin-top: 1em;
-  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-  color: #879cb1;
-  font-weight: normal;
-  font-size: 1.08rem;
-  line-height: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-@media (min-width: 481px) {
-  body#tinymce h4 {
-    font-size: 1.08rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 961px) {
-  body#tinymce h4 {
-    font-size: 1.26rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 1361px) {
-  body#tinymce h4 {
-    font-size: 1.44rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 1921px) {
-  body#tinymce h4 {
-    font-size: 1.44rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-body#tinymce h5 {
-  margin-top: 1em;
-  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-  color: #879cb1;
-  font-weight: normal;
-  font-size: 0.99rem;
-  line-height: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-@media (min-width: 481px) {
-  body#tinymce h5 {
-    font-size: 0.99rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 961px) {
-  body#tinymce h5 {
-    font-size: 1.17rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 1361px) {
-  body#tinymce h5 {
-    font-size: 1.26rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 1921px) {
-  body#tinymce h5 {
-    font-size: 1.26rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
+body#tinymce h2,
+body#tinymce h3,
+body#tinymce h4,
+body#tinymce h5,
+body#tinymce h6 {
+  color: #384d62;
 }
 
 body#tinymce p {
-  font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
-  color: #384d62;
-  font-weight: 400;
-  font-size: 0.9rem;
-  line-height: 1.5em;
-  margin-bottom: 0.5em;
+  color: #4b6782;
 }
 
-@media (min-width: 481px) {
-  body#tinymce p {
-    font-size: 0.9rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 961px) {
-  body#tinymce p {
-    font-size: 0.99rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 1361px) {
-  body#tinymce p {
-    font-size: 0.99rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 1921px) {
-  body#tinymce p {
-    font-size: 1.08rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-body#tinymce ul li,
-body#tinymce ol li {
-  position: relative;
-  font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 0.9rem;
-  line-height: 1.5em;
-  margin-bottom: 0.5em;
-  color: #384d62 !important;
-}
-
-@media (min-width: 481px) {
-  body#tinymce ul li,
-  body#tinymce ol li {
-    font-size: 0.9rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 961px) {
-  body#tinymce ul li,
-  body#tinymce ol li {
-    font-size: 0.99rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 1361px) {
-  body#tinymce ul li,
-  body#tinymce ol li {
-    font-size: 0.99rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 1921px) {
-  body#tinymce ul li,
-  body#tinymce ol li {
-    font-size: 1.08rem;
-    line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-body#tinymce ul li:before,
-body#tinymce ol li:before {
-  content: "";
-  background: url(../../assets/img/icon-list-cube-3qbik-grey.svg) no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 4px;
-  left: 0;
-  width: 0.85em;
-  height: 0.85em;
-  font-size: 1rem;
+body#tinymce ul li {
+  color: #4b6782;
 }
 
 body#tinymce a {
-  color: #2c3e50;
-  text-decoration: underline;
-}
-
-body#tinymce a:hover {
-  color: #ec764d;
+  outline: none;
+  border-bottom: 2px dotted #ec764d;
 }
 
 /*# sourceMappingURL=../../maps/style-tinymce.css.map */

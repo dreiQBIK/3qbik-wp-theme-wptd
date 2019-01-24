@@ -1,0 +1,45 @@
+// zoom
+body {
+   zoom: 1.1;
+}
+
+// links hover
+a:active,
+a:hover {
+   color: $c1-third-backend;
+}
+
+// media links
+.media-frame a {
+   color: $c2-main-backend !important;
+
+   &:hover {
+      color: $c1-third-backend !important;
+   }
+}
+
+// top buttons
+.wrap .add-new-h2,
+.wrap .add-new-h2:active,
+.wrap .page-title-action,
+.wrap .page-title-action:active {
+   color: $c2-main-backend !important;
+
+   &:hover {
+      color: $c-white !important;
+   }
+}
+
+// modal icon
+.media-modal-close:active,
+.media-modal-close:hover {
+   color: $c1-third-backend !important;
+}
+
+// button active state
+.wp-core-ui .button-primary[disabled],
+.wp-core-ui .button-primary:disabled,
+.wp-core-ui .button-primary.button-primary-disabled,
+.wp-core-ui .button-primary.disabled {
+   color: $c-white !important;
+}

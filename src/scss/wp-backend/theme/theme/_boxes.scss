@@ -1,0 +1,19 @@
+// header bar
+.hndle.ui-sortable-handle {
+   background-color: $c2-main-backend;
+   color: $c-white;
+}
+
+// header bar toggle
+.accordion-section-title:after,
+.handlediv,
+.item-edit,
+.postbox .handlediv.button-link,
+.toggle-indicator {
+   color: $c3-main-backend;
+}
+
+// header bar toggle focus state
+.js .postbox .handlediv:focus .toggle-indicator:before {
+   box-shadow: 0 0 0 1px $c3-main-backend, 0 0 2px 1px $c3-main-backend;
+}

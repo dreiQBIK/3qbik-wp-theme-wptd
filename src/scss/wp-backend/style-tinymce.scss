@@ -5,57 +5,28 @@
 @import "../base/b_tinymce";
 
 body#tinymce {
-   width: 90%;
-   margin: 20px auto 40px;
+   margin: 1.2rem 1.5rem;
 
-   h3 {
-      margin-top: 1em;
-      @include fontstyle($style: "third-02", $color: $c3-main);
-   }
-
-   h4 {
-      margin-top: 1em;
-      @include fontstyle($style: "third-03", $scale: 0.9, $color: $c3-main);
-   }
-
-   h5 {
-      margin-top: 1em;
-      @include fontstyle($style: "third-04", $scale: 0.9, $color: $c3-main);
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+      color: $c2-main-backend;
    }
 
    p {
-      @include fontstyle($style: "third-01", $scale: 0.9, $color: $c2-main);
+      color: lighten($c2-main-backend, 10%);
    }
 
-   ul,
-   ol {
+   ul {
       li {
-         position: relative;
-
-         @include fontstyle($style: "third-01", $scale: 0.9);
-         color: $c2-main !important;
-
-         &:before {
-            content: "";
-            background: url(../../assets/img/icon-list-cube-3qbik-grey.svg)
-               no-repeat;
-            background-size: contain;
-            position: absolute;
-            top: 4px;
-            left: 0;
-            width: 0.85em;
-            height: 0.85em;
-            font-size: 1rem;
-         }
+         color: lighten($c2-main-backend, 10%);
       }
    }
 
    a {
-      color: $c1-main;
-      text-decoration: underline;
-
-      &:hover {
-         color: $c1-third;
-      }
+      outline: none;
+      border-bottom: 2px dotted $c1-third-backend;
    }
 }

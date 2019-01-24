@@ -1,34 +1,65 @@
-// GENERAL
-$theme-font: $f1-second;
+// DEFINE: project colors
+$c1-main-backend: #2c3e50; //dark
+$c2-main-backend: #384d62; //dark
+$c3-main-backend: #879cb1; //dark
 
-// MENU_ADMIN
-$c1-menu-admin-background: $c1-main; //dark
-$c2-menu-admin-background: $c2-main; //dark
+$c1-second-backend: #fff191; //light
+$c2-second-backend: #eede70; //light
 
-$c1-menu-admin-link      : $c-white; //light
-$c1-menu-admin-link-hover: $c1-second; //light
+$c1-third-backend: #ec764d; //medium
+$c2-third-backend: #d96a44; //medium
+$c3-third-backend: #ff855b; //medium
 
+// core variables
+$text-color: #fff !default;
+$base-color: $c1-main-backend !default;
+$icon-color: hsl(hue($base-color), 7%, 95%) !default;
+$highlight-color: $c1-third-backend !default;
+$notification-color: $c1-third-backend !default;
 
-// MENU_SIDE
-$c1-menu-side-text       : $c-white; //light
-$c1-menu-side-accent     : $c1-third; //dark
+// global
+$body-background: #f1f1f1 !default;
 
-$c1-menu-side-background : $c1-main; //dark
-$c2-menu-side-background : $c2-main; //dark
-$c3-menu-side-background : $c1-menu-side-accent; //dark
+$link: $c2-main-backend !default;
+$link-focus: lighten($link, 10%) !default;
 
+$button-color: $highlight-color !default;
+$form-checked: $highlight-color !default;
 
-// MENU_CONTENT
-$c1-content-text         : $c-white; //light
-$c2-content-text         : $c1-main; //dark
-$c1-content-accent       : $c1-third; //dark
+// admin menu & admin-bar
+$menu-text: $text-color !default;
+$menu-icon: $icon-color !default;
+$menu-background: $base-color !default;
 
-$c1-content-background   : lighten($c3-main, 70%); //light
-$c1-content-bars         : $c2-main; //dark
-$c2-content-bars         : $c1-main; //dark
+$menu-highlight-text: $text-color !default;
+$menu-highlight-icon: $text-color !default;
+$menu-highlight-background: $highlight-color !default;
 
-$c1-content-button       : lighten($c3-main, 70%); //light
-$c2-content-button       : $c1-content-accent; //dark
+$menu-current-text: $menu-highlight-text !default;
+$menu-current-icon: $menu-highlight-icon !default;
+$menu-current-background: $menu-highlight-background !default;
 
-$c1-content-link         : $c1-main; //dark
-$c2-content-link-hover   : $c1-content-accent; //dark
+$menu-submenu-text: mix($base-color, $text-color, 30%) !default;
+$menu-submenu-background: darken($base-color, 7%) !default;
+$menu-submenu-background-alt: desaturate(
+   lighten($menu-background, 7%),
+   7%
+) !default;
+
+$menu-submenu-focus-text: $highlight-color !default;
+$menu-submenu-current-text: $text-color !default;
+
+$menu-bubble-text: $text-color !default;
+$menu-bubble-background: $notification-color !default;
+$menu-bubble-current-text: $text-color !default;
+$menu-bubble-current-background: $menu-submenu-background !default;
+
+$menu-collapse-text: $menu-icon !default;
+$menu-collapse-icon: $menu-icon !default;
+$menu-collapse-focus-text: $text-color !default;
+$menu-collapse-focus-icon: $menu-highlight-icon !default;
+
+$adminbar-avatar-frame: lighten($menu-background, 7%) !default;
+$adminbar-input-background: lighten($menu-background, 7%) !default;
+
+$menu-customizer-text: mix($base-color, $text-color, 40%) !default;

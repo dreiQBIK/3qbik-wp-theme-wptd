@@ -1,0 +1,18 @@
+// header bar add item
+a.acf-icon.-plus:hover {
+   background-color: $c2-main-backend !important;
+}
+a.acf-icon.-minus:hover,
+a.acf-icon.-cancel:hover {
+   background-color: $c1-third-backend !important;
+}
+
+// tooltip
+.acf-tooltip {
+   background-color: $c2-main !important;
+}
+
+// tooltip/popup link hover state
+.acf-fc-popup a:hover {
+   background-color: $c1-third !important;
+}
