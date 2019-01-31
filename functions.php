@@ -16,6 +16,9 @@ require_once get_template_directory() . '/inc/basic/b_setup.php';
 require_once get_template_directory() . '/inc/basic/b_extras.php';
 require_once get_template_directory() . '/inc/basic/b_template-tags.php';
 
+/* ACF Builder Composition */
+require_once get_template_directory() . '/inc/acf/setup/acf_setup.php';
+require_once get_template_directory() . '/inc/acf/setup/acf_helpers.php';
 
 /* Include Boilerplate Settings */
 require_once get_template_directory() . '/inc/wptd_enqueue-scripts.php';
@@ -23,7 +26,3 @@ require_once get_template_directory() . '/inc/wptd_timber.php';
 require_once get_template_directory() . '/inc/wptd_setup.php';
 require_once get_template_directory() . '/inc/wptd_tinymce.php';
 require_once get_template_directory() . '/inc/wptd_whitelabel.php';
-
-/* ACF Components */
-require_once get_template_directory() . '/inc/acf/acf_example.php';
-require_once get_template_directory() . '/inc/acf/acf_page-builder.php';

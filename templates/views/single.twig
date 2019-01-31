@@ -1,14 +1,11 @@
 {% extends "base.twig" %}
-
 {% block content %}
-
    <article class="main__inner l_article post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
-
       <header class="container">
-         <h1 class="heading-1">{{ post.title }}</h1>
+         <h1 class="heading-1">
+            {{ post.title }}</h1>
+         {%  %}
       </header>
-
-      {% include '/partials/layouts/l_page_builder.twig' %}
-
+      {% include '/partials/layouts/l_builder.twig' %}
    </article>
 {% endblock %}

@@ -1,0 +1,17 @@
+{% set modules = post.meta('builder') %}
+{% for module in modules %}
+   {# Module: HEADLINE #}
+   {% if module.acf_fc_layout == 'heading' %}
+      {% include "/partials/modules/builder/m_headline.twig" with {
+         headline: module.heading.text,
+         space_bottom: module.heading.margin
+      }%}
+   {% endif %}
+   {# Module: TEXT #}
+   {% if module.acf_fc_layout == 'editor' %}
+      {% include "/partials/modules/builder/m_text.twig" with {
+         editor: module.editor.wysiwyg,
+         space_bottom: module.editor.margin
+      }%}
+   {% endif %}
+{% endfor %}
