@@ -25,14 +25,13 @@ require_once get_template_directory() . '/inc/wptd_timber.php';
 require_once get_template_directory() . '/inc/wptd_setup.php';
 require_once get_template_directory() . '/inc/wptd_tinymce.php';
 
-
 /* User Roles */
-require_once get_template_directory() . '/inc/user-roles/wptd_manage-roles.php';
-require_once get_template_directory() . '/inc/user-roles/wptd_roles-capabilities.php';
-require_once get_template_directory() . '/inc/user-roles/wptd_roles-nav-admin.php';
-require_once get_template_directory() . '/inc/user-roles/wptd_roles-nav-main.php';
+require_once get_template_directory() . '/inc/user-roles/ur_manage-roles.php';
+require_once get_template_directory() . '/inc/user-roles/ur_capabilities.php';
+require_once get_template_directory() . '/inc/user-roles/ur_nav-admin.php';
+require_once get_template_directory() . '/inc/user-roles/ur_nav-main.php';
 
 /* White Label */
-require_once get_template_directory() . '/inc/white-label/wptd_whitelabel-basics.php';
-require_once get_template_directory() . '/inc/white-label/wptd_whitelabel-posts.php';
-require_once get_template_directory() . '/inc/white-label/wptd_whitelabel-profile.php';
+require_once get_template_directory() . '/inc/white-label/wl_basics.php';
+require_once get_template_directory() . '/inc/white-label/wl_posts.php';
+require_once get_template_directory() . '/inc/white-label/wl_profile.php';
