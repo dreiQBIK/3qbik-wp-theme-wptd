@@ -51,38 +51,38 @@ $example
         'button_label' => 'Element hinzufügen',
     ])
         /* Flexible Content Component */
-    ->addLayout('example_headline', [
-        'title' => 'Überschrift',
-    ])
+        ->addLayout('example_headline', [
+            'title' => 'Überschrift',
+        ])
             /* Text */
-    ->addText('example_headline_text', [
-        'label' => 'Text',
-        'instructions' => 'Hier kann eine Anweisung an den Nutzer stehen',
-        'wrapper' => ['width' => 30],
-    ])
+            ->addText('example_headline_text', [
+                'label' => 'Text',
+                'instructions' => 'Hier kann eine Anweisung an den Nutzer stehen',
+                'wrapper' => ['width' => 30],
+            ])
 
             /* Text Area */
-    ->addTextArea('example_headline_text2', [
-        'label' => 'Text2',
-        'wrapper' => ['width' => 70],
-    ])
+            ->addTextArea('example_headline_text2', [
+                'label' => 'Text2',
+                'wrapper' => ['width' => 70],
+            ])
 
         /* Other Flexible Content Component */
-    ->addLayout('example_content', [
-        'title' => 'Inhalt',
-    ])
+        ->addLayout('example_content', [
+            'title' => 'Inhalt',
+        ])
             /* Wysiwyg */
-    ->addWysiwyg('example_content_text', [
-        'label' => 'Text',
-    ])
+            ->addWysiwyg('example_content_text', [
+                'label' => 'Text',
+            ])
 
-    ->addLayout('example_image', [
-        'title' => 'Bild',
-    ])
+            ->addLayout('example_image', [
+                'title' => 'Bild',
+            ])
             /* Image */
-    ->addImage('example_image_item', [
-        'label' => 'Bild-Upload',
-    ])
+            ->addImage('example_image_item', [
+                'label' => 'Bild-Upload',
+            ])
 
     ->endFlexibleContent()
 
@@ -200,19 +200,19 @@ $example
     ->addTab('example_tab', [
         'label' => 'Tab',
     ])
-    ->addText('example_tab_field')
+        ->addText('example_tab_field')
 
     ->addTab('example_tab2', [
         'label' => 'Tab2',
     ])
-    ->addText('example_tab2_field')
+        ->addText('example_tab2_field')
 
 
     /* Group */
     ->addGroup('example_group', [
         'label' => 'Gruppierung',
     ])
-    ->addText('example_group_field')
+        ->addText('example_group_field')
     ->endGroup()
 
 
@@ -223,7 +223,7 @@ $example
         'min' => 2,
         'max' => 6,
     ])
-    ->addText('example_repeater_field')
+        ->addText('example_repeater_field')
     ->endRepeater()
 
 

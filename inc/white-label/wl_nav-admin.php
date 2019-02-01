@@ -16,16 +16,16 @@
    'new-content'      // Remove the content link
    'w3tc'             // If you use w3 total cache remove the performance link
    'my-account'       // Remove the user details tab
-***************************************************************************************** */
+ ***************************************************************************************** */
 
 
 //get current user
 $user = wp_get_current_user();
 // define a user or a list of users
-$role_owner = array('owner');
+$role_admin = array('admin');
 
-if (array_intersect($role_owner, $user->roles)) {
-   function remove_admin_bar_links()
+if (array_intersect($role_admin, $user->roles)) {
+   function wptd_remove_admin_bar_links()
    {
       global $wp_admin_bar;
       $wp_admin_bar->remove_menu('wp-logo');          // Remove the Wordpress logo
@@ -39,8 +39,8 @@ if (array_intersect($role_owner, $user->roles)) {
       $wp_admin_bar->remove_menu('new-content');      // Remove the content link
       $wp_admin_bar->remove_menu('w3tc');             // If you use w3 total cache remove the performance link
    }
-   
-   add_action('wp_before_admin_bar_render', 'remove_admin_bar_links');
+
+   add_action('wp_before_admin_bar_render', 'wptd_remove_admin_bar_links');
 }
 
 

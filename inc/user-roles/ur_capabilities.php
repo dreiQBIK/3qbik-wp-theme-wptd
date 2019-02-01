@@ -1,11 +1,11 @@
 <?php
 // https://isabelcastillo.com/list-capabilities-current-user-wordpress
 
-function wpcodex_set_capabilities()
+function wptd_set_capabilities()
 {
    // get custom roles
-   $role_owner = get_role('owner');
-   
+   $role_admin = get_role('admin');
+
    // remove all capabilities from custom roles
    $remove_capabilities = array(
       'switch_themes',
@@ -73,11 +73,14 @@ function wpcodex_set_capabilities()
       'administrator',
    );
    foreach ($remove_capabilities as $remove_capability) {
-      $role_owner->remove_cap($remove_capability);
+      $role_admin->remove_cap($remove_capability);
    }
-   
-   // set capabilities for role OWNER
-   $role_owner_capabilities = array(
+
+   // set capabilities for role admin
+   $role_admin_capabilities = array(
+      'switch_themes',
+      'activate_plugins',
+      'edit_plugins',
       'edit_users',
       'edit_files',
       'manage_options',
@@ -118,13 +121,22 @@ function wpcodex_set_capabilities()
       'delete_private_pages',
       'edit_private_pages',
       'read_private_pages',
+      'delete_users',
+      'create_users',
+      'unfiltered_upload',
+      'edit_dashboard',
+      'update_plugins',
+      'delete_plugins',
+      'install_plugins',
+      'update_core',
       'list_users',
       'remove_users',
       'add_users',
+      'export',
    );
-   foreach ($role_owner_capabilities as $role_owner_capability) {
-      $role_owner->add_cap($role_owner_capability);
+   foreach ($role_admin_capabilities as $role_admin_capability) {
+      $role_admin->add_cap($role_admin_capability);
    }
 }
 
-add_action('init', 'wpcodex_set_capabilities');
+add_action('init', 'wptd_set_capabilities');

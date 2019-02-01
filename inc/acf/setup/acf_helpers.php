@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Simple function to pretty up our field partial includes.
  *

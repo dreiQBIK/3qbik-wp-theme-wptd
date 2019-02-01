@@ -3,42 +3,45 @@
 // https://codex.wordpress.org/Function_Reference/remove_meta_box
 // https://gist.github.com/aliciaduffy/3362670
 
-/*if (is_admin()) {
-   add_action('admin_menu', 'wpdocs_remove_meta_boxes');
-   add_action('add_meta_boxes', 'plugin_remove_meta_boxes', 100);
-}*/
+// if (!is_admin()) {
+add_action('admin_menu', 'wptd_remove_meta_boxes');
+add_action('do_meta_boxes', 'wptd_remove_side_meta_boxes');
+// }
 
 /**
  * Remove meta boxes from the post edit screens
  */
-/*function wpdocs_remove_meta_boxes()
+function wptd_remove_meta_boxes()
 {
-   if (!current_user_can('manage_options')) {
-      remove_meta_box('postexcerpt', 'post', 'normal');
-      remove_meta_box('trackbacksdiv', 'post', 'normal');
-      remove_meta_box('commentstatusdiv', 'post', 'normal');
-      remove_meta_box('pageparentdiv', 'post', 'normal');
-      remove_meta_box('tagsdiv-post_tag', 'post', 'normal');
-      remove_meta_box('categorydiv', 'post', 'normal');
-      remove_meta_box('formatdiv', 'post', 'normal');
+   if (current_user_can('manage_options')) {
+      // page
+      remove_meta_box('commentstatusdiv', 'page', 'normal'); // Discussion
+      remove_meta_box('commentsdiv', 'page', 'normal'); // Comments
+      remove_meta_box('revisionsdiv', 'page', 'normal'); // Revisions
+
+      // posts
+      remove_meta_box('formatdiv', 'post', 'normal'); // Format
+      remove_meta_box('revisionsdiv', 'post', 'normal'); // Revisions
    }
-   
-   // remove plugin meta-boxes
-   function plugin_remove_meta_boxes()
-   {
-      if (!current_user_can('manage_options')) {
-         remove_meta_box('novo-map-post-admin-menu', 'post', 'advanced'); // Novo-Maps meta-box
-      }
+}
+
+/**
+ * Remove meta boxes from the post edit screens
+ */
+function wptd_remove_side_meta_boxes()
+{
+   if (current_user_can('manage_options')) {
+      remove_meta_box('postimagediv', 'page', 'side'); // Featured Image
    }
-}*/
+}
 
 // remove screen-options
-/*add_filter('screen_options_show_screen', '__return_false');*/
+// add_filter('screen_options_show_screen', '__return_false');
 
 // remove help
-/*add_filter( 'contextual_help', 'mytheme_remove_help_tabs', 999, 3 );
-function mytheme_remove_help_tabs($old_help, $screen_id, $screen){
+/* add_filter('contextual_help', 'wptd_remove_help_tabs', 999, 3);
+function wptd_remove_help_tabs($old_help, $screen_id, $screen)
+{
    $screen->remove_help_tabs();
    return $old_help;
-}*/
-
+} */

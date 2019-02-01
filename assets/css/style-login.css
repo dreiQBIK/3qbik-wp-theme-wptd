@@ -29,25 +29,6 @@
     @include fontstyle("main-01");
 
 ******************************************************************/
-/******************************************************************
-
-    SETTINGS: FONTS
-
-    USAGE:
-    @include fontstyle(
-        $style: false, $scale: 1,
-        $family: false, $weight: false, $color: false,
-        $fz-xs: false, $lh-xs: false, $mb-xs: false,
-        $fz-sm: false, $lh-sm: false, $mb-sm: false,
-        $fz-md: false, $lh-md: false, $mb-md: false,
-        $fz-lg: false, $lh-lg: false, $mb-lg: false,
-        $fz-xl: false, $lh-xl: false, $mb-xl: false
-    );
-
-    USAGE SHORT:
-    @include fontstyle("main-01");
-
-******************************************************************/
 body.login {
   background-color: #2c3e50;
 }

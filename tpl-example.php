@@ -1,6 +1,8 @@
 <?php
+
 /**
- * Template Name: ACF Example Fields
+ * Template Name: Example Template
+ * Template Post Type: post, page
  *
  * Methods for TimberHelper can be found in the /lib sub-directory
  *
@@ -12,4 +14,4 @@
 $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
-Timber::render( 'views/tpl-example.twig', $context );
+Timber::render('views/tpl-example.twig', $context);

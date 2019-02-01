@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ***********************************************************************************************
  *
@@ -52,7 +53,7 @@ function wptd_backend_color_scheme()
    wp_admin_css_color(
       'wptd-backend-css',
       __('wptd Color-Theme'),
-      $theme_dir.'/assets/css/style-theme.css',
+      $theme_dir . '/assets/css/style-theme.css',
       array(
          '#202A35',
          '#364250',
@@ -60,8 +61,8 @@ function wptd_backend_color_scheme()
          '#ec764d',
       ),
       array(
-         'base'    => '#202A35',
-         'focus'   => '#fff191',
+         'base' => '#202A35',
+         'focus' => '#fff191',
          'current' => '#ec764d',
       )
    );
@@ -73,7 +74,7 @@ add_action('admin_init', 'wptd_backend_color_scheme');
 function wptd_set_backend_color_scheme_as_default($user_id)
 {
    $args = array(
-      'ID'          => $user_id,
+      'ID' => $user_id,
       'admin_color' => 'wptd-backend-css',
    );
    wp_update_user($args);
@@ -85,7 +86,7 @@ add_action('user_register', 'wptd_set_backend_color_scheme_as_default');
 function wptd_update_backend_color_scheme($color_scheme)
 {
    $color_scheme = 'wptd-backend-css';
-   
+
    return $color_scheme;
 }
 
@@ -102,7 +103,7 @@ function wptd_hide_tinymce()
    $template_file = basename(get_page_template());
    if ($template_file != 'tpl-tinymce.php') {
       remove_post_type_support('post', 'editor');
-      remove_post_type_support('page', 'editor');
+      // remove_post_type_support('page', 'editor');
    }
 }
 
