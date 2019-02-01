@@ -103,7 +103,7 @@ function wptd_hide_tinymce()
    $template_file = basename(get_page_template());
    if ($template_file != 'tpl-tinymce.php') {
       remove_post_type_support('post', 'editor');
-      // remove_post_type_support('page', 'editor');
+      remove_post_type_support('page', 'editor');
    }
 }
 

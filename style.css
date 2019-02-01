@@ -448,14 +448,16 @@ template {
 	COLORS
 ******************************************************************/
 /******************************************************************
-		FONTS
-	******************************************************************/
+   FONTS
+******************************************************************/
 /******************************************************************
-		SPACERS
-	******************************************************************/
+   SPACERS
+   https://getbootstrap.com/docs/4.1/utilities/spacing/
+******************************************************************/
 /******************************************************************
-		GRID
-	******************************************************************/
+   GRID
+   https://getbootstrap.com/docs/4.1/layout/overview/#responsive-breakpoints
+******************************************************************/
 /******************************************************************
 
     SETTINGS: FONTS
@@ -472,7 +474,7 @@ template {
     );
 
     USAGE SHORT:
-    @include fontstyle("main-01");
+    @include fontstyle("fs1-main");
 
 ******************************************************************/
 .container {
@@ -9145,10 +9147,6 @@ readers do not read off random characters that represent icons */
   background-color: #879cb1;
 }
 
-.l_page__header {
-  background-color: #788fa7;
-}
-
 .l_page > .container {
   background-color: #788fa7;
 }
@@ -9164,7 +9162,7 @@ readers do not read off random characters that represent icons */
 }
 
 .l_comments {
-  background-color: #eeeeee;
+  background-color: #c8c8c8;
   padding: 2em;
   margin-top: 2em;
 }
@@ -9173,7 +9171,7 @@ readers do not read off random characters that represent icons */
 .l_comments textarea {
   border: none;
   background-color: #879cb1;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #c8c8c8;
   padding: 1em;
 }
 
@@ -9206,51 +9204,8 @@ readers do not read off random characters that represent icons */
   background-color: #ff855b;
 }
 
-.l_imprint a {
-  border-bottom: 3px solid #ff855b;
-}
-
-.l_imprint a:hover {
-  color: #ec764d;
-}
-
 .l_sidebar {
   background-color: #fff191;
-  display: none;
-}
-
-.widget_search label > span {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.widget_search .search-field {
-  border: none;
-  background-color: #879cb1;
-  border-bottom: 2px solid #dddddd;
-  padding: 1em;
-}
-
-.widget_search .search-field:focus {
-  outline: 0;
-  border-bottom: 2px solid #ec764d;
-}
-
-.widget_search .search-submit {
-  background-color: #ec764d;
-  color: #ffffff;
-  font-weight: 700;
-  text-transform: uppercase;
-  border: none;
-  border-bottom: 5px solid #d96a44;
-  border-radius: 5px;
-  padding: 1em 2em;
-}
-
-.widget_search .search-submit:hover {
-  outline: 0;
-  background-color: #ff855b;
 }
 
 .l_404 {
@@ -9370,7 +9325,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #c8c8c8;
   margin: 1em 0;
   padding: 0;
 }
@@ -10352,8 +10307,8 @@ a.m_btn {
 
 .m_btn--light,
 a.m_btn--light {
-  background-color: #cccccc;
-  border-bottom: 3px solid #aaaaaa;
+  background-color: #c8c8c8;
+  border-bottom: 3px solid #c8c8c8;
   color: #2c3e50;
 }
 
@@ -10361,7 +10316,7 @@ a.m_btn--light {
   .m_btn--light:hover,
   a.m_btn--light:hover {
     outline: 0;
-    background-color: #bbbbbb;
+    background-color: #c8c8c8;
   }
 }
 

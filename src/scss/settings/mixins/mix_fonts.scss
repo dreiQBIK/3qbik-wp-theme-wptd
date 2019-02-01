@@ -14,7 +14,7 @@
     );
 
     USAGE SHORT:
-    @include fontstyle("main-01");
+    @include fontstyle("fs1-main");
 
 ******************************************************************/
 
@@ -67,7 +67,7 @@
    $mb-xl-default: 0.5em;
 
    // default heading h1
-   @if $style == "main-01" {
+   @if $style == "fs1-main" {
       //settings
       $family-default: $f1-main;
       $weight-default: 700;
@@ -95,7 +95,7 @@
       $mb-xl-default: 0.5em;
    }
       // default heading h2
-   @else if $style == "main-02" {
+   @else if $style == "fs2-main" {
       //settings
       $family-default: $f1-main;
       $weight-default: 700;
@@ -149,7 +149,7 @@
       $fz-xl-default: 5.2rem;
       $lh-xl-default: 1.2em;
       $mb-xl-default: 0.5em;
-   } @else if $style == "second-01" {
+   } @else if $style == "fs1-second" {
       //settings
       $family-default: $f1-second;
       $weight-default: 700;
@@ -175,7 +175,7 @@
       $fz-xl-default: 2.6rem;
       $lh-xl-default: 1.4em;
       $mb-xl-default: 0.5em;
-   } @else if $style == "second-02" {
+   } @else if $style == "fs2-second" {
       //settings
       $family-default: $f1-second;
       $weight-default: 700;
@@ -203,7 +203,7 @@
       $mb-xl-default: 0.5em;
    }
       // default running text
-   @else if $style == "third-01" {
+   @else if $style == "fs1-third" {
       //settings
       $family-default: $f1-third;
       $weight-default: 400;
@@ -231,7 +231,7 @@
       $mb-xl-default: 0.5em;
    }
       // default text h3
-   @else if $style == "third-02" {
+   @else if $style == "fs2-third" {
       //settings
       $family-default: $f3-third;
       $weight-default: normal;
@@ -259,7 +259,7 @@
       $mb-xl-default: 0.5em;
    }
       // default text h4
-   @else if $style == "third-03" {
+   @else if $style == "fs3-third" {
       //settings
       $family-default: $f3-third;
       $weight-default: normal;
@@ -287,7 +287,7 @@
       $mb-xl-default: 0.5em;
    }
       // default text h4
-   @else if $style == "third-04" {
+   @else if $style == "fs4-third" {
       //settings
       $family-default: $f3-third;
       $weight-default: normal;
@@ -311,34 +311,6 @@
       $mb-lg-default: 0.5em;
       //xlarge
       $fz-xl-default: 1.4rem;
-      $lh-xl-default: 1.5em;
-      $mb-xl-default: 0.5em;
-   }
-      // card heading
-   @else if $style == "third-05" {
-      //settings
-      $family-default: $f3-third;
-      $weight-default: normal;
-      $color-default: $c1-second;
-
-      //base
-      $fz-xs-default: 1.3rem;
-      $lh-xs-default: 1.5em;
-      $mb-xs-default: 0.5em;
-      //small
-      $fz-sm-default: 1.3rem;
-      $lh-sm-default: 1.5em;
-      $mb-sm-default: 0.5em;
-      //medium
-      $fz-md-default: 1.4rem;
-      $lh-md-default: 1.5em;
-      $mb-md-default: 0.5em;
-      //large
-      $fz-lg-default: 1.5rem;
-      $lh-lg-default: 1.5em;
-      $mb-lg-default: 0.5em;
-      //xlarge
-      $fz-xl-default: 1.5rem;
       $lh-xl-default: 1.5em;
       $mb-xl-default: 0.5em;
    }

@@ -1,8 +1,4 @@
-// stylelint-disable declaration-no-important
-
-// Flex variation
-//
-// Custom styles for additional flex alignment options.
+// https://getbootstrap.com/docs/4.1/utilities/flex/
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {

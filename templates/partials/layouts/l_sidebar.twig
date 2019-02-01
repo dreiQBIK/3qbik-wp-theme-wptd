@@ -1,0 +1,17 @@
+<aside class="l_sidebar">
+   <ul class="m_categories">
+   {% for cat in categories %}
+      <li>
+         <a href="{{cat.link}}">{{cat.name}}</a>
+      </li>
+   {% endfor %}
+   </ul>
+
+   <ul class="m_tags">
+   {% for tag in tags %}
+      <li>
+         <a href="{{tag.link}}">{{tag.name}}</a>
+      </li>
+   {% endfor %}
+   </ul>
+</aside>

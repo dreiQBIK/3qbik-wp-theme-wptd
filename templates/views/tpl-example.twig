@@ -1,11 +1,12 @@
 {% extends "base.twig" %}
 {% block content %}
    <div class="main__inner l_page">
-      <header class="container l_page__header">
-         <h1 class="heading-2">This is an example Template</h1>
+      <header class="container">
+         <h1 class="heading-1">{{post.title}}</h1>
       </header>
-      <div class="container">
-         {{ post.content }}
+      <div class="container tinymce">
+         {{ post.meta('tinymce') }}
       </div>
+      {{ sidebar }}
    </div>
 {% endblock %}

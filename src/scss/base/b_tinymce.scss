@@ -31,20 +31,20 @@
    }
 
    h3 {
-      @include fontstyle("third-02");
+      @include fontstyle("fs2-third");
    }
    h4 {
       margin-top: 1em;
-      @include fontstyle("third-03");
+      @include fontstyle("fs3-third");
    }
    h5 {
       margin-top: 1em;
-      @include fontstyle($style: "third-04", $color: $c-white);
+      @include fontstyle($style: "fs4-third", $color: $c-white);
    }
 
    p {
       margin: 0 0 0.5em !important;
-      @include fontstyle($style: "third-01");
+      @include fontstyle($style: "fs1-third");
       color: lighten($c3-main, 30%);
 
       &:last-of-type {

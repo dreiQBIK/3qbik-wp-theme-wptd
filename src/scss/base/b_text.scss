@@ -10,21 +10,21 @@ h5 {
 }
 
 h1 {
-   @include fontstyle("main-01");
+   @include fontstyle("fs1-main");
 }
 
 h2 {
-   @include fontstyle("second-01");
+   @include fontstyle("fs1-second");
 }
 
 h3,
 h4,
 h5 {
-   @include fontstyle("third-01");
+   @include fontstyle("fs1-third");
 }
 
 p {
-   @include fontstyle("third-01");
+   @include fontstyle("fs1-third");
    margin-top: 0;
    margin-bottom: 0.5em;
 
@@ -40,12 +40,12 @@ p {
 }
 
 .heading-1 {
-   @include fontstyle("main-01");
+   @include fontstyle("fs1-main");
    text-transform: uppercase;
 }
 
 .heading-2 {
-   @include fontstyle("main-02");
+   @include fontstyle("fs2-main");
    text-transform: uppercase;
 }
 .heading-3 {

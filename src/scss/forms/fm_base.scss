@@ -14,7 +14,7 @@
          height: 50px;
          padding: 0.8em 1.2em;
          border: 0;
-         border-bottom: 2px solid $c9-grey;
+         border-bottom: 2px solid $c1-grey;
 
          &:focus {
             border-bottom: 2px solid $c1-third;
@@ -27,26 +27,26 @@
          // placeholder
          &::-webkit-input-placeholder {
             /* Chrome/Opera/Safari */
-            color: $c11-grey;
+            color: $c1-grey;
             font-style: italic;
          }
          &::-webkit-input-placeholder {
-            color: $c11-grey;
+            color: $c1-grey;
             font-style: italic;
          }
          &::-moz-placeholder {
             /* Firefox 19+ */
-            color: $c11-grey;
+            color: $c1-grey;
             font-style: italic;
          }
          &:-ms-input-placeholder {
             /* IE 10+ */
-            color: $c11-grey;
+            color: $c1-grey;
             font-style: italic;
          }
          &:-moz-placeholder {
             /* Firefox 18- */
-            color: $c11-grey;
+            color: $c1-grey;
             font-style: italic;
          }
       }
@@ -71,7 +71,7 @@
          // style date text
          &::-webkit-datetime-edit-fields-wrapper {
             margin-bottom: 0 !important;
-            color: $c11-grey;
+            color: $c1-grey;
             font-style: italic;
          }
          // pick date
@@ -167,7 +167,7 @@
                width: 19px;
                height: 19px;
                margin-right: 8px;
-               border: 2px solid $c9-grey;
+               border: 2px solid $c1-grey;
                border-radius: 50%;
             }
          }
@@ -204,7 +204,7 @@
                width: 18px;
                height: 18px;
                margin-right: 8px;
-               border: 2px solid $c9-grey;
+               border: 2px solid $c1-grey;
             }
          }
       }

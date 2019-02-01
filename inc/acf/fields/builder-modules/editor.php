@@ -21,9 +21,7 @@ $editor
         ])
             ->addWysiwyg('wysiwyg', [
                 'label' => 'Text',
-                'tabs' => 'visual',
                 'media_upload' => 0,
-                'required' => 1,
             ])
 
         ->addTab('settings', [

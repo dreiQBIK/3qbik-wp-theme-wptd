@@ -10,14 +10,14 @@ a.m_btn {
    text-transform: uppercase;
 
    &--light {
-      background-color: $c12-grey;
-      border-bottom: 3px solid $c10-grey;
+      background-color: $c1-grey;
+      border-bottom: 3px solid $c1-grey;
       color: $c1-main;
 
       &:hover {
          @include media-breakpoint-up(md) {
             outline: 0;
-            background-color: $c11-grey;
+            background-color: $c1-grey;
          }
       }
    }

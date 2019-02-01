@@ -7,6 +7,7 @@
  *  > REGISTER_TINY_MCE_SECOND_TOOLBAR
  *  > REGISTER_TINY_MCE_CUSTOM_COLORS
  *  > ADD_CLASS_TO_EMPTY_P
+ *  > PREVENT_COLLAPSE
  *
  * @package wptd
  *********************************************************************************************** */
@@ -184,6 +185,19 @@ add_filter('tiny_mce_before_init', 'wptd_mce_custom_colors');
 ************************************************************************************************* */
 
 function wptd_mce_add_class_to_empty_p( $content ) {
-    return str_ireplace( '<p>&nbsp;</p>', '<span class="mce_brake"></span>', $content );
+    return str_replace( '<p>&nbsp;</p>', '<span class="mce_brake"></span>', $content );
 }
- add_filter( 'acf_the_content', 'wptd_mce_add_class_to_empty_p', PHP_INT_MAX );
+add_filter( 'acf_the_content', 'wptd_mce_add_class_to_empty_p', PHP_INT_MAX );
+
+
+
+/************************************************************************************************
+    PREVENT_COLLAPSE
+************************************************************************************************* */
+
+function wptd_acf_tinymce_prevent_collapse(){
+    echo "<script type='text/javascript'>jQuery(document).ready(function($) {
+        $('#acf-group_tinymce').removeClass('closed');
+    });</script>";
+}
+add_action('admin_head','wptd_acf_tinymce_prevent_collapse');

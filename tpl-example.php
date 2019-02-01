@@ -14,4 +14,5 @@
 $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
+$context['sidebar'] = Timber::get_sidebar('l-sidebar.php');
 Timber::render('views/tpl-example.twig', $context);
