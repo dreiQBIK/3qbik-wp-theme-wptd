@@ -4,16 +4,15 @@ namespace App;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-$config = (object)[
-    'ui' => 1,
-    'wrapper' => ['width' => 30],
-];
 
-$heading = new FieldsBuilder('heading', ['title' => 'Überschrift']);
+$m_heading = new FieldsBuilder('m_heading', [
+   'title' => 'Überschrift',
+]);
 
-$heading
-    ->addGroup('heading', [
+$m_heading
+    ->addGroup('m_heading_group', [
         'label' => '',
+        /*'wrapper' => ['width' => 50],*/
     ])
 
         ->addTab('content', [
@@ -39,4 +38,4 @@ $heading
 
     ->endGroup();
 
-return $heading;
+return $m_heading;

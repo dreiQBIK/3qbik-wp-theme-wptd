@@ -1,10 +1,9 @@
 {% extends "base.twig" %}
 {% block content %}
-   <div class="main__inner l_page">
-      <header class="container">
-         <h1 class="heading-1">
-            {{ post.title }}</h1>
-      </header>
-      {% include '/partials/layouts/l_builder.twig' %}
-   </div>
+  <div class="main__inner l_page">
+    <header class="container">
+      <h1 class="heading-1">{{ post.title }}</h1>
+    </header>
+    {% include '/partials/layouts/l_builder.twig' %}
+  </div>
 {% endblock %}

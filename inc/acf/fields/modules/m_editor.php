@@ -4,16 +4,12 @@ namespace App;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-$config = (object)[
-    'ui' => 1,
-    'wrapper' => ['width' => 30],
-];
+$m_editor = new FieldsBuilder('m_editor', ['title' => 'Editor']);
 
-$editor = new FieldsBuilder('editor', ['title' => 'Editor']);
-
-$editor
-    ->addGroup('editor', [
+$m_editor
+    ->addGroup('m_editor_group', [
         'label' => '',
+        /*'wrapper' => ['width' => 50],*/
     ])
 
         ->addTab('content', [
@@ -39,4 +35,4 @@ $editor
 
     ->endGroup();
 
-return $editor;
+return $m_editor;

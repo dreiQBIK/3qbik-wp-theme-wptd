@@ -4,7 +4,7 @@ namespace App;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-$tinymce = new FieldsBuilder('tinymce', [
+$g_tinymce = new FieldsBuilder('g_tinymce', [
     'title' => 'Editor',
     'menu_order' => 0,
     'hide_on_screen' => array(
@@ -12,14 +12,14 @@ $tinymce = new FieldsBuilder('tinymce', [
     ),
 ]);
 
-$tinymce
+$g_tinymce
     ->setLocation('post_type', '==', 'page')
     ->and('post_template', '==', 'tpl-example.php');
 
-$tinymce
-    ->addWysiwyg('tinymce', [
+$g_tinymce
+    ->addWysiwyg('wysiwyg', [
         'label' => 'Text',
         'media_upload' => 0,
     ]);
 
-return $tinymce;
+return $g_tinymce;

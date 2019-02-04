@@ -3,11 +3,10 @@
 /**
  * Simple function to pretty up our field partial includes.
  *
- * @param  mixed $partial
+ * @param  mixed $builder_module
  * @return mixed
  */
-function get_field_partial($partial)
+function get_modules($module)
 {
-    $partial = str_replace('.', '/', $partial);
-    return include(get_template_directory() . "/inc/acf/fields/{$partial}.php");
+    return include(get_template_directory() . "/inc/acf/fields/{$module}.php");
 }
