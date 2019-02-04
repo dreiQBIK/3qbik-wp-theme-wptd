@@ -4,23 +4,19 @@ namespace App;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
+$m_editor = new FieldsBuilder('m_editor', ['title' => 'Editor']);
 
-$m_heading = new FieldsBuilder('m_heading', [
-   'title' => 'Überschrift',
-]);
-
-$m_heading
-    ->addGroup('m_heading_group', [
+$m_editor
+    ->addGroup('m_editor', [
         'label' => '',
-        /*'wrapper' => ['width' => 50],*/
     ])
 
         ->addTab('content', [
             'label' => 'Inhalt',
         ])
-            ->addText('text', [
-                'label' => 'Überschrift',
-                'required' => 1,
+            ->addWysiwyg('wysiwyg', [
+                'label' => 'Text',
+                'media_upload' => 0,
             ])
 
         ->addTab('settings', [
@@ -30,12 +26,12 @@ $m_heading
                 'label' => 'Abstand nach unten',
                 'instructions' => 'Größe des Abstandes des gesamten Elementes nach unten/zum nächsten Element',
                 'wrapper' => ['width' => 50],
-                'default_value' => '2'
+                'default_value' => 'sp-md'
             ])
-            ->addChoice('1', 'Klein')
-            ->addChoice('2', 'Standard')
-            ->addChoice('4', 'Groß')
+            ->addChoice('sp-sm', 'Klein')
+            ->addChoice('sp-md', 'Standard')
+            ->addChoice('sp-lg', 'Groß')
 
     ->endGroup();
 
-return $m_heading;
+return $m_editor;

@@ -9204,10 +9204,6 @@ readers do not read off random characters that represent icons */
   background-color: #ff855b;
 }
 
-.l_sidebar {
-  background-color: #fff191;
-}
-
 .l_404 {
   height: calc(100vh - 150px);
 }

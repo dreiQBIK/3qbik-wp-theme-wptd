@@ -10,50 +10,47 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 add_action(
    'init',
    function () {
-      
+
       $acf_files = array();
-      foreach (glob(get_template_directory().'/inc/acf/fields/templates/**/*.php') as $file) {
+      foreach (glob(get_template_directory() . '/inc/acf/fields/**/*.php') as $file) {
          $acf_files[] = $file;
       }
-      
+
       $acf_files_adjusted = array_map(
          function ($field) {
             return require_once($field);
          },
          $acf_files
       );
-      
+
       array_map(
          function ($field) {
-            
             if ($field instanceof FieldsBuilder) {
                acf_add_local_field_group($field->build());
             }
          },
          $acf_files_adjusted
       );
-      
-      
-      $acf_files_global = array();
-      foreach (glob(get_template_directory().'/inc/acf/fields/modules/globals/*.php') as $file) {
-         $acf_files_global[] = $file;
+
+      $acf_files_2 = array();
+      foreach (glob(get_template_directory() . '/inc/acf/fields/*.php') as $file) {
+         $acf_files_2[] = $file;
       }
-      
-      $acf_files_adjusted_global = array_map(
+
+      $acf_files_adjusted_2 = array_map(
          function ($field) {
             return require_once($field);
          },
-         $acf_files_global
+         $acf_files_2
       );
-      
-      
+
       array_map(
          function ($field) {
             if ($field instanceof FieldsBuilder) {
                acf_add_local_field_group($field->build());
             }
          },
-         $acf_files_adjusted_global
+         $acf_files_adjusted_2
       );
    }
 );

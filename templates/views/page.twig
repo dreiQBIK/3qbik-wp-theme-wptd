@@ -1,9 +1,18 @@
+{% set page_header = post.meta('page_header') %}
+{% set header_heading = page_header.heading %}
+{% set header_text = page_header.text %}
 {% extends "base.twig" %}
 {% block content %}
-  <div class="main__inner l_page">
-    <header class="container">
-      <h1 class="heading-1">{{ post.title }}</h1>
-    </header>
-    {% include '/partials/layouts/l_builder.twig' %}
-  </div>
+   <div class="main__inner l_page">
+      <header class="container">
+         <h1 class="heading-1">
+            {{ post.title }}</h1>
+      </header>
+      <section class="container">
+         <h2>
+            {{header_heading}}</h2>
+         <p>
+            {{ header_text }}</p>
+      </section>
+   </div>
 {% endblock %}

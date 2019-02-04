@@ -1,17 +1,17 @@
-{% set modules = post.meta('builder-modules') %}
+{% set modules = post.meta('builder_content') %}
 {% for module in modules %}
    {# Module: HEADLINE #}
-   {% if module.acf_fc_layout == 'heading' %}
+   {% if module.acf_fc_layout == 'm_heading' %}
       {% include "/partials/modules/builder/m_headline.twig" with {
-         headline: module.heading.text,
-         space_bottom: module.heading.margin
+         headline: module.m_heading.text,
+         space_bottom: module.m_heading.margin
       }%}
    {% endif %}
    {# Module: TEXT #}
-   {% if module.acf_fc_layout == 'editor' %}
+   {% if module.acf_fc_layout == 'm_editor' %}
       {% include "/partials/modules/builder/m_text.twig" with {
-         editor: module.editor.wysiwyg,
-         space_bottom: module.editor.margin
+         editor: module.m_editor.wysiwyg,
+         space_bottom: module.m_editor.margin
       }%}
    {% endif %}
 {% endfor %}

@@ -8,5 +8,5 @@
  */
 function get_modules($module)
 {
-    return include(get_template_directory() . "/inc/acf/fields/{$module}.php");
+    return include(get_template_directory() . "/inc/acf/fields/builder/modules/{$module}.php");
 }
