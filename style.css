@@ -5278,54 +5278,6 @@ template {
   font-style: italic !important;
 }
 
-.text-white {
-  color: #ffffff !important;
-}
-
-.text-c1-main {
-  color: #2c3e50 !important;
-}
-
-.text-c2-main {
-  color: #384d62 !important;
-}
-
-.text-c3-main {
-  color: #879cb1 !important;
-}
-
-.text-c1-second {
-  color: #fff191 !important;
-}
-
-.text-c2-second {
-  color: #eede70 !important;
-}
-
-.text-c1-third {
-  color: #ec764d !important;
-}
-
-.text-c2-third {
-  color: #d96a44 !important;
-}
-
-.text-c1-accent {
-  color: #96a9bb !important;
-}
-
-.text-c1-hint {
-  color: #ec764d !important;
-}
-
-.text-c1-error {
-  color: #d6445c !important;
-}
-
-.text-c1-success {
-  color: #00b878 !important;
-}
-
 .text-hide {
   font: 0/0 a;
   color: transparent;
@@ -10287,6 +10239,124 @@ ul li:before {
 
 .tinymce a:active {
   color: #ff855b;
+}
+
+.text-c1-main {
+  color: #2c3e50 !important;
+}
+
+.text-c2-main {
+  color: #384d62 !important;
+}
+
+.text-c3-main {
+  color: #879cb1 !important;
+}
+
+.text-c1-second {
+  color: #fff191 !important;
+}
+
+.text-c2-second {
+  color: #eede70 !important;
+}
+
+.text-c1-third {
+  color: #ec764d !important;
+}
+
+.text-c2-third {
+  color: #d96a44 !important;
+}
+
+.text-c1-accent {
+  color: #96a9bb !important;
+}
+
+.text-c1-hint {
+  color: #ec764d !important;
+}
+
+.text-c1-error {
+  color: #d6445c !important;
+}
+
+.text-c1-success {
+  color: #00b878 !important;
+}
+
+.bg-c1-main {
+  background: #2c3e50 !important;
+}
+
+.bg-c2-main {
+  background: #384d62 !important;
+}
+
+.bg-c3-main {
+  background: #879cb1 !important;
+}
+
+.bg-c1-second {
+  background: #fff191 !important;
+}
+
+.bg-c2-second {
+  background: #eede70 !important;
+}
+
+.bg-c1-third {
+  background: #ec764d !important;
+}
+
+.bg-c2-third {
+  background: #d96a44 !important;
+}
+
+.bg-c1-accent {
+  background: #96a9bb !important;
+}
+
+.bg-c1-hint {
+  background: #ec764d !important;
+}
+
+.bg-c1-error {
+  background: #d6445c !important;
+}
+
+.bg-c1-success {
+  background: #00b878 !important;
+}
+
+.f1-main {
+  font-family: "FuturaLTPro-XBold", sans-serif !important;
+}
+
+.f1-second {
+  font-family: "KlavikaWeb", "Helvetica", "Arial", sans-serif !important;
+}
+
+.f1-third {
+  font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif !important;
+}
+
+.f2-third {
+  font-family: "OfficinaSansITCStd-BookItalic", "Helvetica", "Arial", sans-serif !important;
+}
+
+.f3-third {
+  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif !important;
+}
+
+.f4-third {
+  font-family: "OfficinaSansITCStd-BoldItalic", "Helvetica", "Arial", sans-serif !important;
+}
+
+.l_styleguide .color-field {
+  display: block;
+  width: 100%;
+  height: 80px;
 }
 
 .m_btn,

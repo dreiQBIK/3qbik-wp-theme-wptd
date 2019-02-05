@@ -57,6 +57,19 @@ $f2-third: "OfficinaSansITCStd-BookItalic", "Helvetica", "Arial", sans-serif;
 $f3-third: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
 $f4-third: "OfficinaSansITCStd-BoldItalic", "Helvetica", "Arial", sans-serif;
 
+$theme-fonts: () !default;
+$theme-fonts: map-merge(
+      (
+         "f1-main": $f1-main,
+         "f1-second": $f1-second,
+         "f1-third": $f1-third,
+         "f2-third": $f2-third,
+         "f3-third": $f3-third,
+         "f4-third": $f4-third,
+      ),
+      $theme-fonts
+);
+
 
 /******************************************************************
    SPACERS

@@ -1,0 +1,18 @@
+{% extends "base.twig" %}
+
+{% block header %}
+  <header class="container">
+    <h1 class="heading-1 f1-third">
+      {{ post.title }}
+    </h1>
+  </header>
+{% endblock %}
+
+{% block content %}
+  <div class="main__inner l_styleguide mt-3">
+    
+    {% include "/styleguide/partials/styleguide-fonts.twig" %}
+    {% include "/styleguide/partials/styleguide-colors.twig" %}
+    
+  </div>
+{% endblock %}

@@ -19,7 +19,8 @@ STYLESHEET: STYLE
 @import "settings/mixins/mix_fonts";
 @import "settings/mixins/mix_visibility";
 @import "settings/mixins/mix_clearfix";
-@import "settings/mixins/mix_text-emphasis";
+@import "settings/mixins/mix_color-classes";
+@import "settings/mixins/mix_font-classes";
 @import "settings/mixins/mix_text-hide";
 @import "settings/mixins/mix_text-truncate";
 @import "settings/set_grid";
@@ -52,6 +53,10 @@ STYLESHEET: STYLE
 @import "base/b_list";
 @import "base/b_helpers";
 @import "base/b_tinymce";
+
+// Styleguide
+@import "styleguide/sg_utilities";
+@import "styleguide/sg_base";
 
 // Modules
 @import "modules/m_btn";

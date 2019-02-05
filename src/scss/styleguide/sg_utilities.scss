@@ -1,0 +1,13 @@
+// usage: text-c1-main, bg-c1-main
+
+@each $color, $value in $theme-colors {
+   @include text-color-classes(".text-#{$color}", $value);
+}
+
+@each $color, $value in $theme-colors {
+   @include background-color-classes(".bg-#{$color}", $value);
+}
+
+@each $font, $value in $theme-fonts {
+   @include font-classes(".#{$font}", $value);
+}

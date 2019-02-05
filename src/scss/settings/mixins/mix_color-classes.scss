@@ -1,0 +1,11 @@
+@mixin text-color-classes($parent, $color) {
+  #{$parent} {
+    color: $color !important;
+  }
+}
+
+@mixin background-color-classes($parent, $color) {
+  #{$parent} {
+    background: $color !important;
+  }
+}
