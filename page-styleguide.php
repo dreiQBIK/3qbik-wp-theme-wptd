@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * The template for displaying a styleguide - ONLY FOR DEVELOPMENT/OVERVIEW.
  *
  * Methods for TimberHelper can be found in the /lib sub-directory
  *
@@ -11,7 +12,17 @@
 
 
 $context = Timber::get_context();
+$templates = 'styleguide/page-styleguide.twig';
+
 $post = new TimberPost();
 $context['post'] = $post;
-Timber::render('styleguide/page-styleguide.twig', $context);
+
+$styleguide_partials = array();
+foreach (glob(get_template_directory() . '/templates/styleguide/partials/*.twig') as $file) {
+   $filename = str_replace(get_template_directory() . "/templates", "", $file);
+   $styleguide_partials[] = $filename;
+}
+$context['styleguide_partials'] = $styleguide_partials;
+
+Timber::render($templates, $context);
 

@@ -1,21 +1,33 @@
 // GENERAL
-$login-logo            : url('../img/dreiqbik-logo-mobile.svg');
-$login-font            : $f1-second;
+$login-logo: url("../img/dreiqbik-logo-mobile.svg");
 
 // LOGIN
-$c1-login-text         : $c-white;
-$c1-login-accent       : $c1-third;
-$c2-login-accent       : $c1-second;
+$c1-main-backend: #2c3e50; //dark
+$c2-main-backend: #384d62; //dark
+$c3-main-backend: #879cb1; //dark
 
-$c1-login-background   : $c1-main;
-$c2-login-background   : $c2-main;
+$c1-second-backend: #fff191; //light
+$c2-second-backend: #eede70; //light
 
-$c1-login-button       : $c1-third;
-$c1-login-button-hover : $c2-third;
-$c1-login-button-text  : $c-white;
+$c1-third-backend: #ec764d; //medium
+$c2-third-backend: #d96a44; //medium
+$c3-third-backend: #ff855b; //medium
 
-$c1-login-link         : $c1-accent;
-$c1-login-link-hover   : $c1-second;
+$c1-login-text: white;
+$c1-login-accent: $c2-main-backend;
+$c2-login-accent: $c1-second-backend;
 
-$c1-message-link       : $c1-accent;
-$c1-message-link-hover : $c1-second;
+$c1-login-form: white;
+
+$c1-login-background: $c1-main-backend;
+$c2-login-background: $c2-main-backend;
+
+$c1-login-button: $c1-third-backend;
+$c1-login-button-hover: $c2-third-backend;
+$c1-login-button-text: white;
+
+$c1-login-link: white;
+$c1-login-link-hover: white;
+
+$c1-message-link: white;
+$c1-message-link-hover: white;

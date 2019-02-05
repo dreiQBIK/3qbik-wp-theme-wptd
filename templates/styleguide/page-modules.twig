@@ -1,18 +1,15 @@
 {% extends "base.twig" %}
-
 {% block header %}
-  <header class="container">
-    <h1 class="heading-1 f1-third">
-      {{ post.title }}
-    </h1>
-  </header>
+   <header class="container">
+      <h1 class="heading-1 f1-third">
+         {{ post.title }}
+      </h1>
+   </header>
 {% endblock %}
-
-
 {% block content %}
-  {% for module in template_modules %}
-    <div class="container">
-      {% include module %}
-    </div>
-  {% endfor %}
+   {% for module in template_modules %}
+      <div class="container">
+         {% include module %}
+      </div>
+   {% endfor %}
 {% endblock %}

@@ -1,16 +1,8 @@
 body {
+   zoom: 1.1;
+
    &.login {
       background-color: $c1-login-background;
-
-      //font -> for all elments
-      div,
-      p,
-      a,
-      label,
-      input {
-         font-family: $login-font;
-         font-weight: 400;
-      }
 
       a {
          transition: all 0.2s ease-in-out;
@@ -27,8 +19,8 @@ body {
          //logo -> file/size
          h1 a {
             background-image: $login-logo;
-            height: 100px;
-            width: 100px;
+            height: 120px;
+            width: 120px;
             background-size: contain;
             background-repeat: no-repeat;
          }
@@ -61,7 +53,7 @@ body {
       input {
          &[type="text"],
          &[type="password"] {
-            background: $c1-login-text;
+            background: $c1-login-form;
          }
 
          &[type="text"],
@@ -77,7 +69,7 @@ body {
 
          input {
             &[type="checkbox"] {
-               background: $c1-login-text;
+               background: $c1-login-form;
 
                &:checked {
                   position: relative;
@@ -94,31 +86,23 @@ body {
          }
       }
 
-      //login button
+      // login button
       .submit {
          .button {
-            transition: all 0.2s ease-in-out;
-            background: none;
-            background-color: $c1-login-button;
             color: $c1-login-button-text;
-            display: inline-block;
-            font-weight: 700;
-            text-transform: uppercase;
-            border: none;
-            border-bottom: 5px solid darken($c1-login-button, 5%);
-            border-radius: 5px;
-            padding: 1em 2em;
-            margin-top: 1em;
-            width: 100%;
-            height: auto;
-            text-shadow: none;
-            box-shadow: none;
-            float: none;
+            background: $c1-login-button;
+            border-color: darken($c1-login-button, 5%);
+            box-shadow: 0 1px 0 darken($c1-login-button, 5%);
+            color: #fff;
+            text-decoration: none;
+            text-shadow: 0 -1px 1px $c1-login-button, 1px 0 1px $c1-login-button,
+               0 1px 1px $c1-login-button, -1px 0 1px $c1-login-button;
+            padding: 0 1.5rem;
 
             &:hover {
                outline: 0;
                background-color: $c1-login-button-hover;
-               border-bottom: 5px solid $c1-login-button;
+               box-shadow: 0 1px 0 darken($c1-login-button, 5%);
             }
          }
       }
@@ -136,9 +120,11 @@ body {
          }
          &:hover {
             color: $c1-login-link-hover;
+            text-decoration: underline;
          }
          &:active {
             color: $c1-login-link;
+            text-decoration: underline;
          }
       }
 
