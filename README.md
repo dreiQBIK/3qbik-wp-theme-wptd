@@ -6,14 +6,17 @@ WordPress Theme with Timber, ACF and acf-builder
 
 Install this theme and be sure the Timber plugin is activated (see dependencies):
 
-1. Make sure you have installed the plugin for the [Timber Library](https://wordpress.org/plugins/timber-library/) and [Advanced Custom Fields](https://de.wordpress.org/plugins/advanced-custom-fields/)
-2. Download the zip for this [theme](https://github.com/) (or clone it) and move it to `wp-content/themes/custom-theme-name` in your WordPress installation.
-3. Rename the folder (custom-theme-name) to something that makes sense for your website (generally no spaces and all lowercase).
-4. Activate the theme in WordPress Backend > Appearance > Themes.
-5. Open console in path `wp-content/themes/custom-theme-name/_config`.
+1. Install current [WordPress Version](https://de.wordpress.org/download/)
+2. Setup localhost in your local-server (Naming-Convention: projectname.local)
+3. Install plugins: [Timber Library](https://wordpress.org/plugins/timber-library/) and [Advanced Custom Fields](https://de.wordpress.org/plugins/advanced-custom-fields/)
+4. Download the zip for this [theme](https://github.com/) (or clone it) and move it to `wp-content/themes/custom-theme-name` in your WordPress installation.
+5. Rename the folder (custom-theme-name) to something that makes sense for your website (generally no spaces and all lowercase).
+6. Activate the theme in WordPress Backend > Appearance > Themes.
+7. Open console in path `wp-content/themes/custom-theme-name/_config`.
     - Use command `npm install` to install dependencies.
     - Use command `ncu` to update dependencies.
-6. Open file `/wp-config.php` and add the line `define( 'WP_DEBUG', true );` underneath the line 64 `$table_prefix = 'wp_';`.
+8. Open file `wp-content/themes/custom-theme-name/_config/config.json` and rename host-settings `"host": "projectname.local"`.
+9. Open file `/wp-config.php` and add the line `define( 'WP_DEBUG', true );` underneath the line 64 `$table_prefix = 'wp_';`.
 
 
 ### Dependencies
