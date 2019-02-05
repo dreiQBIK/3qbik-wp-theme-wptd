@@ -9349,6 +9349,10 @@ address {
   font-style: normal;
 }
 
+.sp-zero {
+  padding-bottom: 0;
+}
+
 .sp-sm {
   padding-bottom: 0.25rem;
 }

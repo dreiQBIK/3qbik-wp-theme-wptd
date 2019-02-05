@@ -10,11 +10,14 @@
  */
 
 $context = Timber::get_context();
+$templates = array( 'views/single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'views/single.twig' );
+$templates_pass = 'single-password.twig';
+
 $post = Timber::query_post();
 $context['post'] = $post;
 
 if ( post_password_required( $post->ID ) ) {
-	Timber::render( 'single-password.twig', $context );
+	Timber::render( $templates_pass, $context );
 } else {
-	Timber::render( array( 'views/single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'views/single.twig' ), $context );
+	Timber::render( $templates, $context );
 }
