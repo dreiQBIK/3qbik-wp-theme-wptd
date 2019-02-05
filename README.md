@@ -1,4 +1,4 @@
-# wptd Theme
+# Theme WPTD
 
 WordPress Theme with Timber, ACF and acf-builder
 
@@ -9,15 +9,14 @@ Install this theme and be sure the Timber plugin is activated (see dependencies)
 1. Install current [WordPress Version](https://de.wordpress.org/download/)
 2. Setup localhost in your local-server (Naming-Convention: projectname.local)
 3. Install plugins: [Timber Library](https://wordpress.org/plugins/timber-library/) and [Advanced Custom Fields](https://de.wordpress.org/plugins/advanced-custom-fields/)
-4. Download the zip for this [theme](https://github.com/) (or clone it) and move it to `wp-content/themes/custom-theme-name` in your WordPress installation.
+4. Download the zip for this [theme](https://github.com/dreiQBIK/3qbik-wp-theme-wptd) (or clone it) and move it to `wp-content/themes/custom-theme-name` in your WordPress installation.
 5. Rename the folder (custom-theme-name) to something that makes sense for your website (generally no spaces and all lowercase).
 6. Activate the theme in WordPress Backend > Appearance > Themes.
 7. Open console in path `wp-content/themes/custom-theme-name/_config`.
-    - Use command `npm install` to install dependencies.
+    - Use command `npm install` or `yarn install` to install dependencies.
     - Use command `ncu` to update dependencies.
-8. Open file `wp-content/themes/custom-theme-name/_config/config.json` and rename host-settings `"host": "projectname.local"`.
-9. Open file `/wp-config.php` and add the line `define( 'WP_DEBUG', true );` underneath the line 64 `$table_prefix = 'wp_';`.
-
+8. Open file `wp-content/themes/custom-theme-name/_config/config.json` and rename host-settings to `"host": "projectname.local"`.
+9. Open file `/wp-config.php` and add the line `define( 'WP_DEBUG', true );` below `$table_prefix = 'wp_';` on the bottom of the file.
 
 ### Dependencies
 
@@ -31,11 +30,11 @@ This theme is build with Timber and ACF (including acf-builder). **Therefore you
 
 `src/` is where you can keep your development front-end scripts, styles, or images.
 
-`templates/` contains all of your Twig templates. These pretty much correspond 1 to 1 with the PHP files that respond to the WordPress template hierarchy. At the end of each PHP template, you'll notice a `Timber::render()` function whose first parameter is the Twig file where that data (or `$context`) will be used. Just an FYI.
+`templates/` contains all of your Twig templates. These pretty much correspond 1 to 1 with the PHP files that respond to the WordPress template hierarchy. At the end of each PHP template, you'll notice a `Timber::render()` function whose first parameter is the Twig file where that data (or `$context`) will be used.
 
 `inc/` contains all PHP functionality you want to add to your theme - these files get included in the `functions.php`.
 
-`inc/acf/` is where you register you ACF fields. Don't forget to include register each file in the `functions.php`!
+`inc/acf/` is where you register you ACF fields. All ACF fields get included automatically!
 
 ## Other Resources
 
