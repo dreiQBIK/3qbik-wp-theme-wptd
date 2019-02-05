@@ -8,6 +8,9 @@
  */
 
 $context = Timber::get_context();
+$templates = 'partials/layouts/l_sidebar.twig';
+
 $context['tags'] = Timber::get_terms('tag');
 $context['categories'] = Timber::get_terms('category');
-Timber::render('partials/layouts/l_sidebar.twig', $context);
+
+Timber::render($templates, $context);

@@ -1,5 +1,9 @@
 .sp {
 
+   &-zero {
+      padding-bottom: 0;
+   }
+
    &-sm {
       padding-bottom: map-get($spacers, 1);
 

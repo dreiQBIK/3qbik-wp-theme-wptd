@@ -7,13 +7,6 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * To generate specific templates for your pages you can use:
- * /mytheme/views/page-mypage.twig
- * (which will still route through this PHP file)
- * OR
- * /mytheme/page-mypage.php
- * (in which case you'll want to duplicate this file and save to the above path)
- *
  * Methods for TimberHelper can be found in the /lib sub-directory
  *
  * @package  WordPress
@@ -22,6 +15,9 @@
  */
 
 $context = Timber::get_context();
+$templates = array( 'views/page-' . $post->post_name . '.twig', 'views/page.twig' );
+
 $post = new TimberPost();
 $context['post'] = $post;
-Timber::render( array( 'views/page-' . $post->post_name . '.twig', 'views/page.twig' ), $context );
+
+Timber::render( $templates, $context );

@@ -31,6 +31,7 @@ $m_heading
                 'wrapper' => ['width' => '50'],
                 'default_value' => 'sp-md'
             ])
+            ->addChoice('sp-zero', 'Kein Abstand')
             ->addChoice('sp-sm', 'Klein')
             ->addChoice('sp-md', 'Standard')
             ->addChoice('sp-lg', 'Groß')

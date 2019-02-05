@@ -12,7 +12,10 @@
  */
 
 $context = Timber::get_context();
+$templates = 'views/tpl-editor.twig';
+
 $post = new TimberPost();
 $context['post'] = $post;
 $context['sidebar'] = Timber::get_sidebar('l-sidebar.php');
-Timber::render('views/tpl-editor.twig', $context);
+
+Timber::render($templates, $context);
