@@ -29,7 +29,7 @@ class StarterSite extends TimberSite {
         add_theme_support( 'post-thumbnails' );
         add_theme_support( 'menus' );
         add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
-        add_filter( 'timber_context', array( $this, 'add_to_context' ) );
+        add_filter( 'timber_context', array( $this, 'add_to_global_context' ) );
         add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
         add_action( 'init', array( $this, 'register_post_types' ) );
         add_action( 'init', array( $this, 'register_taxonomies' ) );
@@ -44,18 +44,11 @@ class StarterSite extends TimberSite {
         //this is where you can register custom taxonomies
     }
 
-    function add_to_context( $context ) {
-        // $context['foo'] = 'bar';
-        // $context['stuff'] = 'I am a value set in your functions.php file';
-        // $context['notes'] = 'These values are available everytime you call Timber::get_context();';
+    function add_to_global_context( $context ) {
         $context['menu'] = new \Timber\Menu( 'primary' );
+        $context['menu_footer'] = new \Timber\Menu( 'footer' );
         $context['site'] = $this;
         return $context;
-    }
-
-    function myfoo( $text ) {
-        $text .= ' bar!';
-        return $text;
     }
 
     function add_to_twig( $twig ) {
