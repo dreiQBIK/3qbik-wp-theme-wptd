@@ -1,0 +1,39 @@
+{# USES
+   space_bottom => type: string
+   image => type: object
+   image_settings => type: object
+#}
+<div class="container {{ space_bottom }}">
+   <div class="m_image">
+      <div class="row">
+
+         {% set show_caption = image_settings.truefalse_caption %}
+         {% set show_lightbox = image_settings.truefalse_lightbox %}
+
+         <div class="col col-12">
+            <figure class="m_image__figure{% if show_lightbox %} with-lightbox{% endif %}">
+               <img
+                     class="m_image__img lazyload"
+                     alt="{{ image.alt }}"
+                     src="{{ theme.link }}/assets/img/placeholder-wide-large.png"
+                     data-src="{{ image.sizes.medium_large }}"
+                     data-srcset="{{ image.sizes.thumbnail }} 150w,
+                        {{ image.sizes.medium }} 300w,
+                        {{ image.sizes.medium_large }} 768w,
+                        {{ image.sizes.large }} 1024w,
+                        {{ image.sizes.wptd_thumb_l }} 1600w,
+                        {{ image.sizes.wptd_thumb_xl }} 1920w,"
+                     data-sizes="auto"
+                  />
+                  {% if show_lightbox %}
+                  <i class="m_image__zoom fas fa-search-plus"></i>
+               {% endif %}
+            </figure>
+            {% if show_caption %}
+               <figcaption class="m_image__caption">{{ image.caption }}</figcaption>
+            {% endif %}
+         </div>
+
+      </div>
+   </div>
+</div>

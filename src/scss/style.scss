@@ -62,11 +62,13 @@ STYLESHEET: STYLE
 // Modules
 @import "modules/m_btn";
 @import "modules/m_card";
+@import "modules/m_image";
 
 // Navigation
 @import "navigation/n_site";
 
 // Overlays
+@import "overlays/o_lightbox";
 
 // Header
 @import "header/h_site";

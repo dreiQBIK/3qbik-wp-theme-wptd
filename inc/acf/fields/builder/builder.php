@@ -26,6 +26,7 @@ $builder
          'button_label' => 'Baustein hinzufügen',
       ]
    )
+   ->addLayout(get_modules('m_image'))
    ->addLayout(get_modules('m_editor'))
    ->addLayout(get_modules('m_heading'));
 

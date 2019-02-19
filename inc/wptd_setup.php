@@ -21,28 +21,20 @@ if (function_exists('add_image_size')) {
 }
 // Add featured image sizes
 if (function_exists('add_image_size')) {
-   add_image_size('own-thumb-xl', 1920, 9999);
-   add_image_size('own-thumb-l', 1600, 9999);
-   add_image_size('own-thumb-ml', 1200, 9999);
-   add_image_size('own-thumb-m', 900, 9999);
-   add_image_size('own-thumb-s', 600, 9999);
-   add_image_size('own-thumb-xs', 400, 9999);
-   
+   add_image_size('wptd_thumb_l', 1600, 9999);
+   add_image_size('wptd_thumb_xl', 1920, 9999);
+
    //* Add new image sizes to media selection
    function post_image_sizes($sizes)
    {
       $custom_sizes = array(
-         'own-thumb-xl' => 'Special Size 1920w',
-         'own-thumb-l'  => 'Special Size 1600w',
-         'own-thumb-ml' => 'Special Size 1200w',
-         'own-thumb-m'  => 'Special Size 900w',
-         'own-thumb-s'  => 'Special Size 600w',
-         'own-thumb-xs' => 'Special Size 400w',
+         'wptd_thumb_l'  => 'Size 1600w',
+         'wptd_thumb_xl' => 'Size 1920w',
       );
-      
+
       return array_merge($sizes, $custom_sizes);
    }
-   
+
    add_filter('image_size_names_choose', 'post_image_sizes');
 }
 

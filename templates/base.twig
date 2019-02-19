@@ -20,6 +20,7 @@
 </main>
 
 {% block footer %}
+   {% include '/partials/overlays/o_lightbox.twig' %}
    {% include '/partials/footer/f_site.twig' %}
    {{ function('wp_footer') }}
 {% endblock %}

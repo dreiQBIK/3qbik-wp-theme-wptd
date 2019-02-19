@@ -209,6 +209,86 @@ var nSite = function ($) {
 }(jQuery);
 "use strict";
 
+var oLightbox = function ($) {
+  /******************************************************************
+      VARS
+  ******************************************************************/
+  var $lightbox = $('.o_lightbox');
+  var $closeButton = $('.o_lightbox__close');
+  var $allImages = $('figure.with-lightbox');
+  /******************************************************************
+      EVENTS
+  ******************************************************************/
+  // close lightbox
+
+  $closeButton.on('click', function (e) {
+    closeLightbox();
+  }); // open lightbox
+
+  $allImages.on('click', function (e) {
+    var $img = $(e.target).closest('figure').find('img');
+    openLightbox($img);
+  }); // close on click on background
+
+  $lightbox.on('click', function (e) {
+    var $target = $(e.target);
+
+    if ($target.closest('.o_lightbox').hasClass('is-open')) {
+      if (!$target.hasClass('o_lightbox__img')) {
+        closeLightbox();
+      }
+    }
+  });
+  $(window).on('resize', function (e) {
+    if ($lightbox.hasClass('is-open')) {
+      setTimeout(function () {
+        adjustImageSize($('.o_lightbox__img'));
+      }, 100);
+    }
+  });
+  /******************************************************************
+      FUNCTIONS
+  ******************************************************************/
+
+  function openLightbox($img) {
+    var imgAlt = $img.attr('alt');
+    var imgSrc = $img.attr('data-src');
+    var imgSrcset = $img.attr('data-srcset'); // build img with given attributes
+
+    $lightbox.addClass('is-open');
+    var lightboxImg = '<img class="o_lightbox__img lazyload" alt="' + imgAlt + '" data-src="' + imgSrc + '" data-srcset="' + imgSrcset + '" sizes="' + $lightbox.width() + '" />';
+    $lightbox.find('.o_lightbox__figure').append(lightboxImg); // add to DOM and adjust sizing
+
+    adjustImageSize($img);
+  }
+
+  function closeLightbox() {
+    var $lightboxImg = $('.o_lightbox__img');
+    $lightbox.removeClass('is-open');
+    $lightboxImg.remove();
+  }
+
+  function adjustImageSize($img) {
+    var $container = $('.o_lightbox__figure');
+    var $lightboxImg = $('.o_lightbox__img');
+    var containerSize = $container.width() / $container.height();
+    var imgSize = $img.width() / $img.height();
+
+    if (containerSize < imgSize) {
+      $lightboxImg.css({
+        width: '100%',
+        height: 'auto'
+      });
+    } else {
+      $lightboxImg.css({
+        width: 'auto',
+        height: '100%'
+      });
+    }
+  }
+}(jQuery);
+"use strict";
+
 var example = function ($) {
   /******************************************************************
       VARS
@@ -230,4 +310,65 @@ var example = function ($) {
   ******************************************************************/
   return {// your code here
   };
+}(jQuery);
+"use strict";
+
+var imgCover = function ($) {
+  /******************************************************************
+      EVENTS
+  ******************************************************************/
+  $(document).on('lazyloaded', function (e) {
+    if (!$(e.target).hasClass('img-cover')) return;
+    makeImgCover($(e.target));
+  });
+  $(window).on('resize', function (e) {
+    setTimeout(function () {
+      makeImgCover($('.img-cover'));
+    }, 100); // trigger again to further improve it
+
+    setTimeout(function () {
+      makeImgCover($('.img-cover'));
+    }, 500);
+  });
+  /******************************************************************
+      FUNCTIONS
+  ******************************************************************/
+
+  function makeImgCover($img) {
+    $img.each(function () {
+      var $this = $(this);
+      var $container = $this.parent();
+      var containerWidth = $container.width();
+      var containerHeight = $container.height();
+      var imgWidth = $this.width();
+      var imgHeight = $this.height();
+      var containerSize = containerWidth / containerHeight;
+      var imgSize = imgWidth / imgHeight;
+      var horizontalStretch = containerSize >= imgSize;
+      var centerHeight;
+      var centerWidth;
+
+      if (horizontalStretch) {
+        $this.css({
+          width: '100%',
+          height: 'auto'
+        });
+        centerHeight = ($this.height() - containerHeight) / 3;
+        $this.css({
+          marginLeft: '0px',
+          marginTop: -centerHeight + 'px'
+        });
+      } else {
+        $this.css({
+          width: 'auto',
+          height: '100%'
+        });
+        centerWidth = ($this.width() - containerWidth) / 2;
+        $this.css({
+          marginTop: '0px',
+          marginLeft: -centerWidth + 'px'
+        });
+      }
+    });
+  }
 }(jQuery);
