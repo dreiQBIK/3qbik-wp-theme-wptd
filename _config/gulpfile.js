@@ -253,7 +253,7 @@ gulp.task("watch", function() {
       .on("change", browserSync.reload);
    gulp.watch(
       "../src/scss/**/*.scss",
-      gulp.series("sass", "login-sass", "tinymce-sass", "theme-sass")
+      gulp.series("sass")
    );
    gulp.watch("../**/*.php").on("change", browserSync.reload);
    gulp.watch("../**/templates/**/*.twig").on("change", browserSync.reload);
