@@ -22,10 +22,11 @@
 
 function wptd_admin_default_page()
 {
-   return 'wp-admin/edit.php'; //your redirect URL
+   // redirects all logins to this url:
+   return 'wp-admin/edit.php';
 }
 
-add_filter('login_redirect', 'wptd_admin_default_page');
+// add_filter('login_redirect', 'wptd_admin_default_page');
 
 
 /* ****************************************************
