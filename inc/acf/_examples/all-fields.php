@@ -193,6 +193,8 @@ $example
         'label' => 'Taxonomie',
         'field_type' => 'multi_select',
         'taxonomy' => 'category',
+        'save_terms'    => 1,
+        'load_terms'    => 1,
     ])
 
 
