@@ -49,25 +49,21 @@ $theme-colors: map-merge(
 ******************************************************************/
 
 $f1-main: "FuturaLTPro-XBold", sans-serif;
-
-$f1-second: "KlavikaWeb", "Helvetica", "Arial", sans-serif;
-
-$f1-third: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
-$f2-third: "OfficinaSansITCStd-BookItalic", "Helvetica", "Arial", sans-serif;
-$f3-third: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-$f4-third: "OfficinaSansITCStd-BoldItalic", "Helvetica", "Arial", sans-serif;
+$f1-second: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
+$f2-second: "OfficinaSansITCStd-Italic", "Helvetica", "Arial", sans-serif;
+$f3-second: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
+$f4-second: "OfficinaSansITCStd-Bold-Italic", "Helvetica", "Arial", sans-serif;
 
 $theme-fonts: () !default;
 $theme-fonts: map-merge(
-      (
-         "f1-main": $f1-main,
-         "f1-second": $f1-second,
-         "f1-third": $f1-third,
-         "f2-third": $f2-third,
-         "f3-third": $f3-third,
-         "f4-third": $f4-third,
-      ),
-      $theme-fonts
+   (
+      "f1-main": $f1-main,
+      "f1-second": $f1-second,
+      "f2-second": $f2-second,
+      "f3-second": $f3-second,
+      "f4-second": $f4-second,
+   ),
+   $theme-fonts
 );
 
 

@@ -8,26 +8,13 @@
       url("assets/fonts/futura/2FACC7_0_0.woff2") format("woff2"),
       url("assets/fonts/futura/2FACC7_0_0.woff") format("woff"),
       url("assets/fonts/futura/2FACC7_0_0.ttf") format("truetype");
-}
-
-/* Klavika Web Bold */
-@font-face {
-   font-family: "KlavikaWeb";
-   font-display: swap;
-   src: url("assets/fonts/klavika/KlavikaWebBold/KlavikaWebBold.eot");
-   src: url("assets/fonts/klavika/KlavikaWebBold/KlavikaWebBold.eot?#iefix")
-         format("embedded-opentype"),
-      url("assets/fonts/klavika/KlavikaWebBold/KlavikaWebBold.woff2")
-         format("woff2"),
-      url("assets/fonts/klavika/KlavikaWebBold/KlavikaWebBold.woff")
-         format("woff");
-   font-weight: 700;
+   font-weight: 400;
    font-style: normal;
 }
 
 /* Officina Web Book */
 @font-face {
-   font-family: "OfficinaSansITCStd-Book";
+   font-family: "OfficinaSansITCStd";
    font-display: swap;
    src: url("assets/fonts/officina/officina-book/37F07C_1_0.eot");
    src: url("assets/fonts/officina/officina-book/37F07C_1_0.eot?#iefix")
@@ -37,11 +24,13 @@
       url("assets/fonts/officina/officina-book/37F07C_1_0.woff") format("woff"),
       url("assets/fonts/officina/officina-book/37F07C_1_0.ttf")
          format("truetype");
+   font-weight: 400;
+   font-style: normal;
 }
 
 /* Officina Web Book Italic */
 @font-face {
-   font-family: "OfficinaSansITCStd-BookItalic";
+   font-family: "OfficinaSansITCStd-Italic";
    font-display: swap;
    src: url("assets/fonts/officina/officina-book-italic/37F07C_4_0.eot");
    src: url("assets/fonts/officina/officina-book-italic/37F07C_4_0.eot?#iefix")
@@ -52,6 +41,8 @@
          format("woff"),
       url("assets/fonts/officina/officina-book-italic/37F07C_4_0.ttf")
          format("truetype");
+   font-weight: 400;
+   font-style: italic;
 }
 
 /* Officina Web Bold */
@@ -66,11 +57,13 @@
       url("assets/fonts/officina/officina-bold/37F07C_3_0.woff") format("woff"),
       url("assets/fonts/officina/officina-bold/37F07C_3_0.ttf")
          format("truetype");
+   font-weight: 700;
+   font-style: normal;
 }
 
 /* Officina Web Bold Italic */
 @font-face {
-   font-family: "OfficinaSansITCStd-BoldItalic";
+   font-family: "OfficinaSansITCStd-Bold-Italic";
    font-display: swap;
    src: url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.eot");
    src: url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.eot?#iefix")
@@ -81,4 +74,6 @@
          format("woff"),
       url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.ttf")
          format("truetype");
+   font-weight: 700;
+   font-style: italic;
 }

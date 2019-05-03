@@ -6,6 +6,7 @@
     @include fontstyle(
         $style: false, $scale: 1,
         $family: false, $weight: false, $color: false,
+        $lh-a: false, $mb-a: false,
         $fz-xs: false, $lh-xs: false, $mb-xs: false,
         $fz-sm: false, $lh-sm: false, $mb-sm: false,
         $fz-md: false, $lh-md: false, $mb-md: false,
@@ -24,6 +25,8 @@
    $family: false,
    $weight: false,
    $color: false,
+   $lh-a: false,
+   $mb-a: false,
    $fz-xs: false,
    $lh-xs: false,
    $mb-xs: false,
@@ -43,7 +46,7 @@
    //settings
    $family-default: $f1-second;
    $weight-default: 700;
-   $color-default: $c1-main;
+   $color-default: $c-black;
 
    //base
    $fz-xs-default: 1rem;
@@ -66,101 +69,19 @@
    $lh-xl-default: 1.4em;
    $mb-xl-default: 0.5em;
 
-   // default heading h1
+   // Default Use Case: H1
    @if $style == "fs1-main" {
       //settings
       $family-default: $f1-main;
-      $weight-default: 700;
-      $color-default: $c-white;
-
-      //base
-      $fz-xs-default: 2rem;
-      $lh-xs-default: 1.3em;
-      $mb-xs-default: 0.5em;
-      //small
-      $fz-sm-default: 2.6rem;
-      $lh-sm-default: 1.2em;
-      $mb-sm-default: 0.5em;
-      //medium
-      $fz-md-default: 3.2rem;
-      $lh-md-default: 1.2em;
-      $mb-md-default: 0.5em;
-      //large
-      $fz-lg-default: 3.8rem;
-      $lh-lg-default: 1.2em;
-      $mb-lg-default: 0.5em;
-      //xlarge
-      $fz-xl-default: 4.2rem;
-      $lh-xl-default: 1.2em;
-      $mb-xl-default: 0.5em;
-   }
-      // default heading h2
-   @else if $style == "fs2-main" {
-      //settings
-      $family-default: $f1-main;
-      $weight-default: 700;
-      $color-default: $c1-main;
-
-      //base
-      $fz-xs-default: 1.4rem;
-      $lh-xs-default: 1.2em;
-      $mb-xs-default: 0.5em;
-      //small
-      $fz-sm-default: 1.6rem;
-      $lh-sm-default: 1.2em;
-      $mb-sm-default: 0.5em;
-      //medium
-      $fz-md-default: 1.8rem;
-      $lh-md-default: 1.2em;
-      $mb-md-default: 0.5em;
-      //large
-      $fz-lg-default: 2rem;
-      $lh-lg-default: 1.2em;
-      $mb-lg-default: 0.5em;
-      //xlarge
-      $fz-xl-default: 2rem;
-      $lh-xl-default: 1.2em;
-      $mb-xl-default: 0.5em;
-   }
-      // default heading h3
-   @else if $style == "main-03" {
-      //settings
-      $family-default: $f1-main;
-      $weight-default: 700;
-      $color-default: $c1-main;
-
-      //base
-      $fz-xs-default: 2rem;
-      $lh-xs-default: 1.2em;
-      $mb-xs-default: 0.5em;
-      //small
-      $fz-sm-default: 2.6rem;
-      $lh-sm-default: 1.2em;
-      $mb-sm-default: 0.5em;
-      //medium
-      $fz-md-default: 4.4rem;
-      $lh-md-default: 1.2em;
-      $mb-md-default: 0.5em;
-      //large
-      $fz-lg-default: 5rem;
-      $lh-lg-default: 1.2em;
-      $mb-lg-default: 0.5em;
-      //xlarge
-      $fz-xl-default: 5.2rem;
-      $lh-xl-default: 1.2em;
-      $mb-xl-default: 0.5em;
-   } @else if $style == "fs1-second" {
-      //settings
-      $family-default: $f1-second;
-      $weight-default: 700;
+      $weight-default: 400;
       $color-default: $c1-second;
 
       //base
-      $fz-xs-default: 1.6rem;
+      $fz-xs-default: 2.2rem;
       $lh-xs-default: 1.2em;
       $mb-xs-default: 0.5em;
       //small
-      $fz-sm-default: 2rem;
+      $fz-sm-default: 2.2rem;
       $lh-sm-default: 1.2em;
       $mb-sm-default: 0.5em;
       //medium
@@ -172,147 +93,144 @@
       $lh-lg-default: 1.2em;
       $mb-lg-default: 0.5em;
       //xlarge
-      $fz-xl-default: 2.6rem;
-      $lh-xl-default: 1.4em;
+      $fz-xl-default: 2.4rem;
+      $lh-xl-default: 1.2em;
       $mb-xl-default: 0.5em;
-   } @else if $style == "fs2-second" {
+
+   // Default Use Case: H2
+   } @else if $style == "fs2-main" {
       //settings
-      $family-default: $f1-second;
-      $weight-default: 700;
-      $color-default: $c1-second;
+      $family-default: $f1-main;
+      $weight-default: 400;
 
       //base
       $fz-xs-default: 1.6rem;
       $lh-xs-default: 1.2em;
       $mb-xs-default: 0.5em;
       //small
-      $fz-sm-default: 2rem;
+      $fz-sm-default: 1.6rem;
       $lh-sm-default: 1.2em;
       $mb-sm-default: 0.5em;
       //medium
-      $fz-md-default: 2rem;
+      $fz-md-default: 1.6rem;
       $lh-md-default: 1.2em;
       $mb-md-default: 0.5em;
       //large
-      $fz-lg-default: 2rem;
+      $fz-lg-default: 1.8rem;
       $lh-lg-default: 1.2em;
       $mb-lg-default: 0.5em;
       //xlarge
-      $fz-xl-default: 2.2rem;
-      $lh-xl-default: 1.4em;
+      $fz-xl-default: 1.8rem;
+      $lh-xl-default: 1.2em;
       $mb-xl-default: 0.5em;
-   }
-      // default running text
-   @else if $style == "fs1-third" {
+
+   // Default Use Case: H3
+   } @else if $style == "fs3-main" {
       //settings
-      $family-default: $f1-third;
+      $family-default: $f1-main;
       $weight-default: 400;
-      $color-default: $c-white;
 
       //base
-      $fz-xs-default: 1rem;
-      $lh-xs-default: 1.5em;
+      $fz-xs-default: 1.4rem;
+      $lh-xs-default: 1em;
       $mb-xs-default: 0.5em;
       //small
-      $fz-sm-default: 1rem;
-      $lh-sm-default: 1.5em;
-      $mb-sm-default: 0.5em;
-      //medium
-      $fz-md-default: 1.1rem;
-      $lh-md-default: 1.5em;
-      $mb-md-default: 0.5em;
-      //large
-      $fz-lg-default: 1.1rem;
-      $lh-lg-default: 1.5em;
-      $mb-lg-default: 0.5em;
-      //xlarge
-      $fz-xl-default: 1.2rem;
-      $lh-xl-default: 1.5em;
-      $mb-xl-default: 0.5em;
-   }
-      // default text h3
-   @else if $style == "fs2-third" {
-      //settings
-      $family-default: $f3-third;
-      $weight-default: normal;
-      $color-default: $c1-second;
-
-      //base
-      $fz-xs-default: 1.5rem;
-      $lh-xs-default: 1.5em;
-      $mb-xs-default: 0.5em;
-      //small
-      $fz-sm-default: 1.5rem;
-      $lh-sm-default: 1.5em;
-      $mb-sm-default: 0.5em;
-      //medium
-      $fz-md-default: 1.8rem;
-      $lh-md-default: 1.5em;
-      $mb-md-default: 0.5em;
-      //large
-      $fz-lg-default: 2.2rem;
-      $lh-lg-default: 1.5em;
-      $mb-lg-default: 0.5em;
-      //xlarge
-      $fz-xl-default: 2.2rem;
-      $lh-xl-default: 1.5em;
-      $mb-xl-default: 0.5em;
-   }
-      // default text h4
-   @else if $style == "fs3-third" {
-      //settings
-      $family-default: $f3-third;
-      $weight-default: normal;
-      $color-default: $c1-second;
-
-      //base
-      $fz-xs-default: 1.2rem;
-      $lh-xs-default: 1.5em;
-      $mb-xs-default: 0.5em;
-      //small
-      $fz-sm-default: 1.2rem;
-      $lh-sm-default: 1.5em;
+      $fz-sm-default: 1.4rem;
+      $lh-sm-default: 1em;
       $mb-sm-default: 0.5em;
       //medium
       $fz-md-default: 1.4rem;
-      $lh-md-default: 1.5em;
+      $lh-md-default: 1em;
       $mb-md-default: 0.5em;
       //large
-      $fz-lg-default: 1.6rem;
-      $lh-lg-default: 1.5em;
+      $fz-lg-default: 1.5rem;
+      $lh-lg-default: 1em;
       $mb-lg-default: 0.5em;
       //xlarge
-      $fz-xl-default: 1.6rem;
-      $lh-xl-default: 1.5em;
+      $fz-xl-default: 1.5rem;
+      $lh-xl-default: 1em;
       $mb-xl-default: 0.5em;
-   }
-      // default text h4
-   @else if $style == "fs4-third" {
+
+   // Default Use Case: H4
+   } @else if $style == "fs4-main" {
       //settings
-      $family-default: $f3-third;
-      $weight-default: normal;
-      $color-default: $c3-main;
+      $family-default: $f1-main;
+      $weight-default: 400;
+
+      //base
+      $fz-xs-default: 1.3rem;
+      $lh-xs-default: 1em;
+      $mb-xs-default: 0.5em;
+      //small
+      $fz-sm-default: 1.3rem;
+      $lh-sm-default: 1em;
+      $mb-sm-default: 0.5em;
+      //medium
+      $fz-md-default: 1.3rem;
+      $lh-md-default: 1em;
+      $mb-md-default: 0.5em;
+      //large
+      $fz-lg-default: 1.4rem;
+      $lh-lg-default: 1em;
+      $mb-lg-default: 0.5em;
+      //xlarge
+      $fz-xl-default: 1.4rem;
+      $lh-xl-default: 1em;
+      $mb-xl-default: 0.5em;
+
+   // Default Use Case: Body
+   } @else if $style == "fs1-second" {
+      //settings
+      $family-default: $f1-second;
+      $weight-default: 400;
 
       //base
       $fz-xs-default: 1.1rem;
       $lh-xs-default: 1.5em;
-      $mb-xs-default: 0.5em;
+      $mb-xs-default: 1em;
       //small
       $fz-sm-default: 1.1rem;
       $lh-sm-default: 1.5em;
-      $mb-sm-default: 0.5em;
+      $mb-sm-default: 1em;
       //medium
-      $fz-md-default: 1.3rem;
+      $fz-md-default: 1.1rem;
       $lh-md-default: 1.5em;
-      $mb-md-default: 0.5em;
+      $mb-md-default: 1em;
       //large
-      $fz-lg-default: 1.4rem;
+      $fz-lg-default: 1.2rem;
       $lh-lg-default: 1.5em;
-      $mb-lg-default: 0.5em;
+      $mb-lg-default: 1em;
       //xlarge
-      $fz-xl-default: 1.4rem;
+      $fz-xl-default: 1.2rem;
       $lh-xl-default: 1.5em;
-      $mb-xl-default: 0.5em;
+      $mb-xl-default: 1em;
+
+   // Default Use Case: Body small
+   } @else if $style == "fs2-second" {
+      //settings
+      $family-default: $f1-second;
+      $weight-default: 400;
+
+      //base
+      $fz-xs-default: 0.95rem;
+      $lh-xs-default: 1.2em;
+      $mb-xs-default: 1em;
+      //small
+      $fz-sm-default: 0.95rem;
+      $lh-sm-default: 1.2em;
+      $mb-sm-default: 1em;
+      //medium
+      $fz-md-default: 0.95rem;
+      $lh-md-default: 1.2em;
+      $mb-md-default: 1em;
+      //large
+      $fz-lg-default: 1.05rem;
+      $lh-lg-default: 1.2em;
+      $mb-lg-default: 1em;
+      //xlarge
+      $fz-xl-default: 1.05rem;
+      $lh-xl-default: 1.2em;
+      $mb-xl-default: 1em;
    }
 
    @if $family {
@@ -338,12 +256,18 @@
    } @else {
       font-size: $fz-xs-default * $scale;
    }
-   @if $lh-xs {
+
+   @if $lh-a {
+      line-height: $lh-a;
+   } @else if $lh-xs {
       line-height: $lh-xs;
    } @else {
       line-height: $lh-xs-default;
    }
-   @if $mb-xs {
+
+   @if $mb-a {
+      margin-bottom: $mb-a;
+   } @else if $mb-xs {
       margin-bottom: $mb-xs;
    } @else {
       margin-bottom: $mb-xs-default;
@@ -355,63 +279,90 @@
       } @else {
          font-size: $fz-sm-default * $scale;
       }
-      @if $lh-sm {
+
+      @if $lh-a {
+         line-height: $lh-a;
+      } @else if $lh-sm {
          line-height: $lh-sm;
       } @else {
          line-height: $lh-sm-default;
       }
-      @if $mb-sm {
+
+      @if $mb-a {
+         margin-bottom: $mb-a;
+      } @else if $mb-sm {
          margin-bottom: $mb-sm;
       } @else {
          margin-bottom: $mb-sm-default;
       }
    }
+
    @include media-breakpoint-up(md) {
       @if $fz-md {
          font-size: $fz-md * $scale;
       } @else {
          font-size: $fz-md-default * $scale;
       }
-      @if $lh-md {
+
+      @if $lh-a {
+         line-height: $lh-a;
+      } @else if $lh-md {
          line-height: $lh-md;
       } @else {
          line-height: $lh-md-default;
       }
-      @if $mb-md {
+
+      @if $mb-a {
+         margin-bottom: $mb-a;
+      } @else if $mb-md {
          margin-bottom: $mb-md;
       } @else {
          margin-bottom: $mb-md-default;
       }
    }
+
    @include media-breakpoint-up(lg) {
       @if $fz-lg {
          font-size: $fz-lg * $scale;
       } @else {
          font-size: $fz-lg-default * $scale;
       }
-      @if $lh-lg {
+
+      @if $lh-a {
+         line-height: $lh-a;
+      } @else if $lh-lg {
          line-height: $lh-lg;
       } @else {
          line-height: $lh-lg-default;
       }
-      @if $mb-lg {
+
+      @if $mb-a {
+         margin-bottom: $mb-a;
+      } @else if $mb-lg {
          margin-bottom: $mb-lg;
       } @else {
          margin-bottom: $mb-lg-default;
       }
    }
+
    @include media-breakpoint-up(xl) {
       @if $fz-xl {
          font-size: $fz-xl * $scale;
       } @else {
          font-size: $fz-xl-default * $scale;
       }
-      @if $lh-xl {
+
+      @if $lh-a {
+         line-height: $lh-a;
+      } @else if $lh-xl {
          line-height: $lh-xl;
       } @else {
          line-height: $lh-xl-default;
       }
-      @if $mb-xl {
+
+      @if $mb-a {
+         margin-bottom: $mb-a;
+      } @else if $mb-xl {
          margin-bottom: $mb-xl;
       } @else {
          margin-bottom: $mb-xl-default;

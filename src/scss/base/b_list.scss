@@ -23,7 +23,7 @@ ul {
       position: relative;
       margin-bottom: 0.5em;
       padding-left: 1.2rem;
-      @include fontstyle("fs1-third");
+      @include fontstyle("fs1-second");
 
       @include media-breakpoint-up(md) {
          padding-left: 1.4em;

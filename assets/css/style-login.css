@@ -31,10 +31,6 @@
     @include fontstyle("fs1-main");
 
 ******************************************************************/
-body {
-  zoom: 1.1;
-}
-
 body.login {
   background-color: #2c3e50;
 }

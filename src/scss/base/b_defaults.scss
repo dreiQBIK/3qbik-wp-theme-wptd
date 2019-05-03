@@ -11,7 +11,10 @@ body {
    background-color: $c2-main;
    overflow-x: hidden;
 
-   @include fontstyle($style: "fs1-third");
+   @include fontstyle(
+      $style: "fs1-second",
+      $mb-a: 0
+   );
 
    &.no-scroll {
       overflow: hidden;

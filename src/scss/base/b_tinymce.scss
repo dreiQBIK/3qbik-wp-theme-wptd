@@ -2,9 +2,6 @@
    @import "b_list";
    @import "b_links";
 
-   font-family: $f1-third;
-   font-size: 1rem;
-
    h3,
    h4,
    h5,
@@ -31,21 +28,23 @@
    }
 
    h3 {
-      @include fontstyle("fs2-third");
+      @include fontstyle($style: "fs2-main");
    }
    h4 {
       margin-top: 1em;
-      @include fontstyle("fs3-third");
+      @include fontstyle($style: "fs3-main");
    }
    h5 {
       margin-top: 1em;
-      @include fontstyle($style: "fs4-third", $color: $c-white);
+      @include fontstyle($style: "fs4-main", $color: $c-white);
    }
 
    p {
       margin: 0 0 0.5em !important;
-      @include fontstyle($style: "fs1-third");
-      color: lighten($c3-main, 30%);
+      @include fontstyle(
+         $style: "fs1-second",
+         $color: $c-white
+      );
 
       &:last-of-type {
          margin-bottom: 0 !important;
@@ -77,12 +76,11 @@
    }
 
    strong {
-      font-family: $f3-third;
-      font-weight: normal;
+      font-weight: bold;
    }
 
    em {
-      font-family: $f2-third;
+      font-style: italic;
    }
 
    ul {
@@ -100,9 +98,6 @@
 
       li {
          margin-bottom: 0.2em;
-         font-family: $f3-third;
-         font-weight: normal;
-         color: $c3-main;
       }
    }
 

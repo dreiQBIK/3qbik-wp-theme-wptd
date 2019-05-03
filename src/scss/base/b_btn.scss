@@ -1,5 +1,5 @@
-.m_btn,
-a.m_btn {
+.b_btn,
+a.b_btn {
    cursor: pointer;
    transition: 0.15s ease-in-out;
    display: inline-block;
@@ -9,7 +9,7 @@ a.m_btn {
    border-radius: 3px;
    text-transform: uppercase;
 
-   &--light {
+   &--primary {
       background-color: $c1-grey;
       border-bottom: 3px solid $c1-grey;
       color: $c1-main;
@@ -22,7 +22,7 @@ a.m_btn {
       }
    }
 
-   &--dark {
+   &--secondary {
       background-color: $c1-third;
       border-bottom: 3px solid $c2-third;
       color: $c-white;

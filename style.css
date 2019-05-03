@@ -400,32 +400,28 @@ template {
   font-display: swap;
   src: url("assets/fonts/futura/2FACC7_0_0.eot");
   src: url("assets/fonts/futura/2FACC7_0_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/futura/2FACC7_0_0.woff2") format("woff2"), url("assets/fonts/futura/2FACC7_0_0.woff") format("woff"), url("assets/fonts/futura/2FACC7_0_0.ttf") format("truetype");
-}
-
-/* Klavika Web Bold */
-@font-face {
-  font-family: "KlavikaWeb";
-  font-display: swap;
-  src: url("assets/fonts/klavika/KlavikaWebBold/KlavikaWebBold.eot");
-  src: url("assets/fonts/klavika/KlavikaWebBold/KlavikaWebBold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/klavika/KlavikaWebBold/KlavikaWebBold.woff2") format("woff2"), url("assets/fonts/klavika/KlavikaWebBold/KlavikaWebBold.woff") format("woff");
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
 }
 
 /* Officina Web Book */
 @font-face {
-  font-family: "OfficinaSansITCStd-Book";
+  font-family: "OfficinaSansITCStd";
   font-display: swap;
   src: url("assets/fonts/officina/officina-book/37F07C_1_0.eot");
   src: url("assets/fonts/officina/officina-book/37F07C_1_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/officina/officina-book/37F07C_1_0.woff2") format("woff2"), url("assets/fonts/officina/officina-book/37F07C_1_0.woff") format("woff"), url("assets/fonts/officina/officina-book/37F07C_1_0.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Officina Web Book Italic */
 @font-face {
-  font-family: "OfficinaSansITCStd-BookItalic";
+  font-family: "OfficinaSansITCStd-Italic";
   font-display: swap;
   src: url("assets/fonts/officina/officina-book-italic/37F07C_4_0.eot");
   src: url("assets/fonts/officina/officina-book-italic/37F07C_4_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/officina/officina-book-italic/37F07C_4_0.woff2") format("woff2"), url("assets/fonts/officina/officina-book-italic/37F07C_4_0.woff") format("woff"), url("assets/fonts/officina/officina-book-italic/37F07C_4_0.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
 }
 
 /* Officina Web Bold */
@@ -434,14 +430,18 @@ template {
   font-display: swap;
   src: url("assets/fonts/officina/officina-bold/37F07C_3_0.eot");
   src: url("assets/fonts/officina/officina-bold/37F07C_3_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/officina/officina-bold/37F07C_3_0.woff2") format("woff2"), url("assets/fonts/officina/officina-bold/37F07C_3_0.woff") format("woff"), url("assets/fonts/officina/officina-bold/37F07C_3_0.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* Officina Web Bold Italic */
 @font-face {
-  font-family: "OfficinaSansITCStd-BoldItalic";
+  font-family: "OfficinaSansITCStd-Bold-Italic";
   font-display: swap;
   src: url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.eot");
   src: url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.woff2") format("woff2"), url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.woff") format("woff"), url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
 }
 
 /******************************************************************
@@ -466,6 +466,7 @@ template {
     @include fontstyle(
         $style: false, $scale: 1,
         $family: false, $weight: false, $color: false,
+        $lh-a: false, $mb-a: false,
         $fz-xs: false, $lh-xs: false, $mb-xs: false,
         $fz-sm: false, $lh-sm: false, $mb-sm: false,
         $fz-md: false, $lh-md: false, $mb-md: false,
@@ -9160,6 +9161,34 @@ readers do not read off random characters that represent icons */
   height: calc(100vh - 150px);
 }
 
+.l_home {
+  padding: 2rem 0;
+}
+
+@media (min-width: 961px) {
+  .l_home {
+    padding: 4rem 0;
+  }
+}
+
+.l_home__item {
+  padding-left: 0;
+}
+
+.l_home__item:before {
+  display: none;
+}
+
+.l_article {
+  padding: 2rem 0;
+}
+
+@media (min-width: 961px) {
+  .l_article {
+    padding: 4rem 0;
+  }
+}
+
 html {
   font-size: 16px;
   line-height: 1.4em;
@@ -9172,19 +9201,19 @@ body {
   color: #ffffff;
   background-color: #384d62;
   overflow-x: hidden;
-  font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
-  color: #ffffff;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
+  color: #000000;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
 }
 
 @media (min-width: 481px) {
   body {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
   }
 }
 
@@ -9192,15 +9221,15 @@ body {
   body {
     font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: 1361px) {
   body {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
   }
 }
 
@@ -9208,7 +9237,7 @@ body {
   body {
     font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
   }
 }
 
@@ -9301,6 +9330,10 @@ address {
   font-style: normal;
 }
 
+.main {
+  min-height: 85vh;
+}
+
 .sp-zero {
   padding-bottom: 0;
 }
@@ -9358,7 +9391,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "KlavikaWeb", "Helvetica", "Arial", sans-serif;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 0;
@@ -9366,64 +9399,23 @@ h5 {
 
 h1 {
   font-family: "FuturaLTPro-XBold", sans-serif;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 1.3em;
-  margin-bottom: 0.5em;
-}
-
-@media (min-width: 481px) {
-  h1 {
-    font-size: 2.6rem;
-    line-height: 1.2em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 961px) {
-  h1 {
-    font-size: 3.2rem;
-    line-height: 1.2em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 1361px) {
-  h1 {
-    font-size: 3.8rem;
-    line-height: 1.2em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 1921px) {
-  h1 {
-    font-size: 4.2rem;
-    line-height: 1.2em;
-    margin-bottom: 0.5em;
-  }
-}
-
-h2 {
-  font-family: "KlavikaWeb", "Helvetica", "Arial", sans-serif;
   color: #fff191;
-  font-weight: 700;
-  font-size: 1.6rem;
+  font-weight: 400;
+  font-size: 2.2rem;
   line-height: 1.2em;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
-  h2 {
-    font-size: 2rem;
+  h1 {
+    font-size: 2.2rem;
     line-height: 1.2em;
     margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 961px) {
-  h2 {
+  h1 {
     font-size: 2.2rem;
     line-height: 1.2em;
     margin-bottom: 0.5em;
@@ -9431,7 +9423,7 @@ h2 {
 }
 
 @media (min-width: 1361px) {
-  h2 {
+  h1 {
     font-size: 2.4rem;
     line-height: 1.2em;
     margin-bottom: 0.5em;
@@ -9439,31 +9431,72 @@ h2 {
 }
 
 @media (min-width: 1921px) {
-  h2 {
-    font-size: 2.6rem;
-    line-height: 1.4em;
+  h1 {
+    font-size: 2.4rem;
+    line-height: 1.2em;
     margin-bottom: 0.5em;
+  }
+}
+
+h2 {
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
+  color: #000000;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 481px) {
+  h2 {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: 961px) {
+  h2 {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: 1361px) {
+  h2 {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: 1921px) {
+  h2 {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    margin-bottom: 1em;
   }
 }
 
 h3,
 h4,
 h5 {
-  font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
-  color: #ffffff;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
+  color: #000000;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 @media (min-width: 481px) {
   h3,
   h4,
   h5 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -9473,7 +9506,7 @@ h5 {
   h5 {
     font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -9481,9 +9514,9 @@ h5 {
   h3,
   h4,
   h5 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -9493,26 +9526,50 @@ h5 {
   h5 {
     font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
 p {
-  font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
-  color: #ffffff;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
+  color: #000000;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
+  font-weight: normal;
   margin-top: 0;
   margin-bottom: 0.5em;
+  /* Hyphens: http://clagnut.com/blog/2395 */
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 3;
+  -webkit-hyphenate-limit-chars: 6 4 4;
+  -webkit-hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-last: always;
+  -webkit-hyphenate-limit-zone: 8%;
+  -moz-hyphens: auto;
+  -moz-hyphenate-limit-chars: 6 4 4;
+  -moz-hyphenate-limit-lines: 2;
+  -moz-hyphenate-limit-last: always;
+  -moz-hyphenate-limit-zone: 8%;
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: 6 4 4;
+  -ms-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-last: always;
+  -ms-hyphenate-limit-zone: 8%;
+  hyphens: auto;
+  hyphenate-limit-chars: 6 4 4;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
 }
 
 @media (min-width: 481px) {
   p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -9520,15 +9577,15 @@ p {
   p {
     font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
 @media (min-width: 1361px) {
   p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -9536,33 +9593,31 @@ p {
   p {
     font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
 p em {
-  font-family: "OfficinaSansITCStd-BookItalic", "Helvetica", "Arial", sans-serif;
   font-style: italic;
 }
 
 p strong {
-  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
 }
 
 .heading-1 {
   font-family: "FuturaLTPro-XBold", sans-serif;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 1.3em;
+  color: #fff191;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 1.2em;
   margin-bottom: 0.5em;
   text-transform: uppercase;
 }
 
 @media (min-width: 481px) {
   .heading-1 {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     line-height: 1.2em;
     margin-bottom: 0.5em;
   }
@@ -9570,7 +9625,7 @@ p strong {
 
 @media (min-width: 961px) {
   .heading-1 {
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     line-height: 1.2em;
     margin-bottom: 0.5em;
   }
@@ -9578,7 +9633,7 @@ p strong {
 
 @media (min-width: 1361px) {
   .heading-1 {
-    font-size: 3.8rem;
+    font-size: 2.4rem;
     line-height: 1.2em;
     margin-bottom: 0.5em;
   }
@@ -9586,7 +9641,7 @@ p strong {
 
 @media (min-width: 1921px) {
   .heading-1 {
-    font-size: 4.2rem;
+    font-size: 2.4rem;
     line-height: 1.2em;
     margin-bottom: 0.5em;
   }
@@ -9594,9 +9649,9 @@ p strong {
 
 .heading-2 {
   font-family: "FuturaLTPro-XBold", sans-serif;
-  color: #2c3e50;
-  font-weight: 700;
-  font-size: 1.4rem;
+  color: #000000;
+  font-weight: 400;
+  font-size: 1.6rem;
   line-height: 1.2em;
   margin-bottom: 0.5em;
   text-transform: uppercase;
@@ -9612,66 +9667,66 @@ p strong {
 
 @media (min-width: 961px) {
   .heading-2 {
+    font-size: 1.6rem;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media (min-width: 1361px) {
+  .heading-2 {
     font-size: 1.8rem;
     line-height: 1.2em;
     margin-bottom: 0.5em;
   }
 }
 
-@media (min-width: 1361px) {
-  .heading-2 {
-    font-size: 2rem;
-    line-height: 1.2em;
-    margin-bottom: 0.5em;
-  }
-}
-
 @media (min-width: 1921px) {
   .heading-2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1.2em;
     margin-bottom: 0.5em;
   }
 }
 
 .heading-3 {
-  font-family: "FuturaLTPro-XBold", sans-serif;
-  color: #2c3e50;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
+  color: #000000;
   font-weight: 700;
-  font-size: 2rem;
-  line-height: 1.2em;
+  font-size: 1rem;
+  line-height: 1.4em;
   margin-bottom: 0.5em;
   text-transform: uppercase;
 }
 
 @media (min-width: 481px) {
   .heading-3 {
-    font-size: 2.6rem;
-    line-height: 1.2em;
+    font-size: 1rem;
+    line-height: 1.4em;
     margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 961px) {
   .heading-3 {
-    font-size: 4.4rem;
-    line-height: 1.2em;
+    font-size: 1rem;
+    line-height: 1.4em;
     margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 1361px) {
   .heading-3 {
-    font-size: 5rem;
-    line-height: 1.2em;
+    font-size: 1rem;
+    line-height: 1.4em;
     margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 1921px) {
   .heading-3 {
-    font-size: 5.2rem;
-    line-height: 1.2em;
+    font-size: 1rem;
+    line-height: 1.4em;
     margin-bottom: 0.5em;
   }
 }
@@ -9698,6 +9753,48 @@ a:focus {
 
 a:active {
   color: #ff855b;
+}
+
+.b_btn,
+a.b_btn {
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.8em 2em;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.b_btn--primary,
+a.b_btn--primary {
+  background-color: #c8c8c8;
+  border-bottom: 3px solid #c8c8c8;
+  color: #2c3e50;
+}
+
+@media (min-width: 961px) {
+  .b_btn--primary:hover,
+  a.b_btn--primary:hover {
+    outline: 0;
+    background-color: #c8c8c8;
+  }
+}
+
+.b_btn--secondary,
+a.b_btn--secondary {
+  background-color: #ec764d;
+  border-bottom: 3px solid #d96a44;
+  color: #ffffff;
+}
+
+@media (min-width: 961px) {
+  .b_btn--secondary:hover,
+  a.b_btn--secondary:hover {
+    outline: 0;
+    background-color: #ff855b;
+  }
 }
 
 ul,
@@ -9730,19 +9827,19 @@ ul li {
   position: relative;
   margin-bottom: 0.5em;
   padding-left: 1.2rem;
-  font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
-  color: #ffffff;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
+  color: #000000;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 @media (min-width: 481px) {
   ul li {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -9750,15 +9847,15 @@ ul li {
   ul li {
     font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
 @media (min-width: 1361px) {
   ul li {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -9766,7 +9863,7 @@ ul li {
   ul li {
     font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -9830,11 +9927,6 @@ ul li:before {
   overflow: visible !important;
 }
 
-.tinymce {
-  font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
-  font-size: 1rem;
-}
-
 .tinymce ul,
 .tinymce ol {
   margin-top: 0;
@@ -9865,19 +9957,19 @@ ul li:before {
   position: relative;
   margin-bottom: 0.5em;
   padding-left: 1.2rem;
-  font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
-  color: #ffffff;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
+  color: #000000;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 @media (min-width: 481px) {
   .tinymce ul li {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -9885,15 +9977,15 @@ ul li:before {
   .tinymce ul li {
     font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
 @media (min-width: 1361px) {
   .tinymce ul li {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -9901,7 +9993,7 @@ ul li:before {
   .tinymce ul li {
     font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -9988,60 +10080,60 @@ ul li:before {
 }
 
 .tinymce h3 {
-  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-  color: #fff191;
-  font-weight: normal;
-  font-size: 1.5rem;
-  line-height: 1.5em;
+  font-family: "FuturaLTPro-XBold", sans-serif;
+  color: #000000;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.2em;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   .tinymce h3 {
-    font-size: 1.5rem;
-    line-height: 1.5em;
+    font-size: 1.6rem;
+    line-height: 1.2em;
     margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 961px) {
   .tinymce h3 {
-    font-size: 1.8rem;
-    line-height: 1.5em;
+    font-size: 1.6rem;
+    line-height: 1.2em;
     margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 1361px) {
   .tinymce h3 {
-    font-size: 2.2rem;
-    line-height: 1.5em;
+    font-size: 1.8rem;
+    line-height: 1.2em;
     margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 1921px) {
   .tinymce h3 {
-    font-size: 2.2rem;
-    line-height: 1.5em;
+    font-size: 1.8rem;
+    line-height: 1.2em;
     margin-bottom: 0.5em;
   }
 }
 
 .tinymce h4 {
   margin-top: 1em;
-  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-  color: #fff191;
-  font-weight: normal;
-  font-size: 1.2rem;
-  line-height: 1.5em;
+  font-family: "FuturaLTPro-XBold", sans-serif;
+  color: #000000;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1em;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   .tinymce h4 {
-    font-size: 1.2rem;
-    line-height: 1.5em;
+    font-size: 1.4rem;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
@@ -10049,41 +10141,41 @@ ul li:before {
 @media (min-width: 961px) {
   .tinymce h4 {
     font-size: 1.4rem;
-    line-height: 1.5em;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 1361px) {
   .tinymce h4 {
-    font-size: 1.6rem;
-    line-height: 1.5em;
+    font-size: 1.5rem;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 1921px) {
   .tinymce h4 {
-    font-size: 1.6rem;
-    line-height: 1.5em;
+    font-size: 1.5rem;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
 
 .tinymce h5 {
   margin-top: 1em;
-  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
+  font-family: "FuturaLTPro-XBold", sans-serif;
   color: #ffffff;
-  font-weight: normal;
-  font-size: 1.1rem;
-  line-height: 1.5em;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1em;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   .tinymce h5 {
-    font-size: 1.1rem;
-    line-height: 1.5em;
+    font-size: 1.3rem;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
@@ -10091,7 +10183,7 @@ ul li:before {
 @media (min-width: 961px) {
   .tinymce h5 {
     font-size: 1.3rem;
-    line-height: 1.5em;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
@@ -10099,7 +10191,7 @@ ul li:before {
 @media (min-width: 1361px) {
   .tinymce h5 {
     font-size: 1.4rem;
-    line-height: 1.5em;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
@@ -10107,27 +10199,26 @@ ul li:before {
 @media (min-width: 1921px) {
   .tinymce h5 {
     font-size: 1.4rem;
-    line-height: 1.5em;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
 
 .tinymce p {
   margin: 0 0 0.5em !important;
-  font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
   color: #ffffff;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5em;
-  margin-bottom: 0.5em;
-  color: #e4e9ed;
+  margin-bottom: 1em;
 }
 
 @media (min-width: 481px) {
   .tinymce p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -10135,15 +10226,15 @@ ul li:before {
   .tinymce p {
     font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
 @media (min-width: 1361px) {
   .tinymce p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -10151,7 +10242,7 @@ ul li:before {
   .tinymce p {
     font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -10184,12 +10275,11 @@ ul li:before {
 }
 
 .tinymce strong {
-  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .tinymce em {
-  font-family: "OfficinaSansITCStd-BookItalic", "Helvetica", "Arial", sans-serif;
+  font-style: italic;
 }
 
 .tinymce ul {
@@ -10216,9 +10306,6 @@ ul li:before {
 
 .tinymce ul li {
   margin-bottom: 0.2em;
-  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-  font-weight: normal;
-  color: #879cb1;
 }
 
 .tinymce a {
@@ -10248,7 +10335,6 @@ ul li:before {
 #wpadminbar {
   color: #ffffff;
   background: #2c3e50;
-  zoom: 1.1;
 }
 
 #wpadminbar .ab-top-menu > li.hover > .ab-item,
@@ -10388,71 +10474,25 @@ ul li:before {
 }
 
 .f1-second {
-  font-family: "KlavikaWeb", "Helvetica", "Arial", sans-serif !important;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif !important;
 }
 
-.f1-third {
-  font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif !important;
+.f2-second {
+  font-family: "OfficinaSansITCStd-Italic", "Helvetica", "Arial", sans-serif !important;
 }
 
-.f2-third {
-  font-family: "OfficinaSansITCStd-BookItalic", "Helvetica", "Arial", sans-serif !important;
-}
-
-.f3-third {
+.f3-second {
   font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif !important;
 }
 
-.f4-third {
-  font-family: "OfficinaSansITCStd-BoldItalic", "Helvetica", "Arial", sans-serif !important;
+.f4-second {
+  font-family: "OfficinaSansITCStd-Bold-Italic", "Helvetica", "Arial", sans-serif !important;
 }
 
 .l_styleguide .color-field {
   display: block;
   width: 100%;
   height: 80px;
-}
-
-.m_btn,
-a.m_btn {
-  cursor: pointer;
-  transition: 0.15s ease-in-out;
-  display: inline-block;
-  margin-top: 1em;
-  padding: 0.8em 2em;
-  border: none;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-
-.m_btn--light,
-a.m_btn--light {
-  background-color: #c8c8c8;
-  border-bottom: 3px solid #c8c8c8;
-  color: #2c3e50;
-}
-
-@media (min-width: 961px) {
-  .m_btn--light:hover,
-  a.m_btn--light:hover {
-    outline: 0;
-    background-color: #c8c8c8;
-  }
-}
-
-.m_btn--dark,
-a.m_btn--dark {
-  background-color: #ec764d;
-  border-bottom: 3px solid #d96a44;
-  color: #ffffff;
-}
-
-@media (min-width: 961px) {
-  .m_btn--dark:hover,
-  a.m_btn--dark:hover {
-    outline: 0;
-    background-color: #ff855b;
-  }
 }
 
 .m_card {
@@ -10523,6 +10563,11 @@ a.m_btn--dark {
   font-size: 0.9rem;
   line-height: 1.2rem;
   margin: 0.7rem 0;
+}
+
+.m_post-teaser {
+  background-color: #2c3e50;
+  padding: 2rem;
 }
 
 .n_site {

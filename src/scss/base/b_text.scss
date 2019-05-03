@@ -20,21 +20,20 @@ h2 {
 h3,
 h4,
 h5 {
-   @include fontstyle("fs1-third");
+   @include fontstyle("fs1-second");
 }
 
 p {
-   @include fontstyle("fs1-third");
+   @include fontstyle("fs1-second");
+   font-weight: normal;
    margin-top: 0;
    margin-bottom: 0.5em;
 
    em {
-      font-family: $f2-third;
       font-style: italic;
    }
 
    strong {
-      font-family: $f3-third;
       font-weight: normal;
    }
 

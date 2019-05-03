@@ -1049,10 +1049,6 @@ div#wp-responsive-toggle a:before {
   background: #879cb1;
 }
 
-body {
-  zoom: 1.1;
-}
-
 a:active,
 a:hover {
   color: #ec764d;

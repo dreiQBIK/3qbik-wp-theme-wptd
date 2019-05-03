@@ -1,0 +1,11 @@
+<section class="m_post-teaser">
+   <div class="m_post-teaser__content">
+      <a class="m_post-teaser__link" href="{{ post.link }}">
+         <h2 class="m_post-teaser__title">{{ post.title }}</h2>
+         <span class="m_post-teaser__author">{{ post.author }}</span>
+         {# TODO: Replace excerpt with ACF excerpt #}
+         <p class="m_post-teaser__excerpt">{{ post.content|excerpt(30) }}</p>
+      </a>
+      <a class="b_btn b_btn--primary" href="{{ post.link }}">Weiterlesen</a>
+   </div>
+</section>

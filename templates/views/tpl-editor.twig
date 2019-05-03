@@ -1,7 +1,7 @@
 {% set content = post.meta('tinymce') %}
 {% extends "base.twig" %}
 {% block content %}
-   <div class="main__inner l_page">
+   <div class="l_page" data-template="tpl-editor.twig">
       <header class="container">
          <h1 class="heading-1">
             {{post.title}}</h1>

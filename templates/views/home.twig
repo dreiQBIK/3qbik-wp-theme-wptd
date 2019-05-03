@@ -1,0 +1,26 @@
+{% extends "base.twig" %}
+
+{% block content %}
+   <div class="l_home" data-template="home.twig">
+      <div class="container sp-md">
+         {% if posts %}
+            <ul class="l_home__list">
+            {% for post in posts %}
+               <li class="l_home__item">
+                  {% include "/partials/modules/m_post-teaser.twig" %}
+               </li>
+            {% endfor %}
+            </ul>
+         {% else %}
+            <p>{{ __('Aktuell sind leider noch keine Blogposts vorhanden.', 'wptd') }}</p>
+         {% endif %}
+         {% if pagination.prev or pagination.next %}
+            {% include "/partials/layouts/l_pagination.twig" %}
+         {% endif %}
+      </div>
+   </div>
+{% endblock %}
+
+{% block sidebar %}
+   {{ sidebar }}
+{% endblock %}
