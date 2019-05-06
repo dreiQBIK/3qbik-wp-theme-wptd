@@ -11,9 +11,8 @@
 
 if (!function_exists('wptd_setup')) :
 
-    function wptd_setup()
-{
-        /*
+    function wptd_setup() {
+     /*
      * Make theme available for translation.
      * Translations can be filed in the /languages/ directory.
      * If you're building a theme based on wptd, use a find and replace

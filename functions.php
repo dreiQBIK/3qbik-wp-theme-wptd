@@ -23,6 +23,8 @@ require_once get_template_directory() . '/inc/acf/setup/acf_helpers.php';
 require_once get_template_directory() . '/inc/wptd_enqueue-scripts.php';
 require_once get_template_directory() . '/inc/wptd_timber.php';
 require_once get_template_directory() . '/inc/wptd_setup.php';
+require_once get_template_directory() . '/inc/wptd_menus.php';
+require_once get_template_directory() . '/inc/wptd_options-page.php';
 require_once get_template_directory() . '/inc/wptd_tinymce.php';
 
 /* User Roles */

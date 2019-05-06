@@ -3,19 +3,21 @@
  * ***********************************************************************************************
  *
  *  > ADD_EXTRA_IMAGE_THUMBS
- *  > ADD_NEW_USER_ROLE
  *  > REMOVE_HTML_COMMENTS
- *  > REGISTER_MENUS
+ *  > REMOVE_WP_EMBED
+ *  > REMOVE_WP_EMOJI_SUPPORT
+ *  > REMOVE_COMMENTS_IP
  *  >
  *
  * @package wptd
  *********************************************************************************************** */
 
-/************************************************************************************************
- * ADD_EXTRA_IMAGE_THUMBS
- * Make sure featured images are enabled
- ************************************************************************************************* */
 
+/* ****************************************************
+   ADD_EXTRA_IMAGE_THUMBS
+******************************************************* */
+
+// Make sure featured images are enabled
 if (function_exists('add_image_size')) {
    add_theme_support('post-thumbnails');
 }
@@ -39,42 +41,39 @@ if (function_exists('add_image_size')) {
 }
 
 
-/************************************************************************************************
- * REMOVE_HTML_COMMENTS
- *************************************************************************************************/
+/* ****************************************************
+   REMOVE_HTML_COMMENTS
+******************************************************* */
 
-function wptd_remove_html_comments($content = '')
-{
+function wptd_remove_html_comments($content = '') {
    return preg_replace('/<!--(.|\s)*?-->/', '', $content);
 }
 
 
-/************************************************************************************************
- * REMOVE_WP_EMBED
- *************************************************************************************************/
+/* ****************************************************
+   REMOVE_WP_EMBED
+******************************************************* */
 
-function wptd_remove_wp_embed()
-{
+function wptd_remove_wp_embed() {
    wp_deregister_script('wp-embed');
 }
 
 add_action('wp_footer', 'wptd_remove_wp_embed');
 
 
-/************************************************************************************************
- * REMOVE_WP_EMOJI_SUPPORT
- *************************************************************************************************/
+/* ****************************************************
+   REMOVE_WP_EMOJI_SUPPORT
+******************************************************* */
+
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
 
 
-/************************************************************************************************
- * REGISTER_MENUS
- *************************************************************************************************/
-function wptd_register_menus() {
-   register_nav_menus( array(
-      'primary' => __( 'Hauptnavigation', 'wptd' ),
-      'footer' => __( 'Footer', 'wptd' ),
-   ));
+/* ****************************************************
+   REMOVE_COMMENTS_IP
+******************************************************* */
+
+function  wptd_remove_commentsip( $comment_author_ip ) {
+   return '';
 }
-add_action( 'after_setup_theme', 'wptd_register_menus' );
+add_filter( 'pre_comment_user_ip', 'wptd_remove_commentsip' );
