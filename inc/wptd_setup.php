@@ -3,9 +3,10 @@
  * ***********************************************************************************************
  *
  *  > ADD_EXTRA_IMAGE_THUMBS
- *  > ADD_NEW_USER_ROLE
  *  > REMOVE_HTML_COMMENTS
- *  > REGISTER_MENUS
+ *  > REMOVE_WP_EMBED
+ *  > REMOVE_WP_EMOJI_SUPPORT
+ *  > REMOVE_COMMENTS_IP
  *  >
  *
  * @package wptd
@@ -69,12 +70,10 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 
 
 /************************************************************************************************
- * REGISTER_MENUS
+ * REMOVE_COMMENTS_IP
  *************************************************************************************************/
-function wptd_register_menus() {
-   register_nav_menus( array(
-      'primary' => __( 'Hauptnavigation', 'wptd' ),
-      'footer' => __( 'Footer', 'wptd' ),
-   ));
+
+function  wptd_remove_commentsip( $comment_author_ip ) {
+   return '';
 }
-add_action( 'after_setup_theme', 'wptd_register_menus' );
+add_filter( 'pre_comment_user_ip', 'wptd_remove_commentsip' );
