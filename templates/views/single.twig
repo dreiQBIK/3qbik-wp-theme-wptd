@@ -4,6 +4,10 @@
    <article class="l_article post-type-{{ post.post_type }}" id="post-{{ post.ID }}" data-template="single.twig">
       <header class="container">
          <h1>{{ post.title }}</h1>
+         <div class="l_article__meta">
+            <a href="{{ post.author.link }}">{{ post.author.display_name }}</a>
+            <span>{{ post.date }}</span>
+         </div>
       </header>
 
       <div class="l_builder">

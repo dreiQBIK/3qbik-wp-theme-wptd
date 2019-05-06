@@ -4,6 +4,7 @@
       margin: 0;
       width: 100%;
       overflow: hidden;
+      border-radius: $border-radius;
 
       &.with-lightbox {
          cursor: zoom-in;
@@ -41,7 +42,7 @@
    &__caption {
       text-align: center;
       color: $c3-main;
-      font-size: 0.9rem;
+      font-size: 1rem;
       line-height: 1.2rem;
       margin: 0.7rem 0;
    }

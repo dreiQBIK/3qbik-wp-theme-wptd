@@ -12,7 +12,7 @@
  * @since    Timber 0.1
  */
 
-$templates = array( 'archive.twig', 'index.twig' );
+$templates = array( 'views/archive.twig', 'views/index.twig' );
 $context = \Timber\Timber::get_context();
 
 $context['title'] = 'Archive';

@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block content %}
+   <div class="l_home l_archive" data-template="archive.twig">
+      <div class="container sp-md">
+         <header>
+            <h1>{{ __( 'Archiv', 'wptd' ) }}</h1>
+         </header>
+         {% if posts %}
+            <ul class="l_home__list">
+            {% for post in posts %}
+               <li class="l_home__item">
+                  {% include "/partials/modules/m_post-teaser.twig" %}
+               </li>
+            {% endfor %}
+            </ul>
+         {% else %}
+            <p>{{ __('Zu dieser Kategorie sind noch keine Beiträge vorhanden', 'wptd') }}</p>
+         {% endif %}
+         {% if pagination.prev or pagination.next %}
+            {% include "/partials/layouts/l_pagination.twig" %}
+         {% endif %}
+      </div>
+   </div>
+{% endblock %}
+
+{% block sidebar %}
+   {{ sidebar }}
+{% endblock %}

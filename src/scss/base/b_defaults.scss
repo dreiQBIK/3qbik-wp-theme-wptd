@@ -94,3 +94,11 @@ textarea {
 address {
    font-style: normal;
 }
+
+*:focus {
+   color: $c-white;
+   border-color: $c1-accent;
+   outline: 0;
+   box-shadow: 0 0 0 0.2rem rgba($c1-accent, 0.5);
+   border-radius: $border-radius;
+}

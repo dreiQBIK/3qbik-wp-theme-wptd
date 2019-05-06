@@ -1,2 +1,14 @@
 .l_article {
+
+   &__meta {
+      background-color: $c1-main;
+      display: inline-flex;
+      flex-wrap: wrap;
+      border-radius: $border-radius;
+      margin-bottom: 1.5rem;
+
+      > * {
+         padding: 0 0.5rem;
+      }
+   }
 }

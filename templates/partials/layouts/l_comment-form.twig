@@ -1,7 +1,7 @@
 <div id="respond">
     <p class="cancel-comment-reply">{{ fn('cancel_comment_reply_link', 'Antworten abbrechen') }}</p>
 
-    <form id="commentform" class="l_comment-form" method="post" action="{{ site.site_url ~ '/wp-comments-post.php' }}">
+    <form id="commentform" class="l_comment-form" method="post" action="{{ site.site_url ~ '/wp-comments-post.php' }}" data-parsley-validate>
 
         <div class="l_comment-form__comment">
 
@@ -18,7 +18,8 @@
 
                 <div class="col col-12">
                     <div class="l_comment-form__input-wrapper">
-                        <textarea class="l_comment-form__input l_comment-form__textarea trigger" required placeholder="Schreiben Sie Ihre Meinung..." name="comment" aria-label="{{ __( 'Ihr Kommentar', 'wptd' ) }}" cols="60" rows="3" id="comment"></textarea>
+                        <label class="l_comment-form__label" for="author">Ihr Kommentar*</label>
+                        <textarea class="l_comment-form__input l_comment-form__textarea trigger" data-parsley-required placeholder="Schreiben Sie Ihre Meinung..." name="comment" aria-label="{{ __( 'Ihr Kommentar', 'wptd' ) }}" cols="60" rows="3" id="comment"></textarea>
                     </div>
                 </div>
 
@@ -26,21 +27,21 @@
                     <div class="col col-12 col-sm-6">
                         <div class="l_comment-form__input-wrapper l_comment-form__hidden inactive">
                             <label class="l_comment-form__label" for="author">Ihr Name*</label>
-                            <input class="l_comment-form__input" required placeholder="Max Mustermann" name="author" type="text" id="author" data-msg="Bitte geben Sie Ihren Namen ein">
+                            <input class="l_comment-form__input" data-parsley-required placeholder="Max Mustermann" name="author" type="text" id="author" data-msg="Bitte geben Sie Ihren Namen ein">
                         </div>
                     </div>
 
                     <div class="col col-12 col-sm-6">
                         <div class="l_comment-form__input-wrapper l_comment-form__hidden inactive">
                             <label class="l_comment-form__label" for="email">Ihre E-Mail-Adresse*</label>
-                            <input class="l_comment-form__input" required placeholder="max.mustermann@website.de" name="email" type="email" id="email">
+                            <input class="l_comment-form__input" data-parsley-required placeholder="max.mustermann@website.de" name="email" type="email" id="email">
                         </div>
                     </div>
                 {% endif %}
 
                 <div class="col col-12">
                     <div class="l_comment-form__agbs-wrapper l_comment-form__hidden inactive">
-                        <input class="l_comment-form__checkbox" type="checkbox" required name="commentguidelines" id="commentguidelines">
+                        <input class="l_comment-form__checkbox" type="checkbox" data-parsley-required name="commentguidelines" id="commentguidelines">
                         <label class="l_comment-form__label" for="commentguidelines"></label>
                         <p class="l_comment-form__agbs">
                             <span class="l_comment-form__agbs-text">Ich akzeptiere die
