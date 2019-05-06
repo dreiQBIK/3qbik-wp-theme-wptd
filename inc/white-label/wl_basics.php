@@ -97,7 +97,7 @@ add_filter('get_user_option_admin_color', 'wptd_update_backend_color_scheme', 5)
  * REMOVE_WP_TINYMCE
  ************************************************************************************************* */
 
-// Remove default WordPress TinyMce on each template except tpl-tinymce.php
+// Remove default WordPress TinyMce globally on each template except tpl-tinymce.php
 function wptd_hide_tinymce()
 {
    $template_file = basename(get_page_template());

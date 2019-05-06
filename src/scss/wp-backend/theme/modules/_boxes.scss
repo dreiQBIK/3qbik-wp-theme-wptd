@@ -10,12 +10,12 @@
 .item-edit,
 .postbox .handlediv.button-link,
 .toggle-indicator {
-   color: $c3-main-backend;
+   color: $c-white;
 }
 
 // header bar toggle focus state
 .js .postbox .handlediv:focus .toggle-indicator:before {
-   box-shadow: 0 0 0 1px $c3-main-backend, 0 0 2px 1px $c3-main-backend;
+   box-shadow: 0 0 0 1px $c3-grey-backend, 0 0 2px 1px $c3-grey-backend;
 }
 
 // table colors
@@ -23,3 +23,131 @@
 .plugins .active th.check-column {
    border-left: 4px solid $c2-main-backend;
 }
+
+// tinmyce format dropdown
+.mce-menu .mce-menu-item.mce-active.mce-menu-item-normal, .mce-menu .mce-menu-item.mce-active.mce-menu-item-preview, .mce-menu .mce-menu-item.mce-selected, .mce-menu .mce-menu-item:focus, .mce-menu .mce-menu-item:hover {
+   background: $c1-main-backend;
+}
+
+// sidebar x {
+.tagchecklist .ntdelbutton .remove-tag-icon:before {
+   color: $c1-second-backend;
+}
+
+// sidebar baukasten
+.acf-input .acf-repeater .acf-row-handle.order {
+   background: $c2-main-backend;
+}
+
+// title
+#poststuff #post-body #post-body-content {
+   border: 2px solid $c3-grey-backend;
+   padding: 0.7rem;
+   box-sizing: border-box;
+
+   &:before {
+      content: "Titel";
+      display: block;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $c2-grey-backend;
+   }
+}
+
+// sidebar
+#poststuff #post-body.columns-2 #postbox-container-1 {
+   border: 2px solid $c3-grey-backend;
+   padding: 0.7rem;
+   box-sizing: border-box;
+   margin-bottom: 1.5rem;
+
+   > * {
+      min-width: 0;
+      width: auto !important;
+   }
+
+   .postbox {
+      min-width: 0;
+   }
+
+   &:before {
+      content: "Einstellungen";
+      display: block;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $c2-grey-backend;
+   }
+}
+
+#poststuff #post-body.columns-2 #side-sortables {
+
+   > div {
+
+      .hndle.ui-sortable-handle {
+         background-color: $c1-grey-backend;
+      }
+   }
+}
+
+// main content area
+#poststuff #post-body.columns-2 #postbox-container-2 {
+   background-color: $c3-grey-backend;
+   padding: 0.7rem;
+   box-sizing: border-box;
+
+   > * {
+      min-width: 0;
+      width: auto !important;
+   }
+
+   .postbox {
+      min-width: 0;
+      border: 0;
+   }
+
+   &:before {
+      content: "Inhalte";
+      display: block;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $c2-main-backend;
+   }
+
+   // .acf-flexible-content .layout .acf-fc-layout-handle {
+   //    background-color: $c5-grey-backend;
+   // }
+}
+
+#poststuff #post-body.columns-2 #normal-sortables {
+
+   > div {
+
+      // .hndle.ui-sortable-handle {
+      //    background-color: $c1-third-backend;
+      //    border: 0;
+      // }
+
+      &#trackbacksdiv,
+      &#commentstatusdiv,
+      &#commentsdiv,
+      &#wpseo_meta,
+      &#revisionsdiv,
+      &#slugdiv,
+      &#postexcerpt,
+      &#authordiv,
+      &#coauthorsdiv {
+
+         .hndle.ui-sortable-handle {
+            background-color: $c1-grey-backend;
+         }
+      }
+   }
+}
+
+// // nav icons
+// .nav-menus-php .item-edit {
+//    color: $c1-grey-backend;
+// }

@@ -7,6 +7,10 @@
 
 <body class="{{body_class}}" data-template="base.twig">
 
+{% block icons %}
+   {% include "/icons/icons.svg" %}
+{% endblock %}
+
 {% block header %}
    {% include '/partials/header/h_site.twig' %}
 {% endblock %}
@@ -18,6 +22,9 @@
    {% endblock %}
 
 </main>
+
+{% block sidebar %}
+{% endblock %}
 
 {% block footer %}
    {% include '/partials/overlays/o_lightbox.twig' %}

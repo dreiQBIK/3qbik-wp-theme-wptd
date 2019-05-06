@@ -5,6 +5,9 @@
    FONTS
 ******************************************************************/
 /******************************************************************
+   BORDER_RADIUS
+******************************************************************/
+/******************************************************************
    SPACERS
    https://getbootstrap.com/docs/4.1/utilities/spacing/
 ******************************************************************/
@@ -20,6 +23,7 @@
     @include fontstyle(
         $style: false, $scale: 1,
         $family: false, $weight: false, $color: false,
+        $lh-a: false, $mb-a: false,
         $fz-xs: false, $lh-xs: false, $mb-xs: false,
         $fz-sm: false, $lh-sm: false, $mb-sm: false,
         $fz-md: false, $lh-md: false, $mb-md: false,

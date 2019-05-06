@@ -5,6 +5,9 @@
    FONTS
 ******************************************************************/
 /******************************************************************
+   BORDER_RADIUS
+******************************************************************/
+/******************************************************************
    SPACERS
    https://getbootstrap.com/docs/4.1/utilities/spacing/
 ******************************************************************/
@@ -20,6 +23,7 @@
     @include fontstyle(
         $style: false, $scale: 1,
         $family: false, $weight: false, $color: false,
+        $lh-a: false, $mb-a: false,
         $fz-xs: false, $lh-xs: false, $mb-xs: false,
         $fz-sm: false, $lh-sm: false, $mb-sm: false,
         $fz-md: false, $lh-md: false, $mb-md: false,
@@ -1098,16 +1102,101 @@ a:hover {
 .item-edit,
 .postbox .handlediv.button-link,
 .toggle-indicator {
-  color: #879cb1;
+  color: #ffffff;
 }
 
 .js .postbox .handlediv:focus .toggle-indicator:before {
-  box-shadow: 0 0 0 1px #879cb1, 0 0 2px 1px #879cb1;
+  box-shadow: 0 0 0 1px #ebedef, 0 0 2px 1px #ebedef;
 }
 
 .plugin-update-tr.active td,
 .plugins .active th.check-column {
   border-left: 4px solid #384d62;
+}
+
+.mce-menu .mce-menu-item.mce-active.mce-menu-item-normal, .mce-menu .mce-menu-item.mce-active.mce-menu-item-preview, .mce-menu .mce-menu-item.mce-selected, .mce-menu .mce-menu-item:focus, .mce-menu .mce-menu-item:hover {
+  background: #2c3e50;
+}
+
+.tagchecklist .ntdelbutton .remove-tag-icon:before {
+  color: #fff191;
+}
+
+.acf-input .acf-repeater .acf-row-handle.order {
+  background: #384d62;
+}
+
+#poststuff #post-body #post-body-content {
+  border: 2px solid #ebedef;
+  padding: 0.7rem;
+  box-sizing: border-box;
+}
+
+#poststuff #post-body #post-body-content:before {
+  content: "Titel";
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #9da8b3;
+}
+
+#poststuff #post-body.columns-2 #postbox-container-1 {
+  border: 2px solid #ebedef;
+  padding: 0.7rem;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+}
+
+#poststuff #post-body.columns-2 #postbox-container-1 > * {
+  min-width: 0;
+  width: auto !important;
+}
+
+#poststuff #post-body.columns-2 #postbox-container-1 .postbox {
+  min-width: 0;
+}
+
+#poststuff #post-body.columns-2 #postbox-container-1:before {
+  content: "Einstellungen";
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #9da8b3;
+}
+
+#poststuff #post-body.columns-2 #side-sortables > div .hndle.ui-sortable-handle {
+  background-color: #95a1b1;
+}
+
+#poststuff #post-body.columns-2 #postbox-container-2 {
+  background-color: #ebedef;
+  padding: 0.7rem;
+  box-sizing: border-box;
+}
+
+#poststuff #post-body.columns-2 #postbox-container-2 > * {
+  min-width: 0;
+  width: auto !important;
+}
+
+#poststuff #post-body.columns-2 #postbox-container-2 .postbox {
+  min-width: 0;
+  border: 0;
+}
+
+#poststuff #post-body.columns-2 #postbox-container-2:before {
+  content: "Inhalte";
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #384d62;
+}
+
+#poststuff #post-body.columns-2 #normal-sortables > div#trackbacksdiv .hndle.ui-sortable-handle, #poststuff #post-body.columns-2 #normal-sortables > div#commentstatusdiv .hndle.ui-sortable-handle, #poststuff #post-body.columns-2 #normal-sortables > div#commentsdiv .hndle.ui-sortable-handle, #poststuff #post-body.columns-2 #normal-sortables > div#wpseo_meta .hndle.ui-sortable-handle, #poststuff #post-body.columns-2 #normal-sortables > div#revisionsdiv .hndle.ui-sortable-handle, #poststuff #post-body.columns-2 #normal-sortables > div#slugdiv .hndle.ui-sortable-handle, #poststuff #post-body.columns-2 #normal-sortables > div#postexcerpt .hndle.ui-sortable-handle, #poststuff #post-body.columns-2 #normal-sortables > div#authordiv .hndle.ui-sortable-handle, #poststuff #post-body.columns-2 #normal-sortables > div#coauthorsdiv .hndle.ui-sortable-handle {
+  background-color: #95a1b1;
 }
 
 a.acf-icon.-plus:hover {

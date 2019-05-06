@@ -1,15 +1,16 @@
 {% extends "base.twig" %}
-{% block header %}
-   <header class="container">
-      <h1 class="heading-1 f1-third">
-         {{ post.title }}
-      </h1>
-   </header>
-{% endblock %}
+
 {% block content %}
-   <div class="main__inner l_styleguide mt-3">
-      {% for module in styleguide_modules %}
-         {% include module %}
-      {% endfor %}
+   <div class="l_home" data-template="page-modules.twig">
+      <div class="container sp-md">
+         <header>
+            <h1>{{ __( 'Styleguide', 'wptd' ) }}</h1>
+         </header>
+         <div class="l_builder">
+         {% for module in styleguide_modules %}
+            {% include module %}
+         {% endfor %}
+         </div>
+      </div>
    </div>
 {% endblock %}

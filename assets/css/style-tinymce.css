@@ -5,6 +5,9 @@
    FONTS
 ******************************************************************/
 /******************************************************************
+   BORDER_RADIUS
+******************************************************************/
+/******************************************************************
    SPACERS
    https://getbootstrap.com/docs/4.1/utilities/spacing/
 ******************************************************************/
@@ -20,6 +23,7 @@
     @include fontstyle(
         $style: false, $scale: 1,
         $family: false, $weight: false, $color: false,
+        $lh-a: false, $mb-a: false,
         $fz-xs: false, $lh-xs: false, $mb-xs: false,
         $fz-sm: false, $lh-sm: false, $mb-sm: false,
         $fz-md: false, $lh-md: false, $mb-md: false,
@@ -31,31 +35,10 @@
     @include fontstyle("fs1-main");
 
 ******************************************************************/
-.tinymce {
-  font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
-  font-size: 1rem;
-}
-
 .tinymce ul,
 .tinymce ol {
-  margin-top: 0;
-  margin-bottom: 0.5em;
+  margin: 1rem 0 1.5rem;
   padding-left: 0;
-}
-
-.tinymce ul.center,
-.tinymce ol.center {
-  width: 100%;
-}
-
-@media (min-width: 481px) {
-  .tinymce ul.center,
-  .tinymce ol.center {
-    width: 80%;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 .tinymce ul {
@@ -64,21 +47,20 @@
 
 .tinymce ul li {
   position: relative;
-  margin-bottom: 0.5em;
-  padding-left: 1.2rem;
-  font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
+  padding-left: 1.5rem;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
   color: #ffffff;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
 }
 
 @media (min-width: 481px) {
   .tinymce ul li {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em;
   }
 }
 
@@ -86,15 +68,15 @@
   .tinymce ul li {
     font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em;
   }
 }
 
 @media (min-width: 1361px) {
   .tinymce ul li {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em;
   }
 }
 
@@ -102,36 +84,17 @@
   .tinymce ul li {
     font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
-  }
-}
-
-@media (min-width: 961px) {
-  .tinymce ul li {
-    padding-left: 1.4em;
-  }
-}
-
-@media (min-width: 1361px) {
-  .tinymce ul li {
-    padding-left: 1.5em;
+    margin-bottom: 0.2em;
   }
 }
 
 .tinymce ul li:before {
   content: "\2022";
   position: absolute;
-  top: -1px;
+  top: 0;
   left: 0;
-  font-size: 1.8rem;
-  color: #ec764d;
-  font-weight: 700;
-}
-
-@media (min-width: 961px) {
-  .tinymce ul li:before {
-    font-size: 2rem;
-  }
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 .tinymce a {
@@ -147,6 +110,7 @@
 @media (min-width: 961px) {
   .tinymce a:hover {
     color: #ec764d;
+    text-decoration: underline;
   }
 }
 
@@ -189,60 +153,59 @@
 }
 
 .tinymce h3 {
-  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-  color: #fff191;
-  font-weight: normal;
-  font-size: 1.5rem;
-  line-height: 1.5em;
+  font-family: "FuturaLTPro-XBold", sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.2em;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   .tinymce h3 {
-    font-size: 1.5rem;
-    line-height: 1.5em;
+    font-size: 1.6rem;
+    line-height: 1.2em;
     margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 961px) {
   .tinymce h3 {
-    font-size: 1.8rem;
-    line-height: 1.5em;
+    font-size: 1.6rem;
+    line-height: 1.2em;
     margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 1361px) {
   .tinymce h3 {
-    font-size: 2.2rem;
-    line-height: 1.5em;
+    font-size: 1.8rem;
+    line-height: 1.2em;
     margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 1921px) {
   .tinymce h3 {
-    font-size: 2.2rem;
-    line-height: 1.5em;
+    font-size: 1.8rem;
+    line-height: 1.2em;
     margin-bottom: 0.5em;
   }
 }
 
 .tinymce h4 {
-  margin-top: 1em;
-  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-  color: #fff191;
-  font-weight: normal;
-  font-size: 1.2rem;
-  line-height: 1.5em;
+  font-family: "FuturaLTPro-XBold", sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1em;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   .tinymce h4 {
-    font-size: 1.2rem;
-    line-height: 1.5em;
+    font-size: 1.4rem;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
@@ -250,41 +213,40 @@
 @media (min-width: 961px) {
   .tinymce h4 {
     font-size: 1.4rem;
-    line-height: 1.5em;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 1361px) {
   .tinymce h4 {
-    font-size: 1.6rem;
-    line-height: 1.5em;
+    font-size: 1.5rem;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 1921px) {
   .tinymce h4 {
-    font-size: 1.6rem;
-    line-height: 1.5em;
+    font-size: 1.5rem;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
 
 .tinymce h5 {
-  margin-top: 1em;
-  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
+  font-family: "FuturaLTPro-XBold", sans-serif;
   color: #ffffff;
-  font-weight: normal;
-  font-size: 1.1rem;
-  line-height: 1.5em;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1em;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   .tinymce h5 {
-    font-size: 1.1rem;
-    line-height: 1.5em;
+    font-size: 1.3rem;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
@@ -292,7 +254,7 @@
 @media (min-width: 961px) {
   .tinymce h5 {
     font-size: 1.3rem;
-    line-height: 1.5em;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
@@ -300,7 +262,7 @@
 @media (min-width: 1361px) {
   .tinymce h5 {
     font-size: 1.4rem;
-    line-height: 1.5em;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
@@ -308,27 +270,26 @@
 @media (min-width: 1921px) {
   .tinymce h5 {
     font-size: 1.4rem;
-    line-height: 1.5em;
+    line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
 
 .tinymce p {
   margin: 0 0 0.5em !important;
-  font-family: "OfficinaSansITCStd-Book", "Helvetica", "Arial", sans-serif;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
   color: #ffffff;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5em;
-  margin-bottom: 0.5em;
-  color: #e4e9ed;
+  margin-bottom: 1em;
 }
 
 @media (min-width: 481px) {
   .tinymce p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -336,15 +297,15 @@
   .tinymce p {
     font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
 @media (min-width: 1361px) {
   .tinymce p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -352,7 +313,7 @@
   .tinymce p {
     font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -385,41 +346,25 @@
 }
 
 .tinymce strong {
-  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .tinymce em {
-  font-family: "OfficinaSansITCStd-BookItalic", "Helvetica", "Arial", sans-serif;
+  font-style: italic;
 }
 
 .tinymce ul {
-  margin-top: 0.8em;
-}
-
-@media (min-width: 481px) {
-  .tinymce ul {
-    margin-top: 1em;
-  }
+  margin-top: 1rem;
 }
 
 @media (min-width: 961px) {
   .tinymce ul {
-    margin-top: 1.3em;
-  }
-}
-
-@media (min-width: 1361px) {
-  .tinymce ul {
-    margin-top: 1.6em;
+    margin-top: 1.5rem;
   }
 }
 
 .tinymce ul li {
-  margin-bottom: 0.2em;
-  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-  font-weight: normal;
-  color: #879cb1;
+  margin-bottom: 0.2rem;
 }
 
 .tinymce a {

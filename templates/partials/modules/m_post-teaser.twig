@@ -1,11 +1,13 @@
+{% set is_editor_post = ( fn('get_page_template_slug', post.id) == 'tpl-editor.php' ) %}
+
 <section class="m_post-teaser">
    <div class="m_post-teaser__content">
-      <a class="m_post-teaser__link" href="{{ post.link }}">
-         <h2 class="m_post-teaser__title">{{ post.title }}</h2>
-         <span class="m_post-teaser__author">{{ post.author }}</span>
-         {# TODO: Replace excerpt with ACF excerpt #}
-         <p class="m_post-teaser__excerpt">{{ post.content|excerpt(30) }}</p>
-      </a>
+      <h2 class="m_post-teaser__title">{{ post.title }}</h2>
+      <div class="m_post-teaser__meta">
+         <a class="m_post-teaser__author" href="{{ post.author.link }}">Autor:&nbsp;{{ post.author }}</a>
+         <span class="m_post-teaser__date">{{ post.date }}</span>
+      </div>
+      <p class="m_post-teaser__excerpt">{{ not is_editor_post ? post.meta('post_excerpt') : post.content|excerpt(30) }}</p>
       <a class="b_btn b_btn--primary" href="{{ post.link }}">Weiterlesen</a>
    </div>
 </section>

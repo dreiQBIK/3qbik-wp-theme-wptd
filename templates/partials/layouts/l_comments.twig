@@ -1,0 +1,14 @@
+<div class="l_comments__wrapper">
+    <h3 class="l_comments__heading">Kommentare</h3>
+    {%  if post.password_required %}
+        <div class="notice">
+            <p>Dieser Beitrag ist passwortgeschützt. Bitte geben Sie das Passwort ein, um Kommentare zu sehen.</p>
+        </div>
+    {% else %}
+        <ol class="l_comments__list commentlist">
+        {% for cmt in post.comments %}
+            {% include "/partials/layouts/l_comment.twig" with {comment:cmt} %}
+        {% endfor %}
+        </ol>
+    {% endif %}
+</div>

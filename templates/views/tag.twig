@@ -1,10 +1,10 @@
 {% extends "base.twig" %}
 
 {% block content %}
-   <div class="l_home" data-template="home.twig">
+   <div class="l_home l_tag" data-template="tag.twig">
       <div class="container sp-md">
          <header>
-            <h1>{{ __( 'Beiträge', 'wptd' ) }}</h1>
+            <h1>{{ __( 'Blog', 'wptd' ) }}: {{ term.title|lower }}</h1>
          </header>
          {% if posts %}
             <ul class="l_home__list">
@@ -15,7 +15,7 @@
             {% endfor %}
             </ul>
          {% else %}
-            <p>{{ __('Aktuell sind noch keine Beiträge vorhanden.', 'wptd') }}</p>
+            <p>{{ __('Zu diesem Tag sind noch keine Beiträge vorhanden', 'wptd') }}</p>
          {% endif %}
          {% if pagination.prev or pagination.next %}
             {% include "/partials/layouts/l_pagination.twig" %}

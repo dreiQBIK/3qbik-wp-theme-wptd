@@ -9,6 +9,7 @@ a {
    &:hover {
       @include media-breakpoint-up(md) {
          color: $c1-third;
+         text-decoration: underline;
       }
    }
    &:focus {

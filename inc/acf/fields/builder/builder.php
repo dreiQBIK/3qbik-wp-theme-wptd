@@ -7,7 +7,7 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $builder = new FieldsBuilder(
    'builder',
    [
-      'title' => 'Baukasten',
+      'title' => 'Content: Baukasten',
       'menu_order' => 5,
       'hide_on_screen' => array(
          0 => 'the_content',

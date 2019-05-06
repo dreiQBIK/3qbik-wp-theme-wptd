@@ -15,6 +15,7 @@ $templates_pass = 'single-password.twig';
 
 $post = Timber::query_post();
 $context['post'] = $post;
+$context['sidebar'] = Timber::get_sidebar('l_sidebar.php');
 
 if ( post_password_required( $post->ID ) ) {
 	Timber::render( $templates_pass, $context );

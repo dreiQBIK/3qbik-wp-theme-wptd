@@ -3,29 +3,44 @@ h2,
 h3,
 h4,
 h5 {
-   font-family: $f1-second;
-   font-weight: 700;
    margin-top: 0;
    margin-bottom: 0;
 }
 
-h1 {
-   @include fontstyle("fs1-main");
+h1,
+.heading-1 {
+   @include fontstyle(
+      "fs1-main",
+      $color: $c1-second,
+   );
 }
 
-h2 {
-   @include fontstyle("fs1-second");
+h2,
+.heading-2 {
+   @include fontstyle(
+      "fs2-main",
+   );
 }
 
 h3,
-h4,
-h5 {
-   @include fontstyle("fs1-second");
+.heading-3 {
+   @include fontstyle(
+      "fs3-main",
+   );
 }
 
+h4,
+.heading-4 {
+   @include fontstyle(
+      "fs4-main",
+   );
+}
+
+
 p {
-   @include fontstyle("fs1-second");
-   font-weight: normal;
+   @include fontstyle(
+      "fs1-second"
+   );
    margin-top: 0;
    margin-bottom: 0.5em;
 
@@ -63,18 +78,4 @@ p {
    hyphenate-limit-lines: 2;
    hyphenate-limit-last: always;
    hyphenate-limit-zone: 8%;
-}
-
-.heading-1 {
-   @include fontstyle("fs1-main");
-   text-transform: uppercase;
-}
-
-.heading-2 {
-   @include fontstyle("fs2-main");
-   text-transform: uppercase;
-}
-.heading-3 {
-   @include fontstyle("main-03");
-   text-transform: uppercase;
 }

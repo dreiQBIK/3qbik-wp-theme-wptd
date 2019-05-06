@@ -1,12 +1,8 @@
 .l_home {
-   padding: 2rem 0;
-
-   @include media-breakpoint-up(md) {
-      padding: 4rem 0;
-   }
 
    &__item {
       padding-left: 0;
+      margin-bottom: 1rem;
 
       &:before {
          display: none;

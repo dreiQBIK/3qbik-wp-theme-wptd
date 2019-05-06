@@ -31,11 +31,9 @@
       @include fontstyle($style: "fs2-main");
    }
    h4 {
-      margin-top: 1em;
       @include fontstyle($style: "fs3-main");
    }
    h5 {
-      margin-top: 1em;
       @include fontstyle($style: "fs4-main", $color: $c-white);
    }
 
@@ -84,20 +82,14 @@
    }
 
    ul {
-      margin-top: 0.8em;
+      margin-top: 1rem;
 
-      @include media-breakpoint-up(sm) {
-         margin-top: 1em;
-      }
       @include media-breakpoint-up(md) {
-         margin-top: 1.3em;
-      }
-      @include media-breakpoint-up(lg) {
-         margin-top: 1.6em;
+         margin-top: 1.5rem;
       }
 
       li {
-         margin-bottom: 0.2em;
+         margin-bottom: 0.2rem;
       }
    }
 

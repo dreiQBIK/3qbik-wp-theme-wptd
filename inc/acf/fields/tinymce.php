@@ -5,7 +5,7 @@ namespace App;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
 $tinymce = new FieldsBuilder('tinymce', [
-    'title' => 'Editor',
+    'title' => 'Content: Editor',
     'menu_order' => 0,
     'hide_on_screen' => array(
         0 => 'the_content',

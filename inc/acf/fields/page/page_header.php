@@ -5,7 +5,7 @@ namespace App;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
 $page_header = new FieldsBuilder('page_header', [
-   'title' => 'Inhalt',
+   'title' => 'Content: Header',
    'menu_order' => 20,
    'hide_on_screen' => array(
       0 => 'the_content',

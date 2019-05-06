@@ -1,0 +1,63 @@
+.l_comment {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 2px dashed $c3-main;
+
+    @include media-breakpoint-up(sm) {
+        padding-bottom: 2rem;
+    }
+
+    .l_comment {
+        margin: 2rem 0 0 4rem;
+        border: 0;
+        border-bottom: 1px solid $c3-main;
+        background-color: $c-white;
+    }
+
+    .comments > .comment {
+
+        &:last-child > .l_comment {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    &__content {
+        margin-bottom: 1rem;
+
+        p {
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__author {
+        @include fontstyle(
+            "fs1-second",
+            $color: $c1-second,
+            $mb-a: 0,
+            $lh-a: 1em,
+        );
+    }
+
+    &__time {
+        font-size: 1rem;
+        color: $c3-main;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .comment-reply-link {
+    }
+}

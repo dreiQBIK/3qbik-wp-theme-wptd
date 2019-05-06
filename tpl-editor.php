@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Editor Template
+ * Template Name: Beispiel-Template
  * Template Post Type: post, page
  *
  * Methods for TimberHelper can be found in the /lib sub-directory

@@ -42,16 +42,20 @@ STYLESHEET: STYLE
 // Layouts
 @import "layouts/l_page";
 @import "layouts/l_comments";
+@import "layouts/l_comment";
+@import "layouts/l_comment-form";
 @import "layouts/l_sidebar";
 @import "layouts/l_404";
 @import "layouts/l_home";
 @import "layouts/l_article";
+@import "layouts/l_pagination";
 
 // Base
 @import "base/b_defaults";
 @import "base/b_general";
 @import "base/b_spacer";
 @import "base/b_text";
+@import "base/b_icons";
 @import "base/b_links";
 @import "base/b_btn";
 @import "base/b_list";
@@ -81,7 +85,7 @@ STYLESHEET: STYLE
 @import "footer/f_site";
 
 // Forms
-// @import "forms/fm_base";
+@import "forms/fm_base";
 // @import "forms/fm_choices";
 // @import "forms/fm_upload";
 // @import "forms/fm_validation";

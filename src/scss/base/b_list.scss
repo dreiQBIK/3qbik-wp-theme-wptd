@@ -1,19 +1,7 @@
 ul,
 ol {
-   margin-top: 0;
-   margin-bottom: 0.5em;
+   margin: 1rem 0 1.5rem;
    padding-left: 0;
-
-   &.center {
-      width: 100%;
-
-      @include media-breakpoint-up(sm) {
-         width: 80%;
-         max-width: 600px;
-         margin-left: auto;
-         margin-right: auto;
-      }
-   }
 }
 
 ul {
@@ -21,29 +9,20 @@ ul {
 
    li {
       position: relative;
-      margin-bottom: 0.5em;
-      padding-left: 1.2rem;
-      @include fontstyle("fs1-second");
-
-      @include media-breakpoint-up(md) {
-         padding-left: 1.4em;
-      }
-      @include media-breakpoint-up(lg) {
-         padding-left: 1.5em;
-      }
+      padding-left: 1.5rem;
+      @include fontstyle(
+         "fs1-second",
+         $color: $c-white,
+         $mb-a: 0.2em,
+      );
 
       &:before {
          content: "\2022";
          position: absolute;
-         top: -1px;
+         top: 0;
          left: 0;
-         font-size: 1.8rem;
-         color: $c1-third;
-         font-weight: 700;
-
-         @include media-breakpoint-up(md) {
-            font-size: 2rem;
-         }
+         font-size: 1.5rem;
+         color: $c-white;
       }
    }
 }

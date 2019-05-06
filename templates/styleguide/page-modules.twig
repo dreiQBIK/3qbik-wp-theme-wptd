@@ -1,15 +1,16 @@
 {% extends "base.twig" %}
-{% block header %}
-   <header class="container">
-      <h1 class="heading-1 f1-third">
-         {{ post.title }}
-      </h1>
-   </header>
-{% endblock %}
+
 {% block content %}
-   {% for module in template_modules %}
-      <div class="container">
-         {% include module %}
+   <div class="l_home" data-template="page-modules.twig">
+      <div class="container sp-md">
+         <header>
+            <h1>{{ __( 'Bausteine', 'wptd' ) }}</h1>
+         </header>
+         <div class="l_builder">
+         {% for module in template_modules %}
+            {% include module %}
+         {% endfor %}
+         </div>
       </div>
-   {% endfor %}
+   </div>
 {% endblock %}

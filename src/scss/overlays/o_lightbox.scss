@@ -33,7 +33,7 @@
    &__img {
       width: 100%;
       height: auto;
-      border-radius: 3px;
+      border-radius: $border-radius;
    }
 
    &__close {
@@ -44,7 +44,7 @@
       right: 1rem;
       background-color: rgba($c-black, 0.5);
       border: 0;
-      border-radius: 3px;
+      border-radius: $border-radius;
       color: $c-white;
       padding: 0.5rem 1rem;
       transition: background-color 0.15s ease-in;

@@ -1,0 +1,136 @@
+.l_comment-form {
+    background-color: $c1-main;
+    padding: 2rem;
+    border-radius: $border-radius;
+
+    .col {
+
+        & + .col > .l_comment-form__hidden:not(.inactive) {
+            margin-top: 1rem;
+        }
+    }
+
+    &__textarea {
+        &:focus {
+            border-color: $c1-second;
+        }
+    }
+
+    &__input[type="text"] {
+
+        &:focus {
+            border-color: $c1-second;
+        }
+    }
+
+    #comment-error,
+    #commentguidelines-error {
+        margin-top: -0.5rem;
+    }
+
+    &__input-wrapper {
+        transition: opacity 0.2s ease-out;
+
+        &.inactive {
+            display: none;
+        }
+    }
+
+    &__agbs-wrapper {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        margin-bottom: 1rem;
+
+        @include media-breakpoint-up(md) {
+            align-items: center;
+        }
+
+        &.inactive {
+            display: none;
+        }
+
+        .l_comment-form__label {
+            cursor: pointer;
+            flex: 1 0 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: 0;
+        }
+    }
+
+    &__checkbox {
+
+        &:focus {
+            + .l_comment-form__label:before {
+                border-color: $c1-second;
+            }
+        }
+    }
+
+    &__agbs {
+        flex: 1 0 0;
+        margin-bottom: 0;
+        margin-left: 0.5rem;
+        font-size: 0.9rem;
+
+        @include media-breakpoint-up(sm) {
+            padding-top: 0;
+        }
+
+        @include media-breakpoint-up(md) {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 0;
+        }
+    }
+
+    &__agbs-text {
+        display: inline-block;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+        }
+    }
+
+
+    &__agbs-link {
+        text-decoration: underline;
+        color: $c-black;
+
+        &:visited {
+            color: $c-black;
+        }
+    }
+
+    &__required {
+        display: block;
+        margin-bottom: 0;
+        color: $c3-main;
+    }
+
+    &__submit {
+
+        &.inactive {
+            display: none;
+        }
+    }
+
+    &__submit-btn {
+        width: auto;
+    }
+
+    &__loggedin {
+        margin-bottom: 1rem;
+    }
+
+    &__loggedin-out {
+        text-decoration: underline;
+    }
+
+    .inv-recaptcha-holder {
+        margin-top: 0 !important;
+    }
+}

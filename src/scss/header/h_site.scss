@@ -3,7 +3,10 @@
    color: $c-white;
    min-height: 70px;
    margin-top: 0;
-   padding: 1rem 2rem;
-   display: flex;
-   justify-content: space-between;
+   padding: 1rem 0;
+
+   .container {
+      display: flex;
+      justify-content: space-between;
+   }
 }
