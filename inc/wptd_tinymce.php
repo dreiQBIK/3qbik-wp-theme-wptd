@@ -13,10 +13,9 @@
  *********************************************************************************************** */
 
 
-
- /************************************************************************************************
-     REGISTER_TINY_MCE_SETTINGS
- ************************************************************************************************* */
+/* ****************************************************
+   REGISTER_TINY_MCE_SETTINGS
+******************************************************* */
 
  function wptd_mce_settings(array $settings) {
 
@@ -48,10 +47,9 @@
  add_filter( 'tiny_mce_before_init', 'wptd_mce_settings' );
 
 
-
- /************************************************************************************************
-     REGISTER_TINY_MCE_FIRST_TOOLBAR
- ************************************************************************************************* */
+/* ****************************************************
+   REGISTER_TINY_MCE_FIRST_TOOLBAR
+******************************************************* */
 
 function wptd_mce_toolbar_01(array $buttons)
 {
@@ -117,10 +115,9 @@ function wptd_mce_toolbar_01(array $buttons)
 add_filter('mce_buttons', 'wptd_mce_toolbar_01');
 
 
-
-/************************************************************************************************
-    REGISTER_TINY_MCE_SECOND_TOOLBAR
-************************************************************************************************* */
+/* ****************************************************
+   REGISTER_TINY_MCE_SECOND_TOOLBAR
+******************************************************* */
 
 function wptd_mce_toolbar_02(array $buttons)
 {
@@ -149,22 +146,23 @@ function wptd_mce_toolbar_02(array $buttons)
 add_filter('mce_buttons_2', 'wptd_mce_toolbar_02');
 
 
-
-/************************************************************************************************
-    REGISTER_TINY_MCE_CUSTOM_COLORS
-************************************************************************************************* */
+/* ****************************************************
+   REGISTER_TINY_MCE_CUSTOM_COLORS
+******************************************************* */
 
 function wptd_mce_custom_colors($init) {
-  $default_colours = '"202A35", "c1-main",
-                      "364250", "c2-main",
-                      "F5F8FB", "c3-main",
+    $default_colours = '
+        "202A35", "c1-main",
+        "364250", "c2-main",
+        "F5F8FB", "c3-main",
 
-                      "fff191", "c1-second",
-                      "EEDE70", "c2-second",
+        "fff191", "c1-second",
+        "EEDE70", "c2-second",
 
-                      "ec764d", "c1-third",
-                      "d96a44", "c2-third",
-                      "ff855b", "c3-third"';
+        "ec764d", "c1-third",
+        "d96a44", "c2-third",
+        "ff855b", "c3-third"
+    ';
 
   $custom_colours =  '';
 
@@ -179,10 +177,9 @@ function wptd_mce_custom_colors($init) {
 add_filter('tiny_mce_before_init', 'wptd_mce_custom_colors');
 
 
-
-/************************************************************************************************
-    ADD_CLASS_TO_EMPTY_P
-************************************************************************************************* */
+/* ****************************************************
+   ADD_CLASS_TO_EMPTY_P
+******************************************************* */
 
 function wptd_mce_add_class_to_empty_p( $content ) {
     return str_replace( '<p>&nbsp;</p>', '<span class="mce_brake"></span>', $content );
@@ -190,10 +187,9 @@ function wptd_mce_add_class_to_empty_p( $content ) {
 add_filter( 'acf_the_content', 'wptd_mce_add_class_to_empty_p', PHP_INT_MAX );
 
 
-
-/************************************************************************************************
-    PREVENT_COLLAPSE
-************************************************************************************************* */
+/* ****************************************************
+   PREVENT_COLLAPSE
+******************************************************* */
 
 function wptd_acf_tinymce_prevent_collapse(){
     echo "<script type='text/javascript'>jQuery(document).ready(function($) {
