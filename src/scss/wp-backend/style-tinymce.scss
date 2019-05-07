@@ -16,13 +16,27 @@ body#tinymce {
       color: $c2-main-backend;
    }
 
-   p {
+   p,
+   li {
+      @include fontstyle("fs6");
       color: lighten($c2-main-backend, 10%);
    }
 
-   ul {
+   ul,
+   ol {
+      padding-left: 1em;
+
       li {
-         color: lighten($c2-main-backend, 10%);
+         padding-left: 0;
+      }
+   }
+
+   ul {
+
+      li {
+         &:before {
+            display: none;
+         }
       }
    }
 

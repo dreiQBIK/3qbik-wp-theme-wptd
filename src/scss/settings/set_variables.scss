@@ -25,6 +25,8 @@ $c1-hint: $c1-third;
 $c1-error: #d6445c;
 $c1-success: #00b878;
 
+// usage text: .t-c1-main,...
+// usage background: .bg-c1-main,...
 $theme-colors: () !default;
 $theme-colors: map-merge(
    (
@@ -57,6 +59,7 @@ $f2-second: "OfficinaSansITCStd-Italic", "Helvetica", "Arial", sans-serif;
 $f3-second: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
 $f4-second: "OfficinaSansITCStd-Bold-Italic", "Helvetica", "Arial", sans-serif;
 
+// usage: .f1-main, .f1-second,...
 $theme-fonts: () !default;
 $theme-fonts: map-merge(
    (
@@ -78,6 +81,7 @@ $theme-fonts: map-merge(
 $bd-radius-3: 3px;
 $bd-radius-5: 5px;
 
+// usage: .bd-radius-3, .bd-radius-5,...
 $border-radius: () !default;
 $border-radius: map-merge(
    (
@@ -91,6 +95,8 @@ $border-radius: map-merge(
 $bd-width-1: 1px;
 $bd-width-2: 2px;
 
+// usage: .bd-all-1, .bd-top-1,...
+// CAUTION: needs border-color -> usgae: .bd-c1-main,...
 $border-width: () !default;
 $border-width: map-merge(
    (
@@ -101,43 +107,68 @@ $border-width: map-merge(
 );
 
 
-
 /******************************************************************
    SPACERS
-   https://getbootstrap.com/docs/4.1/utilities/spacing/
 ******************************************************************/
 
+//https://getbootstrap.com/docs/4.1/utilities/spacing/
 $spacer: 1rem !default;
 $spacers: () !default;
 $spacers: map-merge(
    (
       0: 0,
-      1: (
+      25: (
          $spacer * 0.25,
       ),
-      2: (
+      50: (
          $spacer * 0.5,
       ),
-      3: $spacer,
-      4: (
+      75: (
+         $spacer * 0.75,
+      ),
+      100: (
+         $spacer * 1,
+      ),
+      125: (
+         $spacer * 1.25,
+      ),
+      150: (
          $spacer * 1.5,
       ),
-      5: (
+      200: (
+         $spacer * 2,
+      ),
+      250: (
+         $spacer * 2.5,
+      ),
+      300: (
          $spacer * 3,
       ),
-      6: (
+      350: (
+         $spacer * 3.5,
+      ),
+      400: (
+         $spacer * 4,
+      ),
+      500: (
          $spacer * 5,
       ),
-      7: (
+      600: (
+         $spacer * 6,
+      ),
+      800: (
          $spacer * 8,
       ),
-      8: (
+      1000: (
          $spacer * 10,
       ),
-      9: (
+      1200: (
+         $spacer * 12,
+      ),
+      1500: (
          $spacer * 15,
       ),
-      10: (
+      1800: (
          $spacer * 18,
       ),
       grid: (

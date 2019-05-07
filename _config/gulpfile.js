@@ -252,7 +252,7 @@ gulp.task("watch", function() {
       .on("change", browserSync.reload);
    gulp.watch(
       "../src/scss/**/*.scss",
-      gulp.series("sass", "theme-sass")
+      gulp.series("sass", "theme-sass", "tinymce-sass")
    );
    gulp.watch("../**/*.php").on("change", browserSync.reload);
    gulp.watch("../**/templates/**/*.twig").on("change", browserSync.reload);
@@ -267,7 +267,11 @@ gulp.task(
       "scripts-vendor",
       "scripts-separate",
       "scripts-separate-vendor",
-      "watch"
+      "watch",
+      "tinymce-sass",
+      "tinymce-css",
+      "theme-sass",
+      "theme-css"
    )
 );
 

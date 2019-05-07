@@ -101,3 +101,9 @@ address {
    box-shadow: 0 0 0 0.2rem rgba($c1-accent, 0.5);
    border-radius: $bd-radius-3;
 }
+
+ul,
+ol {
+   padding-left: 0;
+   list-style: none;
+}

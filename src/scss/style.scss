@@ -37,6 +37,7 @@ STYLESHEET: STYLE
 @import "settings/utilities/ut_animations";
 
 // Vendor
+@import "vendor/v_nucleo-icons";
 
 // Layouts
 @import "layouts/l_page";
@@ -45,18 +46,15 @@ STYLESHEET: STYLE
 @import "layouts/l_comment-form";
 @import "layouts/l_sidebar";
 @import "layouts/l_404";
-@import "layouts/l_home";
+@import "layouts/l_posts";
 @import "layouts/l_article";
 
 // Base
 @import "base/b_defaults";
-@import "base/b_general";
 @import "base/b_spacer";
 @import "base/b_text";
-@import "base/b_icons";
 @import "base/b_links";
 @import "base/b_list";
-@import "base/b_helpers";
 @import "base/b_tinymce";
 @import "base/b_wp-toolbar";
 

@@ -66,15 +66,15 @@
       $lh-sm-default: 1.2em;
 
       //medium
-      $fz-md-default: 2.2rem;
+      $fz-md-default: 2.3rem;
       $lh-md-default: 1.2em;
 
       //large
-      $fz-lg-default: 2.4rem;
+      $fz-lg-default: 2.5rem;
       $lh-lg-default: 1.2em;
 
       //xlarge
-      $fz-xl-default: 2.4rem;
+      $fz-xl-default: 2.6rem;
       $lh-xl-default: 1.2em;
 
 
@@ -89,15 +89,15 @@
       $lh-sm-default: 1.2em;
 
       //medium
-      $fz-md-default: 1.6rem;
+      $fz-md-default: 1.8rem;
       $lh-md-default: 1.2em;
 
       //large
-      $fz-lg-default: 1.8rem;
+      $fz-lg-default: 1.9rem;
       $lh-lg-default: 1.2em;
 
       //xlarge
-      $fz-xl-default: 1.8rem;
+      $fz-xl-default: 2rem;
       $lh-xl-default: 1.2em;
 
 
@@ -120,7 +120,7 @@
       $lh-lg-default: 1em;
 
       //xlarge
-      $fz-xl-default: 1.5rem;
+      $fz-xl-default: 1.6rem;
       $lh-xl-default: 1em;
 
 
@@ -164,20 +164,20 @@
    // Default Use Case: Body small
    } @else if $style == "fs6" {
       //base
-      $fz-xs-default: 0.95rem;
-      $lh-xs-default: 1.2em;
+      $fz-xs-default: 1rem;
+      $lh-xs-default: 1.5em;
       //small
-      $fz-sm-default: 0.95rem;
-      $lh-sm-default: 1.2em;
+      $fz-sm-default: 1rem;
+      $lh-sm-default: 1.5em;
       //medium
-      $fz-md-default: 0.95rem;
-      $lh-md-default: 1.2em;
+      $fz-md-default: 1rem;
+      $lh-md-default: 1.5em;
       //large
-      $fz-lg-default: 1.05rem;
-      $lh-lg-default: 1.2em;
+      $fz-lg-default: 1.1rem;
+      $lh-lg-default: 1.5em;
       //xlarge
-      $fz-xl-default: 1.05rem;
-      $lh-xl-default: 1.2em;
+      $fz-xl-default: 1.1rem;
+      $lh-xl-default: 1.5em;
    }
 
    @if $fz-xs {

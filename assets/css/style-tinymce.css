@@ -5,11 +5,10 @@
    FONTS
 ******************************************************************/
 /******************************************************************
-   BORDER_RADIUS
+   BORDER
 ******************************************************************/
 /******************************************************************
    SPACERS
-   https://getbootstrap.com/docs/4.1/utilities/spacing/
 ******************************************************************/
 /******************************************************************
    GRID
@@ -21,82 +20,25 @@
 
     USAGE:
     @include fontstyle(
-        $style: false, $scale: 1,
-        $family: false, $weight: false, $color: false,
-        $lh-a: false, $mb-a: false,
-        $fz-xs: false, $lh-xs: false, $mb-xs: false,
-        $fz-sm: false, $lh-sm: false, $mb-sm: false,
-        $fz-md: false, $lh-md: false, $mb-md: false,
-        $fz-lg: false, $lh-lg: false, $mb-lg: false,
-        $fz-xl: false, $lh-xl: false, $mb-xl: false
+        $style: false,
+        $scale: 1,
+        $lh-a: false,
+        $fz-xs: false,
+        $lh-xs: false,
+        $fz-sm: false,
+        $lh-sm: false,
+        $fz-md: false,
+        $lh-md: false,
+        $fz-lg: false,
+        $lh-lg: false,
+        $fz-xl: false,
+        $lh-xl: false
     );
 
     USAGE SHORT:
     @include fontstyle("fs1-main");
 
 ******************************************************************/
-.tinymce ul,
-.tinymce ol {
-  margin: 1rem 0 1.5rem;
-  padding-left: 0;
-}
-
-.tinymce ul {
-  list-style: none;
-}
-
-.tinymce ul li {
-  position: relative;
-  padding-left: 1.5rem;
-  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 1.1rem;
-  line-height: 1.5em;
-  margin-bottom: 0.2em;
-}
-
-@media (min-width: 481px) {
-  .tinymce ul li {
-    font-size: 1.1rem;
-    line-height: 1.5em;
-    margin-bottom: 0.2em;
-  }
-}
-
-@media (min-width: 961px) {
-  .tinymce ul li {
-    font-size: 1.1rem;
-    line-height: 1.5em;
-    margin-bottom: 0.2em;
-  }
-}
-
-@media (min-width: 1361px) {
-  .tinymce ul li {
-    font-size: 1.2rem;
-    line-height: 1.5em;
-    margin-bottom: 0.2em;
-  }
-}
-
-@media (min-width: 1921px) {
-  .tinymce ul li {
-    font-size: 1.2rem;
-    line-height: 1.5em;
-    margin-bottom: 0.2em;
-  }
-}
-
-.tinymce ul li:before {
-  content: "\2022";
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 1.5rem;
-  color: #ffffff;
-}
-
 .tinymce a {
   transition: color 0.15s ease-in-out;
   color: #ff855b;
@@ -131,6 +73,7 @@
 .tinymce li,
 .tinymce a {
   margin-top: 0;
+  margin-bottom: 0.5em;
 }
 
 .tinymce h3:last-child,
@@ -153,60 +96,47 @@
 }
 
 .tinymce h3 {
-  font-family: "FuturaLTPro-XBold", sans-serif;
-  color: #ffffff;
-  font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.2em;
-  margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   .tinymce h3 {
     font-size: 1.6rem;
     line-height: 1.2em;
-    margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 961px) {
   .tinymce h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 1.2em;
-    margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 1361px) {
   .tinymce h3 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     line-height: 1.2em;
-    margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 1921px) {
   .tinymce h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 1.2em;
-    margin-bottom: 0.5em;
   }
 }
 
 .tinymce h4 {
-  font-family: "FuturaLTPro-XBold", sans-serif;
-  color: #ffffff;
-  font-weight: 400;
   font-size: 1.4rem;
   line-height: 1em;
-  margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   .tinymce h4 {
     font-size: 1.4rem;
     line-height: 1em;
-    margin-bottom: 0.5em;
   }
 }
 
@@ -214,7 +144,6 @@
   .tinymce h4 {
     font-size: 1.4rem;
     line-height: 1em;
-    margin-bottom: 0.5em;
   }
 }
 
@@ -222,32 +151,25 @@
   .tinymce h4 {
     font-size: 1.5rem;
     line-height: 1em;
-    margin-bottom: 0.5em;
   }
 }
 
 @media (min-width: 1921px) {
   .tinymce h4 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 1em;
-    margin-bottom: 0.5em;
   }
 }
 
 .tinymce h5 {
-  font-family: "FuturaLTPro-XBold", sans-serif;
-  color: #ffffff;
-  font-weight: 400;
   font-size: 1.3rem;
   line-height: 1em;
-  margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   .tinymce h5 {
     font-size: 1.3rem;
     line-height: 1em;
-    margin-bottom: 0.5em;
   }
 }
 
@@ -255,7 +177,6 @@
   .tinymce h5 {
     font-size: 1.3rem;
     line-height: 1em;
-    margin-bottom: 0.5em;
   }
 }
 
@@ -263,7 +184,6 @@
   .tinymce h5 {
     font-size: 1.4rem;
     line-height: 1em;
-    margin-bottom: 0.5em;
   }
 }
 
@@ -271,25 +191,18 @@
   .tinymce h5 {
     font-size: 1.4rem;
     line-height: 1em;
-    margin-bottom: 0.5em;
   }
 }
 
 .tinymce p {
-  margin: 0 0 0.5em !important;
-  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
-  color: #ffffff;
-  font-weight: 400;
   font-size: 1.1rem;
   line-height: 1.5em;
-  margin-bottom: 1em;
 }
 
 @media (min-width: 481px) {
   .tinymce p {
     font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 1em;
   }
 }
 
@@ -297,7 +210,6 @@
   .tinymce p {
     font-size: 1.1rem;
     line-height: 1.5em;
-    margin-bottom: 1em;
   }
 }
 
@@ -305,7 +217,6 @@
   .tinymce p {
     font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 1em;
   }
 }
 
@@ -313,7 +224,6 @@
   .tinymce p {
     font-size: 1.2rem;
     line-height: 1.5em;
-    margin-bottom: 1em;
   }
 }
 
@@ -353,18 +263,62 @@
   font-style: italic;
 }
 
-.tinymce ul {
-  margin-top: 1rem;
+.tinymce ul li,
+.tinymce ol li {
+  font-size: 1.1rem;
+  line-height: 1.5em;
 }
 
-@media (min-width: 961px) {
-  .tinymce ul {
-    margin-top: 1.5rem;
+@media (min-width: 481px) {
+  .tinymce ul li,
+  .tinymce ol li {
+    font-size: 1.1rem;
+    line-height: 1.5em;
   }
 }
 
+@media (min-width: 961px) {
+  .tinymce ul li,
+  .tinymce ol li {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 1361px) {
+  .tinymce ul li,
+  .tinymce ol li {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 1921px) {
+  .tinymce ul li,
+  .tinymce ol li {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+  }
+}
+
+.tinymce ol {
+  padding-left: 1em;
+  list-style: decimal;
+}
+
 .tinymce ul li {
+  position: relative;
   margin-bottom: 0.2rem;
+  padding-left: 1.5rem;
+}
+
+.tinymce ul li:before {
+  content: "\2022";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 .tinymce a {
@@ -403,12 +357,57 @@ body#tinymce h6 {
   color: #384d62;
 }
 
-body#tinymce p {
+body#tinymce p,
+body#tinymce li {
+  font-size: 1rem;
+  line-height: 1.5em;
   color: #4b6782;
 }
 
-body#tinymce ul li {
-  color: #4b6782;
+@media (min-width: 481px) {
+  body#tinymce p,
+  body#tinymce li {
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 961px) {
+  body#tinymce p,
+  body#tinymce li {
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 1361px) {
+  body#tinymce p,
+  body#tinymce li {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 1921px) {
+  body#tinymce p,
+  body#tinymce li {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+  }
+}
+
+body#tinymce ul,
+body#tinymce ol {
+  padding-left: 1em;
+}
+
+body#tinymce ul li,
+body#tinymce ol li {
+  padding-left: 0;
+}
+
+body#tinymce ul li:before {
+  display: none;
 }
 
 body#tinymce a {

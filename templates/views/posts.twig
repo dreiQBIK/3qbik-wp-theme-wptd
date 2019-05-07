@@ -1,15 +1,15 @@
 {% extends "base.twig" %}
 
 {% block content %}
-   <div class="l_home" data-template="home.twig">
+   <div class="l_posts" data-template="home.twig">
       <div class="container sp-md">
          <header>
             <h1>{{ __( 'Beiträge', 'wptd' ) }}</h1>
          </header>
          {% if posts %}
-            <ul class="l_home__list">
+            <ul class="l_posts__list">
             {% for post in posts %}
-               <li class="l_home__item">
+               <li class="l_posts__item">
                   {% include "/partials/modules/m_post-teaser.twig" %}
                </li>
             {% endfor %}
