@@ -10,7 +10,7 @@ p {
 }
 
 h1,
-.heading-1 {
+.fs-1 {
    @include fontstyle(
       "fs1",
    );
@@ -18,7 +18,7 @@ h1,
 }
 
 h2,
-.heading-2 {
+.fs-2 {
    @include fontstyle(
       "fs2",
    );
@@ -26,7 +26,7 @@ h2,
 }
 
 h3,
-.heading-3 {
+.fs-3 {
    @include fontstyle(
       "fs3",
    );
@@ -34,13 +34,26 @@ h3,
 }
 
 h4,
-.heading-4 {
+.fs-4 {
    @include fontstyle(
       "fs4",
    );
    margin-bottom: 0.5em;
 }
 
+.fs-5 {
+   @include fontstyle(
+      "fs5"
+   );
+   margin-bottom: 0.5em;
+}
+
+.fs-6 {
+   @include fontstyle(
+      "fs6"
+   );
+   margin-bottom: 0.5em;
+}
 
 p {
    @include fontstyle(
@@ -83,3 +96,4 @@ p {
    hyphenate-limit-last: always;
    hyphenate-limit-zone: 8%;
 }
+

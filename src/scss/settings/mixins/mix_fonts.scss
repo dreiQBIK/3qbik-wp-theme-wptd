@@ -59,23 +59,23 @@
    @if $style == "fs1" {
       //base
       $fz-xs-default: 2.2rem;
-      $lh-xs-default: 1.2em;
+      $lh-xs-default: 1.3em;
 
       //small
       $fz-sm-default: 2.2rem;
-      $lh-sm-default: 1.2em;
+      $lh-sm-default: 1.3em;
 
       //medium
       $fz-md-default: 2.3rem;
-      $lh-md-default: 1.2em;
+      $lh-md-default: 1.3em;
 
       //large
       $fz-lg-default: 2.5rem;
-      $lh-lg-default: 1.2em;
+      $lh-lg-default: 1.3em;
 
       //xlarge
       $fz-xl-default: 2.6rem;
-      $lh-xl-default: 1.2em;
+      $lh-xl-default: 1.3em;
 
 
    // Default Use Case: H2
@@ -105,42 +105,42 @@
    } @else if $style == "fs3" {
       //base
       $fz-xs-default: 1.4rem;
-      $lh-xs-default: 1em;
+      $lh-xs-default: 1.5em;
 
       //small
       $fz-sm-default: 1.4rem;
-      $lh-sm-default: 1em;
+      $lh-sm-default: 1.5em;
 
       //medium
       $fz-md-default: 1.4rem;
-      $lh-md-default: 1em;
+      $lh-md-default: 1.5em;
 
       //large
       $fz-lg-default: 1.5rem;
-      $lh-lg-default: 1em;
+      $lh-lg-default: 1.5em;
 
       //xlarge
       $fz-xl-default: 1.6rem;
-      $lh-xl-default: 1em;
+      $lh-xl-default: 1.5em;
 
 
    // Default Use Case: H4
    } @else if $style == "fs4" {
       //base
       $fz-xs-default: 1.3rem;
-      $lh-xs-default: 1em;
+      $lh-xs-default: 1.5em;
       //small
       $fz-sm-default: 1.3rem;
-      $lh-sm-default: 1em;
+      $lh-sm-default: 1.5em;
       //medium
       $fz-md-default: 1.3rem;
-      $lh-md-default: 1em;
+      $lh-md-default: 1.5em;
       //large
       $fz-lg-default: 1.4rem;
-      $lh-lg-default: 1em;
+      $lh-lg-default: 1.5em;
       //xlarge
       $fz-xl-default: 1.4rem;
-      $lh-xl-default: 1em;
+      $lh-xl-default: 1.5em;
 
 
    // Default Use Case: Body

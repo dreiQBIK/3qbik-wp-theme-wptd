@@ -8123,46 +8123,46 @@ p {
 }
 
 h1,
-.heading-1 {
+.fs-1 {
   font-size: 2.2rem;
-  line-height: 1.2em;
+  line-height: 1.3em;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   h1,
-  .heading-1 {
+  .fs-1 {
     font-size: 2.2rem;
-    line-height: 1.2em;
+    line-height: 1.3em;
   }
 }
 
 @media (min-width: 961px) {
   h1,
-  .heading-1 {
+  .fs-1 {
     font-size: 2.3rem;
-    line-height: 1.2em;
+    line-height: 1.3em;
   }
 }
 
 @media (min-width: 1361px) {
   h1,
-  .heading-1 {
+  .fs-1 {
     font-size: 2.5rem;
-    line-height: 1.2em;
+    line-height: 1.3em;
   }
 }
 
 @media (min-width: 1921px) {
   h1,
-  .heading-1 {
+  .fs-1 {
     font-size: 2.6rem;
-    line-height: 1.2em;
+    line-height: 1.3em;
   }
 }
 
 h2,
-.heading-2 {
+.fs-2 {
   font-size: 1.6rem;
   line-height: 1.2em;
   margin-bottom: 0.5em;
@@ -8170,7 +8170,7 @@ h2,
 
 @media (min-width: 481px) {
   h2,
-  .heading-2 {
+  .fs-2 {
     font-size: 1.6rem;
     line-height: 1.2em;
   }
@@ -8178,7 +8178,7 @@ h2,
 
 @media (min-width: 961px) {
   h2,
-  .heading-2 {
+  .fs-2 {
     font-size: 1.8rem;
     line-height: 1.2em;
   }
@@ -8186,7 +8186,7 @@ h2,
 
 @media (min-width: 1361px) {
   h2,
-  .heading-2 {
+  .fs-2 {
     font-size: 1.9rem;
     line-height: 1.2em;
   }
@@ -8194,87 +8194,155 @@ h2,
 
 @media (min-width: 1921px) {
   h2,
-  .heading-2 {
+  .fs-2 {
     font-size: 2rem;
     line-height: 1.2em;
   }
 }
 
 h3,
-.heading-3 {
+.fs-3 {
   font-size: 1.4rem;
-  line-height: 1em;
+  line-height: 1.5em;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   h3,
-  .heading-3 {
+  .fs-3 {
     font-size: 1.4rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 961px) {
   h3,
-  .heading-3 {
+  .fs-3 {
     font-size: 1.4rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 1361px) {
   h3,
-  .heading-3 {
+  .fs-3 {
     font-size: 1.5rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 1921px) {
   h3,
-  .heading-3 {
+  .fs-3 {
     font-size: 1.6rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 h4,
-.heading-4 {
+.fs-4 {
   font-size: 1.3rem;
-  line-height: 1em;
+  line-height: 1.5em;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   h4,
-  .heading-4 {
+  .fs-4 {
     font-size: 1.3rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 961px) {
   h4,
-  .heading-4 {
+  .fs-4 {
     font-size: 1.3rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 1361px) {
   h4,
-  .heading-4 {
+  .fs-4 {
     font-size: 1.4rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 1921px) {
   h4,
-  .heading-4 {
+  .fs-4 {
     font-size: 1.4rem;
-    line-height: 1em;
+    line-height: 1.5em;
+  }
+}
+
+.fs-5 {
+  font-size: 1.1rem;
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: 481px) {
+  .fs-5 {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 961px) {
+  .fs-5 {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 1361px) {
+  .fs-5 {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 1921px) {
+  .fs-5 {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+  }
+}
+
+.fs-6 {
+  font-size: 1rem;
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: 481px) {
+  .fs-6 {
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 961px) {
+  .fs-6 {
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 1361px) {
+  .fs-6 {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 1921px) {
+  .fs-6 {
+    font-size: 1.1rem;
+    line-height: 1.5em;
   }
 }
 
@@ -8483,67 +8551,67 @@ ul.list li:before {
 
 .tinymce h4 {
   font-size: 1.4rem;
-  line-height: 1em;
+  line-height: 1.5em;
 }
 
 @media (min-width: 481px) {
   .tinymce h4 {
     font-size: 1.4rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 961px) {
   .tinymce h4 {
     font-size: 1.4rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 1361px) {
   .tinymce h4 {
     font-size: 1.5rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 1921px) {
   .tinymce h4 {
     font-size: 1.6rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 .tinymce h5 {
   font-size: 1.3rem;
-  line-height: 1em;
+  line-height: 1.5em;
 }
 
 @media (min-width: 481px) {
   .tinymce h5 {
     font-size: 1.3rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 961px) {
   .tinymce h5 {
     font-size: 1.3rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 1361px) {
   .tinymce h5 {
     font-size: 1.4rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 1921px) {
   .tinymce h5 {
     font-size: 1.4rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
@@ -8601,10 +8669,12 @@ ul.list li:before {
   margin-top: 0;
   margin-left: 0;
   margin-right: 0;
-  font-size: 1.4rem;
+  padding: 1em;
 }
 
 .tinymce blockquote p {
+  font-size: 1.5rem;
+  font-style: italic;
   color: #ec764d;
 }
 
@@ -8749,8 +8819,8 @@ ul.list li:before {
 
 .l_styleguide .color-field {
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 
 .m_btn,

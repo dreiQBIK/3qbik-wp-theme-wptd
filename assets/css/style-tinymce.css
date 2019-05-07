@@ -130,67 +130,67 @@
 
 .tinymce h4 {
   font-size: 1.4rem;
-  line-height: 1em;
+  line-height: 1.5em;
 }
 
 @media (min-width: 481px) {
   .tinymce h4 {
     font-size: 1.4rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 961px) {
   .tinymce h4 {
     font-size: 1.4rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 1361px) {
   .tinymce h4 {
     font-size: 1.5rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 1921px) {
   .tinymce h4 {
     font-size: 1.6rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 .tinymce h5 {
   font-size: 1.3rem;
-  line-height: 1em;
+  line-height: 1.5em;
 }
 
 @media (min-width: 481px) {
   .tinymce h5 {
     font-size: 1.3rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 961px) {
   .tinymce h5 {
     font-size: 1.3rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 1361px) {
   .tinymce h5 {
     font-size: 1.4rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
 @media (min-width: 1921px) {
   .tinymce h5 {
     font-size: 1.4rem;
-    line-height: 1em;
+    line-height: 1.5em;
   }
 }
 
@@ -248,10 +248,12 @@
   margin-top: 0;
   margin-left: 0;
   margin-right: 0;
-  font-size: 1.4rem;
+  padding: 1em;
 }
 
 .tinymce blockquote p {
+  font-size: 1.5rem;
+  font-style: italic;
   color: #ec764d;
 }
 
