@@ -1,0 +1,36 @@
+input.parsley-success,
+select.parsley-success,
+textarea.parsley-success {
+  border: 2px solid $c1-success;
+}
+
+input.parsley-error,
+select.parsley-error,
+textarea.parsley-error {
+  border: 2px solid $c1-error;
+}
+
+.parsley-errors-list {
+  margin: 2px 0 3px;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9em;
+  line-height: 0.9em;
+  opacity: 0;
+  color: $c-white;
+  transition: all .3s ease-in;
+
+  &.filled {
+     opacity: 1;
+  }
+
+  > li {
+     padding-left: 0;
+     color: $c1-error;
+     font-size: 1rem;
+
+     &:before {
+        display: none;
+     }
+  }
+}

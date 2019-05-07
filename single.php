@@ -9,7 +9,7 @@
  * @since    Timber 0.1
  */
 
-$context = Timber::get_context();
+$context = Timber::context();
 $templates = array( 'views/single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'views/single.twig' );
 $templates_pass = 'single-password.twig';
 

@@ -11,7 +11,7 @@
  * @since    Timber 0.1
  */
 
-$context = Timber::get_context();
+$context = Timber::context();
 $templates = 'views/tpl-editor.twig';
 
 $post = new TimberPost();

@@ -23,20 +23,6 @@
             text-align: right;
             margin-bottom: 0.5rem;
         }
-
-        #cancel-comment-reply-link {
-            @include fontstyle(
-                "fs2-second",
-            );
-            transition: color 0.2s ease-out;
-            color: $c3-main;
-
-            &:hover {
-                @include media-breakpoint-up(md) {
-                    color: $c-black;
-                }
-            }
-        }
     }
 }
 

@@ -1,7 +1,34 @@
+{% if comment.author.ID %}
+	{% set author_image = fn('get_field', 'user_roles_info', 'user_' ~ comment.author.ID).image %}
+{% else %}
+	{% set author_image = false %}
+{% endif %}
+
 <li {{ fn('comment_class', '', comment.ID, post.ID, true) }} id="li-comment-{{ comment.ID }}">
 	<article class="l_comment {{ (comment.depth and comment.depth > 0) ? 'comment-depth-'~comment.depth }}" id="comment-{{ comment.ID }}" itemscope itemtype="https://schema.org/Comment">
 
 		<header class="l_comment__header">
+			{% if author_image %}
+				<img
+					class="l_comment__author-img lazyload"
+					alt="{{ author_image.alt }}"
+					src="{{ theme.link }}/assets/img/avatar.png"
+					data-src="{{ author_image.sizes.medium }}"
+					data-srcset="{{ author_image.sizes.thumbnail }} 150w,
+						{{ author_image.sizes.medium }} 300w,
+						{{ author_image.sizes.medium_large }} 768w,"
+					data-sizes="auto"
+				/>
+			{% else %}
+				<img
+					class="l_comment__author-img lazyload"
+					alt="{{ __( 'Portrait Avatar', 'wptd' ) }}"
+					src="{{ theme.link }}/assets/img/avatar.png"
+					data-src="{{ theme.link }}/assets/img/avatar.png"
+					data-srcset="{{ theme.link }}/assets/img/avatar.png"
+					data-sizes="auto"
+				/>
+			{% endif %}
 		    <div class="l_comment__info">
 		        <p class="l_comment__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <span itemprop="name">{{ comment.author.name }}</span>
@@ -12,9 +39,7 @@
 		    </div>
 		</header>
 
-		<div class="l_comment__content" itemprop="text">
-            {{ comment.comment_content|wpautop }}
-        </div>
+		<div class="l_comment__content" itemprop="text">{{ comment.comment_content|wpautop }}</div>
 
 		{% if post.comment_status == 'open' %}
 			<footer class="l_comment__footer reply">
@@ -28,8 +53,8 @@
 			<div class="comments">
 	      	{% for reply in comment.children() %}
 	        	{% include "/partials/layouts/l_comment.twig" with {comment:reply} %}
-	      {% endfor %}
-	      </div>
+			{% endfor %}
+			</div>
 	    {% endif %}
 
 	</article>

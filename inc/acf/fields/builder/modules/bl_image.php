@@ -4,10 +4,10 @@ namespace App;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-$m_image = new FieldsBuilder('m_image', ['title' => 'Bild']);
+$bl_image = new FieldsBuilder('bl_image', ['title' => 'Bild']);
 
-$m_image
-    ->addGroup('m_image', [
+$bl_image
+    ->addGroup('bl_image', [
         'label' => '',
     ])
 
@@ -50,4 +50,4 @@ $m_image
 
     ->endGroup();
 
-return $m_image;
+return $bl_image;

@@ -10,19 +10,6 @@
         }
     }
 
-    &__textarea {
-        &:focus {
-            border-color: $c1-second;
-        }
-    }
-
-    &__input[type="text"] {
-
-        &:focus {
-            border-color: $c1-second;
-        }
-    }
-
     #comment-error,
     #commentguidelines-error {
         margin-top: -0.5rem;

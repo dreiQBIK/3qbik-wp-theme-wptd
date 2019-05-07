@@ -5,12 +5,12 @@ namespace App;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
 
-$m_heading = new FieldsBuilder('m_heading', [
+$bl_heading = new FieldsBuilder('bl_heading', [
     'title' => 'Überschrift',
 ]);
 
-$m_heading
-    ->addGroup('m_heading', [
+$bl_heading
+    ->addGroup('bl_heading', [
         'label' => '',
     ])
 
@@ -38,4 +38,4 @@ $m_heading
 
     ->endGroup();
 
-return $m_heading;
+return $bl_heading;

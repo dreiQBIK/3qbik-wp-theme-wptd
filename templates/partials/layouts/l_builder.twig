@@ -2,27 +2,27 @@
 {% for module in modules %}
 
    {# Module: HEADLINE #}
-   {% if module.acf_fc_layout == 'm_heading' %}
-      {% include "/partials/modules/builder/m_headline.twig" with {
-         space_bottom: module.m_heading.margin,
-         headline: module.m_heading.text,
+   {% if module.acf_fc_layout == 'bl_heading' %}
+      {% include "/partials/builder/bl_headline.twig" with {
+         space_bottom: module.bl_heading.margin,
+         headline: module.bl_heading.text,
       }%}
    {% endif %}
 
    {# Module: TEXT #}
-   {% if module.acf_fc_layout == 'm_editor' %}
-      {% include "/partials/modules/builder/m_text.twig" with {
-         space_bottom: module.m_editor.margin,
-         editor: module.m_editor.wysiwyg,
+   {% if module.acf_fc_layout == 'bl_editor' %}
+      {% include "/partials/builder/bl_text.twig" with {
+         space_bottom: module.bl_editor.margin,
+         editor: module.bl_editor.wysiwyg,
       }%}
    {% endif %}
 
    {# Module: IMAGE #}
-   {% if module.acf_fc_layout == 'm_image' %}
-      {% include "/partials/modules/builder/m_image.twig" with {
-         space_bottom: module.m_image.margin,
-         image: module.m_image.image,
-         image_settings: module.m_image.image_settings,
+   {% if module.acf_fc_layout == 'bl_image' %}
+      {% include "/partials/builder/bl_image.twig" with {
+         space_bottom: module.bl_image.margin,
+         image: module.bl_image.image,
+         image_settings: module.bl_image.image_settings,
       }%}
    {% endif %}
 

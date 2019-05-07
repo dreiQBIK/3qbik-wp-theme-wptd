@@ -4,10 +4,10 @@ namespace App;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-$m_editor = new FieldsBuilder('m_editor', ['title' => 'Editor']);
+$bl_editor = new FieldsBuilder('bl_editor', ['title' => 'Editor']);
 
-$m_editor
-    ->addGroup('m_editor', [
+$bl_editor
+    ->addGroup('bl_editor', [
         'label' => '',
     ])
 
@@ -35,4 +35,4 @@ $m_editor
 
     ->endGroup();
 
-return $m_editor;
+return $bl_editor;

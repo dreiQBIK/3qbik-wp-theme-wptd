@@ -14,6 +14,10 @@
         background-color: $c-white;
     }
 
+    & + #respond {
+        margin-bottom: 4rem;
+    }
+
     .comments > .comment {
 
         &:last-child > .l_comment {
@@ -39,6 +43,11 @@
         }
     }
 
+    &__author-img {
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
     &__time {
         font-size: 1rem;
         color: $c3-main;
@@ -47,8 +56,5 @@
     &__footer {
         display: flex;
         justify-content: space-between;
-    }
-
-    .comment-reply-link {
     }
 }

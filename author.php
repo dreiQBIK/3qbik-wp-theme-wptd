@@ -8,8 +8,8 @@
  */
 
 global $wp_query;
-$context = \Timber\Timber::get_context();
-$templates = array( 'author.twig', 'archive.twig' );
+$context = \Timber\Timber::context();
+$templates = array( 'views/author.twig', 'views/archive.twig' );
 
 $context['posts'] = \Timber\Timber::get_posts();
 

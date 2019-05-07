@@ -12,8 +12,8 @@
  * @since    Timber 0.1
  */
 
-$templates = array( 'archive.twig', 'index.twig' );
-$context = \Timber\Timber::get_context();
+$templates = array( 'views/archive.twig', 'views/index.twig' );
+$context = \Timber\Timber::context();
 
 $context['title'] = 'Archive';
 if ( is_day() ) {

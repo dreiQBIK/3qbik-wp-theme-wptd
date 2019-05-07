@@ -1,7 +1,7 @@
 <div id="respond">
     <p class="cancel-comment-reply">{{ fn('cancel_comment_reply_link', 'Antworten abbrechen') }}</p>
 
-    <form id="commentform" class="l_comment-form" method="post" action="{{ site.site_url ~ '/wp-comments-post.php' }}">
+    <form id="commentform" class="l_comment-form" method="post" action="{{ site.site_url ~ '/wp-comments-post.php' }}" data-parsley-validate>
 
         <div class="l_comment-form__comment">
 
@@ -18,6 +18,7 @@
 
                 <div class="col col-12">
                     <div class="l_comment-form__input-wrapper">
+                        <label class="l_comment-form__label" for="author">Ihr Kommentar*</label>
                         <textarea class="l_comment-form__input l_comment-form__textarea trigger" required placeholder="Schreiben Sie Ihre Meinung..." name="comment" aria-label="{{ __( 'Ihr Kommentar', 'wptd' ) }}" cols="60" rows="3" id="comment"></textarea>
                     </div>
                 </div>
@@ -58,7 +59,7 @@
         {{fn('comment_id_fields')}}
 
         <div class="l_comment-form__submit l_comment-form__hidden inactive">
-            <button id="submit" name="Submit" class="l_comment-form__submit-btn b_btn b_btn--primary">Senden</button>
+            <button id="submit" name="Submit" class="l_comment-form__submit-btn m_btn m_btn--primary">Senden</button>
         </div>
 
         {% do action( 'comment_form', post.id ) %}

@@ -13,7 +13,7 @@
  * @since   Timber 0.1
  */
 
-$context = Timber::get_context();
+$context = Timber::context();
 $templates = array( 'views/index.twig' );
 
 if ( is_home() ) {

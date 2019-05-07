@@ -7,7 +7,7 @@
  * @subpackage  Timber
  */
 
-$context = Timber::get_context();
+$context = Timber::context();
 $templates = 'partials/layouts/l_sidebar.twig';
 
 $context['tags'] = Timber::get_terms('tag');

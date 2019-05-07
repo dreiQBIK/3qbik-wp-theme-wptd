@@ -47,7 +47,6 @@ STYLESHEET: STYLE
 @import "layouts/l_404";
 @import "layouts/l_home";
 @import "layouts/l_article";
-@import "layouts/l_pagination";
 
 // Base
 @import "base/b_defaults";
@@ -56,7 +55,6 @@ STYLESHEET: STYLE
 @import "base/b_text";
 @import "base/b_icons";
 @import "base/b_links";
-@import "base/b_btn";
 @import "base/b_list";
 @import "base/b_helpers";
 @import "base/b_tinymce";
@@ -66,12 +64,16 @@ STYLESHEET: STYLE
 @import "styleguide/sg_base";
 
 // Modules
+@import "modules/m_btn";
 @import "modules/m_card";
-@import "modules/m_image";
 @import "modules/m_post-teaser";
+
+// Builder Modules
+@import "builder/bl_image";
 
 // Navigation
 @import "navigation/n_site";
+@import "navigation/n_pagination";
 
 // Overlays
 @import "overlays/o_lightbox";
@@ -84,6 +86,7 @@ STYLESHEET: STYLE
 
 // Forms
 @import "forms/fm_base";
+@import "forms/fm_parsley";
 // @import "forms/fm_choices";
 // @import "forms/fm_upload";
 // @import "forms/fm_validation";

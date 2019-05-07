@@ -11,7 +11,7 @@
  */
 
 
-$context = Timber::get_context();
+$context = Timber::context();
 $templates = 'styleguide/page-modules.twig';
 
 $post = new TimberPost();

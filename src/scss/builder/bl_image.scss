@@ -1,16 +1,17 @@
-.m_image {
+.bl_image {
 
    &__figure {
       margin: 0;
       width: 100%;
       overflow: hidden;
+      border-radius: $border-radius;
 
       &.with-lightbox {
          cursor: zoom-in;
          position: relative;
 
          &:hover {
-            .m_image__zoom {
+            .bl_image__zoom {
                @include media-breakpoint-up(md) {
                   background-color: $c1-main;
                }
@@ -19,8 +20,8 @@
       }
    }
 
-   .m_image__zoom,
-   svg.m_image__zoom {
+   .bl_image__zoom,
+   svg.bl_image__zoom {
       position: absolute;
       right: 0;
       bottom: 0;
@@ -41,7 +42,7 @@
    &__caption {
       text-align: center;
       color: $c3-main;
-      font-size: 0.9rem;
+      font-size: 1rem;
       line-height: 1.2rem;
       margin: 0.7rem 0;
    }
