@@ -13,7 +13,7 @@
  */
 
 $templates = array( 'views/archive.twig', 'views/index.twig' );
-$context = \Timber\Timber::get_context();
+$context = \Timber\Timber::context();
 
 $context['title'] = 'Archive';
 if ( is_day() ) {

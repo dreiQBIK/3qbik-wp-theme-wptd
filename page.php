@@ -14,7 +14,7 @@
  * @since    Timber 0.1
  */
 
-$context = Timber::get_context();
+$context = Timber::context();
 $templates = array( 'views/page-' . $post->post_name . '.twig', 'views/page.twig' );
 
 $post = new TimberPost();

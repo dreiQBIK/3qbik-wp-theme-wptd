@@ -9,7 +9,7 @@
  * @since   Timber 0.1
  */
 
-$context = Timber::get_context();
+$context = Timber::context();
 $templates = array( 'search.twig', 'archive.twig', 'index.twig' );
 
 $context['title'] = 'Search results for ' . get_search_query();

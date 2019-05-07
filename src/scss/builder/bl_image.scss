@@ -1,4 +1,4 @@
-.m_image {
+.bl_image {
 
    &__figure {
       margin: 0;
@@ -11,7 +11,7 @@
          position: relative;
 
          &:hover {
-            .m_image__zoom {
+            .bl_image__zoom {
                @include media-breakpoint-up(md) {
                   background-color: $c1-main;
                }
@@ -20,8 +20,8 @@
       }
    }
 
-   .m_image__zoom,
-   svg.m_image__zoom {
+   .bl_image__zoom,
+   svg.bl_image__zoom {
       position: absolute;
       right: 0;
       bottom: 0;

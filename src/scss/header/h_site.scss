@@ -1,12 +1,8 @@
 .h_site {
-   background-color: $c1-main;
    color: $c-white;
    min-height: 70px;
    margin-top: 0;
    padding: 1rem 0;
-
-   .container {
-      display: flex;
-      justify-content: space-between;
-   }
+   display: flex;
+   justify-content: space-between;
 }
