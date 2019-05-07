@@ -1,0 +1,33 @@
+// border-radius
+// usage: .bd-radius-3
+@each $radius, $value in $border-radius {
+   @include border-radius(".#{$radius}", $value);
+}
+
+// border-color
+// usage: .bd-c1-main
+@each $color, $value in $theme-colors {
+   @include border-color(".bd-#{$color}", $value);
+}
+
+// border-width
+// usage: .bd-all-1
+@each $width, $value in $border-width {
+   @include border-all(".bd-all-#{$width}", $value);
+}
+// usage: .bd-top-1
+@each $width, $value in $border-width {
+   @include border-top(".bd-top-#{$width}", $value);
+}
+// usage: .bd-right-1
+@each $width, $value in $border-width {
+   @include border-right(".bd-right-#{$width}", $value);
+}
+// usage: .bd-bottom-1
+@each $width, $value in $border-width {
+   @include border-bottom(".bd-bottom-#{$width}", $value);
+}
+// usage: .bd-left-1
+@each $width, $value in $border-width {
+   @include border-left(".bd-left-#{$width}", $value);
+}

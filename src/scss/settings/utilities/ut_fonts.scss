@@ -1,0 +1,4 @@
+// usage: .f1-main
+@each $font, $value in $theme-fonts {
+   @include font-classes(".#{$font}", $value);
+}

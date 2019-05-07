@@ -1,0 +1,46 @@
+@mixin border-radius($parent, $radius) {
+   #{$parent} {
+      border-radius: $radius !important;
+   }
+}
+
+@mixin border-color($parent, $color) {
+   #{$parent} {
+      border-color: $color !important;
+   }
+}
+
+@mixin border-all($parent, $width) {
+   #{$parent} {
+      border-width: $width !important;
+      border-style: solid !important;
+   }
+}
+@mixin border-top($parent, $width) {
+   #{$parent} {
+      border-width: 0 !important;
+      border-top-width: $width !important;
+      border-style: solid !important;
+   }
+}
+@mixin border-right($parent, $width) {
+   #{$parent} {
+      border-width: 0 !important;
+      border-right-width: $width !important;
+      border-style: solid !important;
+   }
+}
+@mixin border-bottom($parent, $width) {
+   #{$parent} {
+      border-width: 0 !important;
+      border-bottom-width: $width !important;
+      border-style: solid !important;
+   }
+}
+@mixin border-left($parent, $width) {
+   #{$parent} {
+      border-width: 0 !important;
+      border-left-width: $width !important;
+      border-style: solid !important;
+   }
+}

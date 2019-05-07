@@ -1,15 +1,15 @@
 // https://getbootstrap.com/docs/4.1/utilities/text/
 
 // Alignment
-.text-justify {
+.t-justify {
    text-align: justify !important;
 }
 
-.text-nowrap {
+.t-nowrap {
    white-space: nowrap !important;
 }
 
-.text-truncate {
+.t-truncate {
    @include text-truncate;
 }
 
@@ -18,50 +18,54 @@
    @include media-breakpoint-up($breakpoint) {
       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-      .text#{$infix}-left {
+      .t#{$infix}-left {
          text-align: left !important;
       }
-      .text#{$infix}-right {
+      .t#{$infix}-right {
          text-align: right !important;
       }
-      .text#{$infix}-center {
+      .t#{$infix}-center {
          text-align: center !important;
       }
    }
 }
 
 // Transformation
-.text-lowercase {
+.t-lowercase {
    text-transform: lowercase !important;
 }
 
-.text-uppercase {
+.t-uppercase {
    text-transform: uppercase !important;
 }
 
-.text-capitalize {
+.t-capitalize {
    text-transform: capitalize !important;
 }
 
 // Weight and italics
-.font-weight-light {
-   font-weight: 300 !important;
-}
-
-.font-weight-normal {
+.t-weight-normal {
    font-weight: normal !important;
 }
-
-.font-weight-bold {
+.t-weight-300 {
+   font-weight: 300 !important;
+}
+.t-weight-400 {
+   font-weight: 400 !important;
+}
+.t-weight-500 {
+   font-weight: 500 !important;
+}
+.t-weight-600 {
+   font-weight: 600 !important;
+}
+.t-weight-700 {
    font-weight: 700 !important;
 }
-
-.font-italic {
-   font-style: italic !important;
+.t-weight-900 {
+   font-weight: 900 !important;
 }
 
-
-// Misc
-.text-hide {
-   @include text-hide($ignore-warning: true);
+.t-italic {
+   font-style: italic !important;
 }

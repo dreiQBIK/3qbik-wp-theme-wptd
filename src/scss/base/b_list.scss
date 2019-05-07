@@ -10,11 +10,6 @@ ul {
    li {
       position: relative;
       padding-left: 1.5rem;
-      @include fontstyle(
-         "fs1-second",
-         $color: $c-white,
-         $mb-a: 0.2em,
-      );
 
       &:before {
          content: "\2022";

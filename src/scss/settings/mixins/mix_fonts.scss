@@ -4,14 +4,19 @@
 
     USAGE:
     @include fontstyle(
-        $style: false, $scale: 1,
-        $family: false, $weight: false, $color: false,
-        $lh-a: false, $mb-a: false,
-        $fz-xs: false, $lh-xs: false, $mb-xs: false,
-        $fz-sm: false, $lh-sm: false, $mb-sm: false,
-        $fz-md: false, $lh-md: false, $mb-md: false,
-        $fz-lg: false, $lh-lg: false, $mb-lg: false,
-        $fz-xl: false, $lh-xl: false, $mb-xl: false
+        $style: false,
+        $scale: 1,
+        $lh-a: false,
+        $fz-xs: false,
+        $lh-xs: false,
+        $fz-sm: false,
+        $lh-sm: false,
+        $fz-md: false,
+        $lh-md: false,
+        $fz-lg: false,
+        $lh-lg: false,
+        $fz-xl: false,
+        $lh-xl: false
     );
 
     USAGE SHORT:
@@ -22,233 +27,157 @@
 @mixin fontstyle(
    $style: false,
    $scale: 1,
-   $family: false,
-   $weight: false,
-   $color: false,
    $lh-a: false,
-   $mb-a: false,
    $fz-xs: false,
    $lh-xs: false,
-   $mb-xs: false,
    $fz-sm: false,
    $lh-sm: false,
-   $mb-sm: false,
    $fz-md: false,
    $lh-md: false,
-   $mb-md: false,
    $fz-lg: false,
    $lh-lg: false,
-   $mb-lg: false,
    $fz-xl: false,
-   $lh-xl: false,
-   $mb-xl: false
+   $lh-xl: false
 ) {
-   //settings
-   $family-default: $f1-second;
-   $weight-default: 700;
-   $color-default: $c-white;
-
    //base
    $fz-xs-default: 1rem;
    $lh-xs-default: 1.4em;
-   $mb-xs-default: 0.5em;
    //small
    $fz-sm-default: 1rem;
    $lh-sm-default: 1.4em;
-   $mb-sm-default: 0.5em;
    //medium
    $fz-md-default: 1rem;
    $lh-md-default: 1.4em;
-   $mb-md-default: 0.5em;
    //large
    $fz-lg-default: 1rem;
    $lh-lg-default: 1.4em;
-   $mb-lg-default: 0.5em;
    //xlarge
    $fz-xl-default: 1rem;
    $lh-xl-default: 1.4em;
-   $mb-xl-default: 0.5em;
 
    // Default Use Case: H1
-   @if $style == "fs1-main" {
-      //settings
-      $family-default: $f1-main;
-      $weight-default: 400;
-      $color-default: $c1-second;
-
+   @if $style == "fs1" {
       //base
       $fz-xs-default: 2.2rem;
       $lh-xs-default: 1.2em;
-      $mb-xs-default: 0.5em;
+
       //small
       $fz-sm-default: 2.2rem;
       $lh-sm-default: 1.2em;
-      $mb-sm-default: 0.5em;
+
       //medium
       $fz-md-default: 2.2rem;
       $lh-md-default: 1.2em;
-      $mb-md-default: 0.5em;
+
       //large
       $fz-lg-default: 2.4rem;
       $lh-lg-default: 1.2em;
-      $mb-lg-default: 0.5em;
+
       //xlarge
       $fz-xl-default: 2.4rem;
       $lh-xl-default: 1.2em;
-      $mb-xl-default: 0.5em;
+
 
    // Default Use Case: H2
-   } @else if $style == "fs2-main" {
-      //settings
-      $family-default: $f1-main;
-      $weight-default: 400;
-
+   } @else if $style == "fs2" {
       //base
       $fz-xs-default: 1.6rem;
       $lh-xs-default: 1.2em;
-      $mb-xs-default: 0.5em;
+
       //small
       $fz-sm-default: 1.6rem;
       $lh-sm-default: 1.2em;
-      $mb-sm-default: 0.5em;
+
       //medium
       $fz-md-default: 1.6rem;
       $lh-md-default: 1.2em;
-      $mb-md-default: 0.5em;
+
       //large
       $fz-lg-default: 1.8rem;
       $lh-lg-default: 1.2em;
-      $mb-lg-default: 0.5em;
+
       //xlarge
       $fz-xl-default: 1.8rem;
       $lh-xl-default: 1.2em;
-      $mb-xl-default: 0.5em;
+
 
    // Default Use Case: H3
-   } @else if $style == "fs3-main" {
-      //settings
-      $family-default: $f1-main;
-      $weight-default: 400;
-
+   } @else if $style == "fs3" {
       //base
       $fz-xs-default: 1.4rem;
       $lh-xs-default: 1em;
-      $mb-xs-default: 0.5em;
+
       //small
       $fz-sm-default: 1.4rem;
       $lh-sm-default: 1em;
-      $mb-sm-default: 0.5em;
+
       //medium
       $fz-md-default: 1.4rem;
       $lh-md-default: 1em;
-      $mb-md-default: 0.5em;
+
       //large
       $fz-lg-default: 1.5rem;
       $lh-lg-default: 1em;
-      $mb-lg-default: 0.5em;
+
       //xlarge
       $fz-xl-default: 1.5rem;
       $lh-xl-default: 1em;
-      $mb-xl-default: 0.5em;
+
 
    // Default Use Case: H4
-   } @else if $style == "fs4-main" {
-      //settings
-      $family-default: $f1-main;
-      $weight-default: 400;
-
+   } @else if $style == "fs4" {
       //base
       $fz-xs-default: 1.3rem;
       $lh-xs-default: 1em;
-      $mb-xs-default: 0.5em;
       //small
       $fz-sm-default: 1.3rem;
       $lh-sm-default: 1em;
-      $mb-sm-default: 0.5em;
       //medium
       $fz-md-default: 1.3rem;
       $lh-md-default: 1em;
-      $mb-md-default: 0.5em;
       //large
       $fz-lg-default: 1.4rem;
       $lh-lg-default: 1em;
-      $mb-lg-default: 0.5em;
       //xlarge
       $fz-xl-default: 1.4rem;
       $lh-xl-default: 1em;
-      $mb-xl-default: 0.5em;
+
 
    // Default Use Case: Body
-   } @else if $style == "fs1-second" {
-      //settings
-      $family-default: $f1-second;
-      $weight-default: 400;
-
+   } @else if $style == "fs5" {
       //base
       $fz-xs-default: 1.1rem;
       $lh-xs-default: 1.5em;
-      $mb-xs-default: 1em;
       //small
       $fz-sm-default: 1.1rem;
       $lh-sm-default: 1.5em;
-      $mb-sm-default: 1em;
       //medium
       $fz-md-default: 1.1rem;
       $lh-md-default: 1.5em;
-      $mb-md-default: 1em;
       //large
       $fz-lg-default: 1.2rem;
       $lh-lg-default: 1.5em;
-      $mb-lg-default: 1em;
       //xlarge
       $fz-xl-default: 1.2rem;
       $lh-xl-default: 1.5em;
-      $mb-xl-default: 1em;
 
    // Default Use Case: Body small
-   } @else if $style == "fs2-second" {
-      //settings
-      $family-default: $f1-second;
-      $weight-default: 400;
-
+   } @else if $style == "fs6" {
       //base
       $fz-xs-default: 0.95rem;
       $lh-xs-default: 1.2em;
-      $mb-xs-default: 1em;
       //small
       $fz-sm-default: 0.95rem;
       $lh-sm-default: 1.2em;
-      $mb-sm-default: 1em;
       //medium
       $fz-md-default: 0.95rem;
       $lh-md-default: 1.2em;
-      $mb-md-default: 1em;
       //large
       $fz-lg-default: 1.05rem;
       $lh-lg-default: 1.2em;
-      $mb-lg-default: 1em;
       //xlarge
       $fz-xl-default: 1.05rem;
       $lh-xl-default: 1.2em;
-      $mb-xl-default: 1em;
-   }
-
-   @if $family {
-      font-family: $family;
-   } @else {
-      font-family: $family-default;
-   }
-
-   @if $color {
-      color: $color;
-   } @else {
-      color: $color-default;
-   }
-
-   @if $weight {
-      font-weight: $weight;
-   } @else {
-      font-weight: $weight-default;
    }
 
    @if $fz-xs {
@@ -256,7 +185,6 @@
    } @else {
       font-size: $fz-xs-default * $scale;
    }
-
    @if $lh-a {
       line-height: $lh-a;
    } @else if $lh-xs {
@@ -265,35 +193,18 @@
       line-height: $lh-xs-default;
    }
 
-   @if $mb-a {
-      margin-bottom: $mb-a;
-   } @else if $mb-xs {
-      margin-bottom: $mb-xs;
-   } @else {
-      margin-bottom: $mb-xs-default;
-   }
-
    @include media-breakpoint-up(sm) {
       @if $fz-sm {
          font-size: $fz-sm * $scale;
       } @else {
          font-size: $fz-sm-default * $scale;
       }
-
       @if $lh-a {
          line-height: $lh-a;
       } @else if $lh-sm {
          line-height: $lh-sm;
       } @else {
          line-height: $lh-sm-default;
-      }
-
-      @if $mb-a {
-         margin-bottom: $mb-a;
-      } @else if $mb-sm {
-         margin-bottom: $mb-sm;
-      } @else {
-         margin-bottom: $mb-sm-default;
       }
    }
 
@@ -303,21 +214,12 @@
       } @else {
          font-size: $fz-md-default * $scale;
       }
-
       @if $lh-a {
          line-height: $lh-a;
       } @else if $lh-md {
          line-height: $lh-md;
       } @else {
          line-height: $lh-md-default;
-      }
-
-      @if $mb-a {
-         margin-bottom: $mb-a;
-      } @else if $mb-md {
-         margin-bottom: $mb-md;
-      } @else {
-         margin-bottom: $mb-md-default;
       }
    }
 
@@ -327,21 +229,12 @@
       } @else {
          font-size: $fz-lg-default * $scale;
       }
-
       @if $lh-a {
          line-height: $lh-a;
       } @else if $lh-lg {
          line-height: $lh-lg;
       } @else {
          line-height: $lh-lg-default;
-      }
-
-      @if $mb-a {
-         margin-bottom: $mb-a;
-      } @else if $mb-lg {
-         margin-bottom: $mb-lg;
-      } @else {
-         margin-bottom: $mb-lg-default;
       }
    }
 
@@ -351,21 +244,12 @@
       } @else {
          font-size: $fz-xl-default * $scale;
       }
-
       @if $lh-a {
          line-height: $lh-a;
       } @else if $lh-xl {
          line-height: $lh-xl;
       } @else {
          line-height: $lh-xl-default;
-      }
-
-      @if $mb-a {
-         margin-bottom: $mb-a;
-      } @else if $mb-xl {
-         margin-bottom: $mb-xl;
-      } @else {
-         margin-bottom: $mb-xl-default;
       }
    }
 }

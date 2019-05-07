@@ -28,20 +28,24 @@
    }
 
    h3 {
-      @include fontstyle($style: "fs2-main");
+      @include fontstyle(
+         "fs2"
+      );
    }
    h4 {
-      @include fontstyle($style: "fs3-main");
+      @include fontstyle(
+         "fs3"
+      );
    }
    h5 {
-      @include fontstyle($style: "fs4-main", $color: $c-white);
+      @include fontstyle(
+         "fs4"
+      );
    }
 
    p {
-      margin: 0 0 0.5em !important;
       @include fontstyle(
-         $style: "fs1-second",
-         $color: $c-white
+         "fs5"
       );
 
       &:last-of-type {

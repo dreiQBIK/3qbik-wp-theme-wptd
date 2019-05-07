@@ -28,6 +28,9 @@ $c1-success: #00b878;
 $theme-colors: () !default;
 $theme-colors: map-merge(
    (
+      "c-black": #000000,
+      "c-white": #ffffff,
+      "c1-grey": #c8c8c8,
       "c1-main": $c1-main,
       "c2-main": $c2-main,
       "c3-main": $c3-main,
@@ -68,10 +71,34 @@ $theme-fonts: map-merge(
 
 
 /******************************************************************
-   BORDER_RADIUS
+   BORDER
 ******************************************************************/
 
-$border-radius: 3px;
+// border-radius
+$bd-radius-3: 3px;
+$bd-radius-5: 5px;
+
+$border-radius: () !default;
+$border-radius: map-merge(
+   (
+      "bd-radius-3": 3px,
+      "bd-radius-5": 5px,
+   ),
+   $border-radius
+);
+
+// border-width
+$bd-width-1: 1px;
+$bd-width-2: 2px;
+
+$border-width: () !default;
+$border-width: map-merge(
+   (
+      "1": 1px,
+      "2": 2px,
+   ),
+   $border-width
+);
 
 
 

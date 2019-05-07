@@ -12,8 +12,7 @@ body {
    overflow-x: hidden;
 
    @include fontstyle(
-      $style: "fs1-second",
-      $mb-a: 0
+      $style: "fs5"
    );
 
    &.no-scroll {

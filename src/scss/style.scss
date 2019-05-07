@@ -19,11 +19,14 @@ STYLESHEET: STYLE
 @import "settings/mixins/mix_fonts";
 @import "settings/mixins/mix_visibility";
 @import "settings/mixins/mix_clearfix";
+@import "settings/mixins/mix_border-classes";
 @import "settings/mixins/mix_color-classes";
 @import "settings/mixins/mix_font-classes";
-@import "settings/mixins/mix_text-hide";
 @import "settings/mixins/mix_text-truncate";
 @import "settings/set_grid";
+@import "settings/utilities/ut_border";
+@import "settings/utilities/ut_colors";
+@import "settings/utilities/ut_fonts";
 @import "settings/utilities/ut_display";
 @import "settings/utilities/ut_flex";
 @import "settings/utilities/ut_spacing";
@@ -60,7 +63,6 @@ STYLESHEET: STYLE
 @import "base/b_wp-toolbar";
 
 // Styleguide
-@import "styleguide/sg_utilities";
 @import "styleguide/sg_base";
 
 // Modules

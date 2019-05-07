@@ -39,15 +39,6 @@
         }
     }
 
-    &__author {
-        @include fontstyle(
-            "fs1-second",
-            $color: $c1-second,
-            $mb-a: 0,
-            $lh-a: 1em,
-        );
-    }
-
     &__time {
         font-size: 1rem;
         color: $c3-main;
