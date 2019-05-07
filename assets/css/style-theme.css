@@ -5,7 +5,7 @@
    FONTS
 ******************************************************************/
 /******************************************************************
-   BORDER_RADIUS
+   BORDER
 ******************************************************************/
 /******************************************************************
    SPACERS
@@ -21,14 +21,19 @@
 
     USAGE:
     @include fontstyle(
-        $style: false, $scale: 1,
-        $family: false, $weight: false, $color: false,
-        $lh-a: false, $mb-a: false,
-        $fz-xs: false, $lh-xs: false, $mb-xs: false,
-        $fz-sm: false, $lh-sm: false, $mb-sm: false,
-        $fz-md: false, $lh-md: false, $mb-md: false,
-        $fz-lg: false, $lh-lg: false, $mb-lg: false,
-        $fz-xl: false, $lh-xl: false, $mb-xl: false
+        $style: false,
+        $scale: 1,
+        $lh-a: false,
+        $fz-xs: false,
+        $lh-xs: false,
+        $fz-sm: false,
+        $lh-sm: false,
+        $fz-md: false,
+        $lh-md: false,
+        $fz-lg: false,
+        $lh-lg: false,
+        $fz-xl: false,
+        $lh-xl: false
     );
 
     USAGE SHORT:

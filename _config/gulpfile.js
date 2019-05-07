@@ -2,7 +2,6 @@
 // Include Plugins
 const gulp = require("gulp");
 const babel = require("gulp-babel");
-const log = require("fancy-log");
 const sass = require("gulp-sass");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
@@ -253,7 +252,7 @@ gulp.task("watch", function() {
       .on("change", browserSync.reload);
    gulp.watch(
       "../src/scss/**/*.scss",
-      gulp.series("sass")
+      gulp.series("sass", "theme-sass")
    );
    gulp.watch("../**/*.php").on("change", browserSync.reload);
    gulp.watch("../**/templates/**/*.twig").on("change", browserSync.reload);
@@ -264,9 +263,6 @@ gulp.task(
    "default",
    gulp.series(
       "sass",
-      "login-sass",
-      "tinymce-sass",
-      "theme-sass",
       "scripts",
       "scripts-vendor",
       "scripts-separate",
@@ -280,8 +276,11 @@ gulp.task(
    "build",
    gulp.series(
       "css",
+      "login-sass",
       "login-css",
+      "tinymce-sass",
       "tinymce-css",
+      "theme-sass",
       "theme-css",
       "scripts",
       "scripts-vendor",
