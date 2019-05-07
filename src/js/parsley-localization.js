@@ -1,6 +1,5 @@
 const parsleyLocalization = (function($) {
 
-
     Parsley.addMessages('de', {
         defaultMessage: "Die Eingabe scheint nicht korrekt zu sein.",
         type: {

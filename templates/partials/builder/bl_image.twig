@@ -3,14 +3,15 @@
    image => type: object
    image_settings => type: object
 #}
+
+{% set show_caption = image_settings.truefalse_caption %}
+{% set show_lightbox = image_settings.truefalse_lightbox %}
+
 <div class="container {{ space_bottom }}">
-   <div class="row">
+   <div class="bl_image">
+      <div class="row">
+         <div class="col col-12">
 
-      {% set show_caption = image_settings.truefalse_caption %}
-      {% set show_lightbox = image_settings.truefalse_lightbox %}
-
-      <div class="col col-12">
-         <div class="bl_image">
             <figure class="bl_image__figure{% if show_lightbox %} with-lightbox{% endif %}">
                <img
                      class="bl_image__img lazyload"
@@ -26,14 +27,14 @@
                      data-sizes="auto"
                   />
                   {% if show_lightbox %}
-                  <i class="bl_image__zoom fas fa-search-plus"></i>
+                  <i class="m_image__zoom"><svg class="icon"><use href="#icon-zoom-in" xlink:href="#icon-zoom-in"/></svg></i>
                {% endif %}
             </figure>
             {% if show_caption %}
                <figcaption class="bl_image__caption">{{ image.caption }}</figcaption>
             {% endif %}
-         </div>
 
+         </div>
       </div>
    </div>
 </div>
