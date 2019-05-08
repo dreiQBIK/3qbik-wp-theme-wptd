@@ -1,6 +1,4 @@
 .tinymce {
-   @import "b_links";
-
    h3,
    h4,
    h5,
@@ -112,23 +110,22 @@
    }
 
    a {
-      transition: color 0.15 ease-in-out;
-      color: $c3-third;
-      text-decoration: none;
+      transition: color 0.15s ease-in-out;
 
+      &:link {
+         color: $c-white;
+         text-decoration: underline;
+      }
       &:visited {
-         color: $c3-third;
+         color: $c-white;
       }
       &:hover {
          @include media-breakpoint-up(md) {
-            color: $c1-third;
+            color: $c3-third;
          }
       }
-      &:focus {
-         color: $c3-third;
-      }
       &:active {
-         color: $c3-third;
+         color: $c-white;
       }
    }
 }

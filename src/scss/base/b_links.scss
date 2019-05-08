@@ -39,19 +39,19 @@ a.link {
 
    &1-second {
       &:link {
-         color: $c1-third;
+         color: $c-white;
          text-decoration: underline;
       }
       &:visited {
-         color: $c1-third;
+         color: $c-white;
       }
       &:hover {
          @include media-breakpoint-up(md) {
-            color: $c-white;
+            color: $c1-third;
          }
       }
       &:active {
-         color: $c1-third;
+         color: $c-white;
       }
    }
    &2-second {
