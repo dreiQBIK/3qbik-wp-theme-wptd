@@ -16,7 +16,7 @@
       @include media-breakpoint-up(lg) {
          padding-bottom: map-get($spacers, 300);
       }
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xl) {
          padding-bottom: map-get($spacers, 400);
       }
    }

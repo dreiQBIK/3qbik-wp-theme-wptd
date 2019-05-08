@@ -51,7 +51,6 @@ STYLESHEET: STYLE
 
 // Base
 @import "base/b_defaults";
-@import "base/b_spacer";
 @import "base/b_text";
 @import "base/b_links";
 @import "base/b_list";
@@ -67,6 +66,7 @@ STYLESHEET: STYLE
 @import "modules/m_post-teaser";
 
 // Builder Modules
+@import "builder/bl_spacer";
 @import "builder/bl_image";
 
 // Navigation
