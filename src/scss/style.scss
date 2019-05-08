@@ -52,6 +52,7 @@ STYLESHEET: STYLE
 // Base
 @import "base/b_defaults";
 @import "base/b_text";
+@import "base/b_btn";
 @import "base/b_links";
 @import "base/b_list";
 @import "base/b_tinymce";
@@ -61,7 +62,6 @@ STYLESHEET: STYLE
 @import "styleguide/sg_base";
 
 // Modules
-@import "modules/m_btn";
 @import "modules/m_card";
 @import "modules/m_post-teaser";
 

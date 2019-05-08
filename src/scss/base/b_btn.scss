@@ -1,0 +1,68 @@
+.btn,
+a.btn {
+   cursor: pointer;
+   transition: 0.15s ease-in-out;
+   display: inline-block;
+   padding: 0.5em 1em;
+   border: 0;
+   border-radius: $bd-radius-3;
+   font-size: 1rem;
+   font-family: $f3-second;
+
+   &--small {
+      font-size: 0.8rem;
+   }
+
+   &--large {
+      font-size: 1rem;
+
+      @include media-breakpoint-up(md) {
+         font-size: 1.3rem;
+      }
+   }
+
+   &--block {
+      display: block;
+      text-align: center;
+   }
+
+   &--disabled {
+      cursor: auto;
+      background: $c1-gray;
+      color: darken($c1-gray, 15%);
+   }
+
+   // main buttons
+   &1-main {
+      background: $c1-main;
+      color: $c-white;
+
+      &:hover {
+         @include media-breakpoint-up(md) {
+            background-color: $c2-main;
+         }
+      }
+   }
+   &2-main {
+      background-color: $c2-main;
+      color: $c-white;
+
+      &:hover {
+         @include media-breakpoint-up(md) {
+            background-color: $c3-main;
+         }
+      }
+   }
+
+   // second buttons
+   &1-second {
+      background-color: $c1-third;
+      color: $c-white;
+
+      &:hover {
+         @include media-breakpoint-up(md) {
+            background-color: $c2-third;
+         }
+      }
+   }
+}

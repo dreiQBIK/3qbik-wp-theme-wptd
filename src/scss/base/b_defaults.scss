@@ -80,3 +80,22 @@ ol {
    padding-left: 0;
    list-style: none;
 }
+
+a {
+   color: inherit;
+   text-decoration: none;
+
+   &:visited {
+      color: inherit;
+   }
+   &:hover {
+      color: inherit;
+      text-decoration: none;
+   }
+   &:focus {
+      color: inherit;
+   }
+   &:active {
+      color: inherit;
+   }
+}
