@@ -158,6 +158,22 @@ gulp.task("theme-css", function() {
       .pipe(gulp.dest(config.css.pathDestBackend));
 });
 
+// Compile Backend-Sass and create CSS-File
+gulp.task("debug-sass", function() {
+   return gulp
+      .src(config.css.pathSrcForDebug)
+      .pipe(sourcemaps.init())
+      .pipe(
+         sass({
+            outputStyle: "expanded",
+            errLogToConsole: true,
+         }).on("error", sass.logError)
+      )
+      .pipe(sourcemaps.write(config.css.pathDestBackendMaps))
+      .pipe(gulp.dest(config.css.pathDestBackend))
+      .pipe(browserSync.stream());
+});
+
 // Concatenate & Minify JS
 gulp.task("scripts", function() {
    return gulp
@@ -252,7 +268,7 @@ gulp.task("watch", function() {
       .on("change", browserSync.reload);
    gulp.watch(
       "../src/scss/**/*.scss",
-      gulp.series("sass", "theme-sass", "tinymce-sass")
+      gulp.series("sass", "theme-sass", "tinymce-sass", "debug-sass")
    );
    gulp.watch("../**/*.php").on("change", browserSync.reload);
    gulp.watch("../**/templates/**/*.twig").on("change", browserSync.reload);
@@ -271,7 +287,8 @@ gulp.task(
       "tinymce-sass",
       "tinymce-css",
       "theme-sass",
-      "theme-css"
+      "theme-css",
+      "debug-sass"
    )
 );
 

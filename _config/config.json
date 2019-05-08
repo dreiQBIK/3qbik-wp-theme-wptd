@@ -21,6 +21,7 @@
       "pathSrcForTinymce": "../src/scss/wp-backend/style-tinymce.scss",
       "pathSrcForTinymceMinify": "../assets/css/style-tinymce.css",
       "pathSrcForTheme": "../src/scss/wp-backend/theme/style-theme.scss",
+      "pathSrcForDebug": "../src/scss/debug.scss",
       "pathSrcForThemeMinify": "../assets/css/style-theme.css",
       "pathDest": "../",
       "pathDestBackend": "../assets/css",

@@ -1,0 +1,80 @@
+/******************************************************************
+	COLORS
+******************************************************************/
+/******************************************************************
+   FONTS
+******************************************************************/
+/******************************************************************
+   BORDER
+******************************************************************/
+/******************************************************************
+   SPACERS
+******************************************************************/
+/******************************************************************
+   GRID
+   https://getbootstrap.com/docs/4.1/layout/overview/#responsive-breakpoints
+******************************************************************/
+/******************************************************************
+
+    SETTINGS: FONTS
+
+    USAGE:
+    @include fontstyle(
+        $style: false,
+        $scale: 1,
+        $lh-a: false,
+        $fz-xs: false,
+        $lh-xs: false,
+        $fz-sm: false,
+        $lh-sm: false,
+        $fz-md: false,
+        $lh-md: false,
+        $fz-lg: false,
+        $lh-lg: false,
+        $fz-xl: false,
+        $lh-xl: false
+    );
+
+    USAGE SHORT:
+    @include fontstyle("fs1-main");
+
+******************************************************************/
+body:after {
+  content: "xs";
+  display: inline-block;
+  background: #ec764d;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  width: 50px;
+  padding: 0.5rem 0.7rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (min-width: 481px) {
+  body:after {
+    content: "sm";
+  }
+}
+
+@media (min-width: 961px) {
+  body:after {
+    content: "md";
+  }
+}
+
+@media (min-width: 1361px) {
+  body:after {
+    content: "lg";
+  }
+}
+
+@media (min-width: 1921px) {
+  body:after {
+    content: "xl";
+  }
+}
+
+/*# sourceMappingURL=../../maps/debug.css.map */

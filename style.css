@@ -8020,44 +8020,6 @@ body.no-scroll {
   overflow: hidden;
 }
 
-body:after {
-  content: "xs";
-  display: inline-block;
-  background: #ec764d;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 100;
-  width: 50px;
-  padding: 0.5rem 0.7rem;
-  text-align: center;
-  color: #ffffff;
-}
-
-@media (min-width: 481px) {
-  body:after {
-    content: "sm";
-  }
-}
-
-@media (min-width: 961px) {
-  body:after {
-    content: "md";
-  }
-}
-
-@media (min-width: 1361px) {
-  body:after {
-    content: "lg";
-  }
-}
-
-@media (min-width: 1921px) {
-  body:after {
-    content: "xl";
-  }
-}
-
 @-ms-viewport {
   width: device-width;
 }

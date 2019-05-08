@@ -19,6 +19,7 @@ function wptd_scripts() {
     // CSS-Files DEV mode
     if ( WP_DEBUG ) {
         wp_enqueue_style('wptd-style', get_template_directory_uri() . '/style.css', date('H:i:s'));
+        wp_enqueue_style( 'wptd-debug', get_stylesheet_directory_uri() . '/assets/css/debug.css', date('H:i:s') );
     // CSS-Files PROD mode
     } else {
         wp_enqueue_style('wptd-style', get_template_directory_uri() . '/style.min.css', '18121201');
