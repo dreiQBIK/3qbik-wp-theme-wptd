@@ -3,15 +3,17 @@
 
 {% block content %}
    <div class="l_styleguide" data-template="page-modules.twig">
-      <div class="container sp-md">
-         <header>
-            <h1>{{ __( 'Styleguide', 'wptd' ) }}</h1>
-         </header>
-         <div class="l_builder">
-         {% for module in styleguide_partials %}
-            {% include module %}
-         {% endfor %}
+      <header class="container container--narrow">
+         <div class="row">
+            <div class="col col-12">
+               <h1 class="h1">{{ __( 'Styleguide', 'wptd' ) }}</h1>
+            </div>
          </div>
+      </header>
+      <div class="l_builder">
+      {% for module in styleguide_partials %}
+         {% include module %}
+      {% endfor %}
       </div>
    </div>
 {% endblock %}

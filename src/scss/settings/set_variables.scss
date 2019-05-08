@@ -2,10 +2,10 @@
 	COLORS
 ******************************************************************/
 
-// greys
+// grayscale
 $c-black: #000000;
 $c-white: #ffffff;
-$c1-grey: #c8c8c8;
+$c1-gray: #c8c8c8;
 
 // project
 $c1-main: #2c3e50;
@@ -32,7 +32,7 @@ $theme-colors: map-merge(
    (
       "c-black": #000000,
       "c-white": #ffffff,
-      "c1-grey": #c8c8c8,
+      "c1-gray": #c8c8c8,
       "c1-main": $c1-main,
       "c2-main": $c2-main,
       "c3-main": $c3-main,
@@ -40,6 +40,7 @@ $theme-colors: map-merge(
       "c2-second": $c2-second,
       "c1-third": $c1-third,
       "c2-third": $c2-third,
+      "c3-third": $c3-third,
       "c1-accent": $c1-accent,
       "c1-hint": $c1-hint,
       "c1-error": $c1-error,

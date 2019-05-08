@@ -1416,7 +1416,7 @@ template {
   border-color: #ffffff !important;
 }
 
-.bd-c1-grey {
+.bd-c1-gray {
   border-color: #c8c8c8 !important;
 }
 
@@ -1446,6 +1446,10 @@ template {
 
 .bd-c2-third {
   border-color: #d96a44 !important;
+}
+
+.bd-c3-third {
+  border-color: #ff855b !important;
 }
 
 .bd-c1-accent {
@@ -1530,7 +1534,7 @@ template {
   color: #ffffff !important;
 }
 
-.t-c1-grey {
+.t-c1-gray {
   color: #c8c8c8 !important;
 }
 
@@ -1562,6 +1566,10 @@ template {
   color: #d96a44 !important;
 }
 
+.t-c3-third {
+  color: #ff855b !important;
+}
+
 .t-c1-accent {
   color: #96a9bb !important;
 }
@@ -1586,7 +1594,7 @@ template {
   background: #ffffff !important;
 }
 
-.bg-c1-grey {
+.bg-c1-gray {
   background: #c8c8c8 !important;
 }
 
@@ -1616,6 +1624,10 @@ template {
 
 .bg-c2-third {
   background: #d96a44 !important;
+}
+
+.bg-c3-third {
+  background: #ff855b !important;
 }
 
 .bg-c1-accent {
@@ -8123,15 +8135,17 @@ p {
 }
 
 h1,
-.fs-1 {
+.h1 {
   font-size: 2.2rem;
   line-height: 1.3em;
+  font-family: "FuturaLTPro-XBold", sans-serif;
+  text-transform: uppercase;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   h1,
-  .fs-1 {
+  .h1 {
     font-size: 2.2rem;
     line-height: 1.3em;
   }
@@ -8139,7 +8153,7 @@ h1,
 
 @media (min-width: 961px) {
   h1,
-  .fs-1 {
+  .h1 {
     font-size: 2.3rem;
     line-height: 1.3em;
   }
@@ -8147,7 +8161,7 @@ h1,
 
 @media (min-width: 1361px) {
   h1,
-  .fs-1 {
+  .h1 {
     font-size: 2.5rem;
     line-height: 1.3em;
   }
@@ -8155,22 +8169,23 @@ h1,
 
 @media (min-width: 1921px) {
   h1,
-  .fs-1 {
+  .h1 {
     font-size: 2.6rem;
     line-height: 1.3em;
   }
 }
 
 h2,
-.fs-2 {
+.h2 {
   font-size: 1.6rem;
   line-height: 1.2em;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   h2,
-  .fs-2 {
+  .h2 {
     font-size: 1.6rem;
     line-height: 1.2em;
   }
@@ -8178,7 +8193,7 @@ h2,
 
 @media (min-width: 961px) {
   h2,
-  .fs-2 {
+  .h2 {
     font-size: 1.8rem;
     line-height: 1.2em;
   }
@@ -8186,7 +8201,7 @@ h2,
 
 @media (min-width: 1361px) {
   h2,
-  .fs-2 {
+  .h2 {
     font-size: 1.9rem;
     line-height: 1.2em;
   }
@@ -8194,22 +8209,23 @@ h2,
 
 @media (min-width: 1921px) {
   h2,
-  .fs-2 {
+  .h2 {
     font-size: 2rem;
     line-height: 1.2em;
   }
 }
 
 h3,
-.fs-3 {
+.h3 {
   font-size: 1.4rem;
   line-height: 1.5em;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   h3,
-  .fs-3 {
+  .h3 {
     font-size: 1.4rem;
     line-height: 1.5em;
   }
@@ -8217,7 +8233,7 @@ h3,
 
 @media (min-width: 961px) {
   h3,
-  .fs-3 {
+  .h3 {
     font-size: 1.4rem;
     line-height: 1.5em;
   }
@@ -8225,7 +8241,7 @@ h3,
 
 @media (min-width: 1361px) {
   h3,
-  .fs-3 {
+  .h3 {
     font-size: 1.5rem;
     line-height: 1.5em;
   }
@@ -8233,22 +8249,23 @@ h3,
 
 @media (min-width: 1921px) {
   h3,
-  .fs-3 {
+  .h3 {
     font-size: 1.6rem;
     line-height: 1.5em;
   }
 }
 
 h4,
-.fs-4 {
+.h4 {
   font-size: 1.3rem;
   line-height: 1.5em;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
   h4,
-  .fs-4 {
+  .h4 {
     font-size: 1.3rem;
     line-height: 1.5em;
   }
@@ -8256,7 +8273,7 @@ h4,
 
 @media (min-width: 961px) {
   h4,
-  .fs-4 {
+  .h4 {
     font-size: 1.3rem;
     line-height: 1.5em;
   }
@@ -8264,7 +8281,7 @@ h4,
 
 @media (min-width: 1361px) {
   h4,
-  .fs-4 {
+  .h4 {
     font-size: 1.4rem;
     line-height: 1.5em;
   }
@@ -8272,75 +8289,77 @@ h4,
 
 @media (min-width: 1921px) {
   h4,
-  .fs-4 {
+  .h4 {
     font-size: 1.4rem;
     line-height: 1.5em;
   }
 }
 
-.fs-5 {
+.p1 {
   font-size: 1.1rem;
   line-height: 1.5em;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
-  .fs-5 {
+  .p1 {
     font-size: 1.1rem;
     line-height: 1.5em;
   }
 }
 
 @media (min-width: 961px) {
-  .fs-5 {
+  .p1 {
     font-size: 1.1rem;
     line-height: 1.5em;
   }
 }
 
 @media (min-width: 1361px) {
-  .fs-5 {
+  .p1 {
     font-size: 1.2rem;
     line-height: 1.5em;
   }
 }
 
 @media (min-width: 1921px) {
-  .fs-5 {
+  .p1 {
     font-size: 1.2rem;
     line-height: 1.5em;
   }
 }
 
-.fs-6 {
+.p2 {
   font-size: 1rem;
   line-height: 1.5em;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 481px) {
-  .fs-6 {
+  .p2 {
     font-size: 1rem;
     line-height: 1.5em;
   }
 }
 
 @media (min-width: 961px) {
-  .fs-6 {
+  .p2 {
     font-size: 1rem;
     line-height: 1.5em;
   }
 }
 
 @media (min-width: 1361px) {
-  .fs-6 {
+  .p2 {
     font-size: 1.1rem;
     line-height: 1.5em;
   }
 }
 
 @media (min-width: 1921px) {
-  .fs-6 {
+  .p2 {
     font-size: 1.1rem;
     line-height: 1.5em;
   }
@@ -8349,6 +8368,7 @@ h4,
 p {
   font-size: 1.1rem;
   line-height: 1.5em;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
   margin-bottom: 0.5em;
   /* Hyphens: http://clagnut.com/blog/2395 */
   -webkit-hyphens: auto;
@@ -8404,11 +8424,11 @@ p {
 }
 
 p em {
-  font-style: italic;
+  font-family: "OfficinaSansITCStd-Italic", "Helvetica", "Arial", sans-serif;
 }
 
 p strong {
-  font-weight: bold;
+  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
 }
 
 a {
