@@ -8492,6 +8492,88 @@ a.btn1-second {
   }
 }
 
+a.link {
+  transition: color 0.15s ease-in-out;
+}
+
+a.link1-main:link {
+  color: #2c3e50;
+  text-decoration: underline;
+}
+
+a.link1-main:visited {
+  color: #2c3e50;
+}
+
+@media (min-width: 961px) {
+  a.link1-main:hover {
+    color: #ec764d;
+  }
+}
+
+a.link1-main:active {
+  color: #2c3e50;
+}
+
+a.link2-main:link {
+  color: #879cb1;
+  text-decoration: underline;
+}
+
+a.link2-main:visited {
+  color: #879cb1;
+}
+
+@media (min-width: 961px) {
+  a.link2-main:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+  }
+}
+
+a.link2-main:active {
+  color: #2c3e50;
+}
+
+a.link1-second:link {
+  color: #ec764d;
+  text-decoration: underline;
+}
+
+a.link1-second:visited {
+  color: #ec764d;
+}
+
+@media (min-width: 961px) {
+  a.link1-second:hover {
+    color: #ffffff;
+  }
+}
+
+a.link1-second:active {
+  color: #ec764d;
+}
+
+a.link2-second:link {
+  color: #fff191;
+  text-decoration: underline;
+}
+
+a.link2-second:visited {
+  color: #fff191;
+}
+
+@media (min-width: 961px) {
+  a.link2-second:hover {
+    color: #eede70;
+    text-decoration: underline;
+  }
+}
+
+a.link2-second:active {
+  color: #fff191;
+}
+
 ul.list,
 ol.list {
   margin: 1rem 0 1.5rem;
@@ -8514,6 +8596,88 @@ ul.list li:before {
   left: 0;
   font-size: 1.5rem;
   color: #ffffff;
+}
+
+.tinymce a.link {
+  transition: color 0.15s ease-in-out;
+}
+
+.tinymce a.link1-main:link {
+  color: #2c3e50;
+  text-decoration: underline;
+}
+
+.tinymce a.link1-main:visited {
+  color: #2c3e50;
+}
+
+@media (min-width: 961px) {
+  .tinymce a.link1-main:hover {
+    color: #ec764d;
+  }
+}
+
+.tinymce a.link1-main:active {
+  color: #2c3e50;
+}
+
+.tinymce a.link2-main:link {
+  color: #879cb1;
+  text-decoration: underline;
+}
+
+.tinymce a.link2-main:visited {
+  color: #879cb1;
+}
+
+@media (min-width: 961px) {
+  .tinymce a.link2-main:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+  }
+}
+
+.tinymce a.link2-main:active {
+  color: #2c3e50;
+}
+
+.tinymce a.link1-second:link {
+  color: #ec764d;
+  text-decoration: underline;
+}
+
+.tinymce a.link1-second:visited {
+  color: #ec764d;
+}
+
+@media (min-width: 961px) {
+  .tinymce a.link1-second:hover {
+    color: #ffffff;
+  }
+}
+
+.tinymce a.link1-second:active {
+  color: #ec764d;
+}
+
+.tinymce a.link2-second:link {
+  color: #fff191;
+  text-decoration: underline;
+}
+
+.tinymce a.link2-second:visited {
+  color: #fff191;
+}
+
+@media (min-width: 961px) {
+  .tinymce a.link2-second:hover {
+    color: #eede70;
+    text-decoration: underline;
+  }
+}
+
+.tinymce a.link2-second:active {
+  color: #fff191;
 }
 
 .tinymce h3,

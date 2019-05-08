@@ -1,1 +1,75 @@
+a.link {
+   transition: color 0.15s ease-in-out;
 
+   &1-main {
+      &:link {
+         color: $c1-main;
+         text-decoration: underline;
+      }
+      &:visited {
+         color: $c1-main;
+      }
+      &:hover {
+         @include media-breakpoint-up(md) {
+            color: $c1-third;
+         }
+      }
+      &:active {
+         color: $c1-main;
+      }
+   }
+   &2-main {
+      &:link {
+         color: $c3-main;
+         text-decoration: underline;
+      }
+      &:visited {
+         color: $c3-main;
+      }
+      &:hover {
+         @include media-breakpoint-up(md) {
+            color: $c1-main;
+            text-decoration: underline;
+         }
+      }
+      &:active {
+         color: $c1-main;
+      }
+   }
+
+   &1-second {
+      &:link {
+         color: $c1-third;
+         text-decoration: underline;
+      }
+      &:visited {
+         color: $c1-third;
+      }
+      &:hover {
+         @include media-breakpoint-up(md) {
+            color: $c-white;
+         }
+      }
+      &:active {
+         color: $c1-third;
+      }
+   }
+   &2-second {
+      &:link {
+         color: $c1-second;
+         text-decoration: underline;
+      }
+      &:visited {
+         color: $c1-second;
+      }
+      &:hover {
+         @include media-breakpoint-up(md) {
+            color: $c2-second;
+            text-decoration: underline;
+         }
+      }
+      &:active {
+         color: $c1-second;
+      }
+   }
+}
