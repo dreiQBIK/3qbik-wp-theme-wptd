@@ -5,38 +5,53 @@
    }
 
    &-sm {
-      padding-bottom: map-get($spacers, 1);
+      padding-bottom: map-get($spacers, 100);
 
-      @include media-breakpoint-up(md) {
-         padding-bottom: map-get($spacers, 2);
+      @include media-breakpoint-up(sm) {
+         padding-bottom: map-get($spacers, 150);
       }
-
+      @include media-breakpoint-up(md) {
+         padding-bottom: map-get($spacers, 200);
+      }
       @include media-breakpoint-up(lg) {
-         padding-bottom: map-get($spacers, 3);
+         padding-bottom: map-get($spacers, 300);
+      }
+      @include media-breakpoint-up(lg) {
+         padding-bottom: map-get($spacers, 400);
       }
    }
 
    &-md {
-      padding-bottom: map-get($spacers, 3);
+      padding-bottom: map-get($spacers, 300);
 
-      @include media-breakpoint-up(md) {
-         padding-bottom: map-get($spacers, 4);
+      @include media-breakpoint-up(sm) {
+         padding-bottom: map-get($spacers, 350);
       }
-
+      @include media-breakpoint-up(md) {
+         padding-bottom: map-get($spacers, 400);
+      }
       @include media-breakpoint-up(lg) {
-         padding-bottom: map-get($spacers, 5);
+         padding-bottom: map-get($spacers, 600);
+      }
+      @include media-breakpoint-up(xl) {
+         padding-bottom: map-get($spacers, 700);
       }
    }
 
    &-lg {
-      padding-bottom: map-get($spacers, 5);
+      padding-bottom: map-get($spacers, 500);
 
-      @include media-breakpoint-up(md) {
-         padding-bottom: map-get($spacers, 6);
+      @include media-breakpoint-up(sm) {
+         padding-bottom: map-get($spacers, 550);
       }
-
+      @include media-breakpoint-up(md) {
+         padding-bottom: map-get($spacers, 600);
+      }
       @include media-breakpoint-up(lg) {
-         padding-bottom: map-get($spacers, 7);
+         padding-bottom: map-get($spacers, 800);
+      }
+      @include media-breakpoint-up(xl) {
+         padding-bottom: map-get($spacers, 900);
       }
    }
 }
