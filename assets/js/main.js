@@ -368,6 +368,7 @@ var imgCover = function ($) {
       EVENTS
   ******************************************************************/
   $(document).on('lazyloaded', function (e) {
+    // no img-cover
     if (!$(e.target).hasClass('img-cover')) return;
     makeImgCover($(e.target));
   });
@@ -388,24 +389,27 @@ var imgCover = function ($) {
     $img.each(function () {
       var $this = $(this);
       var $container = $this.parent();
-      var containerWidth = $container.width();
-      var containerHeight = $container.height();
+      var containerWidth = $container.outerWidth();
+      var containerHeight = $container.outerHeight();
       var imgWidth = $this.width();
       var imgHeight = $this.height();
-      var containerSize = containerWidth / containerHeight;
-      var imgSize = imgWidth / imgHeight;
-      var horizontalStretch = containerSize >= imgSize;
+      var containerRatio = containerWidth / containerHeight;
+      var imgRatio = imgWidth / imgHeight;
+      var horizontalStretch = containerRatio >= imgRatio;
       var centerHeight;
-      var centerWidth;
+      var centerWidth; // get data attributes from image
+
+      var posY = parseInt($this.data('pos-y'), 10);
+      var posX = parseInt($this.data('pos-x'), 10);
 
       if (horizontalStretch) {
         $this.css({
           width: '100%',
           height: 'auto'
         });
-        centerHeight = ($this.height() - containerHeight) / 3;
+        centerHeight = ($this.height() - containerHeight) * (1 / posY);
         $this.css({
-          marginLeft: '0px',
+          marginLeft: '0',
           marginTop: -centerHeight + 'px'
         });
       } else {
@@ -413,7 +417,7 @@ var imgCover = function ($) {
           width: 'auto',
           height: '100%'
         });
-        centerWidth = ($this.width() - containerWidth) / 2;
+        centerWidth = ($this.width() - containerWidth) * (1 / posX);
         $this.css({
           marginTop: '0px',
           marginLeft: -centerWidth + 'px'

@@ -6,8 +6,9 @@ a.btn {
    padding: 0.5em 1em;
    border: 0;
    border-radius: $bd-radius-3;
-   font-size: 1rem;
    font-family: $f3-second;
+   font-size: 1rem;
+   line-height: 1.5em;
 
    &--small {
       font-size: 0.8rem;

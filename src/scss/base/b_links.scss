@@ -73,3 +73,25 @@ a.link {
       }
    }
 }
+
+// comments
+a.comment-reply-link,
+a#cancel-comment-reply-link {
+   transition: color 0.15s ease-in-out;
+
+   &:link {
+      color: $c-white;
+      text-decoration: underline;
+   }
+   &:visited {
+      color: $c-white;
+   }
+   &:hover {
+      @include media-breakpoint-up(md) {
+         color: $c1-third;
+      }
+   }
+   &:active {
+      color: $c-white;
+   }
+}

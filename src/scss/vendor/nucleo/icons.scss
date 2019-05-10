@@ -1,0 +1,103 @@
+/*------------------------
+	icons
+-------------------------*/
+@function unicode($str) {
+  @return unquote("\"\\#{$str}\"");
+}
+
+$Nucleo-icon-pc-monitor-2: unicode(ea02);
+$Nucleo-icon-single-01-2: unicode(ea03);
+$Nucleo-icon-zoom: unicode(ea04);
+$Nucleo-icon-clock-2: unicode(ea05);
+$Nucleo-icon-e-remove: unicode(ea06);
+$Nucleo-icon-zoom-in: unicode(ea07);
+$Nucleo-icon-down-arrow: unicode(ea08);
+$Nucleo-icon-letter: unicode(ea09);
+$Nucleo-icon-left-arrow: unicode(ea0a);
+$Nucleo-icon-up-arrow: unicode(ea0b);
+$Nucleo-icon-tag-2: unicode(ea0c);
+$Nucleo-icon-right-arrow-2: unicode(ea0d);
+$Nucleo-icon-pin-3-2: unicode(ea0e);
+$Nucleo-icon-multiple-11: unicode(ea0f);
+$Nucleo-icon-calendar-2: unicode(ea10);
+$Nucleo-icon-phone: unicode(ea11);
+$Nucleo-icon-a-chat: unicode(ea12);
+$Nucleo-icon-a-edit: unicode(ea13);
+$Nucleo-icon-check: unicode(ea14);
+
+.Nucleo-icon-pc-monitor-2::before {
+  content: $Nucleo-icon-pc-monitor-2;
+}
+
+.Nucleo-icon-single-01-2::before {
+  content: $Nucleo-icon-single-01-2;
+}
+
+.Nucleo-icon-zoom::before {
+  content: $Nucleo-icon-zoom;
+}
+
+.Nucleo-icon-clock-2::before {
+  content: $Nucleo-icon-clock-2;
+}
+
+.Nucleo-icon-e-remove::before {
+  content: $Nucleo-icon-e-remove;
+}
+
+.Nucleo-icon-zoom-in::before {
+  content: $Nucleo-icon-zoom-in;
+}
+
+.Nucleo-icon-down-arrow::before {
+  content: $Nucleo-icon-down-arrow;
+}
+
+.Nucleo-icon-letter::before {
+  content: $Nucleo-icon-letter;
+}
+
+.Nucleo-icon-left-arrow::before {
+  content: $Nucleo-icon-left-arrow;
+}
+
+.Nucleo-icon-up-arrow::before {
+  content: $Nucleo-icon-up-arrow;
+}
+
+.Nucleo-icon-tag-2::before {
+  content: $Nucleo-icon-tag-2;
+}
+
+.Nucleo-icon-right-arrow-2::before {
+  content: $Nucleo-icon-right-arrow-2;
+}
+
+.Nucleo-icon-pin-3-2::before {
+  content: $Nucleo-icon-pin-3-2;
+}
+
+.Nucleo-icon-multiple-11::before {
+  content: $Nucleo-icon-multiple-11;
+}
+
+.Nucleo-icon-calendar-2::before {
+  content: $Nucleo-icon-calendar-2;
+}
+
+.Nucleo-icon-phone::before {
+  content: $Nucleo-icon-phone;
+}
+
+.Nucleo-icon-a-chat::before {
+  content: $Nucleo-icon-a-chat;
+}
+
+.Nucleo-icon-a-edit::before {
+  content: $Nucleo-icon-a-edit;
+}
+
+.Nucleo-icon-check::before {
+  content: $Nucleo-icon-check;
+}
+

@@ -1,13 +1,15 @@
 input.parsley-success,
 select.parsley-success,
 textarea.parsley-success {
-  border: 2px solid $c1-success;
+  border-top: 2px solid $c1-success;
+  border-bottom: 2px solid $c1-success;
 }
 
 input.parsley-error,
 select.parsley-error,
 textarea.parsley-error {
-  border: 2px solid $c1-error;
+  border-top: 2px solid $c1-error;
+  border-bottom: 2px solid $c1-error;
 }
 
 .parsley-errors-list {
@@ -25,12 +27,13 @@ textarea.parsley-error {
   }
 
   > li {
-     padding-left: 0;
-     color: $c1-error;
-     font-size: 1rem;
+      margin-right: 0.5rem;
+      padding-left: 0;
+      font-size: 0.9rem;
+      color: $c1-error;
 
-     &:before {
+      &:before {
         display: none;
-     }
+      }
   }
 }

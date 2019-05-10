@@ -1,77 +1,81 @@
 const imgCover = (function($) {
 
-   /******************************************************************
-       EVENTS
-   ******************************************************************/
-
-   $(document).on('lazyloaded', function(e){
-       if (!$(e.target).hasClass('img-cover')) return;
-       makeImgCover($(e.target));
-   });
-
-   $(window).on('resize', function(e) {
-       setTimeout(function() {
-           makeImgCover($('.img-cover'));
-       }, 100);
-       // trigger again to further improve it
-       setTimeout(function() {
-           makeImgCover($('.img-cover'));
-       }, 500);
-   });
 
 
-   /******************************************************************
-       FUNCTIONS
-   ******************************************************************/
+    /******************************************************************
+        EVENTS
+    ******************************************************************/
 
-   function makeImgCover($img) {
+    $(document).on('lazyloaded', function(e){
+        // no img-cover
+        if (!$(e.target).hasClass('img-cover')) return;
+        makeImgCover($(e.target));
+    });
 
-       $img.each(function() {
+    $(window).on('resize', function(e) {
+        setTimeout(function() {
+            makeImgCover($('.img-cover'));
+        }, 100);
+        // trigger again to further improve it
+        setTimeout(function() {
+            makeImgCover($('.img-cover'));
+        }, 500);
+    });
 
-           const $this             = $(this);
-           const $container        = $this.parent();
-           const containerWidth    = $container.width();
-           const containerHeight   = $container.height();
-           const imgWidth          = $this.width();
-           const imgHeight         = $this.height();
 
-           const containerSize     = containerWidth / containerHeight;
-           const imgSize           = imgWidth / imgHeight;
+    /******************************************************************
+        FUNCTIONS
+    ******************************************************************/
 
-           const horizontalStretch = containerSize >= imgSize;
+    function makeImgCover($img) {
 
-           let centerHeight;
-           let centerWidth;
+        $img.each(function() {
 
-           if (horizontalStretch) {
+            const $this             = $(this);
+            const $container        = $this.parent();
+            const containerWidth    = $container.outerWidth();
+            const containerHeight   = $container.outerHeight();
+            const imgWidth          = $this.width();
+            const imgHeight         = $this.height();
 
-               $this.css({
-                   width: '100%',
-                   height: 'auto',
-               });
+            const containerRatio     = containerWidth / containerHeight;
+            const imgRatio           = imgWidth / imgHeight;
 
-                centerHeight = ($this.height() - containerHeight) / 3;
+            const horizontalStretch = containerRatio >= imgRatio;
 
-               $this.css({
-                   marginLeft: '0px',
-                   marginTop: -(centerHeight) + 'px',
-               });
+            let centerHeight;
+            let centerWidth;
 
-           } else {
+            // get data attributes from image
+            let posY = parseInt($this.data('pos-y'), 10);
+            let posX = parseInt($this.data('pos-x'), 10);
 
-               $this.css({
-                   width: 'auto',
-                   height: '100%',
-               });
+            if (horizontalStretch) {
+                $this.css({
+                    width: '100%',
+                    height: 'auto',
+                });
 
-               centerWidth = ($this.width() - containerWidth) / 2;
+                centerHeight = ($this.height() - containerHeight) * (1 / posY);
 
-               $this.css({
-                   marginTop: '0px',
-                   marginLeft: -(centerWidth) + 'px',
-               });
-           }
-       });
-   }
+                $this.css({
+                    marginLeft: '0',
+                    marginTop: -(centerHeight) + 'px',
+                });
+            } else {
+                $this.css({
+                    width: 'auto',
+                    height: '100%',
+                });
 
-})(jQuery);
+                centerWidth = ($this.width() - containerWidth) * (1 / posX);
+
+                $this.css({
+                    marginTop: '0px',
+                    marginLeft: -(centerWidth) + 'px',
+                });
+            }
+        });
+    }
+
+ })(jQuery);

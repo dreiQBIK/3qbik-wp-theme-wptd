@@ -1,0 +1,121 @@
+{# buttons #}
+<div class="container container--narrow bg-c-white bd-radius-5 mb-300 px-400 py-200">
+   <div class="row">
+      <div class="col-12">
+         <h2 class="h1 t-c1-main">Form Elements</h2>
+      </div>
+   </div>
+   <form id="default-form" method="post" action="{{ site.site_url ~ '/wp-comments-post.php' }}" data-parsley-validate>
+      {# input fields #}
+      <div class="row">
+         <div class="col col-12">
+            <h3 class="h3 f3-second t-c1-third">input - default</h3>
+         </div>
+      </div>
+      {# text, emial, telefon, number #}
+      <div class="row">
+         <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="mb-300">
+               <label for="text">{{ __( 'Text', 'wptd' ) }}</label>
+               <input type="text" name="text" placeholder="{{ __('Text', 'wptd') }}" required>
+            </div>
+         </div>
+         <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="mb-300">
+               <label for="email">{{ __( 'E-Mail', 'wptd' ) }}</label>
+               <input type="email" name="email" placeholder="{{ __('E-Mail', 'wptd') }}" required>
+            </div>
+         </div>
+         <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="mb-300">
+               <label for="tel">{{ __( 'Telefon', 'wptd' ) }}</label>
+               <input type="tel" name="tel" placeholder="{{ __('Telefon', 'wptd') }}" required>
+            </div>
+         </div>
+         <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="mb-300">
+               <label for="number">{{ __( 'Nummer', 'wptd' ) }}</label>
+               <input type="number" name="number" placeholder="{{ __('Nummer', 'wptd') }}" required>
+            </div>
+         </div>
+      </div>
+      {# password #}
+      {# <div class="row">
+         <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="mb-300">
+               <label for="password"></label>
+               <input type="password" name="password" placeholder="{{ __('Passwort', 'wptd') }}">
+            </div>
+         </div>
+      </div> #}
+
+      {# input select #}
+      <div class="row">
+         <div class="col col-12">
+            <h3 class="h3 f3-second t-c1-third">input - select</h3>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="mb-300">
+
+               <select>
+                  <option value="volvo">Volvo</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select>
+
+            </div>
+         </div>
+      </div>
+
+      {# input checkbox | radio #}
+      <div class="row">
+         <div class="col col-12">
+            <h3 class="h3 f3-second t-c1-third">input - checkbox | radio</h3>
+         </div>
+      </div>
+      {# text, password, emial, telefon #}
+      <div class="row">
+         <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="mb-300">
+               <label class="checkbox-wrapper mb-100" for="checkbox1">
+                  <input id="checkbox1" type="checkbox" name="checkbox1">
+                  <span>{{ __('Option 1', 'wptd') }}</span>
+               </label>
+               <label class="checkbox-wrapper mb-100" for="checkbox2">
+                  <input id="checkbox2" type="checkbox" name="checkbox2">
+                  <span>{{ __('Option 2', 'wptd') }}</span>
+               </label>
+               <label class="checkbox-wrapper mb-100" for="checkbox3">
+                  <input id="checkbox3" type="checkbox" name="checkbox3">
+                  <span>{{ __('Option 3', 'wptd') }}</span>
+               </label>
+            </div>
+         </div>
+         <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="mb-300">
+               <label class="radio-wrapper mb-100" for="radio1">
+                  <input id="radio1" type="radio" name="radio" checked>
+                  <span>{{ __('Radio 1', 'wptd') }}</span>
+               </label>
+               <label class="radio-wrapper mb-100" for="radio2">
+                  <input id="radio2" type="radio" name="radio">
+                  <span>{{ __('Radio 2', 'wptd') }}</span>
+               </label>
+               <label class="radio-wrapper mb-100" for="radio3">
+                  <input id="radio3" type="radio" name="radio">
+                  <span>{{ __('Radio 3', 'wptd') }}</span>
+               </label>
+            </div>
+         </div>
+      </div>
+      {# submit button #}
+      <div class="row">
+         <div class="col-12">
+            <button id="submit" name="Submit" class="btn btn1-second">{{ __( 'Senden', 'wptd' ) }}</button>
+         </div>
+      </div>
+   </form>
+</div>

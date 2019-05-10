@@ -7,19 +7,17 @@
         background: $c1-third;
         position: relative;
         width: 100%;
-        max-width: 280px;
+        max-width: 240px;
         margin-top: 0.5rem;
-        padding: 0.2em 2em;
+        padding: 0.4em 2em;
         border-radius: $bd-radius-3;
-        border-bottom: 3px solid $c2-third;
-        font-weight: 700;
         color: $c-white;
 
         &:hover {
 
             @include media-breakpoint-up(md) {
                 outline: 0;
-                background-color: $c3-third;
+                background-color: $c2-third;
 
                 svg {
                     right: 20px;

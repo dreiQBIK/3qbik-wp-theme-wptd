@@ -37,7 +37,8 @@ STYLESHEET: STYLE
 @import "settings/utilities/ut_animations";
 
 // Vendor
-@import "vendor/v_nucleo-icons";
+@import "vendor/nucleo/icons";
+@import "vendor/nucleo/nucleo";
 
 // Layouts
 @import "layouts/l_page";
@@ -83,8 +84,13 @@ STYLESHEET: STYLE
 @import "footer/f_site";
 
 // Forms
-@import "forms/fm_base";
+@import "forms/default/fm_base";
+@import "forms/default/fm_checkbox.scss";
+@import "forms/default/fm_radio.scss";
+// Contact Form 7
+@import "forms/cf7/fm_base";
+@import "forms/cf7/fm_upload";
+@import "forms/cf7/fm_validation";
+// Libraries
 @import "forms/fm_parsley";
-// @import "forms/fm_choices";
-// @import "forms/fm_upload";
-// @import "forms/fm_validation";
+@import "forms/fm_choices";

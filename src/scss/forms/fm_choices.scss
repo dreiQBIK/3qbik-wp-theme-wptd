@@ -1,6 +1,7 @@
 .choices {
    cursor: pointer;
    position: relative;
+   color: $c1-main;
 
    &:focus {
       outline: none;
@@ -14,7 +15,7 @@
       height: 0;
       width: 0;
       border-style: solid;
-      border-color: $c1-main transparent transparent transparent;
+      border-color: $c1-third transparent transparent transparent;
       border-width: 5px;
       position: absolute;
       right: 11.5px;
@@ -37,14 +38,15 @@
 }
 
 .choices__inner {
-   transition: border-color 0.2s ease-in-out;
+   transition: border-color 0.15s ease-in-out;
    overflow: hidden;
    display: inline-block;
-   background-color: $c3-main;
+   background-color: $c-white;
    vertical-align: top;
    width: 100%;
-   height: 50px;
-   padding: 0.8em 1.2em;
+   height: 42px;
+   padding: 0.3em 1.2em;
+   border-top: 2px solid $c1-gray;
    border-bottom: 2px solid $c1-gray;
 
    &:hover {
@@ -83,7 +85,6 @@
    &__input {
       display: inline-block;
       vertical-align: baseline;
-      background-color: pink;
       border: 0;
       border-radius: 0;
       max-width: 100%;
@@ -107,11 +108,12 @@
    z-index: 10;
    position: absolute;
    width: 100%;
-   background-color: $c3-main;
+   background-color: $c-white;
    top: 100%;
-   margin-top: -1px;
+   margin-top: 0px;
    overflow: hidden;
    word-break: break-all;
+   box-shadow: 1px 1px 3px 2px rgba(0,0,0,0.2);
 
    &.is-active {
       display: block;
@@ -144,6 +146,7 @@
    }
 
    .choices__item--selectable {
+
       @include media-breakpoint-up(md) {
          padding-right: 100px;
 
@@ -169,7 +172,7 @@
       }
 
       &.is-highlighted {
-         background-color: darken($c3-main, 5%);
+         background-color: darken($c-white, 5%);
 
          &:after {
             opacity: 0.5;

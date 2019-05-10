@@ -36,30 +36,11 @@
         &.inactive {
             display: none;
         }
-
-        .l_comment-form__label {
-            cursor: pointer;
-            flex: 1 0 0;
-            position: absolute;
-            top: 0;
-            left: 0;
-            margin-left: 0;
-        }
-    }
-
-    &__checkbox {
-
-        &:focus {
-            + .l_comment-form__label:before {
-                border-color: $c1-second;
-            }
-        }
     }
 
     &__agbs {
         flex: 1 0 0;
         margin-bottom: 0;
-        margin-left: 0.5rem;
         font-size: 0.9rem;
 
         @include media-breakpoint-up(sm) {
@@ -82,16 +63,6 @@
         }
     }
 
-
-    &__agbs-link {
-        text-decoration: underline;
-        color: $c-black;
-
-        &:visited {
-            color: $c-black;
-        }
-    }
-
     &__required {
         display: block;
         margin-bottom: 0;
@@ -103,10 +74,6 @@
         &.inactive {
             display: none;
         }
-    }
-
-    &__submit-btn {
-        width: auto;
     }
 
     &__loggedin {

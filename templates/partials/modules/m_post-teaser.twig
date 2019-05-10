@@ -4,7 +4,7 @@
    <div class="m_post-teaser__content">
       <h2>{{ post.title }}</h2>
       <div class="m_post-teaser__meta">
-         <a class="m_post-teaser__author" href="{{ post.author.link }}">Autor:&nbsp;{{ post.author }}</a>
+         <a class="m_post-teaser__author link link1-second" href="{{ post.author.link }}">Autor:&nbsp;{{ post.author }}</a>
          <span class="m_post-teaser__date">{{ post.date }}</span>
       </div>
       <p class="m_post-teaser__excerpt">{{ not is_editor_post ? post.meta('post_excerpt') : post.content|excerpt(30) }}</p>
