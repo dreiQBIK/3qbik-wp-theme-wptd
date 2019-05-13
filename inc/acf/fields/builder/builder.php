@@ -27,6 +27,7 @@ $builder
          'button_label' => 'Baustein hinzufügen',
       ]
    )
+   // we could use a loop here instead, to add all layouts
    ->addLayout(get_module('bl_quote'))
    ->addLayout(get_module('bl_video'))
    ->addLayout(get_module('bl_gallery'))
