@@ -20,7 +20,7 @@ textarea.parsley-error {
   line-height: 0.9em;
   opacity: 0;
   color: $c-white;
-  transition: all .3s ease-in;
+  transition: all 0.15s ease-in;
 
   &.filled {
      opacity: 1;

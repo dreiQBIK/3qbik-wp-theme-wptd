@@ -11,9 +11,8 @@ body {
    background-color: $c2-main;
    overflow-x: hidden;
 
-   @include fontstyle(
-      $style: "fs5"
-   );
+   @include fontstyle("fs5");
+   font-family: $f1-second;
 
    &.no-scroll {
       overflow: hidden;
@@ -67,12 +66,18 @@ address {
    font-style: normal;
 }
 
-*:focus {
-   color: $c-white;
-   border-color: $c1-accent;
-   outline: 0;
-   box-shadow: 0 0 0 0.2rem rgba($c1-accent, 0.5);
-   border-radius: $bd-radius-3;
+input,
+select,
+.choices,
+textarea,
+a,
+button {
+   &:focus {
+      border-color: $c1-accent;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba($c1-accent, 0.5);
+      border-radius: $bd-radius-3;
+   }
 }
 
 ul,

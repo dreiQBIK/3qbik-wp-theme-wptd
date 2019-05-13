@@ -29,13 +29,13 @@ a.btn {
 
    &--disabled {
       cursor: auto;
-      background: $c1-gray;
+      background-color: $c1-gray;
       color: darken($c1-gray, 15%);
    }
 
    // main buttons
    &1-main {
-      background: $c1-main;
+      background-color: $c1-main;
       color: $c-white;
 
       &:hover {

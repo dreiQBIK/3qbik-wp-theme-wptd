@@ -46,69 +46,6 @@ var choicesJS = function ($) {
     });
   });
 }(jQuery);
-// const mForm = (function($) {
-//
-//
-//     /******************************************************************
-//         VARS
-//     ******************************************************************/
-//
-//     // get all input fields and trigger float labels on focus
-//     var $formInputs = $('.m_form__input');
-//
-//     // quit if element does not exist (on this page)
-//     if (!$formInputs.length) return;
-//
-//
-//     /******************************************************************
-//         EVENTS
-//     ******************************************************************/
-//
-//     // remove label classes and return to initial state after form was sent successfully
-//     $(document).on('.btn', returnToInitialState);
-//
-//     $formInputs.on('focusin', makeLabelActive);
-//     $formInputs.on('focusout', makeLabelInactive);
-//
-//
-//     /******************************************************************
-//         FUNCTIONS
-//     ******************************************************************/
-//
-//     function makeLabelActive() {
-//
-//         var $activeInput = $(this);
-//         var $activeFormLabel = $activeInput.parents('p').find('.m_form__label');
-//
-//         // add active state
-//         $activeFormLabel.addClass('active');
-//     }
-//
-//     function makeLabelInactive() {
-//
-//         var $activeInput = $(this);
-//         var $activeFormLabel = $activeInput.parents('p').find('.m_form__label');
-//
-//         // remove active state
-//         $activeFormLabel.removeClass('active');
-//
-//         // check if field isn't empty and add done state
-//         if ($activeInput.val() && $activeInput.val().length) {
-//             $activeFormLabel.addClass('done');
-//
-//         // return to initial state if field is empty
-//         } else {
-//             $activeFormLabel.removeClass('done');
-//         }
-//     }
-//
-//     function returnToInitialState() {
-//         var $formLabels = $('.m_form__label');
-//         $formLabels.removeClass('active done');
-//     }
-//
-// })(jQuery);
-"use strict";
 "use strict";
 
 var lCommentForm = function ($) {
@@ -130,34 +67,37 @@ var lCommentForm = function ($) {
       FUNCTIONS
   ******************************************************************/
 }(jQuery);
-// const mBackToTop = (function($) {
-//    const $window = $(window);
-//    $window.on("scroll", function() {
-//       global.debounce(toggleBackToTop(), 2000);
-//    });
-//    $(document).on("click", ".m_back-to-top", function() {
-//       scrollToTop();
-//    });
-//    function toggleBackToTop() {
-//       const $button = $(".m_back-to-top");
-//       const scrollDistance = $(document).scrollTop();
-//       const windowHeight = $window.height();
-//       if (scrollDistance >= windowHeight) {
-//          $button.removeClass("is-hidden");
-//       } else {
-//          $button.addClass("is-hidden");
-//       }
-//    }
-//    function scrollToTop() {
-//       $("html, body").animate(
-//          {
-//             scrollTop: 0,
-//          },
-//          "swing"
-//       );
-//    }
-// })(jQuery);
 "use strict";
+
+var mBackToTop = function ($) {
+  var $window = $(window);
+  $window.on("scroll", function () {
+    global.debounce(toggleBackToTop(), 2000);
+  });
+  $(document).on("click", ".m_back-to-top", function () {
+    scrollToTop();
+  });
+
+  function toggleBackToTop() {
+    var $button = $(".m_back-to-top");
+    var scrollDistance = $(document).scrollTop();
+    var windowHeight = $window.height();
+
+    if (scrollDistance >= windowHeight) {
+      console.log('remove');
+      $button.removeClass("is-hidden");
+    } else {
+      console.log('add');
+      $button.addClass("is-hidden");
+    }
+  }
+
+  function scrollToTop() {
+    $("html, body").animate({
+      scrollTop: 0
+    }, "swing");
+  }
+}(jQuery);
 "use strict";
 
 var nSite = function ($) {
@@ -360,69 +300,4 @@ var example = function ($) {
   ******************************************************************/
   return {// your code here
   };
-}(jQuery);
-"use strict";
-
-var imgCover = function ($) {
-  /******************************************************************
-      EVENTS
-  ******************************************************************/
-  $(document).on('lazyloaded', function (e) {
-    // no img-cover
-    if (!$(e.target).hasClass('img-cover')) return;
-    makeImgCover($(e.target));
-  });
-  $(window).on('resize', function (e) {
-    setTimeout(function () {
-      makeImgCover($('.img-cover'));
-    }, 100); // trigger again to further improve it
-
-    setTimeout(function () {
-      makeImgCover($('.img-cover'));
-    }, 500);
-  });
-  /******************************************************************
-      FUNCTIONS
-  ******************************************************************/
-
-  function makeImgCover($img) {
-    $img.each(function () {
-      var $this = $(this);
-      var $container = $this.parent();
-      var containerWidth = $container.outerWidth();
-      var containerHeight = $container.outerHeight();
-      var imgWidth = $this.width();
-      var imgHeight = $this.height();
-      var containerRatio = containerWidth / containerHeight;
-      var imgRatio = imgWidth / imgHeight;
-      var horizontalStretch = containerRatio >= imgRatio;
-      var centerHeight;
-      var centerWidth; // get data attributes from image
-
-      var posY = parseInt($this.data('pos-y'), 10);
-      var posX = parseInt($this.data('pos-x'), 10);
-
-      if (horizontalStretch) {
-        $this.css({
-          width: '100%',
-          height: 'auto'
-        });
-        centerHeight = ($this.height() - containerHeight) * (1 / posY);
-        $this.css({
-          marginLeft: '0',
-          marginTop: -centerHeight + 'px'
-        });
-      } else {
-        $this.css({
-          width: 'auto',
-          height: '100%'
-        });
-        centerWidth = ($this.width() - containerWidth) * (1 / posX);
-        $this.css({
-          marginTop: '0px',
-          marginLeft: -centerWidth + 'px'
-        });
-      }
-    });
-  }
 }(jQuery);
