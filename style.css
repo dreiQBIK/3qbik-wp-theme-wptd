@@ -583,7 +583,7 @@ template {
 
 @media (min-width: 1921px) {
   .container--wide {
-    width: 90%;
+    width: 1920px;
     max-width: none;
   }
 }
@@ -8440,6 +8440,15 @@ select:focus,
 textarea:focus,
 a:focus,
 button:focus {
+  outline: none;
+}
+
+form input:focus,
+form select:focus,
+form .choices:focus,
+form textarea:focus,
+form a:focus,
+form button:focus {
   border-color: #96a9bb;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(150, 169, 187, 0.5);
@@ -10355,6 +10364,13 @@ textarea:hover {
   color: #c8c8c8;
 }
 
+.wpcf7-form__radio-wrapper input[type="radio"]:focus + span:before, .wpcf7-form__checkbox-wrapper input[type="radio"]:focus + span:before {
+  border-color: #96a9bb;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(150, 169, 187, 0.5);
+  border-radius: 50%;
+}
+
 .wpcf7-form__radio-wrapper input[type="radio"]:checked + span.wpcf7-list-item-label:before, .wpcf7-form__checkbox-wrapper input[type="radio"]:checked + span.wpcf7-list-item-label:before {
   border-color: #ec764d;
 }
@@ -10382,6 +10398,20 @@ textarea:hover {
   margin-right: 10px;
   border: 2px solid #c8c8c8;
   border-radius: 50%;
+}
+
+.wpcf7-form__radio-wrapper input[type="checkbox"]:focus + span:before, .wpcf7-form__checkbox-wrapper input[type="checkbox"]:focus + span:before {
+  border-color: #96a9bb;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(150, 169, 187, 0.5);
+  border-radius: 3px;
+}
+
+.wpcf7-form__radio-wrapper input[type="checkbox"]:focus + span:before, .wpcf7-form__checkbox-wrapper input[type="checkbox"]:focus + span:before {
+  border-color: #96a9bb;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(150, 169, 187, 0.5);
+  border-radius: 3px;
 }
 
 .wpcf7-form__radio-wrapper input[type="checkbox"]:checked + span.wpcf7-list-item-label, .wpcf7-form__checkbox-wrapper input[type="checkbox"]:checked + span.wpcf7-list-item-label {

@@ -1,4 +1,4 @@
-/* USAGE: add class `img-cover` and
+// USAGE: add class `img-cover` and
 //  `data-pos-y="0" => standard / top`
 //  `data-pos-y="1" => bottom`
 //  `data-pos-y="2" => center`
