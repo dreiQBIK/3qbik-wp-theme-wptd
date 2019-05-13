@@ -1,0 +1,50 @@
+.m_back-to-top {
+   position: fixed;
+   bottom: 1rem;
+   right: 0.6rem;
+   width: 40px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 0;
+   outline: none;
+   z-index: 100;
+   background-color: $c3-main;
+   transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out,
+   transform 0.15s ease-in-out, background 0.15s ease-in-out;
+   border-radius: $bd-radius-3;
+   cursor: pointer;
+
+   @include media-breakpoint-up(sm) {
+      bottom: 1.5rem;
+      right: 1rem;
+      width: 44px;
+      height: 44px;
+   }
+
+   @include media-breakpoint-up(md) {
+      right: 2rem;
+   }
+
+   @include media-breakpoint-up(lg) {
+      width: 50px;
+      height: 50px;
+   }
+
+   &:hover {
+      @include media-breakpoint-up(md) {
+         background-color: $c1-third;
+      }
+   }
+
+   &.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+   }
+
+   .icon {
+      color: $c-white;
+   }
+}
