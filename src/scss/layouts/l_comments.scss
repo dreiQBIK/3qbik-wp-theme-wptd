@@ -1,9 +1,4 @@
 .l_comments {
-    margin: 2rem 0;
-
-    @include media-breakpoint-up(sm) {
-        margin: 4rem 0 3rem;
-    }
 
     &__list {
         list-style: none;

@@ -14,9 +14,16 @@
 					alt="{{ author_image.alt }}"
 					src="{{ theme.link }}/assets/img/avatar.png"
 					data-src="{{ author_image.sizes.medium }}"
-					data-srcset="{{ author_image.sizes.thumbnail }} 150w,
-						{{ author_image.sizes.medium }} 300w,
-						{{ author_image.sizes.medium_large }} 768w,"
+					data-srcset="
+						{% if author_image.sizes.thumbnail|length != author_image.url|length %}
+							{{ author_image.sizes.thumbnail }} 150w,
+						{% endif %}
+						{% if author_image.sizes.medium|length != author_image.url|length %}
+							{{ author_image.sizes.medium }} 300w,
+						{% endif %}
+						{% if author_image.sizes.medium_large|length != author_image.url|length %}
+							{{ author_image.sizes.medium_large }} 768w,
+						{% endif %}"
 					data-sizes="auto"
 				/>
 			{% else %}
@@ -30,12 +37,12 @@
 				/>
 			{% endif %}
 		    <div class="l_comment__info">
-		        <p class="l_comment__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <span itemprop="name">{{ comment.author.name }}</span>
-                </p>
-		        <time class="l_comment__time" itemprop="dateCreated">
-                    {{ comment.comment_date_gmt|time_ago(format_past='vor %s', format_future='in %s') }}
-                </time>
+		        	<p class="l_comment__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<span itemprop="name">{{ comment.author.name }}</span>
+					</p>
+		        	<time class="l_comment__time" itemprop="dateCreated">
+						{{ comment.comment_date_gmt|time_ago(format_past='vor %s', format_future='in %s') }}
+					</time>
 		    </div>
 		</header>
 

@@ -5,7 +5,7 @@
       <header class="container">
          <h1>{{ post.title }}</h1>
          <div class="l_article__meta">
-            <a href="{{ post.author.link }}">{{ post.author.display_name }}</a>
+            <a class="link1-second" href="{{ post.author.link }}">{{ post.author.display_name }}</a>
             <span>{{ post.date }}</span>
          </div>
       </header>
@@ -14,7 +14,7 @@
          {% include '/partials/layouts/l_builder.twig' %}
       </div>
 
-      {% if post.comments|length %}
+      {% if post.comments %}
          <section class="container">
             <div class="l_comments" id="comments">
                {% include "/partials/layouts/l_comments.twig" %}

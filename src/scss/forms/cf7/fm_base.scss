@@ -179,6 +179,15 @@
       // hidden input (radio) - interaction area
       input[type="radio"] {
 
+         &:focus {
+            + span:before {
+               border-color: $c1-accent;
+               outline: 0;
+               box-shadow: 0 0 0 0.2rem rgba($c1-accent, 0.5);
+               border-radius: $bd-radius-round;
+            }
+         }
+
          // label and visible radio
          & + span.wpcf7-list-item-label {
          }
@@ -225,6 +234,25 @@
 
       // hidden input (checkbox) - interaction area
       input[type="checkbox"] {
+
+         &:focus {
+            + span:before {
+               border-color: $c1-accent;
+               outline: 0;
+               box-shadow: 0 0 0 0.2rem rgba($c1-accent, 0.5);
+               border-radius: $bd-radius-3;
+            }
+         }
+
+         &:focus {
+            + span:before {
+               border-color: $c1-accent;
+               outline: 0;
+               box-shadow: 0 0 0 0.2rem rgba($c1-accent, 0.5);
+               border-radius: $bd-radius-3;
+            }
+         }
+
          &:checked {
             // label and visible checkbox
             & + span.wpcf7-list-item-label {
