@@ -1,0 +1,12 @@
+{% set related_posts = post.meta('post_related_posts') %}
+
+<div class="m_related-posts">
+   <h3 class="h2 f3-second">{{ __('Verwandte Beiträge', 'wptd') }}</h3>
+   <ul class="m_related-posts__list">
+      {% for item in related_posts.posts %}
+         <li class="m_related-posts__item">
+            <a href="{{ item.link }}" class="link link1-second">{{ item.title }}</a>
+         </li>
+      {% endfor %}
+   </ul>
+</div>
