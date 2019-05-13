@@ -15,6 +15,7 @@ $builder = new FieldsBuilder(
    ]
 );
 
+// conditions should be structured like described here: https://github.com/StoutLogic/acf-builder/wiki/location
 $builder
    ->setLocation('post_type', '==', 'post');
 
@@ -26,11 +27,11 @@ $builder
          'button_label' => 'Baustein hinzufügen',
       ]
    )
-   ->addLayout(get_modules('bl_quote'))
-   ->addLayout(get_modules('bl_video'))
-   ->addLayout(get_modules('bl_gallery'))
-   ->addLayout(get_modules('bl_image'))
-   ->addLayout(get_modules('bl_editor'))
-   ->addLayout(get_modules('bl_heading'));
+   ->addLayout(get_module('bl_quote'))
+   ->addLayout(get_module('bl_video'))
+   ->addLayout(get_module('bl_gallery'))
+   ->addLayout(get_module('bl_image'))
+   ->addLayout(get_module('bl_editor'))
+   ->addLayout(get_module('bl_heading'));
 
 return $builder;
