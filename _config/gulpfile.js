@@ -274,21 +274,58 @@ gulp.task("watch", function() {
    gulp.watch("../**/templates/**/*.twig").on("change", browserSync.reload);
 });
 
+// Watch Files For Changes
+gulp.task("watch-backend", function() {
+   browserSync.init({
+      proxy: config.settings.host,
+   });
+   gulp
+      .watch(
+         "../src/js/**/*.js",
+         gulp.series(
+            "scripts",
+            "scripts-vendor",
+            "scripts-separate",
+            "scripts-separate-vendor"
+         )
+      )
+      .on("change", browserSync.reload);
+   gulp.watch(
+      "../src/scss/**/*.scss",
+      gulp.series("sass", "tinymce-sass", "login-sass", "theme-sass")
+   );
+   gulp.watch("../**/*.php").on("change", browserSync.reload);
+   gulp.watch("../**/templates/**/*.twig").on("change", browserSync.reload);
+});
+
 // Default task
 gulp.task(
    "default",
    gulp.series(
       "sass",
+      "css",
+      "debug-sass",
       "scripts",
       "scripts-vendor",
       "scripts-separate",
       "scripts-separate-vendor",
-      "watch",
+      "watch"
+   )
+);
+
+// Backend Styling task
+gulp.task(
+   "backend",
+   gulp.series(
+      "sass",
+      "css",
       "tinymce-sass",
       "tinymce-css",
+      "login-sass",
+      "login-css",
       "theme-sass",
       "theme-css",
-      "debug-sass"
+      "watch-backend"
    )
 );
 
@@ -296,6 +333,7 @@ gulp.task(
 gulp.task(
    "build",
    gulp.series(
+      "sass",
       "css",
       "login-sass",
       "login-css",
