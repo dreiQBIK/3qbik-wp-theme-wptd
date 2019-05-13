@@ -36,4 +36,13 @@
       }%}
    {% endif %}
 
+   {# Module: QUOTE #}
+   {% if module.acf_fc_layout == 'bl_quote' %}
+      {% include "/partials/builder/bl_quote.twig" with {
+         space_bottom: module.bl_quote.margin,
+         quote: module.bl_quote.quote,
+         author: module.bl_quote.author,
+      }%}
+   {% endif %}
+
 {% endfor %}

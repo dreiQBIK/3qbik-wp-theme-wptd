@@ -9572,6 +9572,46 @@ ul.list li:before {
   margin: 0.7rem 0 0;
 }
 
+.bl_quote {
+  position: relative;
+  background-color: #2c3e50;
+  padding: 1.5rem 1.5rem 1rem 4.5rem;
+  border-radius: 3px;
+}
+
+.bl_quote__text {
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.bl_quote__text:before {
+  content: "\"";
+  color: #2c3e50;
+  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
+  font-size: 6rem;
+  font-style: italic;
+  position: absolute;
+  top: 50px;
+  left: -25px;
+  z-index: 2;
+}
+
+.bl_quote__text:after {
+  content: "";
+  background-color: #fff191;
+  position: absolute;
+  top: 15px;
+  left: -15px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.bl_quote__author {
+  font-family: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
+  text-align: right;
+}
+
 .n_site {
   display: none;
 }

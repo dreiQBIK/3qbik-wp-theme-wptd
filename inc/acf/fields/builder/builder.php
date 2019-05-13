@@ -26,6 +26,7 @@ $builder
          'button_label' => 'Baustein hinzufügen',
       ]
    )
+   ->addLayout(get_modules('bl_quote'))
    ->addLayout(get_modules('bl_video'))
    ->addLayout(get_modules('bl_image'))
    ->addLayout(get_modules('bl_editor'))

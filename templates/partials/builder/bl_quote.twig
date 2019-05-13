@@ -1,0 +1,13 @@
+{# USES
+   space_bottom => type: string
+   quote => type: string
+   author => type: string
+#}
+<div class="container {{ space_bottom }}">
+   <div class="bl_quote">
+      <blockquote class="bl_quote__text">{{ quote }}</blockquote>
+      {% if author %}
+      <p class="bl_quote__author">{{ author }}</p>
+      {% endif %}
+   </div>
+</div>
