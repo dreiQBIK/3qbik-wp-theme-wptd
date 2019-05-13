@@ -190,6 +190,9 @@ $enable-grid-classes: true !default;
 
 // Grid breakpoints
 // @USAGE: @include media-breakpoint-up(sm) {}
+// @USAGE: @include media-breakpoint-down(sm) {}
+// @USAGE: @include media-breakpoint-only(sm) {}
+// @USAGE: @include media-breakpoint-between(md, xl) {}
 $grid-breakpoints: (
    xs: 0,
    sm: 481px,
@@ -235,7 +238,7 @@ $container-widths-wide: (
    sm: 90%,
    md: 90%,
    lg: 90%,
-   xl: 90%,
+   xl: 1920px,
 ) !default;
 
 // Grid columns
