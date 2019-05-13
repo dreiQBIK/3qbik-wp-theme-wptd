@@ -303,15 +303,17 @@ var example = function ($) {
 }(jQuery);
 "use strict";
 
-// USAGE: add class `img-cover` and
-//  `data-pos-y="0" => standard / top`
-//  `data-pos-y="1" => bottom`
-//  `data-pos-y="2" => center`
-//  `data-pos-y=">2" => to top`
-//  `data-pos-x="0" => standard / left`
-//  `data-pos-x="1" => right`
-//  `data-pos-x="2" => center`
-//  `data-pos-x=">2" => to left`
+/*
+ * USAGE: add class `img-cover` and
+ *   - `data-pos-y="0" => standard / top`
+ *   - `data-pos-y="1" => bottom`
+ *   - `data-pos-y="2" => center`
+ *   - `data-pos-y=">2" => to top`
+ *   - `data-pos-x="0" => standard / left`
+ *   - `data-pos-x="1" => right`
+ *   - `data-pos-x="2" => center`
+ *   - `data-pos-x=">2" => to left`
+ */
 var imgCover = function ($) {
   /******************************************************************
       EVENTS
