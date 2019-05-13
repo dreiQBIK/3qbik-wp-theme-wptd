@@ -10,8 +10,7 @@
     .l_comment {
         margin: 2rem 0 0 4rem;
         border: 0;
-        border-bottom: 1px solid $c3-main;
-        background-color: $c-white;
+        border-bottom: 2px dashed $c3-main;
     }
 
     & + #respond {

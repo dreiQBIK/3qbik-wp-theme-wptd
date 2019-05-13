@@ -22,19 +22,19 @@
    }
 
    &-md {
-      padding-bottom: map-get($spacers, 300);
+      padding-bottom: map-get($spacers, 200);
 
       @include media-breakpoint-up(sm) {
-         padding-bottom: map-get($spacers, 350);
+         padding-bottom: map-get($spacers, 250);
       }
       @include media-breakpoint-up(md) {
-         padding-bottom: map-get($spacers, 400);
+         padding-bottom: map-get($spacers, 300);
       }
       @include media-breakpoint-up(lg) {
-         padding-bottom: map-get($spacers, 600);
+         padding-bottom: map-get($spacers, 350);
       }
       @include media-breakpoint-up(xl) {
-         padding-bottom: map-get($spacers, 700);
+         padding-bottom: map-get($spacers, 400);
       }
    }
 

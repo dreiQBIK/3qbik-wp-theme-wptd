@@ -1,10 +1,10 @@
 <aside class="l_sidebar">
    <div class="container sp-md">
-      <h2>Sidebar</h2>
+      <h2>{{ __( 'Sidebar', 'wptd' ) }}</h2>
       <div class="row">
          <div class="col col-12 col-md-6 mb-100 mb-md-0">
             <section class="l_sidebar__section">
-               <h3>Kategorien</h3>
+               <h3>{{ __( 'Kategorien', 'wptd' ) }}</h3>
                <ul class="l_sidebar__section-list">
                {% for cat in categories %}
                   <li>
@@ -16,7 +16,7 @@
          </div>
          <div class="col col-12 col-md-6">
             <section class="l_sidebar__section">
-               <h3>Tags</h3>
+               <h3>{{ __( 'Tags', 'wptd' ) }}</h3>
                <ul class="l_sidebar__section-list">
                {% for tag in tags %}
                   <li>
