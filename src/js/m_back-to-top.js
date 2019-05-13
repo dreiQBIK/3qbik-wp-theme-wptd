@@ -1,5 +1,15 @@
 const mBackToTop = (function($) {
+
+   /******************************************************************
+       VARS
+   ******************************************************************/
+
    const $window = $(window);
+
+
+   /******************************************************************
+        EVENTS
+   ******************************************************************/
 
    $window.on("scroll", function() {
       global.debounce(toggleBackToTop(), 2000);
@@ -9,15 +19,18 @@ const mBackToTop = (function($) {
       scrollToTop();
    });
 
+
+   /******************************************************************
+        FUNCTIONS
+    ******************************************************************/
+
    function toggleBackToTop() {
       const $button = $(".m_back-to-top");
       const scrollDistance = $(document).scrollTop();
       const windowHeight = $window.height();
       if (scrollDistance >= windowHeight) {
-         console.log('remove');
          $button.removeClass("is-hidden");
       } else {
-         console.log('add');
          $button.addClass("is-hidden");
       }
    }
@@ -30,4 +43,5 @@ const mBackToTop = (function($) {
          "swing"
       );
    }
+
 })(jQuery);

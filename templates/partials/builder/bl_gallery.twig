@@ -1,0 +1,98 @@
+{# USES
+   space_bottom => type: string
+   gallery => type: object
+#}
+<div class="container {{ space_bottom }}">
+   <div class="bl_gallery{% if not show_thumbs %} sp-sm{% endif %}">
+
+      <div class="bl_gallery__slider">
+         {% for gallery_item in gallery %}
+            <div class="bl_gallery__slide">
+               <figure class="bl_gallery__figure">
+                  <img
+                        class="bl_gallery__img lazyload img-cover"
+                        alt="{{ gallery_item.alt }}"
+                        src="{{ theme.link }}/assets/img/placeholder-wide-large.png"
+                        data-src="{{ gallery_item.sizes.medium_large }}"
+                        data-srcset="
+                           {% if gallery_item.sizes.thumbnail|length != gallery_item.url|length %}
+                              {{ gallery_item.sizes.thumbnail }} 150w,
+                           {% endif %}
+                           {% if gallery_item.sizes.medium|length != gallery_item.url|length %}
+                              {{ gallery_item.sizes.medium }} 300w,
+                           {% endif %}
+                           {% if gallery_item.sizes.medium_large|length != gallery_item.url|length %}
+                              {{ gallery_item.sizes.medium_large }} 768w,
+                           {% endif %}
+                           {% if gallery_item.sizes.large|length != gallery_item.url|length %}
+                              {{ gallery_item.sizes.large }} 1024w,
+                           {% endif %}
+                           {% if gallery_item.sizes.wptd_thumb_1280|length != gallery_item.url|length %}
+                              {{ gallery_item.sizes.wptd_thumb_1280 }} 1200w,
+                           {% endif %}
+                           {% if gallery_item.sizes.wptd_thumb_1600|length != gallery_item.url|length %}
+                              {{ gallery_item.sizes.wptd_thumb_1600 }} 1600w,
+                           {% endif %}
+                           {% if gallery_item.sizes.wptd_thumb_1920|length != gallery_item.url|length %}
+                              {{ gallery_item.sizes.wptd_thumb_1920 }} 1920w,
+                           {% endif %}"
+                        data-sizes="auto"
+                        data-pos-x="2"
+                        data-pos-y="3"
+                     />
+                     <i class="bl_gallery__zoom"><svg class="icon"><use href="#icon-zoom-in" xlink:href="#icon-zoom-in"/></svg></i>
+               </figure>
+            </div>
+         {% endfor %}
+      </div>
+
+      {% if show_thumbs %}
+
+         <div class="bl_gallery__nav">
+            {% for gallery_item in gallery %}
+               <div class="bl_gallery__nav-slide">
+                  <figure class="bl_gallery__nav-figure">
+                     <img
+                           class="bl_gallery__nav-img lazyload img-cover"
+                           alt="{{ gallery_item.alt }}"
+                           src="{{ theme.link }}/assets/img/placeholder-wide-large.png"
+                           data-src="{{ gallery_item.sizes.medium_large }}"
+                           data-srcset="
+                              {% if gallery_item.sizes.thumbnail|length != gallery_item.url|length %}
+                                 {{ gallery_item.sizes.thumbnail }} 150w,
+                              {% endif %}
+                              {% if gallery_item.sizes.medium|length != gallery_item.url|length %}
+                                 {{ gallery_item.sizes.medium }} 300w,
+                              {% endif %}
+                              {% if gallery_item.sizes.medium_large|length != gallery_item.url|length %}
+                                 {{ gallery_item.sizes.medium_large }} 768w,
+                              {% endif %}
+                              {% if gallery_item.sizes.large|length != gallery_item.url|length %}
+                                 {{ gallery_item.sizes.large }} 1024w,
+                              {% endif %}
+                              {% if gallery_item.sizes.wptd_thumb_1280|length != gallery_item.url|length %}
+                                 {{ gallery_item.sizes.wptd_thumb_1280 }} 1200w,
+                              {% endif %}
+                              {% if gallery_item.sizes.wptd_thumb_1600|length != gallery_item.url|length %}
+                                 {{ gallery_item.sizes.wptd_thumb_1600 }} 1600w,
+                              {% endif %}
+                              {% if gallery_item.sizes.wptd_thumb_1920|length != gallery_item.url|length %}
+                                 {{ gallery_item.sizes.wptd_thumb_1920 }} 1920w,
+                              {% endif %}"
+                           data-sizes="auto"
+                           data-pos-x="2"
+                           data-pos-y="2"
+                        />
+                  </figure>
+               </div>
+            {% endfor %}
+         </div>
+
+      {% endif %}
+
+      {% if show_gallery_caption and gallery_caption %}
+         <footer class="bl_gallery__caption">{{ gallery_caption }}</footer>
+      {% endif %}
+
+   </div>
+</div>

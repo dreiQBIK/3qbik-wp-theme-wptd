@@ -1,4 +1,4 @@
-const example_separate = (function($) {
+const exampleSeparate = (function($) {
 
 
    /******************************************************************

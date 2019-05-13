@@ -42,6 +42,7 @@ STYLESHEET: STYLE
 @import "vendor/nucleo/icons";
 @import "vendor/nucleo/nucleo";
 @import "vendor/nucleo/nucleo-svg";
+@import "vendor/slick/slick";
 
 // Layouts
 @import "layouts/l_page";
@@ -75,6 +76,7 @@ STYLESHEET: STYLE
 @import "builder/bl_image";
 @import "builder/bl_video";
 @import "builder/bl_quote";
+@import "builder/bl_gallery";
 
 // Navigation
 @import "navigation/n_site";

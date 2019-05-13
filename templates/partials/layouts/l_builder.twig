@@ -45,4 +45,15 @@
       }%}
    {% endif %}
 
+   {# Module: GALLERY #}
+   {% if module.acf_fc_layout == 'bl_gallery' %}
+      {% include "/partials/builder/bl_gallery.twig" with {
+         space_bottom: module.bl_gallery.margin,
+         show_thumbs: module.bl_gallery.truefalse_thumbs,
+         show_gallery_caption: module.bl_gallery.truefalse_alt,
+         gallery_caption: module.bl_gallery.text,
+         gallery: module.bl_gallery.gallery,
+      }%}
+   {% endif %}
+
 {% endfor %}

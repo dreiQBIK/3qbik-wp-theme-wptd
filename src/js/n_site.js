@@ -24,6 +24,7 @@ const nSite = (function($) {
    // toggle nav on click on burger
    $siteNavigationBurger.on("click", toggleNav);
 
+
    /******************************************************************
         FUNCTIONS
     ******************************************************************/

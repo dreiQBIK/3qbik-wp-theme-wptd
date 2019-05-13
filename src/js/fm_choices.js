@@ -1,4 +1,5 @@
 const choicesJS = (function($) {
+
    // Select via choices
    $("select").each(function() {
       new Choices(this, {
@@ -6,4 +7,5 @@ const choicesJS = (function($) {
          itemSelectText: "",
       });
    });
+
 })(jQuery);
