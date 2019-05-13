@@ -14,29 +14,32 @@
 
             <figure class="bl_image__figure{% if show_lightbox %} with-lightbox{% endif %}">
                <img
-                     class="bl_image__img lazyload"
-                     alt="{{ image.alt }}"
-                     src="{{ theme.link }}/assets/img/placeholder-wide-large.png"
-                     data-src="{{ image.sizes.medium_large }}"
-                     data-srcset="
-                        {% if image.sizes.thumbnail|length != image.url|length %}
-                           {{ image.sizes.thumbnail }} 150w,
-                        {% endif %}
-                        {% if image.sizes.medium|length != image.url|length %}
-                           {{ image.sizes.medium }} 300w,
-                        {% endif %}
-                        {% if image.sizes.medium_large|length != image.url|length %}
-                           {{ image.sizes.medium_large }} 768w,
-                        {% endif %}
-                        {% if image.sizes.large|length != image.url|length %}
-                           {{ image.sizes.large }} 1024w,
-                        {% endif %}
-                        {% if image.sizes.wptd_thumb_l|length != image.url|length %}
-                           {{ image.sizes.wptd_thumb_l }} 1600w,
-                        {% endif %}
-                        {% if image.sizes.wptd_thumb_xl|length != image.url|length %}
-                           {{ image.sizes.wptd_thumb_xl }} 1920w,
-                        {% endif %}"
+                  class="bl_image__img lazyload"
+                  alt="{{ image.alt }}"
+                  src="{{ theme.link }}/assets/img/placeholder-wide-large.png"
+                  data-src="{{ image.sizes.medium_large }}"
+                  data-srcset="
+                     {% if image.sizes.thumbnail|length != image.url|length %}
+                        {{ image.sizes.thumbnail }} 150w,
+                     {% endif %}
+                     {% if image.sizes.medium|length != image.url|length %}
+                        {{ image.sizes.medium }} 300w,
+                     {% endif %}
+                     {% if image.sizes.medium_large|length != image.url|length %}
+                        {{ image.sizes.medium_large }} 768w,
+                     {% endif %}
+                     {% if image.sizes.large|length != image.url|length %}
+                        {{ image.sizes.large }} 1024w,
+                     {% endif %}
+                     {% if image.sizes.wptd_thumb_1200|length != image.url|length %}
+                        {{ image.sizes.wptd_thumb_1200 }} 1200w,
+                     {% endif %}
+                     {% if image.sizes.wptd_thumb_1600|length != image.url|length %}
+                        {{ image.sizes.wptd_thumb_1600 }} 1600w,
+                     {% endif %}
+                     {% if image.sizes.wptd_thumb_1920|length != image.url|length %}
+                        {{ image.sizes.wptd_thumb_1920 }} 1920w,
+                     {% endif %}"
                      data-sizes="auto"
                   />
                   {% if show_lightbox %}
@@ -46,7 +49,6 @@
             {% if show_caption %}
                <figcaption class="bl_image__caption">{{ image.caption }}</figcaption>
             {% endif %}
-
          </div>
       </div>
    </div>
