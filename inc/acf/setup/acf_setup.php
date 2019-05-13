@@ -27,6 +27,9 @@ add_action(
          function ($field) {
             if ($field instanceof FieldsBuilder) {
                acf_add_local_field_group($field->build());
+            } elseif (is_array($field)) {
+               // enables us to use a standard acf config array to define our field group
+               acf_add_local_field_group($field);
             }
          },
          $acf_files_adjusted
@@ -48,10 +51,12 @@ add_action(
          function ($field) {
             if ($field instanceof FieldsBuilder) {
                acf_add_local_field_group($field->build());
+            } elseif (is_array($field)) {
+               // enables us to use a standard acf config array to define our field group
+               acf_add_local_field_group($field);
             }
          },
          $acf_files_adjusted_2
       );
    }
 );
-
