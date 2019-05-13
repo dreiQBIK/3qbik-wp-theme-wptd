@@ -400,7 +400,6 @@ template {
   font-display: auto;
   src: url("assets/fonts/futura/2FACC7_0_0.eot");
   src: url("assets/fonts/futura/2FACC7_0_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/futura/2FACC7_0_0.woff2") format("woff2"), url("assets/fonts/futura/2FACC7_0_0.woff") format("woff"), url("assets/fonts/futura/2FACC7_0_0.ttf") format("truetype");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -410,7 +409,6 @@ template {
   font-display: auto;
   src: url("assets/fonts/officina/officina-book/37F07C_1_0.eot");
   src: url("assets/fonts/officina/officina-book/37F07C_1_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/officina/officina-book/37F07C_1_0.woff2") format("woff2"), url("assets/fonts/officina/officina-book/37F07C_1_0.woff") format("woff"), url("assets/fonts/officina/officina-book/37F07C_1_0.ttf") format("truetype");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -420,7 +418,6 @@ template {
   font-display: auto;
   src: url("assets/fonts/officina/officina-book-italic/37F07C_4_0.eot");
   src: url("assets/fonts/officina/officina-book-italic/37F07C_4_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/officina/officina-book-italic/37F07C_4_0.woff2") format("woff2"), url("assets/fonts/officina/officina-book-italic/37F07C_4_0.woff") format("woff"), url("assets/fonts/officina/officina-book-italic/37F07C_4_0.ttf") format("truetype");
-  font-weight: 400;
   font-style: italic;
 }
 
@@ -430,7 +427,6 @@ template {
   font-display: auto;
   src: url("assets/fonts/officina/officina-bold/37F07C_3_0.eot");
   src: url("assets/fonts/officina/officina-bold/37F07C_3_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/officina/officina-bold/37F07C_3_0.woff2") format("woff2"), url("assets/fonts/officina/officina-bold/37F07C_3_0.woff") format("woff"), url("assets/fonts/officina/officina-bold/37F07C_3_0.ttf") format("truetype");
-  font-weight: 700;
   font-style: normal;
 }
 
@@ -440,7 +436,6 @@ template {
   font-display: auto;
   src: url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.eot");
   src: url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.eot?#iefix") format("embedded-opentype"), url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.woff2") format("woff2"), url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.woff") format("woff"), url("assets/fonts/officina/officina-bold-italic/37F07C_6_0.ttf") format("truetype");
-  font-weight: 700;
   font-style: italic;
 }
 
@@ -482,7 +477,7 @@ template {
     );
 
     USAGE SHORT:
-    @include fontstyle("fs1-main");
+    @include fontstyle("fs1");
 
 ******************************************************************/
 .container {
@@ -1406,6 +1401,10 @@ template {
 
 .bd-radius-5 {
   border-radius: 5px !important;
+}
+
+.bd-radius-round {
+  border-radius: 50% !important;
 }
 
 .bd-c-black {
@@ -7989,6 +7988,138 @@ Generated using nucleoapp.com
   content: "\ea14";
 }
 
+/* Generated using nucleoapp.com */
+/* --------------------------------
+
+Icon colors
+
+-------------------------------- */
+.icon {
+  display: inline-block;
+  /* icon primary color */
+  color: #2c3e50;
+  height: 1em;
+  width: 1em;
+}
+
+.icon use {
+  /* icon secondary color - fill */
+  fill: inherit;
+}
+
+.icon.icon--outline use {
+  /* icon secondary color - stroke */
+  stroke: inherit;
+}
+
+/* --------------------------------
+
+Change icon size
+
+-------------------------------- */
+.icon--xs {
+  height: 0.5em;
+  width: 0.5em;
+}
+
+.icon--sm {
+  height: 0.8em;
+  width: 0.8em;
+}
+
+.icon--lg {
+  height: 1.6em;
+  width: 1.6em;
+}
+
+.icon--xl {
+  height: 2em;
+  width: 2em;
+}
+
+/* -------------------------------- 
+
+Align icon and text 
+
+-------------------------------- */
+.icon-text-aligner {
+  /* add this class to parent element that contains icon + text */
+  display: flex;
+  align-items: center;
+}
+
+.icon-text-aligner .icon {
+  color: inherit;
+  margin-right: 0.4em;
+  flex-shrink: 0;
+}
+
+.icon-text-aligner .icon.icon--align-right {
+  margin-right: 0;
+  margin-left: 0.4em;
+}
+
+.icon-text-aligner .icon use {
+  color: inherit;
+  fill: currentColor;
+}
+
+.icon-text-aligner .icon.icon--outline use {
+  stroke: currentColor;
+}
+
+/* -------------------------------- 
+
+Icon reset values - used to enable color customizations
+
+-------------------------------- */
+.icon {
+  fill: currentColor;
+  stroke: none;
+}
+
+.icon.icon--outline {
+  stroke: currentColor;
+}
+
+.icon use {
+  stroke: none;
+}
+
+/* -------------------------------- 
+
+Stroke effects - Nucleo outline icons
+
+- 16px icons -> up to 1px stroke (16px outline icons do not support stroke changes)
+- 24px, 32px icons -> up to 2px stroke
+- 48px, 64px icons -> up to 4px stroke
+
+-------------------------------- */
+.icon--outline.icon--stroke-1 {
+  stroke-width: 1px;
+}
+
+.icon--outline.icon--stroke-2 {
+  stroke-width: 2px;
+}
+
+.icon--outline.icon--stroke-3 {
+  stroke-width: 3px;
+}
+
+.icon--outline.icon--stroke-4 {
+  stroke-width: 4px;
+}
+
+.icon--outline.icon--stroke-1 use,
+.icon--outline.icon--stroke-3 use {
+  -webkit-transform: translateX(0.5px) translateY(0.5px);
+  -moz-transform: translateX(0.5px) translateY(0.5px);
+  -ms-transform: translateX(0.5px) translateY(0.5px);
+  -o-transform: translateX(0.5px) translateY(0.5px);
+  transform: translateX(0.5px) translateY(0.5px);
+}
+
 .l_comments {
   margin: 2rem 0;
 }
@@ -8108,7 +8239,7 @@ Generated using nucleoapp.com
 }
 
 .l_comment-form__input-wrapper {
-  transition: opacity 0.2s ease-out;
+  transition: opacity 0.15s ease-out;
 }
 
 .l_comment-form__input-wrapper.inactive {
@@ -8221,6 +8352,7 @@ body {
   overflow-x: hidden;
   font-size: 1.1rem;
   line-height: 1.5em;
+  font-family: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
 }
 
 @media (min-width: 481px) {
@@ -8302,8 +8434,12 @@ address {
   font-style: normal;
 }
 
-*:focus {
-  color: #ffffff;
+input:focus,
+select:focus,
+.choices:focus,
+textarea:focus,
+a:focus,
+button:focus {
   border-color: #96a9bb;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(150, 169, 187, 0.5);
@@ -8345,6 +8481,7 @@ h4,
 h5,
 h6,
 p {
+  font-weight: normal;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -8685,13 +8822,13 @@ a.btn--block {
 .btn--disabled,
 a.btn--disabled {
   cursor: auto;
-  background: #c8c8c8;
+  background-color: #c8c8c8;
   color: #a2a2a2;
 }
 
 .btn1-main,
 a.btn1-main {
-  background: #2c3e50;
+  background-color: #2c3e50;
   color: #ffffff;
 }
 
@@ -9199,6 +9336,62 @@ ul.list li:before {
   height: 100px;
 }
 
+.m_back-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 0.6rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  outline: none;
+  z-index: 100;
+  background-color: #879cb1;
+  transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out, transform 0.15s ease-in-out, background 0.15s ease-in-out;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+@media (min-width: 481px) {
+  .m_back-to-top {
+    bottom: 1.5rem;
+    right: 1rem;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (min-width: 961px) {
+  .m_back-to-top {
+    right: 2rem;
+  }
+}
+
+@media (min-width: 1361px) {
+  .m_back-to-top {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (min-width: 961px) {
+  .m_back-to-top:hover {
+    background-color: #ec764d;
+  }
+}
+
+.m_back-to-top.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+}
+
+.m_back-to-top .icon {
+  color: #ffffff;
+}
+
 .m_card {
   background-color: #879cb1;
 }
@@ -9440,7 +9633,7 @@ ul.list li:before {
   cursor: pointer;
   right: 0;
   top: 0.7em;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 @media (min-width: 961px) {
@@ -9654,6 +9847,10 @@ ul.list li:before {
   border-radius: 3px;
 }
 
+.o_lightbox__icon {
+  color: #ffffff;
+}
+
 .o_lightbox__close {
   cursor: pointer;
   font-size: 1.5rem;
@@ -9779,7 +9976,7 @@ input[type="password"],
 input[type="number"],
 input[type="email"],
 input[type="tel"] {
-  transition: 0.2s ease-in-out;
+  transition: 0.15s ease-in-out;
   background-color: #ffffff;
   display: block;
   width: 100%;
@@ -9858,6 +10055,13 @@ textarea:hover {
   padding: 0;
 }
 
+.checkbox-wrapper input:focus + span:before {
+  border-color: #96a9bb;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(150, 169, 187, 0.5);
+  border-radius: 3px;
+}
+
 .checkbox-wrapper input:checked + span {
   color: #ec764d;
 }
@@ -9925,6 +10129,13 @@ textarea:hover {
   height: 0;
   margin: 0;
   padding: 0;
+}
+
+.radio-wrapper input:focus + span:before {
+  border-color: #96a9bb;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(150, 169, 187, 0.5);
+  border-radius: 50%;
 }
 
 .radio-wrapper input:checked + span {
@@ -9995,7 +10206,7 @@ textarea:hover {
 
 .wpcf7-form__input-wrapper input,
 .wpcf7-form__input-wrapper textarea {
-  transition: 0.2s ease-in-out;
+  transition: 0.15s ease-in-out;
   display: block;
   background-color: #ffffff;
   width: 100%;
@@ -10356,7 +10567,7 @@ textarea.parsley-error {
   line-height: 0.9em;
   opacity: 0;
   color: #ffffff;
-  transition: all .3s ease-in;
+  transition: all 0.15s ease-in;
 }
 
 .parsley-errors-list.filled {

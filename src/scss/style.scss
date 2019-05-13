@@ -41,6 +41,7 @@ STYLESHEET: STYLE
 // Vendor
 @import "vendor/nucleo/icons";
 @import "vendor/nucleo/nucleo";
+@import "vendor/nucleo/nucleo-svg";
 
 // Layouts
 @import "layouts/l_page";
@@ -65,6 +66,7 @@ STYLESHEET: STYLE
 @import "styleguide/sg_base";
 
 // Modules
+@import "modules/m_back-to-top";
 @import "modules/m_card";
 @import "modules/m_post-teaser";
 
