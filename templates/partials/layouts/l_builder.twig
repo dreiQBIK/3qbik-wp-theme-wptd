@@ -26,4 +26,14 @@
       }%}
    {% endif %}
 
+   {# Module: VIDEO #}
+   {% if module.acf_fc_layout == 'bl_video' %}
+      {% include "/partials/builder/bl_video.twig" with {
+         space_bottom: module.bl_video.margin,
+         show_video_caption: module.bl_video.truefalse_alt,
+         video_caption: module.bl_video.text,
+         video: module.bl_video.video,
+      }%}
+   {% endif %}
+
 {% endfor %}

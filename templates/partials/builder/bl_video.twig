@@ -1,0 +1,14 @@
+{# USES
+   space_bottom => type: string
+   video => type: string
+   show_video_caption => type: boolean
+   video_caption: => type: string
+#}
+<div class="container {{ space_bottom }}">
+   <figure class="bl_video">
+      {{ video|wptd_extra_video_params }}
+      {% if show_video_caption and video_caption %}
+         <figcaption class="bl_video__caption">{{ video_caption }}</figcaption>
+      {% endif %}
+   </figure>
+</div>
