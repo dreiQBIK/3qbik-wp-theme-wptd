@@ -17,6 +17,7 @@ STYLESHEET: STYLE
 @import "settings/mixins/mix_grid-framework";
 @import "settings/mixins/mix_grid";
 @import "settings/mixins/mix_fonts";
+@import "settings/mixins/mix_float";
 @import "settings/mixins/mix_visibility";
 @import "settings/mixins/mix_clearfix";
 @import "settings/mixins/mix_border-classes";
@@ -27,6 +28,7 @@ STYLESHEET: STYLE
 @import "settings/utilities/ut_border";
 @import "settings/utilities/ut_colors";
 @import "settings/utilities/ut_fonts";
+@import "settings/utilities/ut_float";
 @import "settings/utilities/ut_display";
 @import "settings/utilities/ut_flex";
 @import "settings/utilities/ut_spacing";
