@@ -3,6 +3,13 @@
    video => type: string
    show_video_caption => type: boolean
    video_caption: => type: string
+   ---
+   {% include "/partials/builder/bl_video.twig" with {
+      space_bottom: 'sp-md',
+      video: '',
+      show_video_caption: false,
+      video_caption: '',
+   } %}
 #}
 <div class="container {{ space_bottom }}">
    <figure class="bl_video">

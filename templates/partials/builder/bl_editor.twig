@@ -1,6 +1,11 @@
 {# USES
    space_bottom => type: string
    editor => type: string
+   ---
+   {% include "/partials/builder/bl_editor.twig" with {
+      space_bottom: 'sp-md',
+      editor: '',
+   } %}
 #}
 
 <div class="container {{ space_bottom }}">

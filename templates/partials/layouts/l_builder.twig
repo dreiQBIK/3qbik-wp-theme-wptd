@@ -6,7 +6,7 @@
       {% include "/partials/builder/bl_heading.twig" with {
          space_bottom: module.bl_heading.margin,
          heading: module.bl_heading.text,
-      }%}
+      } %}
    {% endif %}
 
    {# Module: EDITOR #}
@@ -14,7 +14,7 @@
       {% include "/partials/builder/bl_editor.twig" with {
          space_bottom: module.bl_editor.margin,
          editor: module.bl_editor.wysiwyg,
-      }%}
+      } %}
    {% endif %}
 
    {# Module: IMAGE #}
@@ -23,7 +23,7 @@
          space_bottom: module.bl_image.margin,
          image: module.bl_image.image,
          image_settings: module.bl_image.image_settings,
-      }%}
+      } %}
    {% endif %}
 
    {# Module: VIDEO #}
@@ -33,7 +33,7 @@
          show_video_caption: module.bl_video.truefalse_alt,
          video_caption: module.bl_video.text,
          video: module.bl_video.video,
-      }%}
+      } %}
    {% endif %}
 
    {# Module: QUOTE #}
@@ -42,7 +42,7 @@
          space_bottom: module.bl_quote.margin,
          quote: module.bl_quote.quote,
          author: module.bl_quote.author,
-      }%}
+      } %}
    {% endif %}
 
    {# Module: GALLERY #}
@@ -53,7 +53,7 @@
          show_gallery_caption: module.bl_gallery.truefalse_alt,
          gallery_caption: module.bl_gallery.text,
          gallery: module.bl_gallery.gallery,
-      }%}
+      } %}
    {% endif %}
 
 {% endfor %}
