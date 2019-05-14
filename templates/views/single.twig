@@ -26,9 +26,12 @@
          </section>
       {% endif %}
 
-      <section class="container">
-         {% include "/partials/modules/m_related-posts.twig" %}
-      </section>
+      {% if post.meta('post_related_posts') %}
+         <section class="container">
+            {% include "/partials/modules/m_related-posts.twig" %}
+         </section>
+      {% endif %}
+
    </article>
 
 {% endblock %}
