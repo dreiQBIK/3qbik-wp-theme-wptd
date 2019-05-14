@@ -7,33 +7,47 @@
  * NOTE: Do not write any functions in this file - only file includes here.
  *********************************************************************************************** */
 
+// Add all file paths to an array for inclusion
+$includes = [];
+
 /* Include ACF builder */
-require_once(realpath(__DIR__) . '/inc/vendor/acf-builder-master/autoload.php');
+$includes[] = __DIR__ . '/inc/vendor/acf-builder-master/autoload.php';
 
 /* WordPress Basic Setup */
-require_once get_template_directory() . '/inc/basic/b_setup.php';
-require_once get_template_directory() . '/inc/basic/b_extras.php';
-require_once get_template_directory() . '/inc/basic/b_template-tags.php';
+$includes[] = __DIR__ . '/inc/basic/b_setup.php';
+$includes[] = __DIR__ . '/inc/basic/b_extras.php';
+$includes[] = __DIR__ . '/inc/basic/b_template-tags.php';
 
 /* ACF Builder Composition */
-require_once get_template_directory() . '/inc/acf/setup/acf_setup.php';
-require_once get_template_directory() . '/inc/acf/setup/acf_helpers.php';
+$includes[] = __DIR__ . '/inc/acf/setup/acf_setup.php';
+$includes[] = __DIR__ . '/inc/acf/setup/acf_helpers.php';
+
+// TODO: Put Code in a Custom Plugin that is responsible for data structure and other non-theme-related stuff
+
+/* Register Custom Post Types & Taxonomies */
+$includes[] = __DIR__ . '/inc/taxonomies/taxonomies.php';
+$includes[] = __DIR__ . '/inc/post-types/post-types.php';
 
 /* Include Boilerplate Settings */
-require_once get_template_directory() . '/inc/wptd_enqueue-scripts.php';
-require_once get_template_directory() . '/inc/wptd_timber.php';
-require_once get_template_directory() . '/inc/wptd_setup.php';
-require_once get_template_directory() . '/inc/wptd_menus.php';
-require_once get_template_directory() . '/inc/wptd_options-page.php';
-require_once get_template_directory() . '/inc/wptd_tinymce.php';
+$includes[] = __DIR__ . '/inc/wptd_enqueue-scripts.php';
+$includes[] = __DIR__ . '/inc/wptd_timber.php';
+$includes[] = __DIR__ . '/inc/wptd_setup.php';
+$includes[] = __DIR__ . '/inc/wptd_menus.php';
+$includes[] = __DIR__ . '/inc/wptd_options-page.php';
+$includes[] = __DIR__ . '/inc/wptd_tinymce.php';
 
 /* User Roles */
-require_once get_template_directory() . '/inc/user-roles/ur_manage-roles.php';
-require_once get_template_directory() . '/inc/user-roles/ur_capabilities.php';
+$includes[] = __DIR__ . '/inc/user-roles/ur_manage-roles.php';
+$includes[] = __DIR__ . '/inc/user-roles/ur_capabilities.php';
 
 /* White Label */
-require_once get_template_directory() . '/inc/white-label/wl_nav-admin.php';
-require_once get_template_directory() . '/inc/white-label/wl_nav-main.php';
-require_once get_template_directory() . '/inc/white-label/wl_basics.php';
-require_once get_template_directory() . '/inc/white-label/wl_posts.php';
-require_once get_template_directory() . '/inc/white-label/wl_profile.php';
+$includes[] = __DIR__ . '/inc/white-label/wl_nav-admin.php';
+$includes[] = __DIR__ . '/inc/white-label/wl_nav-main.php';
+$includes[] = __DIR__ . '/inc/white-label/wl_basics.php';
+$includes[] = __DIR__ . '/inc/white-label/wl_posts.php';
+$includes[] = __DIR__ . '/inc/white-label/wl_profile.php';
+
+/* Require all the files */
+foreach ( $includes as $f ) {
+    require_once $f;
+}
