@@ -13,10 +13,17 @@ $includes = [];
 /* Include ACF builder */
 $includes[] = __DIR__ . '/inc/vendor/acf-builder-master/autoload.php';
 
-/* WordPress Basic Setup */
-$includes[] = __DIR__ . '/inc/basic/b_setup.php';
-$includes[] = __DIR__ . '/inc/basic/b_extras.php';
-$includes[] = __DIR__ . '/inc/basic/b_template-tags.php';
+/* Clean Up WordPress Defaults */
+$includes[] = __DIR__ . '/inc/cleanup.php';
+
+/* Add Theme Support */
+$includes[] = __DIR__ . '/inc/theme-support.php';
+
+/* Handle Everything Related To Images */
+$includes[] = __DIR__ . '/inc/images.php';
+
+/* Custom Template Tags */
+$includes[] = __DIR__ . '/inc/template-tags.php';
 
 /* ACF Builder Composition */
 $includes[] = __DIR__ . '/inc/acf/setup/acf_setup.php';
@@ -29,12 +36,11 @@ $includes[] = __DIR__ . '/inc/taxonomies/taxonomies.php';
 $includes[] = __DIR__ . '/inc/post-types/post-types.php';
 
 /* Include Boilerplate Settings */
-$includes[] = __DIR__ . '/inc/wptd_enqueue-scripts.php';
-$includes[] = __DIR__ . '/inc/wptd_timber.php';
-$includes[] = __DIR__ . '/inc/wptd_setup.php';
-$includes[] = __DIR__ . '/inc/wptd_menus.php';
-$includes[] = __DIR__ . '/inc/wptd_options-page.php';
-$includes[] = __DIR__ . '/inc/wptd_tinymce.php';
+$includes[] = __DIR__ . '/inc/enqueue-scripts.php';
+$includes[] = __DIR__ . '/inc/timber.php';
+$includes[] = __DIR__ . '/inc/menus.php';
+$includes[] = __DIR__ . '/inc/options-page.php';
+$includes[] = __DIR__ . '/inc/tinymce.php';
 
 /* User Roles */
 $includes[] = __DIR__ . '/inc/user-roles/ur_manage-roles.php';
