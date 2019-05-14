@@ -1,6 +1,17 @@
 {# USES
-   space_bottom => type: string
+   space_bottom => type: string,
+   show_thumbs => type: boolean,
+   show_gallery_caption => type: boolean,
+   gallery_caption => type: string,
    gallery => type: object
+   ---
+   {% include "/partials/builder/bl_gallery.twig" with {
+      space_bottom: 'sp-md',
+      show_thumbs: false,
+      show_gallery_caption: false,
+      gallery_caption: '',
+      gallery: {},
+   } %}
 #}
 <div class="container {{ space_bottom }}">
    <div class="bl_gallery{% if not show_thumbs %} sp-sm{% endif %}">

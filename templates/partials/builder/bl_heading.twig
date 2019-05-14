@@ -1,6 +1,11 @@
 {# USES
    space_bottom => type: string
    heading => type: string
+   ---
+   {% include "/partials/builder/bl_heading.twig" with {
+      space_bottom: '',
+      heading: '',
+   } %}
 #}
 <div class="container {{ space_bottom }}">
    <div class="bl_heading">

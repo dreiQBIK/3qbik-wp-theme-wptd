@@ -2,6 +2,12 @@
    space_bottom => type: string
    image => type: object
    image_settings => type: object
+   ---
+   {% include "/partials/builder/bl_image.twig" with {
+      space_bottom: 'sp-md',
+      image: {},
+      image_settings: {},
+   } %}
 #}
 
 {% set show_caption = image_settings.truefalse_caption %}

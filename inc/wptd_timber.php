@@ -25,25 +25,15 @@ Timber::$dirname = 'templates';
 class StarterSite extends TimberSite {
 
     function __construct() {
-        add_theme_support( 'post-formats' );
         add_theme_support( 'post-thumbnails' );
         add_theme_support( 'menus' );
         add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
         add_filter( 'timber_context', array( $this, 'add_to_global_context' ) );
         add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
-        add_action( 'init', array( $this, 'register_post_types' ) );
-        add_action( 'init', array( $this, 'register_taxonomies' ) );
         parent::__construct();
     }
 
-    function register_post_types() {
-        //this is where you can register custom post types
-    }
-
-    function register_taxonomies() {
-        //this is where you can register custom taxonomies
-    }
-
+    //  TODO: move this to a better place
     // add extra params to iframe src
     function wptd_extra_video_params( $iframe ) {
 
@@ -65,7 +55,6 @@ class StarterSite extends TimberSite {
         $attributes = 'frameborder="0"';
         $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
 
-
         // always use youtube-nocookie.com
         if ( preg_match('#https?://(www\.)?youtu#i', $src) ) {
             $iframe = preg_replace(
@@ -80,6 +69,7 @@ class StarterSite extends TimberSite {
     }
 
     function add_to_global_context( $context ) {
+        // TODO: Was hiervon ist wirklich nötig?
         $context['menu'] = new \Timber\Menu( 'primary' );
         $context['menu_footer'] = new \Timber\Menu( 'footer' );
         $context['site'] = $this;
@@ -87,8 +77,9 @@ class StarterSite extends TimberSite {
     }
 
     function add_to_twig( $twig ) {
-        // this is where you can add your own functions to twig
+        // to enable usage of template_from_string()
         $twig->addExtension( new Twig_Extension_StringLoader() );
+        // custom twig filters
         $twig->addFilter( new Twig_SimpleFilter('wptd_extra_video_params', array($this, 'wptd_extra_video_params')) );
         return $twig;
     }
