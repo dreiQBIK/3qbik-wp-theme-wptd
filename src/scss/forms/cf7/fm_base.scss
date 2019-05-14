@@ -27,7 +27,7 @@
          background-color: $c-white;
          width: 100%;
          height: 36px;
-         padding: 0 1em;
+         padding: 0 1rem;
          outline: none;
          border: 0;
          border-top: 2px solid $c1-gray;
@@ -68,7 +68,7 @@
 
       textarea {
          min-height: 120px;
-         padding-top: 1em;
+         padding-top: 1rem;
          color: $c1-main;
       }
 
@@ -126,10 +126,10 @@
       .wpcf7-list-item {
          position: relative;
          display: inline-block;
-         margin-left: 1em;
+         margin-left: 1rem;
 
          @include media-breakpoint-up(md) {
-            margin-left: 3em;
+            margin-left: 3rem;
          }
 
          &.first {

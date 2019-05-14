@@ -8648,6 +8648,10 @@ video {
   vertical-align: middle;
 }
 
+main {
+  display: block;
+}
+
 fieldset {
   border: 0;
   margin: 0;
@@ -10341,29 +10345,32 @@ input[type="text"],
 input[type="password"],
 input[type="number"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+textarea {
   transition: 0.15s ease-in-out;
   background-color: #ffffff;
   display: block;
   width: 100%;
   height: 42px;
-  padding: 0 1em;
+  padding: 0 1rem;
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="number"]:focus,
 input[type="email"]:focus,
-input[type="tel"]:focus {
-  border-color: #ec764d;
+input[type="tel"]:focus,
+textarea:focus {
+  border-color: #ec764d !important;
 }
 
 input[type="text"]:hover,
 input[type="password"]:hover,
 input[type="number"]:hover,
 input[type="email"]:hover,
-input[type="tel"]:hover {
-  border-color: #ec764d;
+input[type="tel"]:hover,
+textarea:hover {
+  border-color: #ec764d !important;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -10381,7 +10388,7 @@ textarea {
   width: 100%;
   height: 200px;
   min-height: 200px;
-  padding: 1em;
+  padding: 1rem;
 }
 
 textarea:focus {
@@ -10577,7 +10584,7 @@ textarea:hover {
   background-color: #ffffff;
   width: 100%;
   height: 36px;
-  padding: 0 1em;
+  padding: 0 1rem;
   outline: none;
   border: 0;
   border-top: 2px solid #c8c8c8;
@@ -10632,7 +10639,7 @@ textarea:hover {
 
 .wpcf7-form__input-wrapper textarea {
   min-height: 120px;
-  padding-top: 1em;
+  padding-top: 1rem;
   color: #2c3e50;
 }
 
@@ -10675,12 +10682,12 @@ textarea:hover {
 .wpcf7-form__radio-wrapper .wpcf7-list-item, .wpcf7-form__checkbox-wrapper .wpcf7-list-item {
   position: relative;
   display: inline-block;
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 @media (min-width: 961px) {
   .wpcf7-form__radio-wrapper .wpcf7-list-item, .wpcf7-form__checkbox-wrapper .wpcf7-list-item {
-    margin-left: 3em;
+    margin-left: 3rem;
   }
 }
 
@@ -10900,16 +10907,48 @@ textarea:hover {
 .wpcf7-form .wpcf7-not-valid-tip,
 .wpcf7-form .wpcf7-validation-errors,
 .wpcf7-form label.error {
+  margin-top: 0.3rem;
   margin-bottom: 0 !important;
   padding: 0;
   border: 0 !important;
   font-size: 0.9rem;
-  line-height: 1em;
+  line-height: 1.1rem;
   color: #d6445c;
 }
 
 .wpcf7-form__checkbox-wrapper .error {
   margin-top: 8px;
+}
+
+div.wpcf7 .ajax-loader,
+div.wpcf7 .ajax-loader:after {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+div.wpcf7 .ajax-loader {
+  background: transparent;
+  margin-left: 1rem;
+  font-size: 10px;
+  position: relative;
+  border-top: 5px solid rgba(255, 255, 255, 0.2);
+  border-right: 5px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.2);
+  border-left: 5px solid #ffffff;
+  transform: translateZ(0);
+  animation: spinning 1.1s infinite linear;
+}
+
+@keyframes spinning {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .wpcf7-not-valid input[type="checkbox"] + span.wpcf7-list-item-label:before {
@@ -10947,11 +10986,11 @@ textarea.parsley-error {
 }
 
 .parsley-errors-list {
-  margin: 2px 0 3px;
+  margin: 0.3rem 0 0;
   padding: 0;
   list-style: none;
-  font-size: 0.9em;
-  line-height: 0.9em;
+  font-size: 0.9rem;
+  line-height: 1.1rem;
   opacity: 0;
   color: #ffffff;
   transition: all 0.15s ease-in;
@@ -11020,7 +11059,7 @@ textarea.parsley-error {
   vertical-align: top;
   width: 100%;
   height: 42px;
-  padding: 0.3em 1.2em;
+  padding: 0.3rem 1rem;
   border-top: 2px solid #c8c8c8;
   border-bottom: 2px solid #c8c8c8;
 }
@@ -11109,7 +11148,7 @@ textarea.parsley-error {
 
 .choices__list--dropdown .choices__item {
   position: relative;
-  padding: 10px;
+  padding: 0.7rem 1rem;
 }
 
 [dir="rtl"] .choices__list--dropdown .choices__item {
