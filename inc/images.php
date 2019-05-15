@@ -27,3 +27,10 @@ function wptd_media_selection_image_sizes( $sizes ) {
     return array_merge($sizes, $custom_sizes);
 }
 add_filter( 'image_size_names_choose', 'wptd_media_selection_image_sizes' );
+
+/* Increase the max width of image sizes considered for srcset to 1920px (default: 1600px) */
+function wptd_max_srcset_image_width( $max_width, $size_array ) {
+    $max_width = 1920;
+    return $max_width;
+}
+add_filter( 'max_srcset_image_width', 'wptd_max_srcset_image_width', 10, 2 );
