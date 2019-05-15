@@ -44,7 +44,7 @@ input[type="password"],
 input[type="number"],
 input[type="email"],
 input[type="tel"], {
-   transition: 0.15s ease-in-out;
+   transition: $transition-150 ease-in-out;
    background-color: $c-white;
    display: block;
    width: 100%;

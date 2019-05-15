@@ -72,7 +72,7 @@
    cursor: pointer;
    right: 0;
    top: 0.7em;
-   transition: all 0.15s ease-in-out;
+   transition: all $transition-150 ease-in-out;
 
    @include media-breakpoint-up(md) {
       display: none;
@@ -87,7 +87,7 @@
       height: 2px;
       width: 30px;
       background: $c-white;
-      transition: all 0.15s ease-in-out;
+      transition: all $transition-150 ease-in-out;
    }
 
    span {

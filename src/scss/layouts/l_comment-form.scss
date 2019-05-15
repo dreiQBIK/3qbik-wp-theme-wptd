@@ -16,7 +16,7 @@
     }
 
     &__input-wrapper {
-        transition: opacity 0.15s ease-out;
+        transition: opacity $transition-150 ease-out;
 
         &.inactive {
             display: none;

@@ -449,6 +449,9 @@ template {
    BORDER
 ******************************************************************/
 /******************************************************************
+   TRANSITIONS_TIMING
+******************************************************************/
+/******************************************************************
    SPACERS
 ******************************************************************/
 /******************************************************************
@@ -9590,7 +9593,7 @@ ul.list li:before {
   outline: none;
   z-index: 100;
   background-color: #879cb1;
-  transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out, transform 0.15s ease-in-out, background 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out, transform 0.15s ease-in-out, background 0.15s ease-in-out;
   border-radius: 3px;
   cursor: pointer;
 }

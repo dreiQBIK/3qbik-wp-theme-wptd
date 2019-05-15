@@ -1,7 +1,7 @@
 .btn,
 a.btn {
    cursor: pointer;
-   transition: 0.15s ease-in-out;
+   transition: $transition-150 ease-in-out;
    display: inline-block;
    padding: 0.5em 1em;
    border: 0;

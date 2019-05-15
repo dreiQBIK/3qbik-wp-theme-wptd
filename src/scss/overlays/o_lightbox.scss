@@ -51,7 +51,7 @@
       border-radius: $bd-radius-3;
       color: $c-white;
       padding: 0.5rem 1rem;
-      transition: background-color 0.15s ease-in;
+      transition: background-color $transition-150 ease-in;
 
       @include media-breakpoint-up(md) {
          top: 2rem;

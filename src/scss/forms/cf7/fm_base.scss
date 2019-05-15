@@ -22,7 +22,7 @@
 
       input,
       textarea {
-         transition: 0.15s ease-in-out;
+         transition: $transition-150 ease-in-out;
          display: block;
          background-color: $c-white;
          width: 100%;
@@ -171,7 +171,7 @@
 
          // label and visible radio/checkbox
          & + span.wpcf7-list-item-label {
-            transition: color 0.15s ease-in-out;
+            transition: color $transition-150 ease-in-out;
             color: $c1-gray;
          }
       }
@@ -218,7 +218,7 @@
 
             &:before {
                content: "";
-               transition: border-color 0.15s ease-in-out;
+               transition: border-color $transition-150 ease-in-out;
                background: $c-white;
                display: inline-flex;
                align-items: center;
@@ -280,7 +280,7 @@
 
             &:before {
                content: "";
-               transition: border-color 0.15s ease-in-out;
+               transition: border-color $transition-150 ease-in-out;
                background: $c-white;
                display: inline-flex;
                align-items: center;
