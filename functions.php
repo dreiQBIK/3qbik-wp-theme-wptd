@@ -26,11 +26,9 @@ $includes[] = __DIR__ . '/inc/images.php';
 $includes[] = __DIR__ . '/inc/template-tags.php';
 
 /* ACF Builder Composition */
-$includes[] = __DIR__ . '/inc/acf/setup/acf_setup.php';
-$includes[] = __DIR__ . '/inc/acf/setup/acf_helpers.php';
+$includes = array_merge( $includes, glob( __DIR__ . '/inc/acf/setup/*.php' ) );
 
 // TODO: Put Code in a Custom Plugin that is responsible for data structure and other non-theme-related stuff
-
 /* Register Custom Post Types & Taxonomies */
 $includes[] = __DIR__ . '/inc/taxonomies/taxonomies.php';
 $includes[] = __DIR__ . '/inc/post-types/post-types.php';
@@ -47,11 +45,7 @@ $includes[] = __DIR__ . '/inc/user-roles/ur_manage-roles.php';
 $includes[] = __DIR__ . '/inc/user-roles/ur_capabilities.php';
 
 /* White Label */
-$includes[] = __DIR__ . '/inc/white-label/wl_nav-admin.php';
-$includes[] = __DIR__ . '/inc/white-label/wl_nav-main.php';
-$includes[] = __DIR__ . '/inc/white-label/wl_basics.php';
-$includes[] = __DIR__ . '/inc/white-label/wl_posts.php';
-$includes[] = __DIR__ . '/inc/white-label/wl_profile.php';
+$includes = array_merge( $includes, glob( __DIR__ . '/inc/white-label/*.php' ) );
 
 /* Require all the files */
 foreach ( $includes as $f ) {
