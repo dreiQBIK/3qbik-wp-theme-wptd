@@ -11,7 +11,6 @@
  */
 
 function wptd_theme_support() {
-
     /*
      * Make theme available for translation.
      * Translations can be filed in the /languages/ directory.
@@ -30,9 +29,6 @@ function wptd_theme_support() {
             'caption',
         )
     );
-
-    // Add menu support
-    add_theme_support( 'menus' );
 
     /*
      * Let WordPress manage the document title.

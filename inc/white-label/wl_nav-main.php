@@ -10,23 +10,23 @@
  *********************************************************************************************** */
 
 /* ***********************************************************************************************
-   https://code.tutsplus.com/articles/customizing-your-wordpress-admin--wp-24941
-   https://hotexamples.com/examples/-/-/remove_menu_page/php-remove_menu_page-function-examples.html
+    https://code.tutsplus.com/articles/customizing-your-wordpress-admin--wp-24941
+    https://hotexamples.com/examples/-/-/remove_menu_page/php-remove_menu_page-function-examples.html
 
-      function list_menu_items() {
-      global $menu;
-      global $submenu;
-      print_r($menu);
-      print_r($submenu);
-   }
-   add_action('admin_menu', 'list_menu_items');
+    function list_menu_items() {
+        global $menu;
+        global $submenu;
+        print_r($menu);
+        print_r($submenu);
+    }
+    add_action('admin_menu', 'list_menu_items');
 
 *********************************************************************************************** */
 
 
- //get current user
+// Get current user
 $user = wp_get_current_user();
-// define a user or a list of users
+// Define a user or a list of users
 $role_admin = array('admin');
 
 
@@ -36,19 +36,19 @@ $role_admin = array('admin');
 
 function wptd_remove_menus() {
 
-   // Menu Default
-   // remove_menu_page('index.php'); //Dashboard
-   remove_menu_page('themes.php'); //Design
-   // remove_menu_page('plugins.php'); //Plugins
-   // remove_menu_page('users.php'); //Users
+    // Default Menu
+    // remove_menu_page('index.php'); // Dashboard
+    remove_menu_page('themes.php'); // Design
+    // remove_menu_page('plugins.php'); // Plugins
+    // remove_menu_page('users.php'); // Users
 
-   // Menu Plugins
-   remove_menu_page('edit.php?post_type=acf-field-group'); // ACF
-   // remove_menu_page('wpcf7'); // Contact Form 7
+    // Plugins Menu
+    remove_menu_page('edit.php?post_type=acf-field-group'); // ACF
+    // remove_menu_page('wpcf7'); // Contact Form 7
 }
 
-if (array_intersect($role_admin, $user->roles)) {
-   add_action('admin_menu', 'wptd_remove_menus');
+if ( array_intersect($role_admin, $user->roles) ) {
+    add_action('admin_menu', 'wptd_remove_menus');
 }
 
 
@@ -123,6 +123,3 @@ RENAME_MENU_ITEMS
 //    $submenu['edit.php'][5][0] = 'Alle Empfehlungen';
 // }
 // add_action('admin_menu', 'wptd_rename_menu_items');
-
-
-
