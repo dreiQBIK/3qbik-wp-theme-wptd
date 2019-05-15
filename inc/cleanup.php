@@ -72,5 +72,5 @@ function wptd_cleanup_head() {
  */
 function  wptd_remove_commentsip( $comment_author_ip ) {
     return '';
- }
- add_filter( 'pre_comment_user_ip', 'wptd_remove_commentsip' );
+}
+add_filter( 'pre_comment_user_ip', 'wptd_remove_commentsip' );
