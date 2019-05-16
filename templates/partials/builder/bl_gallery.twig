@@ -25,28 +25,7 @@
                         alt="{{ gallery_item.alt }}"
                         src="{{ theme.link }}/assets/img/placeholder-wide-large.png"
                         data-src="{{ gallery_item.sizes.medium_large }}"
-                        data-srcset="
-                           {% if gallery_item.sizes.thumbnail|length != gallery_item.url|length %}
-                              {{ gallery_item.sizes.thumbnail }} 150w,
-                           {% endif %}
-                           {% if gallery_item.sizes.medium|length != gallery_item.url|length %}
-                              {{ gallery_item.sizes.medium }} 300w,
-                           {% endif %}
-                           {% if gallery_item.sizes.medium_large|length != gallery_item.url|length %}
-                              {{ gallery_item.sizes.medium_large }} 768w,
-                           {% endif %}
-                           {% if gallery_item.sizes.large|length != gallery_item.url|length %}
-                              {{ gallery_item.sizes.large }} 1024w,
-                           {% endif %}
-                           {% if gallery_item.sizes.wptd_thumb_1280|length != gallery_item.url|length %}
-                              {{ gallery_item.sizes.wptd_thumb_1280 }} 1200w,
-                           {% endif %}
-                           {% if gallery_item.sizes.wptd_thumb_1600|length != gallery_item.url|length %}
-                              {{ gallery_item.sizes.wptd_thumb_1600 }} 1600w,
-                           {% endif %}
-                           {% if gallery_item.sizes.wptd_thumb_1920|length != gallery_item.url|length %}
-                              {{ gallery_item.sizes.wptd_thumb_1920 }} 1920w,
-                           {% endif %}"
+                        data-srcset="{{ fn('wp_get_attachment_image_srcset', gallery_item.id) }}"
                         data-sizes="auto"
                         data-pos-x="2"
                         data-pos-y="3"
@@ -68,28 +47,7 @@
                            alt="{{ gallery_item.alt }}"
                            src="{{ theme.link }}/assets/img/placeholder-wide-large.png"
                            data-src="{{ gallery_item.sizes.medium_large }}"
-                           data-srcset="
-                              {% if gallery_item.sizes.thumbnail|length != gallery_item.url|length %}
-                                 {{ gallery_item.sizes.thumbnail }} 150w,
-                              {% endif %}
-                              {% if gallery_item.sizes.medium|length != gallery_item.url|length %}
-                                 {{ gallery_item.sizes.medium }} 300w,
-                              {% endif %}
-                              {% if gallery_item.sizes.medium_large|length != gallery_item.url|length %}
-                                 {{ gallery_item.sizes.medium_large }} 768w,
-                              {% endif %}
-                              {% if gallery_item.sizes.large|length != gallery_item.url|length %}
-                                 {{ gallery_item.sizes.large }} 1024w,
-                              {% endif %}
-                              {% if gallery_item.sizes.wptd_thumb_1280|length != gallery_item.url|length %}
-                                 {{ gallery_item.sizes.wptd_thumb_1280 }} 1200w,
-                              {% endif %}
-                              {% if gallery_item.sizes.wptd_thumb_1600|length != gallery_item.url|length %}
-                                 {{ gallery_item.sizes.wptd_thumb_1600 }} 1600w,
-                              {% endif %}
-                              {% if gallery_item.sizes.wptd_thumb_1920|length != gallery_item.url|length %}
-                                 {{ gallery_item.sizes.wptd_thumb_1920 }} 1920w,
-                              {% endif %}"
+                           data-srcset="{{ fn('wp_get_attachment_image_srcset', gallery_item.id) }}"
                            data-sizes="auto"
                            data-pos-x="2"
                            data-pos-y="2"
@@ -98,7 +56,6 @@
                </div>
             {% endfor %}
          </div>
-
       {% endif %}
 
       {% if show_gallery_caption and gallery_caption %}

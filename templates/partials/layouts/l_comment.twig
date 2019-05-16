@@ -14,16 +14,7 @@
 					alt="{{ author_image.alt }}"
 					src="{{ theme.link }}/assets/img/avatar.png"
 					data-src="{{ author_image.sizes.medium }}"
-					data-srcset="
-						{% if author_image.sizes.thumbnail|length != author_image.url|length %}
-							{{ author_image.sizes.thumbnail }} 150w,
-						{% endif %}
-						{% if author_image.sizes.medium|length != author_image.url|length %}
-							{{ author_image.sizes.medium }} 300w,
-						{% endif %}
-						{% if author_image.sizes.medium_large|length != author_image.url|length %}
-							{{ author_image.sizes.medium_large }} 768w,
-						{% endif %}"
+					data-srcset="{{ fn('wp_get_attachment_image_srcset', author_image.id) }}"
 					data-sizes="auto"
 				/>
 			{% else %}
