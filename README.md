@@ -17,7 +17,8 @@ Install this theme and be sure the Timber plugin is activated (see dependencies)
    -  Use command `ncu` to update dependencies.
 8. Open file `wp-content/themes/custom-theme-name/_config/config.json` and rename host-settings to `"host": "projectname.local"`.
 9. Open file `/wp-config.php` and add the line `define( 'WP_DEBUG', true );` below `$table_prefix = 'wp_';` at the bottom of the file.
-9. Go to phpMyAdmin `http://localhost/phpMyAdmin/` chose the project database, then chose table `prefix_options` and add the `"host": "http://projectname.local"` to the rows `siteurl` and `home`
+10. Go to phpMyAdmin `http://localhost/phpMyAdmin/` chose the project database, then chose table `prefix_options` and add the `"host": "http://projectname.local"` to the rows `siteurl` and `home`
+11. Go to WordPress Backend `http://projectname.local/wp-admin/options-permalink.php` and set/save permalinks
 
 ### Dependencies
 
