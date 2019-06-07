@@ -1,17 +1,42 @@
 {% extends "base.twig" %}
-
+{# Module header #}
 {% set page_header = post.meta('page_header') %}
 {% set heading = page_header.heading %}
 {% set text = page_header.text %}
+
+{# Module image_text #}
+{% set page_image_text = post.meta('page_image_text') %}
+{% set editor = page_image_text.wysiwyg %}
+
+{% set image = page_image_text.image %}
+{% set image_settings = page_image_text.image_settings %}
+{% set show_caption = image_settings.truefalse_caption %}
+{% set show_lightbox = image_settings.truefalse_lightbox %}
 
 {% block content %}
    <div class="l_page" data-template="page.twig">
       <header class="container">
          <h1>{{ post.title }}</h1>
       </header>
-      <section class="container">
+      <section class="container mb-400">
          <h2>{{ heading }}</h2>
          <p>{{ text }}</p>
+      </section>
+      <section class="container">
+         <div class="row">
+            <div class="col col-12 col-md-6">
+               {% include "/partials/modules/m_image.twig" with {
+                  image: image,
+                  show_lightbox: show_lightbox,
+                  show_caption: show_caption,
+               } %}
+            </div>
+            <div class="col col-12 col-md-6">
+               {% include "/partials/modules/m_editor.twig" with {
+                  editor: editor
+               } %}
+            </div>
+         </div>
       </section>
    </div>
 {% endblock %}

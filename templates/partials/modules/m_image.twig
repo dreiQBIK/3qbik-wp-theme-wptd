@@ -1,0 +1,29 @@
+
+{# USES
+   image => type: object
+   show_lightbox => type: boolean
+   show_caption => type: boolean
+   ---
+   {% include "/partials/modules/m_image.twig" with {
+      image: image,
+      show_lightbox: show_lightbox,
+      show_caption: show_caption,
+   } %}
+#}
+
+<div class="m_image">
+   <figure class="m_image__figure{% if show_lightbox %} with-lightbox{% endif %}">
+      <img
+         class="m_image__img lazyload"
+         alt="{{ image.alt }}"
+         src="{{ theme.link }}/assets/img/placeholder-wide-large.png"
+         data-src="{{ image.sizes.medium_large }}"
+         data-srcset="{{ fn('wp_get_attachment_image_srcset', image.id) }}"
+         data-sizes="auto"
+      />
+   </figure>
+
+   {% if show_caption %}
+      <figcaption class="m_image__caption">{{ image.caption }}</figcaption>
+   {% endif %}
+</div>

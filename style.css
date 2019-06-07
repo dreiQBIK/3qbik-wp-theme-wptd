@@ -9662,6 +9662,51 @@ ul.list li:before {
   padding: 1rem 2em 2em;
 }
 
+.m_image__figure {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.m_image__figure.with-lightbox {
+  cursor: zoom-in;
+  position: relative;
+}
+
+@media (min-width: 961px) {
+  .m_image__figure.with-lightbox:hover .bl_image__zoom {
+    background-color: #2c3e50;
+  }
+}
+
+.m_image .bl_image__zoom,
+.m_image svg.bl_image__zoom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  padding: 1rem;
+  transition: background-color 0.15s ease-in;
+}
+
+.m_image__img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.15s ease-in;
+}
+
+.m_image__caption {
+  text-align: center;
+  color: #879cb1;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin: 0.7rem 0;
+}
+
 .m_post-teaser {
   background-color: #2c3e50;
   border-radius: 3px;
