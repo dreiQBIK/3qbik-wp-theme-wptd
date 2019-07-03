@@ -15,6 +15,7 @@ const imagemin = require('gulp-imagemin');
 const imageminPngquant = require('imagemin-pngquant');
 const imageminZopfli = require('imagemin-zopfli');
 const imageminMozjpeg = require('imagemin-mozjpeg'); // need to run 'brew install libpng'
+const imageminWebp = require('imagemin-webp');
 const browserSync = require('browser-sync').create();
 const config = require('./config.json');
 
@@ -255,7 +256,7 @@ gulp.task('scripts-separate-vendor', function() {
 });
 
 // Optimize images
-gulp.task('images', function() {
+gulp.task('images-compress', function() {
     // https://gist.github.com/LoyEgor/e9dba0725b3ddbb8d1a68c91ca5452b5
     return gulp
         .src(config.images.pathSrc + '/*.{gif,png,jpg,svg}')
@@ -265,7 +266,7 @@ gulp.task('images', function() {
                 imageminPngquant({
                     speed: 1,
                     strip: true, // remove optional metadata
-                    quality: [0.95, 1] // lossy settings
+                    quality: [0.7, 0.9] // lossy settings
                 }),
                 imageminZopfli({
                     more: true
@@ -290,10 +291,50 @@ gulp.task('images', function() {
                 imageminMozjpeg({
                     quality: 80
                 })
+            ], {
+                verbose: true
+            })
+        )
+        .pipe(gulp.dest(config.images.pathDest));
+});
+
+// Convert jpg to webp
+gulp.task('images-jpg-webp', function() {
+    // https://freshman.tech/image-optimisation/
+    // convert oiginal jpgs
+    return gulp
+        .src(config.images.pathSrc + '/*.jpg')
+        .pipe(
+            imagemin([
+                imageminWebp({
+                    quality: 75,
+                    method: 6 // slowest method, but best file size and quality, default: 4
+                })
+            ], {
+                verbose: true
+            })
+        )
+        .pipe(rename({ extname: '.webp' }))
+        .pipe(gulp.dest(config.images.pathDest));
+});
+
+// Convert png to webp
+gulp.task('images-png-webp', function() {
+    // https://freshman.tech/image-optimisation/
+    // convert optimized pngs
+    return gulp
+        .src(config.images.pathDest + '/*.png')
+        .pipe(
+            imagemin([
+                imageminWebp({
+                    quality: 75,
+                    method: 6 // slowest method, but best file size and quality, default: 4
+                })
          ], {
             verbose: true
          })
       )
+      .pipe(rename({ extname: '.webp' }))
       .pipe(gulp.dest(config.images.pathDest));
 });
 
