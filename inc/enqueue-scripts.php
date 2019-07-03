@@ -24,8 +24,11 @@ function wptd_frontend_enqueues() {
 
     if ( $debug ) {
         // CSS for debugging Breakpoints
+        // TODO: put this code into a custom dev plugin for us
         wp_enqueue_style( 'wptd-debug', get_theme_file_uri( 'assets/css/debug.css' ), date('His') );
     }
+
+    // CAUTION: we're using filemtime() for prod file versioning, this should only be used with proper server-side caching in place
 
     // Styles
     wptd_add_versioned_style( 'wptd-style', 'style' . $css_suffix, false, 'all', $debug );
