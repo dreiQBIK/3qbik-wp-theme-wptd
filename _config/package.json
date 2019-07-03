@@ -22,6 +22,7 @@
       "gulp-concat": "~2.6.1",
       "gulp-eslint": "~5.0.0",
       "gulp-hub": "~4.2.0",
+      "gulp-imagemin": "^6.0.0",
       "gulp-load-plugins": "~1.5.0",
       "gulp-plumber": "~1.2.1",
       "gulp-postcss": "~8.0.0",
@@ -29,6 +30,9 @@
       "gulp-sass": "~4.0.2",
       "gulp-sourcemaps": "~2.6.5",
       "gulp-uglify": "~3.0.2",
+      "imagemin-mozjpeg": "^8.0.0",
+      "imagemin-pngquant": "^8.0.0",
+      "imagemin-zopfli": "^6.0.0",
       "require-dir": "~1.2.0",
       "sass-loader": "~7.1.0"
    },
