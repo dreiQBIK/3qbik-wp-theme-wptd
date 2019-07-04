@@ -1,25 +1,27 @@
-.checkbox-wrapper {
-   display: block;
-   position: relative;
-   line-height: 0;
+.wpcf7-form__checkbox-wrapper {
+   .wpcf7-list-item {
+      position: relative;
+      display: inline-block;
+      margin-left: 1em;
 
-   &:hover {
       @include media-breakpoint-up(md) {
+         margin-left: 3em;
+      }
 
-         span {
+      &.first {
+         margin-left: 0;
+      }
+
+      &:hover {
+         // label and visible checkbox
+         .wpcf7-list-item-label {
             color: $c1-third;
-         }
-         input {
-            & + span {
-               &:before {
-                  border-color: $c1-third;
-               }
-            }
          }
       }
    }
 
-   input {
+   // hidden input (checkbox) - interaction area
+   input[type="checkbox"] {
       cursor: pointer;
       background: transparent;
       position: absolute;
@@ -27,10 +29,23 @@
       left: 0;
       z-index: 1;
       opacity: 0;
-      width: 0;
-      height: 0;
+      width: 100%;
+      height: 30px;
       margin: 0;
       padding: 0;
+
+      @include media-breakpoint-up(md) {
+         height: 42px;
+      }
+
+      &:focus {
+         + span:before {
+            border-color: $c1-accent;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba($c1-accent, 0.5);
+            border-radius: $bd-radius-3;
+         }
+      }
 
       &:focus {
          + span:before {
@@ -43,31 +58,29 @@
 
       &:checked {
          // label and visible checkbox
-         & + span {
+         & + span.wpcf7-list-item-label {
             color: $c1-third;
 
             &:before {
                content: '\2714';
                display: inline-flex;
                align-items: center;
-               justify-content: center;
                speak: none;
+               justify-content: center;
                text-transform: none;
                -webkit-font-smoothing: antialiased;
                -moz-osx-font-smoothing: grayscale;
-               font-size: 1rem;
+               font-size: 1rem !important;
                color: $c1-third;
                border-color: $c1-third;
             }
          }
       }
+
       // label and visible checkbox
-      & + span {
-         cursor: pointer;
+      & + span.wpcf7-list-item-label {
          transition: color $transition-150 ease-in-out;
-         display: inline-flex;
-         align-items: center;
-         color: $c1-main;
+         color: $c1-gray;
 
          &:before {
             content: "";
@@ -80,6 +93,19 @@
             height: 30px;
             margin-right: 10px;
             border: 2px solid $c1-gray;
+         }
+      }
+   }
+
+   &.position-relative {
+      margin-top: 2.5em;
+
+      .fm-checkbox {
+
+         @include media-breakpoint-up(md) {
+            position: absolute;
+            top: -9px;
+            left: -60px;
          }
       }
    }

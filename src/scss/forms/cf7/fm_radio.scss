@@ -1,0 +1,97 @@
+.wpcf7-form__radio-wrapper {
+   .wpcf7-list-item {
+      position: relative;
+      display: inline-block;
+      margin-left: 1em;
+
+      @include media-breakpoint-up(md) {
+         margin-left: 3em;
+      }
+
+      &.first {
+         margin-left: 0;
+      }
+
+      &:hover {
+         // label and visible radio
+         .wpcf7-list-item-label {
+            color: $c1-third;
+         }
+      }
+   }
+
+   // hidden input (radio) - interaction area
+   input[type="radio"] {
+      cursor: pointer;
+      background: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0;
+      width: 100%;
+      height: 30px;
+      margin: 0;
+      padding: 0;
+
+      @include media-breakpoint-up(md) {
+         height: 42px;
+      }
+
+      &:focus {
+         + span:before {
+            border-color: $c1-accent;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba($c1-accent, 0.5);
+            border-radius: $bd-radius-round;
+         }
+      }
+
+      &:checked {
+         // label and visible radio-button
+         & + span.wpcf7-list-item-label {
+            color: $c1-third;
+
+            &:before {
+               border-color: $c1-third;
+            }
+
+            &:after {
+               content: "";
+               background-color: $c1-third;
+               position: absolute;
+               top: 50%;
+               transform: translateY(-50%);
+               left: -30px;
+               width: 10px;
+               height: 10px;
+               border-radius: 50%;
+            }
+         }
+      }
+
+      // label and visible radio-button
+      & + span.wpcf7-list-item-label {
+         transition: color $transition-150 ease-in-out;
+         color: $c1-gray;
+         margin: 0 2rem 0 40px;
+         position: relative;
+
+         &:before {
+            content: "";
+            transition: border-color $transition-150 ease-in-out;
+            background: $c-white;
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            border: 2px solid $c1-gray;
+            border-radius: 50%;
+         }
+      }
+   }
+}
