@@ -34,5 +34,8 @@
    },
    "dependencies": {
       "node-sass": "~4.12.0"
-   }
+   },
+   "browserslist": [
+      "last 2 version"
+   ]
 }
