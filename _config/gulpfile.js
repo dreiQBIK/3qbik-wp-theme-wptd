@@ -41,9 +41,7 @@ gulp.task('css', function() {
       .src(config.css.pathSrcForMinify)
       .pipe(
          postcss([
-            autoprefixer({
-               browsers: ['last 2 versions'],
-            }),
+            autoprefixer(),
             cssnano(),
          ])
       )
@@ -77,9 +75,7 @@ gulp.task('login-css', function() {
       .src(config.css.pathSrcForLoginMinify)
       .pipe(
          postcss([
-            autoprefixer({
-               browsers: ['last 2 versions'],
-            }),
+            autoprefixer(),
             cssnano(),
          ])
       )
@@ -113,9 +109,7 @@ gulp.task('tinymce-css', function() {
       .src(config.css.pathSrcForTinymceMinify)
       .pipe(
          postcss([
-            autoprefixer({
-               browsers: ['last 2 versions'],
-            }),
+            autoprefixer(),
             cssnano(),
          ])
       )
@@ -149,9 +143,7 @@ gulp.task('theme-css', function() {
       .src(config.css.pathSrcForThemeMinify)
       .pipe(
          postcss([
-            autoprefixer({
-               browsers: ['last 2 versions'],
-            }),
+            autoprefixer(),
             cssnano(),
          ])
       )
