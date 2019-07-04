@@ -29,7 +29,7 @@
       "pathDestBackendMaps": "../../maps"
    },
    "images": {
-      "pathSrc": "../assets/img",
-      "pathDest": "../assets/img/test"
+      "pathSrc": "../src/img",
+      "pathDest": "../assets/img"
    }
 }
