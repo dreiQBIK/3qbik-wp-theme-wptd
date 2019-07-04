@@ -24,6 +24,11 @@ function wptd_start_cleanup() {
     // Launching operation cleanup
     add_action( 'init', 'wptd_cleanup_head' );
 
+    // Remove the 'wp-block-library.css' file from wp_head()
+    add_action( 'wp_enqueue_scripts', function() {
+        wp_dequeue_style( 'wp-block-library' );
+    } );
+
     // Remove WP version from RSS
     add_filter( 'the_generator', '__return_empty_string' );
 
