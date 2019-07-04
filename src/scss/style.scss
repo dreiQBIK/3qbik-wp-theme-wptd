@@ -100,6 +100,8 @@ STYLESHEET: STYLE
 @import "forms/default/fm_radio.scss";
 // Contact Form 7
 @import "forms/cf7/fm_base";
+@import "forms/cf7/fm_checkbox";
+@import "forms/cf7/fm_radio";
 @import "forms/cf7/fm_upload";
 @import "forms/cf7/fm_validation";
 // Libraries
