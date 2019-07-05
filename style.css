@@ -10481,7 +10481,7 @@ textarea:hover {
 }
 
 .checkbox-wrapper input:checked + span:before {
-  content: '\2714';
+  content: '\2713';
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -10789,7 +10789,7 @@ textarea:hover {
 }
 
 .wpcf7-form__checkbox-wrapper input[type="checkbox"]:checked + span.wpcf7-list-item-label:before {
-  content: '\2714';
+  content: '\2713';
   display: inline-flex;
   align-items: center;
   speak: none;
