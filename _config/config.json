@@ -1,6 +1,6 @@
 {
    "settings": {
-      "host": "3qbik-wp-theme-wptd.local"
+      "host": "3qbik-wp-theme-wptd.test"
    },
    "js": {
       "pathSrc": ["../src/js/globals/**.js", "../src/js/**.js"],
