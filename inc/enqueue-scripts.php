@@ -23,9 +23,14 @@ function wptd_frontend_enqueues() {
     $js_suffix  = $debug ? '.js' : '.min.js';
 
     if ( $debug ) {
-        // CSS for debugging Breakpoints
+        // CSS just for development
         // TODO: put this code into a custom dev plugin for us
         wp_enqueue_style( 'wptd-debug', get_theme_file_uri( 'assets/css/debug.css' ), date('His') );
+        wp_enqueue_style( 'wptd-debug-prism', get_theme_file_uri( 'assets/css/debug-prism.css' ), date('His') );
+
+        // JS just for development
+        wptd_add_versioned_script( 'wptd-debug', 'assets/js/separate-files/debug' . $js_suffix, array('jquery'), true, $debug );
+        wptd_add_versioned_script( 'wptd-debug-prism', 'assets/js/separate-files/debug-prism' . $js_suffix, array('jquery'), true, $debug );
     }
 
     // CAUTION: we're using filemtime() for prod file versioning, this should only be used with proper server-side caching in place
@@ -36,7 +41,7 @@ function wptd_frontend_enqueues() {
     // Scripts
     wptd_add_versioned_script( 'wptd-vendor', 'assets/js/vendor/vendor' . $js_suffix, array('jquery'), true, $debug );
     wptd_add_versioned_script( 'wptd-main', 'assets/js/main' . $js_suffix, array('jquery'), true, $debug );
-    // wptd_add_versioned_script( 'wptd-example-separate', 'assets/js/separate-files/vendor/example-separate' . $js_suffix, array('jquery'), true, $debug );
+    // wptd_add_versioned_script( 'wptd-example-separate', 'assets/js/separate-files/example-separate' . $js_suffix, array('jquery'), true, $debug );
 
     if ( is_singular() && comments_open() && get_option('thread_comments') ) {
         wp_enqueue_script('comment-reply');

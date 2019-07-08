@@ -80,4 +80,9 @@ body:after {
   }
 }
 
+.wptd-copied {
+  transition: transform 0.15s ease-in-out;
+  transform: scale(1.001);
+}
+
 /*# sourceMappingURL=../../maps/debug.css.map */

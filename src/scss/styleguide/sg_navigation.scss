@@ -1,0 +1,14 @@
+.l_styleguide-navigation {
+   position: fixed;
+   right: 0;
+   margin-right: -5px;
+   z-index: 10;
+
+   a {
+      transition: color $transition-150 ease-in-out;
+
+      &:hover {
+         color: $c1-main;
+      }
+   }
+}

@@ -7664,80 +7664,108 @@ template {
 /*------------------------
 	icons
 -------------------------*/
-.Nucleo-icon-pc-monitor-2::before {
+.icon-circle-03::before {
   content: "\ea02";
 }
 
-.Nucleo-icon-single-01-2::before {
+.icon-left-arrow::before {
   content: "\ea03";
 }
 
-.Nucleo-icon-zoom::before {
+.icon-right-arrow::before {
   content: "\ea04";
 }
 
-.Nucleo-icon-clock-2::before {
+.icon-up-arrow::before {
   content: "\ea05";
 }
 
-.Nucleo-icon-e-remove::before {
+.icon-down-arrow::before {
   content: "\ea06";
 }
 
-.Nucleo-icon-zoom-in::before {
+.icon-move-layer-down::before {
   content: "\ea07";
 }
 
-.Nucleo-icon-down-arrow::before {
+.icon-move-up::before {
   content: "\ea08";
 }
 
-.Nucleo-icon-letter::before {
+.icon-direction-53::before {
   content: "\ea09";
 }
 
-.Nucleo-icon-left-arrow::before {
+.icon-pdf::before {
   content: "\ea0a";
 }
 
-.Nucleo-icon-up-arrow::before {
+.icon-img-stack::before {
   content: "\ea0b";
 }
 
-.Nucleo-icon-tag-2::before {
+.icon-shape-star-2::before {
   content: "\ea0c";
 }
 
-.Nucleo-icon-right-arrow-2::before {
+.icon-shape-star-1::before {
   content: "\ea0d";
 }
 
-.Nucleo-icon-pin-3-2::before {
+.icon-zoom::before {
   content: "\ea0e";
 }
 
-.Nucleo-icon-multiple-11::before {
+.icon-heart-2::before {
   content: "\ea0f";
 }
 
-.Nucleo-icon-calendar-2::before {
+.icon-heart-1::before {
   content: "\ea10";
 }
 
-.Nucleo-icon-phone::before {
+.icon-pin-3-1::before {
   content: "\ea11";
 }
 
-.Nucleo-icon-a-chat::before {
+.icon-pin-3-2::before {
   content: "\ea12";
 }
 
-.Nucleo-icon-a-edit::before {
+.icon-button-play::before {
   content: "\ea13";
 }
 
-.Nucleo-icon-check::before {
+.icon-play-media::before {
   content: "\ea14";
+}
+
+.icon-phone::before {
+  content: "\ea15";
+}
+
+.icon-network-connection::before {
+  content: "\ea16";
+}
+
+.icon-e-remove::before {
+  content: "\ea17";
+}
+
+.icon-e-add::before {
+  content: "\ea18";
+}
+
+.icon-single-02::before {
+  content: "\ea19";
+}
+
+.icon-mail::before {
+  content: "\ea1a";
+}
+
+.icon-check::before {
+  content: "\ea1b";
 }
 
 /* --------------------------------
@@ -7915,212 +7943,108 @@ Generated using nucleoapp.com
 /*------------------------
 	icons
 -------------------------*/
-.Nucleo-icon-pc-monitor-2::before {
+.icon-circle-03::before {
   content: "\ea02";
 }
 
-.Nucleo-icon-single-01-2::before {
+.icon-left-arrow::before {
   content: "\ea03";
 }
 
-.Nucleo-icon-zoom::before {
+.icon-right-arrow::before {
   content: "\ea04";
 }
 
-.Nucleo-icon-clock-2::before {
+.icon-up-arrow::before {
   content: "\ea05";
 }
 
-.Nucleo-icon-e-remove::before {
+.icon-down-arrow::before {
   content: "\ea06";
 }
 
-.Nucleo-icon-zoom-in::before {
+.icon-move-layer-down::before {
   content: "\ea07";
 }
 
-.Nucleo-icon-down-arrow::before {
+.icon-move-up::before {
   content: "\ea08";
 }
 
-.Nucleo-icon-letter::before {
+.icon-direction-53::before {
   content: "\ea09";
 }
 
-.Nucleo-icon-left-arrow::before {
+.icon-pdf::before {
   content: "\ea0a";
 }
 
-.Nucleo-icon-up-arrow::before {
+.icon-img-stack::before {
   content: "\ea0b";
 }
 
-.Nucleo-icon-tag-2::before {
+.icon-shape-star-2::before {
   content: "\ea0c";
 }
 
-.Nucleo-icon-right-arrow-2::before {
+.icon-shape-star-1::before {
   content: "\ea0d";
 }
 
-.Nucleo-icon-pin-3-2::before {
+.icon-zoom::before {
   content: "\ea0e";
 }
 
-.Nucleo-icon-multiple-11::before {
+.icon-heart-2::before {
   content: "\ea0f";
 }
 
-.Nucleo-icon-calendar-2::before {
+.icon-heart-1::before {
   content: "\ea10";
 }
 
-.Nucleo-icon-phone::before {
+.icon-pin-3-1::before {
   content: "\ea11";
 }
 
-.Nucleo-icon-a-chat::before {
+.icon-pin-3-2::before {
   content: "\ea12";
 }
 
-.Nucleo-icon-a-edit::before {
+.icon-button-play::before {
   content: "\ea13";
 }
 
-.Nucleo-icon-check::before {
+.icon-play-media::before {
   content: "\ea14";
 }
 
-/* Generated using nucleoapp.com */
-/* --------------------------------
-
-Icon colors
-
--------------------------------- */
-.icon {
-  display: inline-block;
-  /* icon primary color */
-  color: #2c3e50;
-  height: 1em;
-  width: 1em;
+.icon-phone::before {
+  content: "\ea15";
 }
 
-.icon use {
-  /* icon secondary color - fill */
-  fill: inherit;
+.icon-network-connection::before {
+  content: "\ea16";
 }
 
-.icon.icon--outline use {
-  /* icon secondary color - stroke */
-  stroke: inherit;
+.icon-e-remove::before {
+  content: "\ea17";
 }
 
-/* --------------------------------
-
-Change icon size
-
--------------------------------- */
-.icon--xs {
-  height: 0.5em;
-  width: 0.5em;
+.icon-e-add::before {
+  content: "\ea18";
 }
 
-.icon--sm {
-  height: 0.8em;
-  width: 0.8em;
+.icon-single-02::before {
+  content: "\ea19";
 }
 
-.icon--lg {
-  height: 1.6em;
-  width: 1.6em;
+.icon-mail::before {
+  content: "\ea1a";
 }
 
-.icon--xl {
-  height: 2em;
-  width: 2em;
-}
-
-/* -------------------------------- 
-
-Align icon and text 
-
--------------------------------- */
-.icon-text-aligner {
-  /* add this class to parent element that contains icon + text */
-  display: flex;
-  align-items: center;
-}
-
-.icon-text-aligner .icon {
-  color: inherit;
-  margin-right: 0.4em;
-  flex-shrink: 0;
-}
-
-.icon-text-aligner .icon.icon--align-right {
-  margin-right: 0;
-  margin-left: 0.4em;
-}
-
-.icon-text-aligner .icon use {
-  color: inherit;
-  fill: currentColor;
-}
-
-.icon-text-aligner .icon.icon--outline use {
-  stroke: currentColor;
-}
-
-/* -------------------------------- 
-
-Icon reset values - used to enable color customizations
-
--------------------------------- */
-.icon {
-  fill: currentColor;
-  stroke: none;
-}
-
-.icon.icon--outline {
-  stroke: currentColor;
-}
-
-.icon use {
-  stroke: none;
-}
-
-/* -------------------------------- 
-
-Stroke effects - Nucleo outline icons
-
-- 16px icons -> up to 1px stroke (16px outline icons do not support stroke changes)
-- 24px, 32px icons -> up to 2px stroke
-- 48px, 64px icons -> up to 4px stroke
-
--------------------------------- */
-.icon--outline.icon--stroke-1 {
-  stroke-width: 1px;
-}
-
-.icon--outline.icon--stroke-2 {
-  stroke-width: 2px;
-}
-
-.icon--outline.icon--stroke-3 {
-  stroke-width: 3px;
-}
-
-.icon--outline.icon--stroke-4 {
-  stroke-width: 4px;
-}
-
-.icon--outline.icon--stroke-1 use,
-.icon--outline.icon--stroke-3 use {
-  -webkit-transform: translateX(0.5px) translateY(0.5px);
-  -moz-transform: translateX(0.5px) translateY(0.5px);
-  -ms-transform: translateX(0.5px) translateY(0.5px);
-  -o-transform: translateX(0.5px) translateY(0.5px);
-  transform: translateX(0.5px) translateY(0.5px);
+.icon-check::before {
+  content: "\ea1b";
 }
 
 /* Slider */
@@ -8716,6 +8640,10 @@ a:focus {
 
 a:active {
   color: inherit;
+}
+
+code {
+  display: inline-block;
 }
 
 h1,
@@ -9574,10 +9502,176 @@ ul.list li:before {
   color: #ffffff;
 }
 
+/* Generated using nucleoapp.com */
+/* --------------------------------
+
+Icon colors
+
+-------------------------------- */
+.icon {
+  display: inline-block;
+  /* icon primary color */
+  color: #2c3e50;
+  height: 1em;
+  width: 1em;
+}
+
+.icon use {
+  /* icon secondary color - fill */
+  fill: inherit;
+}
+
+.icon.icon--outline use {
+  /* icon secondary color - stroke */
+  stroke: inherit;
+}
+
+/* --------------------------------
+
+Change icon size
+
+-------------------------------- */
+.icon--xs {
+  height: 0.8rem;
+  width: 0.8rem;
+  font-size: 0.8rem !important;
+}
+
+.icon--sm {
+  height: 1.3rem;
+  width: 1.3rem;
+  font-size: 1.3rem !important;
+}
+
+.icon--md {
+  height: 1.8rem;
+  width: 1.8rem;
+  font-size: 1.8rem !important;
+}
+
+.icon--lg {
+  height: 2rem;
+  width: 2rem;
+  font-size: 2rem !important;
+}
+
+.icon--xl {
+  height: 3rem;
+  width: 3rem;
+  font-size: 3rem !important;
+}
+
+/* --------------------------------
+
+Align icon and text
+
+-------------------------------- */
+.icon-text-aligner {
+  /* add this class to parent element that contains icon + text */
+  display: flex;
+  align-items: center;
+}
+
+.icon-text-aligner .icon {
+  color: inherit;
+  margin-right: 0.4em;
+  flex-shrink: 0;
+}
+
+.icon-text-aligner .icon.icon--align-right {
+  margin-right: 0;
+  margin-left: 0.4em;
+}
+
+.icon-text-aligner .icon use {
+  color: inherit;
+  fill: currentColor;
+}
+
+.icon-text-aligner .icon.icon--outline use {
+  stroke: currentColor;
+}
+
+/* --------------------------------
+
+Icon reset values - used to enable color customizations
+
+-------------------------------- */
+.icon {
+  fill: currentColor;
+  stroke: none;
+}
+
+.icon.icon--outline {
+  stroke: currentColor;
+}
+
+.icon use {
+  stroke: none;
+}
+
+/* --------------------------------
+
+Stroke effects - Nucleo outline icons
+
+- 16px icons -> up to 1px stroke (16px outline icons do not support stroke changes)
+- 24px, 32px icons -> up to 2px stroke
+- 48px, 64px icons -> up to 4px stroke
+
+-------------------------------- */
+.icon--outline.icon--stroke-1 {
+  stroke-width: 1px;
+}
+
+.icon--outline.icon--stroke-2 {
+  stroke-width: 2px;
+}
+
+.icon--outline.icon--stroke-3 {
+  stroke-width: 3px;
+}
+
+.icon--outline.icon--stroke-4 {
+  stroke-width: 4px;
+}
+
+.icon--outline.icon--stroke-1 use,
+.icon--outline.icon--stroke-3 use {
+  -webkit-transform: translateX(0.5px) translateY(0.5px);
+  -moz-transform: translateX(0.5px) translateY(0.5px);
+  -ms-transform: translateX(0.5px) translateY(0.5px);
+  -o-transform: translateX(0.5px) translateY(0.5px);
+  transform: translateX(0.5px) translateY(0.5px);
+}
+
 .l_styleguide .color-field {
   display: block;
   width: 100px;
   height: 100px;
+}
+
+.wptd-copy {
+  cursor: pointer;
+}
+
+.wptd-copied {
+  transition: transform 0.15s ease-in-out;
+  transform: scale(1.1);
+}
+
+.l_styleguide-navigation {
+  position: fixed;
+  right: 0;
+  margin-right: -5px;
+  z-index: 10;
+}
+
+.l_styleguide-navigation a {
+  transition: color 0.15s ease-in-out;
+}
+
+.l_styleguide-navigation a:hover {
+  color: #2c3e50;
 }
 
 .m_back-to-top {
@@ -10481,17 +10575,18 @@ textarea:hover {
 }
 
 .checkbox-wrapper input:checked + span:before {
-  content: '\2713';
+  content: "\ea1b";
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font: normal normal normal 1em/1 'Nucleo';
   speak: none;
   text-transform: none;
+  /* Better Font Rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1rem;
-  color: #ec764d;
-  border-color: #ec764d;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .checkbox-wrapper input + span {
@@ -10789,17 +10884,18 @@ textarea:hover {
 }
 
 .wpcf7-form__checkbox-wrapper input[type="checkbox"]:checked + span.wpcf7-list-item-label:before {
-  content: '\2713';
+  content: "\ea1b";
   display: inline-flex;
   align-items: center;
-  speak: none;
   justify-content: center;
+  font: normal normal normal 1em/1 'Nucleo';
+  speak: none;
   text-transform: none;
+  /* Better Font Rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1rem !important;
-  color: #ec764d;
-  border-color: #ec764d;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .wpcf7-form__checkbox-wrapper input[type="checkbox"] + span.wpcf7-list-item-label {

@@ -41,7 +41,6 @@ STYLESHEET: STYLE
 // Vendor
 @import "vendor/nucleo/icons";
 @import "vendor/nucleo/nucleo";
-@import "vendor/nucleo/nucleo-svg";
 @import "vendor/slick/slick";
 
 // Layouts
@@ -62,9 +61,11 @@ STYLESHEET: STYLE
 @import "base/b_list";
 @import "base/b_tinymce";
 @import "base/b_wp-toolbar";
+@import "base/b_nucleo";
 
 // Styleguide
 @import "styleguide/sg_base";
+@import "styleguide/sg_navigation";
 
 // Modules
 @import "modules/m_back-to-top";

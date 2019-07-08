@@ -62,17 +62,18 @@
             color: $c1-third;
 
             &:before {
-               content: '\2713';
+               content: "\ea1b";
                display: inline-flex;
                align-items: center;
-               speak: none;
                justify-content: center;
+               font: normal normal normal 1em/1 'Nucleo';
+               speak: none;
                text-transform: none;
+               /* Better Font Rendering */
                -webkit-font-smoothing: antialiased;
                -moz-osx-font-smoothing: grayscale;
-               font-size: 1rem !important;
-               color: $c1-third;
-               border-color: $c1-third;
+               font-size: 1.2rem;
+               font-weight: 700;
             }
          }
       }

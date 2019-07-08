@@ -9,8 +9,8 @@
       "pathSrcSeparateVendor": "../src/js/separate-files/vendor/**.js",
       "pathDest": "../assets/js",
       "pathDestVendor": "../assets/js/vendor",
-      "pathDestSeparate": "../assets/js/separate",
-      "pathDestSeparateVendor": "../assets/js/separate/vendor",
+      "pathDestSeparate": "../assets/js/separate-files",
+      "pathDestSeparateVendor": "../assets/js/separate-files/vendor",
       "pathDestMaps": "../../maps"
    },
    "css": {
