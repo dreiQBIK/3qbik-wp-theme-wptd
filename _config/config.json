@@ -27,5 +27,9 @@
       "pathDestBackend": "../assets/css",
       "pathDestMaps": "maps",
       "pathDestBackendMaps": "../../maps"
+   },
+   "images": {
+      "pathSrc": "../src/img",
+      "pathDest": "../assets/img"
    }
 }
