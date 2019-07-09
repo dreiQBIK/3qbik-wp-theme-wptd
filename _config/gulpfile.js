@@ -16,6 +16,8 @@ const imageminPngquant = require('imagemin-pngquant');
 const imageminZopfli = require('imagemin-zopfli');
 const imageminMozjpeg = require('imagemin-mozjpeg'); // need to run 'brew install libpng'
 const imageminWebp = require('imagemin-webp');
+const imageResize = require('gulp-image-resize');
+const mergeStream = require('merge-stream');
 const browserSync = require('browser-sync').create();
 const config = require('./config.json');
 
@@ -330,6 +332,65 @@ gulp.task('images-png-webp', function() {
       .pipe(gulp.dest(config.images.pathDest));
 });
 
+// Resize Images
+gulp.task('images-resize', function () {
+   // https://www.npmjs.com/package/gulp-image-resize
+   // http://www.graphicsmagick.org/index.html
+   let resizes = [];
+   // Define the desired image widths in px
+   const sizes = [480, 768, 1024, 1280, 1600, 1920];
+   for (let i = 0; i < sizes.length; i++) {
+      resizes.push(
+         gulp.src(config.images.pathSrc + '/thumbs/*.{jpg,png}')
+            .pipe(imageResize({
+               width : sizes[i],
+               crop : false,
+               upscale : false,
+               filter: 'Catrom',
+               noProfile: true,
+         }))
+         .pipe(rename({ suffix: '-' + sizes[i] + 'px'}))
+         .pipe( //imagemin part of task "images-compress"
+            imagemin([
+                  // png
+                  imageminPngquant({
+                     speed: 1,
+                     strip: true, // remove optional metadata
+                     quality: [0.7, 0.9] // lossy settings
+                  }),
+                  imageminZopfli({
+                     more: true
+                     // iterations: 50 // very slow but more effective
+                  }),
+                  // gif
+                  imagemin.gifsicle({
+                     interlaced: true,
+                     optimizationLevel: 3
+                  }),
+                  // svg
+                  imagemin.svgo({
+                     plugins: [{
+                        removeViewBox: false
+                     }]
+                  }),
+                  // jpg lossless
+                  imagemin.jpegtran({
+                     progressive: true
+                  }),
+                  // jpg very light lossy, use vs jpegtran
+                  imageminMozjpeg({
+                     quality: 80
+                  })
+            ], {
+                  verbose: true
+            })
+         )
+         .pipe(gulp.dest(config.images.pathDest + '/thumbs'))
+      );
+   }
+   return mergeStream(resizes);
+ });
+
 // Watch Files For Changes
 gulp.task('watch', function() {
    browserSync.init({
@@ -427,3 +488,14 @@ gulp.task(
       'scripts-separate-vendor'
    )
 );
+
+// Image task
+   gulp.task(
+      'build-images',
+      gulp.series(
+         'images-compress',
+         'images-jpg-webp',
+         'images-png-webp',
+         'images-resize'
+      )
+   );
