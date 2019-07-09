@@ -341,7 +341,7 @@ gulp.task('images-resize', function () {
    const sizes = [480, 768, 1024, 1280, 1600, 1920];
    for (let i = 0; i < sizes.length; i++) {
       resizes.push(
-         gulp.src(config.images.pathSrc + '/thumbs/*.{jpg,png}')
+         gulp.src(config.images.pathSrc + '/thumb-patterns/*.{jpg,png}')
             .pipe(imageResize({
                width : sizes[i],
                crop : false,
@@ -385,7 +385,7 @@ gulp.task('images-resize', function () {
                   verbose: true
             })
          )
-         .pipe(gulp.dest(config.images.pathDest + '/thumbs'))
+         .pipe(gulp.dest(config.images.pathDest + '/thumb-patterns'))
       );
    }
    return mergeStream(resizes);
@@ -491,7 +491,7 @@ gulp.task(
 
 // Image task
    gulp.task(
-      'build-images',
+      'images',
       gulp.series(
          'images-compress',
          'images-jpg-webp',
