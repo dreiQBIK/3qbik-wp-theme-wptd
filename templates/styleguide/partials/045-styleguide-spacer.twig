@@ -1,0 +1,121 @@
+<div class="container container--narrow bg-c-white bd-radius-5 mb-300 px-400 py-200">
+  <div class="row">
+    <div class="col col-12">
+      <div class="mb-300">
+         <h2 id="sg-spacer" class="h1 t-c1-main">Spacer</h2>
+         <p class="p1 t-c1-main">Alle definierten Abstandsklassen können für "margins" und "paddings" in Abhängigkeit der Breakpoints verwendet werden. Der grundlegende Aufbau basiert auf den <a class="link link-main link1-main" href="https://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">Bootstrap Abstandsklassen</a>. Der hier verwendete Wert 200 entspricht dabei der Einheit "2rem". Eine Übersicht aller Abstände ist in der SCSS-Datei <code class="language-css wptd-copy">set_variables.scss</code> zu finden.</p>
+         <p class="p1 t-c1-error">Layout-Abstände werden via "margins" und immer nach unten und rechts vergeben. Innenabstände werden via "paddings" vergeben.</p>
+      </div>
+      <div class="mb-400">
+         <h3 class="h2 f3-second t-c1-main mb-150">Allgemeine Abstandsklassen</h3>
+         <div class="mb-200">
+            <h3 class="h3 f3-second t-c1-main">Abstandsklassen Horizontal</h3>
+            <div class="mb-25">
+              <span class="p1 t-c1-error">Abstäne links:&nbsp;</span>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">ml-200</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">pl-200</pre></code>
+            </div>
+            <div class="mb-25">
+              <span class="p1 t-c1-error">Abstäne rechts:&nbsp;</span>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mr-200</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">pr-200</pre></code>
+            </div>
+            <div class="mb-25">
+              <span class="p1 t-c1-error">Abstäne links und rechts:&nbsp;</span>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mx-200</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">px-200</pre></code>
+            </div>
+         </div>
+
+         <div class="mb-200">
+            <h3 class="h3 f3-second t-c1-main">Abstandsklassen Vertikal</h3>
+            <div class="mb-25">
+              <span class="p1 t-c1-error">Abstäne oben:&nbsp;</span>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mt-200</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">pt-200</pre></code>
+            </div>
+            <div class="mb-25">
+              <span class="p1 t-c1-error">Abstäne unten:&nbsp;</span>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mb-200</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">pb-200</pre></code>
+            </div>
+            <div class="mb-25">
+              <span class="p1 t-c1-error">Abstäne oben und unten:&nbsp;</span>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">my-200</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">py-200</pre></code>
+            </div>
+         </div>
+
+         <div class="mb-200">
+            <h3 class="h3 f3-second t-c1-main">Spezielle Abstandsklassen</h3>
+            <div class="mb-25">
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">m-auto</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">my-auto</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mx-auto</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mt-auto</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mr-auto</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mb-auto</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">ml-auto</pre></code>
+            </div>
+         </div>
+
+         <div class="mb-200">
+            <h3 class="h3 f3-second t-c1-main">Abstandsklassen Breakpoints</h3>
+            <div class="mb-25">
+              <span class="p1 t-c1-error">Beispiel:&nbsp;</span>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mb-25</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mb-sm-50</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mb-md-75</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mb-lg-100</pre></code>
+              <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mb-xl-200</pre></code>
+            </div>
+         </div>
+      </div>
+
+      <div class="mb-300">
+         <h3 class="h2 f3-second t-c1-main mb-150">Grid Abstandsklassen</h3>
+         <div class="mb-200">
+            <h3 class="h3 f3-second t-c1-main">Horizontal - Micro-Offsets</h3>
+            <p class="p1 t-c1-main">Diese Abstände sind eine Ergänzung zu den Grid-Offsets und für kleinere innere Abstände in Layouts und Modulen einsetzbar.</p>
+            <p class="p1 t-c1-error">Innerhalb eines Layouts oder Modules müssen die horizontalen äußeren "Paddings" mit Hilfe dieser Micro-Offsets umgesetzt werden.</p>
+            <div class="mb-25">
+               <div class="mb-50">
+                  <span class="p1 t-c1-error">Klein:&nbsp;</span>
+                  <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">px-small</pre></code>
+               </div>
+              <div class="mb-50">
+                 <span class="p1 t-c1-error">Mittel:&nbsp;</span>
+                 <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">px-medium</pre></code>
+              </div>
+               <div class="mb-50">
+                  <span class="p1 t-c1-error">Groß:&nbsp;</span>
+                  <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">px-large</pre></code>
+               </div>
+            </div>
+         </div>
+
+         <div class="mb-200">
+            <h3 class="h3 f3-second t-c1-main">Vertikal - Template-Abstände</h3>
+            <p class="p1 t-c1-main">Diese Abstände werden zwischen Layout-Parts und Modulen eingesetzt und werden immer nach unten definiert.</p>
+            <div class="mb-25">
+               <div class="mb-50">
+                  <span class="p1 t-c1-error">Klein:&nbsp;</span>
+                  <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mb-small</pre></code>
+               </div>
+              <div class="mb-50">
+                 <span class="p1 t-c1-error">Mittel:&nbsp;</span>
+                 <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mb-medium</pre></code>
+              </div>
+               <div class="mb-50">
+                  <span class="p1 t-c1-error">Groß:&nbsp;</span>
+                  <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">mb-large</pre></code>
+               </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

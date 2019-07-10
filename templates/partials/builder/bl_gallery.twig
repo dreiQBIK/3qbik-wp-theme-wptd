@@ -6,7 +6,7 @@
    gallery => type: object
    ---
    {% include "/partials/builder/bl_gallery.twig" with {
-      space_bottom: 'sp-md',
+      space_bottom: 'pb-medium',
       show_thumbs: false,
       show_gallery_caption: false,
       gallery_caption: '',
@@ -14,7 +14,7 @@
    } %}
 #}
 <div class="container {{ space_bottom }}">
-   <div class="bl_gallery{% if not show_thumbs %} sp-sm{% endif %}">
+   <div class="bl_gallery{% if not show_thumbs %} pb-small{% endif %}">
 
       <div class="bl_gallery__slider">
          {% for gallery_item in gallery %}

@@ -1,10 +1,12 @@
 a.link {
    transition: color $transition-150 ease-in-out;
 
+   &-main {
+      text-decoration: underline;
+   }
    &1-main {
       &:link {
          color: $c1-main;
-         text-decoration: underline;
       }
       &:visited {
          color: $c1-main;
@@ -20,30 +22,31 @@ a.link {
    }
    &2-main {
       &:link {
-         color: $c3-main;
-         text-decoration: underline;
+         color: $c-white;
       }
       &:visited {
-         color: $c3-main;
+         color: $c-white;
       }
       &:hover {
          @include media-breakpoint-up(md) {
-            color: $c1-main;
-            text-decoration: underline;
+            color: $c1-second;
          }
       }
       &:active {
-         color: $c1-main;
+         color: $c-white;
       }
    }
 
+   &-second {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+   }
    &1-second {
       &:link {
-         color: $c-white;
-         text-decoration: underline;
+         color: $c1-main;
       }
       &:visited {
-         color: $c-white;
+         color: $c1-main;
       }
       &:hover {
          @include media-breakpoint-up(md) {
@@ -51,25 +54,23 @@ a.link {
          }
       }
       &:active {
-         color: $c-white;
+         color: $c1-main;
       }
    }
    &2-second {
       &:link {
-         color: $c1-second;
-         text-decoration: underline;
+         color: $c-white;
       }
       &:visited {
-         color: $c1-second;
+         color: $c-white;
       }
       &:hover {
          @include media-breakpoint-up(md) {
-            color: $c2-second;
-            text-decoration: underline;
+            color: $c1-second;
          }
       }
       &:active {
-         color: $c1-second;
+         color: $c-white;
       }
    }
 }

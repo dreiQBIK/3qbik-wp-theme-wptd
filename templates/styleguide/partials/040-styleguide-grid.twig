@@ -1,0 +1,51 @@
+<div class="container container--narrow bg-c-white bd-radius-5 mb-300 px-400 py-200">
+  <div class="row">
+    <div class="col col-12">
+      <div class="mb-300">
+         <h2 id="sg-grid" class="h1 t-c1-main">Grid</h2>
+         <p class="p1 t-c1-main">Das Grid basiert grundlegend auf dem <a class="link link-main link1-main" href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">Bootstrap Grid</a> und kann mit allen hier definierten Breakpoints verwendet werden. Im folgendem einige Beispiele der wichtigsten Klassen</p>
+      </div>
+      <div class="mb-400">
+         <h3 class="h2 f3-second t-c1-main mb-150">Struktur</h3>
+         <div class="mb-100">
+            <span class="p1 t-c1-error">Beispiel Grid-Klassen:&nbsp;</span>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">container-wrapper</pre></code>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">container</pre></code>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">row</pre></code>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2</pre></code>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">offset-1 offset-sm-1 offset-md-1 offset-lg-2 offset-xl-3</pre></code>
+         </div>
+      </div>
+
+      <div class="mb-400">
+         <div class="mb-200">
+            <h3 class="h2 f3-second t-c1-main mb-150">Breakpoints</h3>
+            <p class="p1 t-c1-main">In der Regel werden die Breakpoints nach dem Mobile-First Ansatz verwendet. Das bedeutet, dass die Basis des Codes auf dem kleinsten Breakpoint definiert ist und für alle Breakpoints gültig ist. Abweichungen des Codes können mit Hilfe der größeren Breakpoints überschrieben werden. In Ausnahmefällen können die hier gelisteten anderen Breakpointvarianten verwendet werden.</p>
+         </div>
+         <div class="mb-100">
+            <span class="p1 t-c1-error">Standard - Mobile First:&nbsp;</span><br>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">@include media-breakpoint-up(sm) {}</pre></code>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">@include media-breakpoint-up(md) {}</pre></code>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">@include media-breakpoint-up(lg) {}</pre></code>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">@include media-breakpoint-up(xl) {}</pre></code>
+         </div>
+         <div class="mb-100">
+            <span class="p1 t-c1-error">Abweichung - Graceful Degradation:&nbsp;</span><br>
+            <p class="p1 t-c1-main">Der Code betrifft den definierten Breakpoint und alle kleineren Breakpoints. Mit Hilfe der kleineren Breakpoints kann der weiter oben definierte Code überschrieben werden.</p>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">@include media-breakpoint-down(sm) {}</pre></code>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">@include media-breakpoint-down(md) {}</pre></code>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">@include media-breakpoint-down(lg) {}</pre></code>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">@include media-breakpoint-down(xl) {}</pre></code>
+         </div>
+         <div class="mb-100">
+            <span class="p1 t-c1-error">Abweichung - Dazwischen:&nbsp;</span><br>
+            <p class="p1 t-c1-main">Es kann Code für bestimmte Breakpoints definiert werden in dem ein unterer und oberer Breakpoint definiert wird. Der Code betrifft in diesem Fall den Breakpoint dazwichen (lg).</p>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">@include media-breakpoint-between(md, xl) {}</pre></code>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

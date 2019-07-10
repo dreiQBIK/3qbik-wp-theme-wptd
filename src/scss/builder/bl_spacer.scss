@@ -1,10 +1,10 @@
-.sp {
+.pb {
 
    &-zero {
       padding-bottom: 0;
    }
 
-   &-sm {
+   &-small {
       padding-bottom: map-get($spacers, 100);
 
       @include media-breakpoint-up(sm) {
@@ -21,7 +21,7 @@
       }
    }
 
-   &-md {
+   &-medium {
       padding-bottom: map-get($spacers, 200);
 
       @include media-breakpoint-up(sm) {
@@ -38,7 +38,7 @@
       }
    }
 
-   &-lg {
+   &-large {
       padding-bottom: map-get($spacers, 500);
 
       @include media-breakpoint-up(sm) {

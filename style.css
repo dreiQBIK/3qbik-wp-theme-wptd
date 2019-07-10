@@ -1480,6 +1480,16 @@ template {
   border-style: solid !important;
 }
 
+.bd-all-3 {
+  border-width: 3px !important;
+  border-style: solid !important;
+}
+
+.bd-all-4 {
+  border-width: 4px !important;
+  border-style: solid !important;
+}
+
 .bd-top-1 {
   border-width: 0 !important;
   border-top-width: 1px !important;
@@ -1489,6 +1499,18 @@ template {
 .bd-top-2 {
   border-width: 0 !important;
   border-top-width: 2px !important;
+  border-style: solid !important;
+}
+
+.bd-top-3 {
+  border-width: 0 !important;
+  border-top-width: 3px !important;
+  border-style: solid !important;
+}
+
+.bd-top-4 {
+  border-width: 0 !important;
+  border-top-width: 4px !important;
   border-style: solid !important;
 }
 
@@ -1504,6 +1526,18 @@ template {
   border-style: solid !important;
 }
 
+.bd-right-3 {
+  border-width: 0 !important;
+  border-right-width: 3px !important;
+  border-style: solid !important;
+}
+
+.bd-right-4 {
+  border-width: 0 !important;
+  border-right-width: 4px !important;
+  border-style: solid !important;
+}
+
 .bd-bottom-1 {
   border-width: 0 !important;
   border-bottom-width: 1px !important;
@@ -1516,6 +1550,18 @@ template {
   border-style: solid !important;
 }
 
+.bd-bottom-3 {
+  border-width: 0 !important;
+  border-bottom-width: 3px !important;
+  border-style: solid !important;
+}
+
+.bd-bottom-4 {
+  border-width: 0 !important;
+  border-bottom-width: 4px !important;
+  border-style: solid !important;
+}
+
 .bd-left-1 {
   border-width: 0 !important;
   border-left-width: 1px !important;
@@ -1525,6 +1571,18 @@ template {
 .bd-left-2 {
   border-width: 0 !important;
   border-left-width: 2px !important;
+  border-style: solid !important;
+}
+
+.bd-left-3 {
+  border-width: 0 !important;
+  border-left-width: 3px !important;
+  border-style: solid !important;
+}
+
+.bd-left-4 {
+  border-width: 0 !important;
+  border-left-width: 4px !important;
   border-style: solid !important;
 }
 
@@ -9007,33 +9065,64 @@ a.btn1-main {
 @media (min-width: 961px) {
   .btn1-main:hover,
   a.btn1-main:hover {
-    background-color: #384d62;
+    background-color: #879cb1;
   }
 }
 
 .btn2-main,
 a.btn2-main {
-  background-color: #384d62;
+  background-color: #879cb1;
   color: #ffffff;
 }
 
 @media (min-width: 961px) {
   .btn2-main:hover,
   a.btn2-main:hover {
-    background-color: #879cb1;
+    background-color: #384d62;
+  }
+}
+
+.btn3-main,
+a.btn3-main {
+  background-color: #fff191;
+  color: #2c3e50;
+}
+
+@media (min-width: 961px) {
+  .btn3-main:hover,
+  a.btn3-main:hover {
+    background-color: #ec764d;
+    color: #ffffff;
   }
 }
 
 .btn1-second,
 a.btn1-second {
-  background-color: #ec764d;
-  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ec764d;
+  color: #ec764d;
 }
 
 @media (min-width: 961px) {
   .btn1-second:hover,
   a.btn1-second:hover {
-    background-color: #d96a44;
+    border: 2px solid #2c3e50;
+    color: #2c3e50;
+  }
+}
+
+.btn2-second,
+a.btn2-second {
+  background-color: transparent;
+  border: 2px solid #fff191;
+  color: #fff191;
+}
+
+@media (min-width: 961px) {
+  .btn2-second:hover,
+  a.btn2-second:hover {
+    border: 2px solid #ec764d;
+    color: #ec764d;
   }
 }
 
@@ -9041,9 +9130,12 @@ a.link {
   transition: color 0.15s ease-in-out;
 }
 
+a.link-main {
+  text-decoration: underline;
+}
+
 a.link1-main:link {
   color: #2c3e50;
-  text-decoration: underline;
 }
 
 a.link1-main:visited {
@@ -9061,32 +9153,34 @@ a.link1-main:active {
 }
 
 a.link2-main:link {
-  color: #879cb1;
-  text-decoration: underline;
+  color: #ffffff;
 }
 
 a.link2-main:visited {
-  color: #879cb1;
+  color: #ffffff;
 }
 
 @media (min-width: 961px) {
   a.link2-main:hover {
-    color: #2c3e50;
-    text-decoration: underline;
+    color: #fff191;
   }
 }
 
 a.link2-main:active {
-  color: #2c3e50;
+  color: #ffffff;
+}
+
+a.link-second {
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
 a.link1-second:link {
-  color: #ffffff;
-  text-decoration: underline;
+  color: #2c3e50;
 }
 
 a.link1-second:visited {
-  color: #ffffff;
+  color: #2c3e50;
 }
 
 @media (min-width: 961px) {
@@ -9096,27 +9190,25 @@ a.link1-second:visited {
 }
 
 a.link1-second:active {
-  color: #ffffff;
+  color: #2c3e50;
 }
 
 a.link2-second:link {
-  color: #fff191;
-  text-decoration: underline;
+  color: #ffffff;
 }
 
 a.link2-second:visited {
-  color: #fff191;
+  color: #ffffff;
 }
 
 @media (min-width: 961px) {
   a.link2-second:hover {
-    color: #eede70;
-    text-decoration: underline;
+    color: #fff191;
   }
 }
 
 a.link2-second:active {
-  color: #fff191;
+  color: #ffffff;
 }
 
 a.comment-reply-link,
@@ -9531,31 +9623,31 @@ Icon colors
 Change icon size
 
 -------------------------------- */
-.icon--xs {
+.icon--xsmall {
   height: 0.8rem;
   width: 0.8rem;
   font-size: 0.8rem !important;
 }
 
-.icon--sm {
+.icon--small {
   height: 1.3rem;
   width: 1.3rem;
   font-size: 1.3rem !important;
 }
 
-.icon--md {
+.icon--medium {
   height: 1.8rem;
   width: 1.8rem;
   font-size: 1.8rem !important;
 }
 
-.icon--lg {
+.icon--large {
   height: 2rem;
   width: 2rem;
   font-size: 2rem !important;
 }
 
-.icon--xl {
+.icon--xlarge {
   height: 3rem;
   width: 3rem;
   font-size: 3rem !important;
@@ -9642,6 +9734,177 @@ Stroke effects - Nucleo outline icons
   -ms-transform: translateX(0.5px) translateY(0.5px);
   -o-transform: translateX(0.5px) translateY(0.5px);
   transform: translateX(0.5px) translateY(0.5px);
+}
+
+.mb-small {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 481px) {
+  .mb-small {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 961px) {
+  .mb-small {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 1361px) {
+  .mb-small {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1921px) {
+  .mb-small {
+    margin-bottom: 4rem;
+  }
+}
+
+.mb-medium {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 481px) {
+  .mb-medium {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 961px) {
+  .mb-medium {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1361px) {
+  .mb-medium {
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media (min-width: 1921px) {
+  .mb-medium {
+    margin-bottom: 4rem;
+  }
+}
+
+.mb-large {
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 961px) {
+  .mb-large {
+    margin-bottom: 6rem;
+  }
+}
+
+@media (min-width: 1361px) {
+  .mb-large {
+    margin-bottom: 8rem;
+  }
+}
+
+.px-small {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+@media (min-width: 481px) {
+  .px-small {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@media (min-width: 961px) {
+  .px-small {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+@media (min-width: 1361px) {
+  .px-small {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1921px) {
+  .px-small {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.px-medium {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 481px) {
+  .px-medium {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 961px) {
+  .px-medium {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1361px) {
+  .px-medium {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1921px) {
+  .px-medium {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.px-large {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 481px) {
+  .px-large {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 961px) {
+  .px-large {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1361px) {
+  .px-large {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1921px) {
+  .px-large {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 .l_styleguide .color-field {
@@ -9825,78 +10088,78 @@ Stroke effects - Nucleo outline icons
   padding: 2rem;
 }
 
-.sp-zero {
+.pb-zero {
   padding-bottom: 0;
 }
 
-.sp-sm {
+.pb-small {
   padding-bottom: 1rem;
 }
 
 @media (min-width: 481px) {
-  .sp-sm {
+  .pb-small {
     padding-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 961px) {
-  .sp-sm {
+  .pb-small {
     padding-bottom: 2rem;
   }
 }
 
 @media (min-width: 1361px) {
-  .sp-sm {
+  .pb-small {
     padding-bottom: 3rem;
   }
 }
 
 @media (min-width: 1921px) {
-  .sp-sm {
+  .pb-small {
     padding-bottom: 4rem;
   }
 }
 
-.sp-md {
+.pb-medium {
   padding-bottom: 2rem;
 }
 
 @media (min-width: 481px) {
-  .sp-md {
+  .pb-medium {
     padding-bottom: 2.5rem;
   }
 }
 
 @media (min-width: 961px) {
-  .sp-md {
+  .pb-medium {
     padding-bottom: 3rem;
   }
 }
 
 @media (min-width: 1361px) {
-  .sp-md {
+  .pb-medium {
     padding-bottom: 3.5rem;
   }
 }
 
 @media (min-width: 1921px) {
-  .sp-md {
+  .pb-medium {
     padding-bottom: 4rem;
   }
 }
 
-.sp-lg {
+.pb-large {
   padding-bottom: 5rem;
 }
 
 @media (min-width: 961px) {
-  .sp-lg {
+  .pb-large {
     padding-bottom: 6rem;
   }
 }
 
 @media (min-width: 1361px) {
-  .sp-lg {
+  .pb-large {
     padding-bottom: 8rem;
   }
 }

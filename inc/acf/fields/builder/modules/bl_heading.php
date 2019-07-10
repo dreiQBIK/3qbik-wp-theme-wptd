@@ -29,12 +29,12 @@ $bl_heading
                 'label' => 'Abstand nach unten',
                 'instructions' => 'Größe des Abstandes des gesamten Elementes nach unten/zum nächsten Element',
                 'wrapper' => ['width' => '50'],
-                'default_value' => 'sp-md'
+                'default_value' => 'pb-medium'
             ])
             ->addChoice('sp-zero', 'Kein Abstand')
-            ->addChoice('sp-sm', 'Klein')
-            ->addChoice('sp-md', 'Standard')
-            ->addChoice('sp-lg', 'Groß')
+            ->addChoice('pb-small', 'Klein')
+            ->addChoice('pb-medium', 'Standard')
+            ->addChoice('pb-large', 'Groß')
 
     ->endGroup();
 

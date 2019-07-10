@@ -1,0 +1,95 @@
+{# buttons #}
+<div class="container container--narrow bg-c-white bd-radius-5 mb-300 px-400 py-200">
+   <div class="row">
+      <div class="col-12">
+         <h2 id="sg-icons" class="h1 t-c1-main">Icons</h2>
+      </div>
+
+      <div class="col-12 mb-100">
+         <a class="h3 link link-main link1-main mb-100" href="{{ theme.link }}/templates/icons/demo.html" target="_blank">Alle Icons im Überblick</a>
+      </div>
+
+      <div class="col-12 mb-200">
+         <div class="mb-200">
+            <h3 class="h3 f3-second t-c1-main">SVG-Icons</h3>
+            <p class="p1 t-c1-main">Wenn es möglich ist müssen immer SVG-Icons verwendet werden. Das Icon kann in unterschiedlichen Größen verwendet werden. Ein Überblick über alle Icon-Namen kann in der Datei <code class="language-css wptd-copy">icon.scss</code> eingesehen werden.</p>
+         </div>
+
+         <div class="mb-100">
+            <span class="p1 t-c1-error">HTML-Code:&nbsp;</span>
+<pre class="language-css">
+<code class="language-css">
+&lt;i class="icon-wrapper"&gt;
+   &lt;svg class="icon icon--xsmall icon--outline icon--stroke-4"&gt;
+      &lt;use href="#icon-mail" xlink:href="#icon-mail"/&gt;
+   &lt;/svg&gt;
+&lt;/i&gt;
+</code>
+</pre>
+         </div>
+
+         <div class="mb-100">
+            <span class="p1 t-c1-error">Größen:&nbsp;</span>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">icon--xsmall</pre></code>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">icon--small</pre></code>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">icon--medium</pre></code>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">icon--large</pre></code>
+            <code class="language-css wptd-copy mr-50 mb-50"><pre class="language-css">icon--xlarge</pre></code>
+         </div>
+      </div>
+
+      <div class="col-12 mb-200">
+         <i class="icon-wrapper">
+            <svg class="icon icon--xsmall icon--outline icon--stroke-4"><use href="#icon-mail" xlink:href="#icon-mail"/></svg>
+         </i>
+         <i class="icon-wrapper">
+            <svg class="icon icon--small icon--outline icon--stroke-4"><use href="#icon-mail" xlink:href="#icon-mail"/></svg>
+         </i>
+         <i class="icon-wrapper">
+            <svg class="icon icon--medium icon--outline icon--stroke-4"><use href="#icon-mail" xlink:href="#icon-mail"/></svg>
+         </i>
+         <i class="icon-wrapper">
+            <svg class="icon icon--large icon--outline icon--stroke-4"><use href="#icon-mail" xlink:href="#icon-mail"/></svg>
+         </i>
+         <i class="icon-wrapper">
+            <svg class="icon icon--xlarge icon--outline icon--stroke-4"><use href="#icon-mail" xlink:href="#icon-mail"/></svg>
+         </i>
+      </div>
+
+      <div class="col-12">
+         <div class="mb-200">
+            <h3 class="h3 f3-second t-c1-main">Icon-Font</h3>
+            <p class="p1 t-c1-main">Die Iconfont darf nur in Ausnahmen und für die Icon-Darstellung im WordPress-Backend verwendet werden. Eine Ausnahme im Frontend ist z.B. das Icon einer Checkbox, dass nur über ein Pseudo-Element definiert werden kann. Ein Überblick über alle Icon-Unicodes kann in der Datei <code class="language-css wptd-copy">icon.scss</code> eingesehen werden.</p>
+         </div>
+
+         <div class="mb-100">
+            <span class="p1 t-c1-error">Icon via Pseudo-Element&nbsp;</span>
+<pre>
+<code class="language-css">
+&:before {
+   content: "\ea1b";
+   font: normal normal normal 1em/1 'Nucleo';
+   speak: none;
+   text-transform: none;
+   /* Better Font Rendering */
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   font-size: 1rem;
+}
+</code>
+</pre>
+         </div>
+
+
+
+         <i class="icon icon--xsmall icon-mail"></i>
+         <i class="icon icon--small icon-mail"></i>
+         <i class="icon icon--medium icon-mail"></i>
+         <i class="icon icon--large icon-mail"></i>
+         <i class="icon icon--xlarge icon-mail"></i>
+      </div>
+   </div>
+</div>
+
+
+
