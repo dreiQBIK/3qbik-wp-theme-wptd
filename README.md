@@ -7,7 +7,7 @@ WordPress Theme with Timber, ACF and acf-builder
 Install this theme and be sure the Timber plugin is activated (see dependencies):
 
 1. Install current [WordPress Version](https://de.wordpress.org/download/)
-2. Setup localhost in your local-server (Naming-Convention: projectname.local)
+2. Setup localhost in your local-server (Naming-Convention: projectname.test - z.B. 3qbik-gloeckle-wp-website-skl.test)
 3. Install plugins: [Timber Library](https://wordpress.org/plugins/timber-library/) and [Advanced Custom Fields](https://de.wordpress.org/plugins/advanced-custom-fields/)
 4. Download the zip for this [theme](https://github.com/dreiQBIK/3qbik-wp-theme-wptd) (or clone it) and move it to `wp-content/themes/custom-theme-name` in your WordPress installation.
 5. Rename the folder (custom-theme-name) to something that makes sense for your website (generally no spaces and all lowercase).
