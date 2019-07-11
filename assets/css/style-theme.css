@@ -198,9 +198,20 @@ input[type="radio"]:checked:before {
 }
 
 /* Fix Yoast icon color */
-#adminmenu div.wp-menu-image.svg,
 #wpadminbar .yoast-logo.svg {
-  filter: grayscale(1) brightness(10);
+  filter: grayscale(1) invert(1) brightness(2.5);
+}
+
+#wpadminbar .yoast-logo.svg:hover {
+  filter: grayscale(1) brightness(2.5);
+}
+
+#adminmenu > #toplevel_page_wpseo_dashboard div.wp-menu-image.svg {
+  filter: grayscale(1) invert(1) brightness(2.5);
+}
+
+#adminmenu > #toplevel_page_wpseo_dashboard:hover div.wp-menu-image.svg {
+  filter: grayscale(1) brightness(2.5);
 }
 
 #wpadminbar .quicklinks ul li div[tabindex]:hover {
@@ -719,9 +730,20 @@ input[type="radio"]:checked:before {
 }
 
 /* Fix Yoast icon color */
-#adminmenu div.wp-menu-image.svg,
 #wpadminbar .yoast-logo.svg {
-  filter: grayscale(1) brightness(10);
+  filter: grayscale(1) invert(1) brightness(2.5);
+}
+
+#wpadminbar .yoast-logo.svg:hover {
+  filter: grayscale(1) brightness(2.5);
+}
+
+#adminmenu > #toplevel_page_wpseo_dashboard div.wp-menu-image.svg {
+  filter: grayscale(1) invert(1) brightness(2.5);
+}
+
+#adminmenu > #toplevel_page_wpseo_dashboard:hover div.wp-menu-image.svg {
+  filter: grayscale(1) brightness(2.5);
 }
 
 #wpadminbar .quicklinks ul li div[tabindex]:hover {
