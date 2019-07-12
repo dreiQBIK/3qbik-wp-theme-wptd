@@ -122,6 +122,33 @@ input[type="radio"]:checked:before {
    color: $menu-highlight-icon;
 }
 
+/* Fix Yoast icon color */
+
+#wpadminbar .yoast-logo.svg {
+   filter: grayscale(1) invert(1) brightness(2.5);
+
+   &:hover {
+      filter: grayscale(1) brightness(2.5);
+   }
+}
+
+#adminmenu > #toplevel_page_wpseo_dashboard {
+
+   & div.wp-menu-image.svg {
+      filter: grayscale(1) invert(1) brightness(2.5);
+   }
+
+   &:hover {
+      & div.wp-menu-image.svg {
+         filter: grayscale(1) brightness(2.5);
+      }
+   }
+}
+
+#wpadminbar .quicklinks ul li div[tabindex]:hover {
+   color: $menu-submenu-focus-text !important;
+}
+
 /* Active tabs use a bottom border color that matches the page background color. */
 
 .about-wrap h2 .nav-tab-active,

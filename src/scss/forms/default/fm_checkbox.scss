@@ -47,32 +47,32 @@
             color: $c1-third;
 
             &:before {
-               content: $Nucleo-icon-check;
+               content: "\ea1b";
                display: inline-flex;
                align-items: center;
+               justify-content: center;
                font: normal normal normal 1em/1 'Nucleo';
                speak: none;
                text-transform: none;
+               /* Better Font Rendering */
                -webkit-font-smoothing: antialiased;
                -moz-osx-font-smoothing: grayscale;
-               padding-left: 5px;
-               font-size: 1rem;
-               color: $c1-third;
-               border-color: $c1-third;
+               font-size: 1.2rem;
+               font-weight: 700;
             }
          }
       }
       // label and visible checkbox
       & + span {
          cursor: pointer;
-         transition: color 0.15s ease-in-out;
+         transition: color $transition-150 ease-in-out;
          display: inline-flex;
          align-items: center;
          color: $c1-main;
 
          &:before {
             content: "";
-            transition: border-color 0.15s ease-in-out;
+            transition: border-color $transition-150 ease-in-out;
             background: $c-white;
             display: inline-flex;
             align-items: center;

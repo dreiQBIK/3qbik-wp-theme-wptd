@@ -1,86 +1,61 @@
 <?php
 /**
  * ***********************************************************************************************
- * Initialize Timber
+ *
+ *  > ADMIN_NOTICE_FOR_INACTIVE_TIMBER
+ *  > ADD_OWN_FUNCTIONS_AND_FILTER_TO_TWIG
+ *  > ADD_GLOBAL_TIMBER_CONTEXT
  *
  * @package wptd
  *********************************************************************************************** */
 
+/* ***********************************************************************************************
+    https://github.com/olefredrik/FoundationPress/blob/master/library/cleanup.php
 
-/* Initialize Timber */
+*********************************************************************************************** */
+
+
+/* Set The Default Directory To Look For Our .twig Views */
+Timber::$dirname = 'templates';
+
+
+/* ****************************************************
+   ADMIN_NOTICE_FOR_INACTIVE_TIMBER
+******************************************************* */
+
+/* Show Admin Notice If Timber Is Not Active */
 if ( ! class_exists( 'Timber' ) ) {
     add_action( 'admin_notices', function() {
         echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php') ) . '</a></p></div>';
     });
-
-    add_filter('template_include', function($template) {
-        return get_stylesheet_directory() . '/static/no-timber.html';
-    });
-
     return;
 }
 
-Timber::$dirname = 'templates';
 
-class StarterSite extends TimberSite {
+/* ****************************************************
+   ADD_OWN_FUNCTIONS_AND_FILTER_TO_TWIG
+******************************************************* */
 
-    function __construct() {
-        add_filter( 'timber_context', array( $this, 'add_to_global_context' ) );
-        add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
-        parent::__construct();
-    }
+/* Add Own Functions / Filters To Twig */
+function wptd_add_to_twig( $twig ) {
+    // To enable usage of template_from_string()
+    $twig->addExtension( new Twig_Extension_StringLoader() );
+    // Custom twig filters
+    $twig->addFilter( new Twig_SimpleFilter('wptd_extra_video_params', 'wptd_extra_video_params') );
 
-    //  TODO: move this to a better place
-    // add extra params to iframe src
-    function wptd_extra_video_params( $iframe ) {
-
-        // use preg_match to find iframe src
-        $pattern = '/src="(.+?)"/';
-        preg_match($pattern, $iframe, $matches);
-        $src = $matches[1];
-
-        // add extra params to iframe src
-        $params = array(
-            'rel'            => 0,
-            'modestbranding' => 1,
-            'iv_load_policy' => 3,
-        );
-        $new_src = add_query_arg($params, $src);
-        $iframe = str_replace($src, $new_src, $iframe);
-
-        // add extra attributes to iframe html
-        $attributes = 'frameborder="0"';
-        $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
-
-        // always use youtube-nocookie.com
-        if ( preg_match('#https?://(www\.)?youtu#i', $src) ) {
-            $iframe = preg_replace(
-                '#src=(["\'])(https?:)?//(www\.)?youtube\.com#i',
-                'src=$1$2//$3youtube-nocookie.com',
-                $iframe
-            );
-        }
-
-        // return $iframe
-        return $iframe;
-    }
-
-    function add_to_global_context( $context ) {
-        // TODO: Was hiervon ist wirklich nötig?
-        $context['menu'] = new \Timber\Menu( 'primary' );
-        $context['menu_footer'] = new \Timber\Menu( 'footer' );
-        $context['site'] = $this;
-        return $context;
-    }
-
-    function add_to_twig( $twig ) {
-        // to enable usage of template_from_string()
-        $twig->addExtension( new Twig_Extension_StringLoader() );
-        // custom twig filters
-        $twig->addFilter( new Twig_SimpleFilter('wptd_extra_video_params', array($this, 'wptd_extra_video_params')) );
-        return $twig;
-    }
-
+    return $twig;
 }
+add_filter( 'timber/twig', 'wptd_add_to_twig' );
 
-new StarterSite();
+
+/* ****************************************************
+   ADD_GLOBAL_TIMBER_CONTEXT
+******************************************************* */
+
+/* Add To The Global Timber Context, e.g. Menus */
+function wptd_add_to_global_timber_context( $context ) {
+    $context['menu'] = new \Timber\Menu( 'primary' );
+    $context['menu_footer'] = new \Timber\Menu( 'footer' );
+    return $context;
+}
+add_filter( 'timber/context', 'wptd_add_to_global_timber_context' );

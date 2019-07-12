@@ -2,7 +2,7 @@
 
     &__upload-wrapper {
         cursor: pointer;
-        transition: 0.15s ease-in-out;
+        transition: $transition-150 ease-in-out;
         display: inline-block;
         background: $c1-third;
         position: relative;

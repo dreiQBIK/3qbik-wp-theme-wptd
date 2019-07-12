@@ -1,17 +1,24 @@
 <?php
 /**
- * Register theme support for languages, menus, post-thumbnails etc.
+ * ***********************************************************************************************
  *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
+ *  > THEME_BASIC_SETUP
+ *  >
  *
- * @link https://github.com/olefredrik/FoundationPress/blob/master/library/theme-support.php
  * @package wptd
- */
+ *********************************************************************************************** */
+
+/* ***********************************************************************************************
+    https://github.com/olefredrik/FoundationPress/blob/master/library/theme-support.php
+
+*********************************************************************************************** */
+
+
+/* ****************************************************
+   THEME_BASIC_SETUP
+******************************************************* */
 
 function wptd_theme_support() {
-
     /*
      * Make theme available for translation.
      * Translations can be filed in the /languages/ directory.
@@ -31,9 +38,6 @@ function wptd_theme_support() {
         )
     );
 
-    // Add menu support
-    add_theme_support( 'menus' );
-
     /*
      * Let WordPress manage the document title.
      * By adding theme support, we declare that this theme does not use a
@@ -50,6 +54,5 @@ function wptd_theme_support() {
 
     // Add default posts and comments RSS feed links to head.
     add_theme_support( 'automatic-feed-links' );
-
 }
 add_action( 'after_setup_theme', 'wptd_theme_support' );

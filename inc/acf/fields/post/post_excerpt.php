@@ -17,7 +17,7 @@ $post_excerpt
    ->addTextArea('post_excerpt', [
       'label' => 'Kurzbeschreibung',
       'instructions' => 'Beschreibung, die auf der Listenansicht eines Beitrags angezeigt wird.',
-      'required' => 1,
+      'required' => 0,
    ]);
 
 return $post_excerpt;

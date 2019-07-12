@@ -1,7 +1,7 @@
 .btn,
 a.btn {
    cursor: pointer;
-   transition: 0.15s ease-in-out;
+   transition: $transition-150 ease-in-out;
    display: inline-block;
    padding: 0.5em 1em;
    border: 0;
@@ -40,29 +40,54 @@ a.btn {
 
       &:hover {
          @include media-breakpoint-up(md) {
-            background-color: $c2-main;
+            background-color: $c3-main;
          }
       }
    }
    &2-main {
-      background-color: $c2-main;
+      background-color: $c3-main;
       color: $c-white;
 
       &:hover {
          @include media-breakpoint-up(md) {
-            background-color: $c3-main;
+            background-color: $c2-main;
+         }
+      }
+   }
+   &3-main {
+      background-color: $c1-second;
+      color: $c1-main;
+
+      &:hover {
+         @include media-breakpoint-up(md) {
+            background-color: $c1-third;
+            color: $c-white;
          }
       }
    }
 
    // second buttons
    &1-second {
-      background-color: $c1-third;
-      color: $c-white;
+      background-color: transparent;
+      border: 2px solid $c1-third;
+      color: $c1-third;
 
       &:hover {
          @include media-breakpoint-up(md) {
-            background-color: $c2-third;
+            border: 2px solid $c1-main;
+            color: $c1-main;
+         }
+      }
+   }
+   &2-second {
+      background-color: transparent;
+      border: 2px solid $c1-second;
+      color: $c1-second;
+
+      &:hover {
+         @include media-breakpoint-up(md) {
+            border: 2px solid $c1-third;
+            color: $c1-third;
          }
       }
    }

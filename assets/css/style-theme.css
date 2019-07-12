@@ -8,6 +8,9 @@
    BORDER
 ******************************************************************/
 /******************************************************************
+   TRANSITIONS_TIMING
+******************************************************************/
+/******************************************************************
    SPACERS
 ******************************************************************/
 /******************************************************************
@@ -36,7 +39,7 @@
     );
 
     USAGE SHORT:
-    @include fontstyle("fs1-main");
+    @include fontstyle("fs1");
 
 ******************************************************************/
 /*
@@ -192,6 +195,27 @@ input[type="radio"]:checked:before {
 #adminmenu li.menu-top:hover div.wp-menu-image:before,
 #adminmenu li.opensub > a.menu-top div.wp-menu-image:before {
   color: #fff;
+}
+
+/* Fix Yoast icon color */
+#wpadminbar .yoast-logo.svg {
+  filter: grayscale(1) invert(1) brightness(2.5);
+}
+
+#wpadminbar .yoast-logo.svg:hover {
+  filter: grayscale(1) brightness(2.5);
+}
+
+#adminmenu > #toplevel_page_wpseo_dashboard div.wp-menu-image.svg {
+  filter: grayscale(1) invert(1) brightness(2.5);
+}
+
+#adminmenu > #toplevel_page_wpseo_dashboard:hover div.wp-menu-image.svg {
+  filter: grayscale(1) brightness(2.5);
+}
+
+#wpadminbar .quicklinks ul li div[tabindex]:hover {
+  color: #ec764d !important;
 }
 
 /* Active tabs use a bottom border color that matches the page background color. */
@@ -703,6 +727,27 @@ input[type="radio"]:checked:before {
 #adminmenu li.menu-top:hover div.wp-menu-image:before,
 #adminmenu li.opensub > a.menu-top div.wp-menu-image:before {
   color: #fff;
+}
+
+/* Fix Yoast icon color */
+#wpadminbar .yoast-logo.svg {
+  filter: grayscale(1) invert(1) brightness(2.5);
+}
+
+#wpadminbar .yoast-logo.svg:hover {
+  filter: grayscale(1) brightness(2.5);
+}
+
+#adminmenu > #toplevel_page_wpseo_dashboard div.wp-menu-image.svg {
+  filter: grayscale(1) invert(1) brightness(2.5);
+}
+
+#adminmenu > #toplevel_page_wpseo_dashboard:hover div.wp-menu-image.svg {
+  filter: grayscale(1) brightness(2.5);
+}
+
+#wpadminbar .quicklinks ul li div[tabindex]:hover {
+  color: #fff !important;
 }
 
 /* Active tabs use a bottom border color that matches the page background color. */

@@ -4,10 +4,10 @@
    <div class="m_post-teaser__content">
       <h2>{{ post.title }}</h2>
       <div class="m_post-teaser__meta">
-         <a class="m_post-teaser__author link link1-second" href="{{ post.author.link }}">{{ __( 'Autor:', 'wptd' ) }}&nbsp;{{ post.author }}</a>
+         <a class="m_post-teaser__author link link-main link2-main" href="{{ post.author.link }}">{{ __( 'Autor:', 'wptd' ) }}&nbsp;{{ post.author }}</a>
          <span class="m_post-teaser__date">{{ post.date }}</span>
       </div>
       <p class="m_post-teaser__excerpt">{{ not is_editor_post ? post.meta('post_excerpt') : post.content|excerpt(30) }}</p>
-      <a class="btn btn1-second" href="{{ post.link }}">{{ __( 'Weiterlesen', 'wptd' ) }}</a>
+      <a class="btn btn2-second" href="{{ post.link }}">{{ __( 'Weiterlesen', 'wptd' ) }}</a>
    </div>
 </section>

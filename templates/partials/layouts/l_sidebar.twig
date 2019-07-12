@@ -1,5 +1,5 @@
 <aside class="l_sidebar">
-   <div class="container sp-md">
+   <div class="container pb-medium">
       <h2 class="f3-second">{{ __( 'Sidebar', 'wptd' ) }}</h2>
       <div class="row">
          <div class="col col-12 col-md-6 mb-100 mb-md-0">
@@ -8,7 +8,7 @@
                <ul class="l_sidebar__section-list">
                {% for cat in categories %}
                   <li>
-                     <a class="link link1-second" href="{{ cat.link }}">{{ cat.name }}</a>
+                     <a class="link link-main link2-main" href="{{ cat.link }}">{{ cat.name }}</a>
                   </li>
                {% endfor %}
                </ul>
@@ -20,7 +20,7 @@
                <ul class="l_sidebar__section-list">
                {% for tag in tags %}
                   <li>
-                     <a class="link link1-second" href="{{ tag.link }}">{{ tag.name }}</a>
+                     <a class="link link-main link2-main" href="{{ tag.link }}">{{ tag.name }}</a>
                   </li>
                {% endfor %}
                </ul>

@@ -29,29 +29,39 @@ Change icon size
 
 -------------------------------- */
 
-.icon--xs {
-  height: 0.5em;
-  width: 0.5em;
+.icon--xsmall {
+  height: 0.8rem;
+  width: 0.8rem;
+  font-size: 0.8rem !important;
 }
 
-.icon--sm {
-  height: 0.8em;
-  width: 0.8em;
+.icon--small {
+  height: 1.3rem;
+  width: 1.3rem;
+  font-size: 1.3rem !important;
 }
 
-.icon--lg {
-  height: 1.6em;
-  width: 1.6em;
+.icon--medium {
+  height: 1.8rem;
+  width: 1.8rem;
+  font-size: 1.8rem !important;
 }
 
-.icon--xl {
-  height: 2em;
-  width: 2em;
+.icon--large {
+  height: 2rem;
+  width: 2rem;
+  font-size: 2rem !important;
 }
 
-/* -------------------------------- 
+.icon--xlarge {
+  height: 3rem;
+  width: 3rem;
+  font-size: 3rem !important;
+}
 
-Align icon and text 
+/* --------------------------------
+
+Align icon and text
 
 -------------------------------- */
 
@@ -81,7 +91,7 @@ Align icon and text
   stroke: currentColor;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Icon reset values - used to enable color customizations
 
@@ -100,7 +110,7 @@ Icon reset values - used to enable color customizations
   stroke: none;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Stroke effects - Nucleo outline icons
 

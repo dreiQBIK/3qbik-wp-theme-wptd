@@ -14,7 +14,8 @@
          {% include '/partials/layouts/l_builder.twig' %}
       </div>
 
-      {% if post.comments %}
+      {# if comments exists show comments and form #}
+      {% if post.comments|length %}
          <section class="container mb-400">
             <div class="l_comments" id="comments">
                {% include "/partials/layouts/l_comments.twig" %}
@@ -24,9 +25,18 @@
                {% endif %}
             </div>
          </section>
+      {# else show just form #}
+      {% else %}
+         {% if post.comment_status == 'open' %}
+            <section class="container mb-400">
+               <div class="l_comments" id="comments">
+                     {% include "/partials/layouts/l_comment-form.twig" %}
+               </div>
+            </section>
+         {% endif %}
       {% endif %}
 
-      {% if post.meta('post_related_posts') %}
+      {% if post.meta('post_related_posts').posts %}
          <section class="container">
             {% include "/partials/modules/m_related-posts.twig" %}
          </section>

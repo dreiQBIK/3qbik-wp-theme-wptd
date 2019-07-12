@@ -1,6 +1,6 @@
 {
    "settings": {
-      "host": "3qbik-wp-theme-wptd.local"
+      "host": "3qbik-wp-theme-wptd.test"
    },
    "js": {
       "pathSrc": ["../src/js/globals/**.js", "../src/js/**.js"],
@@ -9,8 +9,8 @@
       "pathSrcSeparateVendor": "../src/js/separate-files/vendor/**.js",
       "pathDest": "../assets/js",
       "pathDestVendor": "../assets/js/vendor",
-      "pathDestSeparate": "../assets/js/separate",
-      "pathDestSeparateVendor": "../assets/js/separate/vendor",
+      "pathDestSeparate": "../assets/js/separate-files",
+      "pathDestSeparateVendor": "../assets/js/separate-files/vendor",
       "pathDestMaps": "../../maps"
    },
    "css": {
@@ -27,5 +27,9 @@
       "pathDestBackend": "../assets/css",
       "pathDestMaps": "maps",
       "pathDestBackendMaps": "../../maps"
+   },
+   "images": {
+      "pathSrc": "../src/img",
+      "pathDest": "../assets/img"
    }
 }

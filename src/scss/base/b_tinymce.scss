@@ -110,7 +110,7 @@
    }
 
    a {
-      transition: color 0.15s ease-in-out;
+      transition: color $transition-150 ease-in-out;
 
       &:link {
          color: $c-white;

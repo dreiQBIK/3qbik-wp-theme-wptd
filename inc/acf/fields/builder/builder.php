@@ -17,7 +17,8 @@ $builder = new FieldsBuilder(
 
 // conditions should be structured like described here: https://github.com/StoutLogic/acf-builder/wiki/location
 $builder
-   ->setLocation('post_type', '==', 'post');
+   ->setLocation('post_type', '==', 'post')
+   ->or('post_template', '==', 'tpl-builder.php');
 
 $builder
    ->addFlexibleContent(

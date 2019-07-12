@@ -1,15 +1,33 @@
 <?php
 /**
- * Clean up WordPress defaults
+ * ***********************************************************************************************
  *
- * @link https://github.com/olefredrik/FoundationPress/blob/master/library/cleanup.php
+ *  > CLEAN_UP
+ *  > CLEAN_UP_HEAD
+ *  > RENAME_MENU_ITEMS
+ *
  * @package wptd
- */
+ *********************************************************************************************** */
+
+/* ***********************************************************************************************
+    https://github.com/olefredrik/FoundationPress/blob/master/library/cleanup.php
+
+*********************************************************************************************** */
+
+
+/* ****************************************************
+   CLEAN_UP
+******************************************************* */
 
 function wptd_start_cleanup() {
 
     // Launching operation cleanup
     add_action( 'init', 'wptd_cleanup_head' );
+
+    // Remove the 'wp-block-library.css' file from wp_head()
+    add_action( 'wp_enqueue_scripts', function() {
+        wp_dequeue_style( 'wp-block-library' );
+    } );
 
     // Remove WP version from RSS
     add_filter( 'the_generator', '__return_empty_string' );
@@ -18,9 +36,10 @@ function wptd_start_cleanup() {
 add_action( 'after_setup_theme', 'wptd_start_cleanup' );
 
 
-/**
- * Clean up head
- */
+/* ****************************************************
+   CLEAN_UP_HEAD
+******************************************************* */
+
 function wptd_cleanup_head() {
 
     // EditURI link
@@ -67,10 +86,11 @@ function wptd_cleanup_head() {
 }
 
 
-/**
- * Remove IPs From Comments
- */
+/* ****************************************************
+   REMOVE_IPS_FROM_COMMENTS
+******************************************************* */
+
 function  wptd_remove_commentsip( $comment_author_ip ) {
     return '';
- }
- add_filter( 'pre_comment_user_ip', 'wptd_remove_commentsip' );
+}
+add_filter( 'pre_comment_user_ip', 'wptd_remove_commentsip' );

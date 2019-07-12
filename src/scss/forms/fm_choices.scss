@@ -38,7 +38,7 @@
 }
 
 .choices__inner {
-   transition: border-color 0.15s ease-in-out;
+   transition: border-color $transition-150 ease-in-out;
    overflow: hidden;
    display: inline-block;
    background-color: $c-white;

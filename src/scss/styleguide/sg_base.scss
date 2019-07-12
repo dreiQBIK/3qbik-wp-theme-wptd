@@ -6,3 +6,13 @@
       height: 100px;
    }
 }
+
+// scale copied text
+.wptd-copy {
+   cursor: pointer;
+ }
+
+.wptd-copied {
+   transition: transform 0.15s ease-in-out;
+   transform: scale(1.1);
+ }
