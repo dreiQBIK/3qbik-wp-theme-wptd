@@ -5,11 +5,18 @@
  */
 function wptd_add_acf_field_groups() {
 
-    $acf_field_group_definition_file_paths = array_merge(
+    $acf_field_group_definition_file_paths_globals = glob( get_template_directory() . '/inc/acf/fields/_globals/*.php' );
+
+    $acf_field_group_definition_file_paths_all = array_merge(
         glob( get_template_directory() . '/inc/acf/fields/**/*.php' ),
         glob( get_template_directory() . '/inc/acf/fields/*.php' )
     );
 
+    // remove _globals folder from array
+    $acf_field_group_definition_file_paths = array_diff($acf_field_group_definition_file_paths_all, $acf_field_group_definition_file_paths_globals);
+
+
+    // all folders except _globals
     $acf_field_group_definitions = array_map(
         function ( $field ) {
             return require_once( $field );
