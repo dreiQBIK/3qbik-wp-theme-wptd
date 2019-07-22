@@ -6,6 +6,7 @@
  * @param  mixed $builder_module
  * @return mixed
  */
-function get_module( $module ) {
+
+function wptd_acf_get_module( $module ) {
     return include( get_template_directory() . "/inc/acf/fields/builder/modules/{$module}.php" );
 }

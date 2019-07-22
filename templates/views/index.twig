@@ -1,5 +1,10 @@
 {% extends "base.twig" %}
 
+{% block html_head_container %}
+   {% include 'html-header-noindex.twig' %}
+</head>
+{% endblock %}
+
 {% set page_header = post.meta('page_header') %}
 {% set heading = page_header.heading %}
 {% set text = page_header.text %}

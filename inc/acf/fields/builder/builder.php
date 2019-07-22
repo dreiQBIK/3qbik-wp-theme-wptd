@@ -29,11 +29,11 @@ $builder
       ]
    )
    // we could use a loop here instead, to add all layouts
-   ->addLayout(get_module('bl_quote'))
-   ->addLayout(get_module('bl_video'))
-   ->addLayout(get_module('bl_gallery'))
-   ->addLayout(get_module('bl_image'))
-   ->addLayout(get_module('bl_editor'))
-   ->addLayout(get_module('bl_heading'));
+   ->addLayout(wptd_acf_get_module('bl_quote'))
+   ->addLayout(wptd_acf_get_module('bl_video'))
+   ->addLayout(wptd_acf_get_module('bl_gallery'))
+   ->addLayout(wptd_acf_get_module('bl_image'))
+   ->addLayout(wptd_acf_get_module('bl_editor'))
+   ->addLayout(wptd_acf_get_module('bl_heading'));
 
 return $builder;

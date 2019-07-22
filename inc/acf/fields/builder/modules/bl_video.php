@@ -4,6 +4,11 @@ namespace App;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
+// make _globals variables available for other acf fields
+$acf_field_group_definition_file_paths_globals = glob( get_template_directory() . '/inc/acf/fields/_globals/*.php' );
+foreach ( $acf_field_group_definition_file_paths_globals as $globals_file_path ) {
+    include( $globals_file_path );
+}
 
 $bl_video = new FieldsBuilder('bl_video', [
     'title' => 'Video',
@@ -33,16 +38,7 @@ $bl_video
         ->addTab('settings', [
             'label' => 'Einstellungen',
         ])
-            ->addSelect('margin', [
-                'label' => 'Abstand nach unten',
-                'instructions' => 'Größe des Abstandes des gesamten Elementes nach unten/zum nächsten Element',
-                'wrapper' => ['width' => '50'],
-                'default_value' => 'pb-medium'
-            ])
-            ->addChoice('sp-zero', 'Kein Abstand')
-            ->addChoice('pb-small', 'Klein')
-            ->addChoice('pb-medium', 'Standard')
-            ->addChoice('pb-large', 'Groß')
+            ->addFields($tab_settings)
 
     ->endGroup();
 
