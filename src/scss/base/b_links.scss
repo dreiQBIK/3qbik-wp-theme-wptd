@@ -38,8 +38,8 @@ a.link {
    }
 
    &-second {
+      font-family: $f3-second;
       text-decoration: underline;
-      text-decoration-style: dotted;
    }
    &1-second {
       &:link {

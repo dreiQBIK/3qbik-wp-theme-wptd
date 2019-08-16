@@ -27,12 +27,6 @@ a.btn {
       text-align: center;
    }
 
-   &--disabled {
-      cursor: auto;
-      background-color: $c1-gray;
-      color: darken($c1-gray, 15%);
-   }
-
    // main buttons
    &1-main {
       background-color: $c1-main;
@@ -65,6 +59,11 @@ a.btn {
          }
       }
    }
+   &-main-disabled {
+      cursor: auto;
+      background-color: $c1-gray;
+      color: darken($c1-gray, 15%);
+   }
 
    // second buttons
    &1-second {
@@ -90,5 +89,11 @@ a.btn {
             color: $c1-third;
          }
       }
+   }
+   &-second-disabled {
+      cursor: auto;
+      background-color: transparent;
+      border: 2px solid $c1-gray;
+      color: darken($c1-gray, 15%);
    }
 }
