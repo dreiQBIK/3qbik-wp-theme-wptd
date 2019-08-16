@@ -1,0 +1,23 @@
+{# USES
+   {% include "/partials/header/h_base.twig" %}
+#}
+
+{% set all_fields = post.meta('header_hero') %}
+{% set margin = all_fields.margin %}
+{% set headings = all_fields.headings %}
+{% set layout_class = headings.layout == 'center' ? ' t-center' : '' %}
+{% set heading = headings.heading %}
+{% set heading_type = headings.heading_type %}
+{% set heading_sub = headings.heading_sub %}
+{% set heading_sub_type = headings.heading_sub_type %}
+
+<div class="container {{ margin }}">
+
+	<header class="h_base">
+		<{{ heading_type|default("h1") }} class="h1{{ layout_class }}{% if not heading_sub %} mb-0{% else %} mb-100{% endif %}">{{ heading }}</{{ heading_type|default("h1") }}>
+		{% if heading_sub %}
+			<{{ heading_sub_type|default("h3") }} class="h3{{ layout_class }} t-c2-gray mb-0">{{ heading_sub }}</{{ heading_sub_type|default("h3") }}>
+		{% endif %}
+	</header>
+
+</div>

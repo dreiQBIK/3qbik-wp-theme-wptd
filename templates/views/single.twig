@@ -2,16 +2,17 @@
 
 {% block content %}
    <article class="l_article post-type-{{ post.post_type }}" id="post-{{ post.ID }}" data-template="single.twig">
+
       <header class="container">
          <h1>{{ post.title }}</h1>
          <div class="l_article__meta">
-            <a class="link link1-second" href="{{ post.author.link }}">{{ post.author.display_name }}</a>
+            <a class="link link-second link2-second" href="{{ post.author.link }}">{{ post.author.display_name }}</a>
             <span>{{ post.date }}</span>
          </div>
       </header>
 
       <div class="l_builder">
-         {% include '/partials/layouts/l_builder.twig' %}
+         {% include '/partials/builder/builder-detail.twig' %}
       </div>
 
       {# if comments exists show comments and form #}

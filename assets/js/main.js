@@ -2,8 +2,39 @@
 
 var global = function ($) {
   /******************************************************************
+      VARS
+  ******************************************************************/
+
+  /*
+  * USAGE:
+  *     if (global.breakpoint.value === 'xs' || global.breakpoint.value *     === 'sm') {
+  *        // your code
+  *     } else {
+  *        // your code
+  *     }
+  */
+  var breakpoint = {};
+
+  breakpoint.refreshValue = function () {
+    this.value = window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content').replace(/\"/g, '');
+  };
+  /******************************************************************
+        EVENTS
+    ***************************************************************** */
+
+
+  $(window).resize(function () {
+    breakpoint.refreshValue();
+  }).resize();
+  /******************************************************************
         FUNCTIONS
     ***************************************************************** */
+
+  /*
+  * USAGE:
+  *     global.debounce(function(), 2000);
+  */
+
   function debounce(func, wait, immediate) {
     var timeout;
     return function () {
@@ -25,6 +56,34 @@ var global = function ($) {
   function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
   }
+  /*
+  * USAGE:
+  *     1. add attribute `data-link` to anchor, you want to trigger
+  *     2. add click event on element you want the link to trigger on
+  *     ---
+  *     $card.on('click', function(e){
+  *        global.triggerCardClick($(this), e);
+  *     });
+  */
+
+
+  function triggerCardClick($clickedCard, event) {
+    var $linkEl = $clickedCard.find('a[data-link]'); // leave if no link is present
+
+    if (!$linkEl.length) return;
+    event.stopPropagation();
+    var linkHref = $clickedCard.find('a[data-link]').attr('href');
+    var linkTarget = $clickedCard.find('a[data-link]').attr('target');
+
+    if (linkTarget == '_blank') {
+      linkTarget = '_blank';
+    } else {
+      linkTarget = '_self';
+    } //simulate anchor click
+
+
+    window.open(linkHref, linkTarget);
+  }
   /** ****************************************************************
         PUBLIC_FUNCTIONS
     ******************************************************************/
@@ -32,23 +91,26 @@ var global = function ($) {
 
   return {
     debounce: debounce,
-    getRandomInt: getRandomInt
+    getRandomInt: getRandomInt,
+    breakpoint: breakpoint,
+    triggerCardClick: triggerCardClick
   };
 }(jQuery);
 "use strict";
 
-var blGallery = function ($) {
+var bldGallery = function ($) {
   /******************************************************************
       VARS
   ******************************************************************/
-  var $slider = $('.bl_gallery__slider');
+  var $slider = $('.bld_gallery__slider');
+  if (!$slider.length) return;
   /******************************************************************
       FUNCTIONS
   ******************************************************************/
 
   $slider.each(function () {
     var $currentSlider = $(this);
-    var $thumbsNav = $currentSlider.next('.bl_gallery__nav'); // navigation with thumbnail preview
+    var $thumbsNav = $currentSlider.next('.bld_gallery__nav'); // navigation with thumbnail preview
 
     if ($thumbsNav.length) {
       $currentSlider.slick({
@@ -56,14 +118,14 @@ var blGallery = function ($) {
         slidesToScroll: 1,
         arrows: true,
         fade: true,
-        asNavFor: '.bl_gallery__nav',
+        asNavFor: '.bld_gallery__nav',
         prevArrow: '<button class="slick-prev" aria-label="Zurück"><i class="slick-icon"><svg class="icon"><use href="#icon-left-arrow" xlink:href="#icon-left-arrow"/></svg></i></button>',
         nextArrow: '<button class="slick-next" aria-label="Weiter"><i class="slick-icon"><svg class="icon"><use href="#icon-right-arrow-2" xlink:href="#icon-right-arrow-2"/></svg></i></button>'
       });
       $thumbsNav.slick({
         slidesToShow: 4,
         slidesToScroll: 4,
-        asNavFor: '.bl_gallery__slider',
+        asNavFor: '.bld_gallery__slider',
         centerMode: true,
         arrows: false,
         focusOnSelect: true,
@@ -91,6 +153,47 @@ var blGallery = function ($) {
       });
     }
   });
+}(jQuery);
+"use strict";
+
+var blgTestimonials = function ($) {
+  /******************************************************************
+      VARS
+  ******************************************************************/
+  var $testimonialSlider = $('.blg_testimonials__slider');
+  /******************************************************************
+      EVENTS
+  ******************************************************************/
+
+  $testimonialSlider.slick({
+    centerMode: true,
+    centerPadding: '200px',
+    slidesToShow: 3,
+    autoplay: false,
+    autoplaySpeed: 6000,
+    prevArrow: '<svg class="icon icon--xlarge t-c-white slick-prev"><use href="#icon-left-arrow" xlink:href="#icon-left-arrow"/></svg>',
+    nextArrow: '<svg class="icon icon--xlarge t-c-white slick-next"><use href="#icon-right-arrow" xlink:href="#icon-right-arrow"/></svg>',
+    responsive: [{
+      breakpoint: 1600,
+      settings: {
+        centerPadding: '100px'
+      }
+    }, {
+      breakpoint: 1400,
+      settings: {
+        centerPadding: '60px'
+      }
+    }, {
+      breakpoint: 961,
+      settings: {
+        centerPadding: '0px',
+        slidesToShow: 1
+      }
+    }]
+  });
+  /******************************************************************
+      FUNCTIONS
+  ******************************************************************/
 }(jQuery);
 "use strict";
 
@@ -169,17 +272,11 @@ var nSite = function ($) {
   /******************************************************************
        VARS
    ******************************************************************/
-  // get variables for setting js breakpoints equal to css breakpoints
-  var breakpointJS = $("body");
-  var breakpointCSSWidth = 961;
-  var breakpointJSWidth = breakpointJS.width(); // cache DOM elements
-
   var $siteNavigation = $(".n_site");
-  var $siteNavigationBurger = $(".n_site-burger");
+  var $siteNavigationBurger = $(".h_site__burger");
   /******************************************************************
        EVENTS
    ******************************************************************/
-  // set js breakpoints equal to css breakpoints
 
   $(window).resize(function () {
     toggleNavAtBreakpoint();
@@ -203,24 +300,14 @@ var nSite = function ($) {
   function hideNav() {
     $siteNavigationBurger.removeClass("is-active");
     $siteNavigation.removeClass("is-active");
-  } // checks for mobile device
-
-
-  function isMobile() {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      return true;
-    }
-
-    return false;
   } // toggle nav on mobile/desktop
 
 
   function toggleNavAtBreakpoint() {
-    // set breakpoint
-    breakpointJSWidth = breakpointJS.width(); // check for mobile device and hide/show nav
-
-    if (!isMobile()) {
-      breakpointJSWidth >= breakpointCSSWidth ? showNav() : hideNav();
+    if (global.breakpoint.value === 'xs' || global.breakpoint.value === 'sm') {
+      showNav();
+    } else {
+      hideNav();
     }
   }
   /******************************************************************
@@ -315,59 +402,6 @@ var oLightbox = function ($) {
 }(jQuery);
 "use strict";
 
-var parsleyLocalization = function ($) {
-  Parsley.addMessages('de', {
-    defaultMessage: "Die Eingabe scheint nicht korrekt zu sein.",
-    type: {
-      email: "Die Eingabe muss eine gültige E-Mail-Adresse sein.",
-      url: "Die Eingabe muss eine gültige URL sein.",
-      number: "Die Eingabe muss eine Zahl sein.",
-      integer: "Die Eingabe muss eine Zahl sein.",
-      digits: "Die Eingabe darf nur Ziffern enthalten.",
-      alphanum: "Die Eingabe muss alphanumerisch sein."
-    },
-    notblank: "Die Eingabe darf nicht leer sein.",
-    required: "Dies ist ein Pflichtfeld.",
-    pattern: "Die Eingabe scheint ungültig zu sein.",
-    min: "Die Eingabe muss größer oder gleich %s sein.",
-    max: "Die Eingabe muss kleiner oder gleich %s sein.",
-    range: "Die Eingabe muss zwischen %s und %s liegen.",
-    minlength: "Die Eingabe ist zu kurz. Es müssen mindestens %s Zeichen eingegeben werden.",
-    maxlength: "Die Eingabe ist zu lang. Es dürfen höchstens %s Zeichen eingegeben werden.",
-    length: "Die Länge der Eingabe ist ungültig. Es müssen zwischen %s und %s Zeichen eingegeben werden.",
-    mincheck: "Wählen Sie mindestens %s Angaben aus.",
-    maxcheck: "Wählen Sie maximal %s Angaben aus.",
-    check: "Wählen Sie zwischen %s und %s Angaben.",
-    equalto: "Dieses Feld muss dem anderen entsprechen."
-  });
-  Parsley.setLocale('de');
-}(jQuery);
-"use strict";
-
-var example = function ($) {
-  /******************************************************************
-      VARS
-  ******************************************************************/
-  // your code here
-
-  /******************************************************************
-      EVENTS
-  ******************************************************************/
-  // your code here
-
-  /******************************************************************
-      FUNCTIONS
-  ******************************************************************/
-  // your code here
-
-  /******************************************************************
-      PUBLIC_FUNCTIONS
-  ******************************************************************/
-  return {// your code here
-  };
-}(jQuery);
-"use strict";
-
 /*
  * USAGE: add class `img-cover` and
  *   - `data-pos-y="0" => standard / top`
@@ -387,6 +421,9 @@ var imgCover = function ($) {
     // no img-cover
     if (!$(e.target).hasClass('img-cover')) return;
     makeImgCover($(e.target));
+    setTimeout(function () {
+      makeImgCover($(e.target));
+    }, 100);
   });
   $(window).on('resize', function (e) {
     setTimeout(function () {

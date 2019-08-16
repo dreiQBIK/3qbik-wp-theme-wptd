@@ -1,0 +1,174 @@
+.h_hero {
+   overflow: hidden;
+   margin-top: -3rem;
+   min-height: 600px;
+   height: 90vh;
+   max-height: 680px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   background-position: center;
+   background-color: $c3-main;
+
+   @include media-breakpoint-up(sm) {
+      min-height: 650px;
+      height: 70vh;
+      max-height: 768px;
+   }
+
+   &--small {
+      min-height: 500px;
+      height: 80vh;
+      max-height: 580px;
+
+      @include media-breakpoint-up(sm) {
+         min-height: 520px;
+         height: 57vh;
+         max-height: 638px;
+      }
+   }
+
+   &__subheading {
+      margin: 0;
+   }
+
+   &__subheading {
+      margin: 0;
+   }
+
+   &__content {
+
+      > * {
+         position: relative;
+         z-index: 5;
+      }
+
+      &--with-bcg {
+
+         &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 0;
+         }
+
+         &.h_hero__content--left-top:after {
+            background: linear-gradient(145deg, rgba($c-white, 0.7) 0%, rgba($c-white, 0.6) 30%, transparent 100%);
+         }
+         &.h_hero__content--left-center:after {
+            background: linear-gradient(90deg, rgba($c-white, 0.7) 0%, rgba($c-white, 0.6) 30%, transparent 100%);
+         }
+         &.h_hero__content--left-bottom:after {
+            background: linear-gradient(55deg, rgba($c-white, 0.7) 0%, rgba($c-white, 0.6) 30%, transparent 100%);
+         }
+
+         &.h_hero__content--right-top:after {
+            background: linear-gradient(55deg, transparent 0%, rgba($c-white, 0.6) 70%, rgba($c-white, 0.7) 100%);
+         }
+         &.h_hero__content--right-center:after {
+            background: linear-gradient(90deg, transparent 0%, rgba($c-white, 0.6) 70%, rgba($c-white, 0.7) 100%);
+         }
+         &.h_hero__content--right-bottom:after {
+            background: linear-gradient(145deg, transparent 0%, rgba($c-white, 0.6) 70%, rgba($c-white, 0.7) 100%);
+         }
+
+         &.h_hero__content--center-top:after {
+            background: linear-gradient(180deg, rgba($c-white, 0.7) 0%, rgba($c-white, 0.6) 40%, transparent 100%);
+         }
+         &.h_hero__content--center-center:after {
+            background: linear-gradient(180deg, transparent 0%, rgba($c-white, 0.6) 30%, rgba($c-white, 0.7) 50%, rgba($c-white, 0.6) 70%, transparent 100%);
+         }
+         &.h_hero__content--center-bottom:after {
+            background: linear-gradient(180deg, transparent 0%, rgba($c-white, 0.6) 60%, rgba($c-white, 0.7) 100%);
+         }
+      }
+
+      @include media-breakpoint-up(sm) {
+         flex: 0 0 100%;
+         max-width: 600px;
+      }
+      @include media-breakpoint-up(md) {
+         max-width: 650px;
+      }
+      @include media-breakpoint-up(lg) {
+         max-width: 850px;
+      }
+   }
+
+   .left-top {
+      justify-content: flex-start;
+      align-items: flex-start;
+   }
+
+   .left-center {
+      justify-content: flex-start;
+      align-items: center;
+   }
+
+   .left-bottom {
+      justify-content: flex-start;
+      align-items: flex-end;
+   }
+
+   .center-top {
+      text-align: center;
+      justify-content: center;
+      align-items: flex-start;
+   }
+
+   .center-center {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .center-bottom {
+      text-align: center;
+      justify-content: center;
+      align-items: flex-end;
+   }
+
+   .right-top {
+      text-align: right;
+      justify-content: flex-end;
+      align-items: flex-start;
+   }
+
+   .right-center {
+      text-align: right;
+      justify-content: flex-end;
+      align-items: center;
+   }
+
+   .right-bottom {
+      text-align: right;
+      justify-content: flex-end;
+      align-items: flex-end;
+   }
+
+   &__link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+   }
+
+   .icon-wrapper {
+      width: 24px;
+      height: 24px;
+      line-height: 22px;
+      display: inline-block;
+   }
+
+   .btn {
+      z-index: 2;
+   }
+
+   &__signature-img {
+      max-width: 300px;
+   }
+}

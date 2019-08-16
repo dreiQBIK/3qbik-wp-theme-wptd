@@ -1,0 +1,16 @@
+{# USES
+   {% include "/partials/builder/bld_video.twig" with {
+      space_bottom: '',
+      video: '',
+      show_video_caption: false,
+      video_caption: '',
+   } %}
+#}
+<div class="container {{ space_bottom }}">
+   <figure class="bld_video">
+      {{ video|wptd_extra_video_params }}
+      {% if show_video_caption and video_caption %}
+         <figcaption class="bld_video__caption">{{ video_caption }}</figcaption>
+      {% endif %}
+   </figure>
+</div>

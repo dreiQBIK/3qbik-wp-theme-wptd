@@ -14,7 +14,7 @@
  */
 
 $context = Timber::context();
-$templates = array( 'views/posts.twig' );
+$templates = array( 'views/blog.twig' );
 
 $post = new TimberPost();
 $context['post'] = $post;

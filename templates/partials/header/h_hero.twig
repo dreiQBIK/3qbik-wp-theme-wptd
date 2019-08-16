@@ -1,0 +1,80 @@
+{# USES
+   {% include "/partials/header/h_hero.twig" %}
+#}
+
+{% set all_fields        = post.meta('header_hero') %}
+{% set margin            = all_fields.margin %}
+{% set bg_image          = all_fields.image %}
+{% set truefalse_caption = all_fields.image_settings.truefalse_caption %}
+{% set caption           = truefalse_caption ? all_fields.image_settings.caption : false %}
+{% set position          = all_fields.position.choices %}
+
+{# label #}
+{% set label       = all_fields.label %}
+{% set label_text  = label.text %}
+{% set label_color = label.color %}
+{% if label_color == 'white' %}
+	{% set label_classes = ' label2-main' %}
+{% elseif label_color == 'yellow' %}
+	{% set label_classes = ' label1-main' %}
+{% elseif label_color == 'gray' %}
+	{% set label_classes = ' label3-main' %}
+{% endif %}
+
+
+{# headlines #}
+{% set heading_background_class = all_fields.headline.truefalse_heading_background ? ' h_hero__content--with-bcg': '' %}
+{% set heading                  = all_fields.headline.heading %}
+{% set is_heading_size_small    = all_fields.headline.size == 'small' ? true: false %}
+{% set heading_size_1_class     = is_heading_size_small ? 'h2' : 'h1' %}
+{% set heading_size_2_class     = is_heading_size_small ? 'h3' : 'h2' %}
+{% set heading_type             = all_fields.headline.heading_type %}
+{% set heading_sub              = all_fields.heading_sub %}
+{% set heading_sub_type         = all_fields.heading_sub_type %}
+
+{# button #}
+{% set button = all_fields.button %}
+
+{# image/signature #}
+{% set image_signature                   = all_fields.image_2                          %}
+{% set image_signature_truefalse_caption = all_fields.image_2_settings.truefalse_caption %}
+{% set image_signature_caption           = truefalse_caption ? all_fields.image_2_settings.caption : image_signature.alt %}
+
+
+<div class="container-wrapper {{ margin }}">
+	<header class="h_hero py-300 py-lg-400 py-xl-500 position-relative{% if button %} is-link{% endif %}{% if is_heading_size_small %} h_hero--small{% endif %}" style="background-image: url({{ bg_image.url }});">
+
+		<div class="container d-flex {{ position }}">
+			<div class="h_hero__content h_hero__content--{{ position }}{{ heading_background_class }}">
+				{% if label %}
+					<span class="label label-main{{ label_classes }}">{{ label.text }}</span>
+				{% endif %}
+
+				<header class="h_hero__heading-wrapper mb-200 mb-md-300 mt-200">
+					<{{ heading_type|default("h1") }} class="h_hero__heading {{ heading_size_1_class }} mb-0">{{ heading }}</{{ heading_type|default("h1") }}>
+					{% if heading_sub %}
+						<{{ heading_sub_type|default("h2") }} class="h_hero__subheading {{ heading_size_2_class }} mt-100">{{ heading_sub }}</{{ heading_sub_type|default("h2") }}>
+					{% endif %}
+				</header>
+
+				{% if button %}
+					<a href="{{ button.url }}" class="btn btn-main btn1-main position-relative" data-link="true" title="{{ button.title }}" target="{{ button.target }}">{{ button.title }}</a>
+				{% endif %}
+
+				{% if image_signature %}
+					<div class="h_hero__signature mt-200">
+						<img class="h_hero__signature-img lazyload"
+							alt="{{ image_signature_caption }}"
+							src="{{ theme.link }}/assets/img/placeholder-wide-large.png"
+							data-src="{{ image_signature.sizes.medium }}"
+							data-srcset="{{ fn('wp_get_attachment_image_srcset', image.id) }}"
+							data-sizes="auto"
+						/>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+
+	</header>
+</div>
+

@@ -5,4 +5,67 @@
    padding: 1rem 0;
    display: flex;
    justify-content: space-between;
+   align-items: center;
+
+   &__burger {
+      display: block;
+      position: relative;
+      width: 40px;
+      height: 42px;
+      cursor: pointer;
+      transition: all $transition-150 ease-in-out;
+
+      @include media-breakpoint-up(md) {
+         display: none;
+      }
+
+      span,
+      span:before,
+      span:after {
+         content: "";
+         position: absolute;
+         display: block;
+         height: 2px;
+         width: 30px;
+         background: $c-white;
+         transition: all $transition-150 ease-in-out;
+      }
+
+      span {
+         right: 0;
+         top: 18px;
+      }
+
+      span:before {
+         top: -8px;
+
+         @include media-breakpoint-up(lg) {
+            top: -9px;
+         }
+      }
+
+      span:after {
+         bottom: -8px;
+
+         @include media-breakpoint-up(lg) {
+            bottom: -9px;
+         }
+      }
+
+      &.is-active {
+         span {
+            background-color: transparent;
+         }
+         span:before,
+         span:after {
+            top: 0;
+         }
+         span:before {
+            transform: rotate(45deg);
+         }
+         span:after {
+            transform: rotate(-45deg);
+         }
+      }
+   }
 }

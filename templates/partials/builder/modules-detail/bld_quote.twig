@@ -1,0 +1,15 @@
+{# USES
+   {% include "/partials/builder/bld_quote.twig" with {
+      space_bottom: '',
+      quote: '',
+      author: '',
+   } %}
+#}
+<div class="container {{ space_bottom }}">
+   <div class="bld_quote">
+      <blockquote class="bld_quote__text">{{ quote }}</blockquote>
+      {% if author %}
+      <p class="bld_quote__author">{{ author }}</p>
+      {% endif %}
+   </div>
+</div>

@@ -1,8 +1,5 @@
-<div class="n_site-wrapper">
-   <div class="n_site-burger">
-      <span class='n_site-burger__bar'></span>
-   </div>
-   <nav class="n_site">
+<div class="n_site">
+   <nav class="n_site__nav container">
       <ul>
          {% for item in menu.get_items %}
             <li class="{{ item.classes | join(' ') }}">

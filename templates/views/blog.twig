@@ -1,0 +1,43 @@
+{% extends "base.twig" %}
+
+{% block content %}
+   <div class="l_posts" data-template="blog.twig">
+
+      {% set header_to_show = post.meta('header_hero').header_to_show %}
+      {% if header_to_show == 'hero' %}
+         {% include "/partials/header/h_hero.twig" %}
+      {% elseif header_to_show == 'base' %}
+         {% include "/partials/header/h_base.twig" %}
+      {% elseif header_to_show == 'none' %}
+      {% else %}
+         <header class="container">
+            <h1>{{ post.title }}</h1>
+         </header>
+      {% endif %}
+
+      <div class="container py-300">
+
+         {% if posts %}
+            <ul class="l_posts__list">
+            {% for post in posts %}
+               <li class="l_posts__item mb-100">
+                  {% include "/partials/modules/m_post-teaser.twig" %}
+               </li>
+            {% endfor %}
+            </ul>
+
+         {% else %}
+            <p>{{ __('Aktuell sind noch keine Beiträge vorhanden.', 'wptd') }}</p>
+         {% endif %}
+
+         {% if pagination.prev or pagination.next %}
+            {% include "/partials/layouts/n_pagination.twig" %}
+         {% endif %}
+
+      </div>
+   </div>
+{% endblock %}
+
+{% block sidebar %}
+   {{ sidebar }}
+{% endblock %}

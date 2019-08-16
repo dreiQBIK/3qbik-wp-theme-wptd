@@ -1,0 +1,57 @@
+{# USES
+   {% include '/partials/builder/builder-detail.twig' %}
+#}
+{% set modules = post.meta('builder_detail_content') %}
+{% for module in modules %}
+
+   {# Module: HEADING #}
+   {% if module.acf_fc_layout == 'bld_heading' %}
+      {% include "/partials/builder/modules-detail/bld_heading.twig" with {
+         space_bottom: module.bld_heading.margin,
+         heading: module.bld_heading.text,
+      } %}
+
+   {# Module: EDITOR #}
+   {% elseif module.acf_fc_layout == 'bld_editor' %}
+      {% include "/partials/builder/modules-detail/bld_editor.twig" with {
+         space_bottom: module.bld_editor.margin,
+         editor: module.bld_editor.wysiwyg,
+      } %}
+
+   {# Module: IMAGE #}
+   {% elseif module.acf_fc_layout == 'bld_image' %}
+      {% include "/partials/builder/modules-detail/bld_image.twig" with {
+         space_bottom: module.bld_image.margin,
+         image: module.bld_image.image,
+         image_settings: module.bld_image.image_settings,
+      } %}
+
+   {# Module: VIDEO #}
+   {% elseif module.acf_fc_layout == 'bld_video' %}
+      {% include "/partials/builder/modules-detail/bld_video.twig" with {
+         space_bottom: module.bld_video.margin,
+         show_video_caption: module.bld_video.truefalse_alt,
+         video_caption: module.bld_video.text,
+         video: module.bld_video.video,
+      } %}
+
+   {# Module: QUOTE #}
+   {% elseif module.acf_fc_layout == 'bld_quote' %}
+      {% include "/partials/builder/modules-detail/bld_quote.twig" with {
+         space_bottom: module.bld_quote.margin,
+         quote: module.bld_quote.quote,
+         author: module.bld_quote.author,
+      } %}
+
+   {# Module: GALLERY #}
+   {% elseif module.acf_fc_layout == 'bld_gallery' %}
+      {% include "/partials/builder/modules-detail/bld_gallery.twig" with {
+         space_bottom: module.bld_gallery.margin,
+         show_thumbs: module.bld_gallery.truefalse_thumbs,
+         show_gallery_caption: module.bld_gallery.truefalse_alt,
+         gallery_caption: module.bld_gallery.text,
+         gallery: module.bld_gallery.gallery,
+      } %}
+   {% endif %}
+
+{% endfor %}

@@ -42,6 +42,7 @@ STYLESHEET: STYLE
 @import "vendor/nucleo/icons";
 @import "vendor/nucleo/nucleo";
 @import "vendor/slick/slick";
+@import "vendor/borlabs-cookie/borlabs-cookie";
 
 // Layouts
 @import "layouts/l_page";
@@ -63,6 +64,7 @@ STYLESHEET: STYLE
 @import "base/b_wp-toolbar";
 @import "base/b_nucleo";
 @import "base/b_spacer";
+@import "base/b_labels";
 
 // Styleguide
 @import "styleguide/sg_base";
@@ -76,15 +78,18 @@ STYLESHEET: STYLE
 @import "modules/m_post-teaser";
 @import "modules/m_related-posts";
 
-// Builder Modules
-@import "builder/bl_spacer";
-@import "builder/bl_image";
-@import "builder/bl_video";
-@import "builder/bl_quote";
-@import "builder/bl_gallery";
+// Builder Detail Modules
+@import "builder/modules-detail/bld_image";
+@import "builder/modules-detail/bld_video";
+@import "builder/modules-detail/bld_quote";
+@import "builder/modules-detail/bld_gallery";
+
+// Builder Global Modules
+@import "builder/modules-global/blg_testimonials";
 
 // Navigation
 @import "navigation/n_site";
+@import "navigation/n_site-mobile";
 @import "navigation/n_pagination";
 
 // Overlays
@@ -92,6 +97,7 @@ STYLESHEET: STYLE
 
 // Header
 @import "header/h_site";
+@import "header/h_hero";
 
 // Footer
 @import "footer/f_site";

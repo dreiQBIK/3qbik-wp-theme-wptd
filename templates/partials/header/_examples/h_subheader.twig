@@ -1,0 +1,35 @@
+{# USES
+   {% include '/partials/header/h_subheader.twig' with {
+      show: false,
+      image: {},
+      image_settings: {},
+      cta_teaser: {},
+      cta_button: {},
+   } %}
+#}
+
+{% if show %}
+   {% set image_alt = image_settings.truefalse_alt ? image_settings.alt : image.alt %}
+
+   <aside class="h_subheader">
+      <div class="container-wrapper bg-c-white">
+         <div class="container">
+
+            <div class="h_subheader__inner">
+               <img class="h_subheader__logo lazyload"
+                  alt="{{ image_alt }}"
+                  src="{{ theme.link }}/assets/img/placeholder-wide-small.png"
+                  data-src="{{ image.sizes.thumbnail }}"
+                  data-srcset="{{ fn('wp_get_attachment_image_srcset', image.id) }}"
+                  data-sizes="auto"
+               />
+               <div class="h_subheader__cta">
+                  <span class="h_subheader__cta-banner label label-main label2-main"><svg class="icon icon--medium"><use href="{{ cta_teaser.icon }}" xlink:href="{{ cta_teaser.icon }}"/></svg>{{ cta_teaser.text }}</span>
+                  <a href="{{ cta_button.url }}" target="{{ cta_button.target }}" class="h_subheader__cta-btn btn btn-second btn-second--small btn1-second">{{ cta_button.title }}</a>
+               </div>
+            </div>
+
+         </div.n_>
+      </div>
+   </aside>
+{% endif %}

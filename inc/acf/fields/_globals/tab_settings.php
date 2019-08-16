@@ -11,15 +11,21 @@ $tab_settings
       'label' => 'Einstellungen',
    ])
 
-      ->addSelect('margin', [
-            'label' => 'Abstand nach unten',
-            'instructions' => 'Größe des Abstandes des gesamten Elementes nach unten/zum nächsten Element',
-            'wrapper' => ['width' => 50],
-            'default_value' => 'pb-medium'
+      ->addButtonGroup('margin', [
+         'label' => 'Abstand nach unten',
+         'instructions' => 'Größe des Abstandes des gesamten Elementes nach unten / zum nächsten Element',
+         'wrapper' => ['width' => 50],
+         'default_value' => 'mb-0'
       ])
-         ->addChoice('sp-zero', 'Kein Abstand')
-         ->addChoice('pb-small', 'Klein')
-         ->addChoice('pb-medium', 'Standard')
-         ->addChoice('pb-large', 'Groß')
+         ->addChoice('mb-0', 'Kein Abstand')
+         ->addChoice('mb-small', 'Klein')
+         ->addChoice('mb-medium', 'Standard')
+         ->addChoice('mb-large', 'Groß')
+
+      ->addText('id', [
+         'label' => 'ID vergeben (optional)',
+         'instructions' => 'Diese ID kann als Sprungmarke in einem Link verwendet werden, z.B. "https://gloeckle.de#ID"',
+         'wrapper' => ['width' => 50],
+      ])
 
    ->endGroup();

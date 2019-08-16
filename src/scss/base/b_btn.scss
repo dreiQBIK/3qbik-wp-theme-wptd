@@ -27,24 +27,31 @@ a.btn {
       text-align: center;
    }
 
+   &:focus {
+      @include media-breakpoint-up(md) {
+         outline: 0;
+         box-shadow: 0 0 0 0.2rem rgba($c1-accent, 0.5);
+      }
+   }
+
    // main buttons
    &1-main {
+      background-color: $c1-third;
+      color: $c-white;
+
+      &:hover {
+         @include media-breakpoint-up(md) {
+            background-color: $c3-third;
+         }
+      }
+   }
+   &2-main {
       background-color: $c1-main;
       color: $c-white;
 
       &:hover {
          @include media-breakpoint-up(md) {
             background-color: $c3-main;
-         }
-      }
-   }
-   &2-main {
-      background-color: $c3-main;
-      color: $c-white;
-
-      &:hover {
-         @include media-breakpoint-up(md) {
-            background-color: $c2-main;
          }
       }
    }
@@ -79,6 +86,18 @@ a.btn {
       }
    }
    &2-second {
+      background-color: transparent;
+      border: 2px solid $c1-main;
+      color: $c1-main;
+
+      &:hover {
+         @include media-breakpoint-up(md) {
+            border: 2px solid $c3-main;
+            color: $c3-main;
+         }
+      }
+   }
+   &3-second {
       background-color: transparent;
       border: 2px solid $c1-second;
       color: $c1-second;

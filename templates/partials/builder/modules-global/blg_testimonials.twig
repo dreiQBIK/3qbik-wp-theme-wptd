@@ -1,0 +1,70 @@
+{# USES
+   {% include "/partials/builder/modules-global/blg_testimonials.twig" with {
+      all_fields: {},
+      margin: '',
+      id: '',
+      heading: '',
+      toggle_heading: false,
+      teaser: {},
+   } %}
+#}
+
+{% set shuffled_teaser = teaser|shuffle %}
+
+<div class="container-wrapper bg-c4-gray py-300 py-md-400 py-lg-500 {{ margin }}">
+   <div class="container" {% if id %}id="{{ id }}"{% endif %}>
+
+      <div class="blg_testimonials">
+
+         {% if toggle_heading %}
+            {% include "/partials/modules/m_heading.twig" with {
+               wrapper_classes: 'mb-300 mb-md-400',
+               heading_classes: 't-center',
+               heading: all_fields.headings.heading,
+               heading_type: all_fields.headings.heading_type,
+               heading_sub: all_fields.headings.heading_sub,
+               heading_sub_type: all_fields.headings.heading_sub_type,
+            } %}
+         {% endif %}
+
+         <div class="blg_testimonials__slider">
+            {% for i in range(1, 2) %}
+               {% for item in shuffled_teaser %}
+
+                  {% if loop.index < 4 %}
+                     {% set intro   = item.intro %}
+                     {% set image   = intro.image %}
+                     {% set caption = intro.image_settings.truefalse_caption ? intro.image_settings.caption : image.alt %}
+                     {% set text    = intro.text %}
+                     {% set name    = intro.name %}
+
+                     <div class="blg_testimonials__slider-slide t-center">
+                        <img
+                           class="bd-radius-round mb-100 lazyload"
+                           alt="{{ caption }}"
+                           src="{{ theme.link }}/assets/img/placeholder-square-small.png"
+                           data-src="{{ image.sizes.medium }}"
+                           data-srcset="{{ fn('wp_get_attachment_image_srcset', image.id) }}"
+                           data-sizes="auto"
+                        />
+                        <div class="blg_testimonials__slider-stars mb-200">
+                           <svg class="icon icon--small"><use href="#icon-star-full" xlink:href="#icon-star-full"/></svg>
+                           <svg class="icon icon--small"><use href="#icon-star-full" xlink:href="#icon-star-full"/></svg>
+                           <svg class="icon icon--small"><use href="#icon-star-full" xlink:href="#icon-star-full"/></svg>
+                           <svg class="icon icon--small"><use href="#icon-star-full" xlink:href="#icon-star-full"/></svg>
+                           <svg class="icon icon--small"><use href="#icon-star-full" xlink:href="#icon-star-full"/></svg>
+                        </div>
+
+                        <blockquote>
+                           <p class="blg_testimonials__text p-intro mb-200 t-c2-gray">{{ text }}</p>
+                           <cite class="blg_testimonials__author t-c2-gray">{{ name }}</cite>
+                        </blockquote>
+                     </div>
+                  {% endif %}
+
+               {% endfor %}
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+</div>

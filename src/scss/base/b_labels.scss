@@ -1,0 +1,23 @@
+.label {
+   display: inline-block;
+   font-family: $f3-second;
+   line-height: 1.5em;
+
+   &-main {
+      padding: 0.3em 1.8em;
+      border-radius: 250px;
+      font-size: 0.875rem;
+   }
+   &1-main {
+      background-color: $c1-second;
+      color: $c1-main;
+   }
+   &2-main {
+      background-color: $c-white;
+      color: $c1-main;
+   }
+   &3-main {
+      background-color: $c2-main;
+      color: $c-white;
+   }
+}

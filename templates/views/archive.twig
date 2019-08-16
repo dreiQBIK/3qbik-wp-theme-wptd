@@ -2,10 +2,12 @@
 
 {% block content %}
    <div class="l_posts" data-template="archive.twig">
-      <div class="container pb-medium">
+      <div class="container py-300">
+
          <header>
             <h1>{{ __( 'Archiv', 'wptd' ) }}</h1>
          </header>
+
          {% if posts %}
             <ul class="l_posts__list">
             {% for post in posts %}
@@ -14,12 +16,15 @@
                </li>
             {% endfor %}
             </ul>
+
          {% else %}
             <p>{{ __('Zu dieser Kategorie sind noch keine Beiträge vorhanden', 'wptd') }}</p>
          {% endif %}
+
          {% if pagination.prev or pagination.next %}
             {% include "/partials/layouts/n_pagination.twig" %}
          {% endif %}
+
       </div>
    </div>
 {% endblock %}

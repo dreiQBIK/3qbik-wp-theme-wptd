@@ -20,6 +20,9 @@ const imgCover = (function($) {
         // no img-cover
         if (!$(e.target).hasClass('img-cover')) return;
         makeImgCover($(e.target));
+        setTimeout(function() {
+            makeImgCover($(e.target));
+        }, 100);
     });
 
     $(window).on('resize', function(e) {

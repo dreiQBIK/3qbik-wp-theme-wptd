@@ -42,6 +42,10 @@ function wptd_add_to_twig( $twig ) {
     $twig->addExtension( new Twig_Extension_StringLoader() );
     // Custom twig filters
     $twig->addFilter( new Twig_SimpleFilter('wptd_extra_video_params', 'wptd_extra_video_params') );
+    $twig->addFilter( new Twig_SimpleFilter('shuffle', function( $array ) {
+        shuffle($array);
+        return $array;
+    }) );
 
     return $twig;
 }

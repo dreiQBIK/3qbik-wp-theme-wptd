@@ -1,0 +1,84 @@
+.h_subheader {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 9999;
+   // border-bottom: 1px solid $c-white;
+   box-shadow: $drop-shadow-bars;
+
+   &.headroom {
+      will-change: transform;
+      transition: transform $transition-300 linear;
+   }
+
+   &.headroom--top {
+      transform: translateY(-180px);
+   }
+
+   &.headroom--not-top {
+      transform: translateY(0%);
+   }
+
+   &__inner {
+      padding: 0.5rem 0;
+
+      @include media-breakpoint-up(sm) {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      @include media-breakpoint-up(md) {
+         justify-content: space-between;
+      }
+   }
+
+   &__logo {
+      display: none;
+
+      @include media-breakpoint-up(md) {
+         display: block;
+         height: 50px;
+      }
+   }
+
+   &__cta {
+      text-align: center;
+
+      @include media-breakpoint-up(sm) {
+         display: flex;
+         align-items: center;
+      }
+   }
+
+   &__cta-btn {
+
+      @include media-breakpoint-up(md) {
+         margin-left: 1.5rem;
+      }
+   }
+
+   &__cta-banner {
+      display: block;
+      margin-bottom: 1rem;
+      padding: 0;
+
+      @include media-breakpoint-up(sm) {
+         display: inline-flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: 0;
+         padding: 0 2rem;
+      }
+
+      .icon {
+         display: none;
+
+         @include media-breakpoint-up(md) {
+            display: inline-block;
+            margin-right: 0.8rem;
+         }
+         color: $c1-main;
+      }
+   }
+}

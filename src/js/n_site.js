@@ -3,20 +3,13 @@ const nSite = (function($) {
         VARS
     ******************************************************************/
 
-   // get variables for setting js breakpoints equal to css breakpoints
-   const breakpointJS = $("body");
-   const breakpointCSSWidth = 961;
-   let breakpointJSWidth = breakpointJS.width();
-
-   // cache DOM elements
    const $siteNavigation = $(".n_site");
-   const $siteNavigationBurger = $(".n_site-burger");
+   const $siteNavigationBurger = $(".h_site__burger");
 
    /******************************************************************
         EVENTS
     ******************************************************************/
 
-   // set js breakpoints equal to css breakpoints
    $(window).resize(function() {
       toggleNavAtBreakpoint();
    });
@@ -44,26 +37,12 @@ const nSite = (function($) {
       $siteNavigation.removeClass("is-active");
    }
 
-   // checks for mobile device
-   function isMobile() {
-      if (
-         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
-         )
-      ) {
-         return true;
-      }
-      return false;
-   }
-
    // toggle nav on mobile/desktop
    function toggleNavAtBreakpoint() {
-      // set breakpoint
-      breakpointJSWidth = breakpointJS.width();
-
-      // check for mobile device and hide/show nav
-      if (!isMobile()) {
-         breakpointJSWidth >= breakpointCSSWidth ? showNav() : hideNav();
+      if (global.breakpoint.value === 'xs' || global.breakpoint.value === 'sm') {
+         showNav();
+      } else {
+         hideNav();
       }
    }
 

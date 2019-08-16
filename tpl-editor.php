@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Beispiel-Template
+ * Template Name: Editor-Template
  * Template Post Type: post, page
  *
  * Methods for TimberHelper can be found in the /lib sub-directory
@@ -16,6 +16,6 @@ $templates = 'views/tpl-editor.twig';
 
 $post = new TimberPost();
 $context['post'] = $post;
-$context['sidebar'] = Timber::get_sidebar('l-sidebar.php');
+// $context['sidebar'] = Timber::get_sidebar('l-sidebar.php');
 
 Timber::render($templates, $context);

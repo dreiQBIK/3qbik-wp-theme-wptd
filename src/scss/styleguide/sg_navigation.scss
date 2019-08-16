@@ -8,7 +8,7 @@
       transition: color $transition-150 ease-in-out;
 
       &:hover {
-         color: $c1-main;
+         text-decoration: underline;
       }
    }
 }

@@ -1,0 +1,60 @@
+{# USES
+   {% include "/partials/builder/bld_gallery.twig" with {
+      space_bottom: '',
+      show_thumbs: false,
+      show_gallery_caption: false,
+      gallery_caption: '',
+      gallery: {},
+   } %}
+#}
+<div class="container {{ space_bottom }}">
+   <div class="bld_gallery{% if not show_thumbs %} pb-small{% endif %}">
+
+      <div class="bld_gallery__slider">
+         {% for gallery_item in gallery %}
+            <div class="bld_gallery__slide">
+               <figure class="bld_gallery__figure">
+                  <img
+                        class="bld_gallery__img lazyload img-cover"
+                        alt="{{ gallery_item.alt }}"
+                        src="{{ theme.link }}/assets/img/placeholder-wide-large.png"
+                        data-src="{{ gallery_item.sizes.medium_large }}"
+                        data-srcset="{{ fn('wp_get_attachment_image_srcset', gallery_item.id) }}"
+                        data-sizes="auto"
+                        data-pos-x="2"
+                        data-pos-y="3"
+                     />
+                     <i class="bld_gallery__zoom"><svg class="icon"><use href="#icon-zoom-in" xlink:href="#icon-zoom-in"/></svg></i>
+               </figure>
+            </div>
+         {% endfor %}
+      </div>
+
+      {% if show_thumbs %}
+
+         <div class="bld_gallery__nav">
+            {% for gallery_item in gallery %}
+               <div class="bld_gallery__nav-slide">
+                  <figure class="bld_gallery__nav-figure">
+                     <img
+                           class="bld_gallery__nav-img lazyload img-cover"
+                           alt="{{ gallery_item.alt }}"
+                           src="{{ theme.link }}/assets/img/placeholder-wide-large.png"
+                           data-src="{{ gallery_item.sizes.medium_large }}"
+                           data-srcset="{{ fn('wp_get_attachment_image_srcset', gallery_item.id) }}"
+                           data-sizes="auto"
+                           data-pos-x="2"
+                           data-pos-y="2"
+                        />
+                  </figure>
+               </div>
+            {% endfor %}
+         </div>
+      {% endif %}
+
+      {% if show_gallery_caption and gallery_caption %}
+         <footer class="bld_gallery__caption">{{ gallery_caption }}</footer>
+      {% endif %}
+
+   </div>
+</div>
