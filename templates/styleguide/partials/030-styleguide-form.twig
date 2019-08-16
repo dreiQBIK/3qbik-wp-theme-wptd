@@ -9,36 +9,52 @@
       {# input fields #}
       <div class="row">
          <div class="col col-12">
-            <h3 class="h3 f3-second t-c1-third">input - default</h3>
+
+      {# text, emial, telefon, number #}
+            <div class="mb-100">
+               <h3 class="h3 f3-second t-c1-main">Input Text Felder</h3>
+               <p class="p1 t-c1-main">Für Input Felder außerhalb wie innerhalb CF7 gilt eine bestimmte HTML Struktur. Nachfolgend steht ein Beispiel für ein Standard Input Text Feld außerhalb von CF7.</p>
+            </div>
          </div>
       </div>
-      {# text, emial, telefon, number #}
+
       <div class="row">
          <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="mb-300">
+            <div class="mb-100">
                <label for="text">{{ __( 'Text', 'wptd' ) }}</label>
                <input type="text" name="text" placeholder="{{ __('Text', 'wptd') }}" required>
             </div>
          </div>
          <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="mb-300">
+            <div class="mb-100">
                <label for="email">{{ __( 'E-Mail', 'wptd' ) }}</label>
                <input type="email" name="email" placeholder="{{ __('E-Mail', 'wptd') }}" required>
             </div>
          </div>
          <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="mb-300">
+            <div class="mb-100">
                <label for="tel">{{ __( 'Telefon', 'wptd' ) }}</label>
                <input type="tel" name="tel" placeholder="{{ __('Telefon', 'wptd') }}" required>
             </div>
          </div>
          <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="mb-300">
+            <div class="mb-100">
                <label for="number">{{ __( 'Nummer', 'wptd' ) }}</label>
                <input type="number" name="number" placeholder="{{ __('Nummer', 'wptd') }}" required>
             </div>
          </div>
       </div>
+
+      <div class="mb-300">
+         <span class="p1 t-c1-error">HTML-Code:&nbsp;</span>
+<pre class="language-html">
+<code class="language-html">
+&lt;label for="text"&gt;&#123;&#123; __( 'Text', 'wptd' ) &#125;&#125;&lt;/label&gt;
+&lt;input type="text" name="text" placeholder="&#123;&#123; __('Text', 'wptd') &#125;&#125;" required&gt;
+</code>
+</pre>
+      </div>
+
       {# password #}
       {# <div class="row">
          <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
@@ -52,12 +68,12 @@
       {# input select #}
       <div class="row">
          <div class="col col-12">
-            <h3 class="h3 f3-second t-c1-third">input - select</h3>
+            <h3 class="h3 f3-second t-c1-main">Input Select Feld</h3>
          </div>
       </div>
       <div class="row">
          <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="mb-300">
+            <div class="mb-100">
 
                <select>
                   <option value="volvo">Volvo</option>
@@ -69,17 +85,34 @@
             </div>
          </div>
       </div>
+      <div class="row">
+         <div class="col col-12">
+            <div class="mb-300">
+               <span class="p1 t-c1-error">HTML-Code:&nbsp;</span>
+<pre class="language-html">
+<code class="language-html">
+&lt;select&gt;
+   &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+   &lt;option value="saab"&gt;Saab&lt;/option&gt;
+   &lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;
+   &lt;option value="audi"&gt;Audi&lt;/option&gt;
+&lt;/select&gt;
+</code>
+</pre>
+            </div>
+         </div>
+      </div>
 
       {# input checkbox | radio #}
       <div class="row">
          <div class="col col-12">
-            <h3 class="h3 f3-second t-c1-third">input - checkbox | radio</h3>
+            <h3 class="h3 f3-second t-c1-main">Input Feld Checkbox | Radio</h3>
          </div>
       </div>
       {# text, password, emial, telefon #}
       <div class="row">
          <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="mb-300">
+            <div class="mb-200">
                <label class="checkbox-wrapper mb-100" for="checkbox1">
                   <input id="checkbox1" type="checkbox" name="checkbox1">
                   <span>{{ __('Option 1', 'wptd') }}</span>
@@ -95,7 +128,7 @@
             </div>
          </div>
          <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="mb-300">
+            <div class="mb-200">
                <label class="radio-wrapper mb-100" for="radio1">
                   <input id="radio1" type="radio" name="radio" checked>
                   <span>{{ __('Radio 1', 'wptd') }}</span>
@@ -111,6 +144,53 @@
             </div>
          </div>
       </div>
+      <div class="row">
+         <div class="col col-12">
+            <div class="mb-200">
+               <span class="p1 t-c1-error">HTML-Code Checkbox:&nbsp;</span>
+<pre class="language-html">
+<code class="language-html">
+&lt;label class="checkbox-wrapper mb-100" for="checkbox1"&gt;
+   &lt;input id="checkbox1" type="checkbox" name="checkbox1"&gt;
+   &lt;span&gt;&#123;&#123; __('Option 1', 'wptd') &#125;&#125;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="checkbox-wrapper mb-100" for="checkbox2"&gt;
+   &lt;input id="checkbox2" type="checkbox" name="checkbox2"&gt;
+   &lt;span&gt;&#123;&#123; __('Option 2', 'wptd') &#125;&#125;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="checkbox-wrapper mb-100" for="checkbox3"&gt;
+   &lt;input id="checkbox3" type="checkbox" name="checkbox3"&gt;
+   &lt;span&gt;&#123;&#123; __('Option 3', 'wptd') &#125;&#125;&lt;/span&gt;
+&lt;/label&gt;
+</code>
+</pre>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col col-12">
+            <div class="mb-300">
+               <span class="p1 t-c1-error">HTML-Code Radio:&nbsp;</span>
+<pre class="language-html">
+<code class="language-html">
+&lt;label class="radio-wrapper mb-100" for="radio1"&gt;
+   &lt;input id="radio1" type="radio" name="radio" checked&gt;
+   &lt;span&gt;&#123;&#123; __('Radio 1', 'wptd') &#125;&#125;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="radio-wrapper mb-100" for="radio2"&gt;
+   &lt;input id="radio2" type="radio" name="radio"&gt;
+   &lt;span&gt;&#123;&#123; __('Radio 2', 'wptd') &#125;&#125;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="radio-wrapper mb-100" for="radio3"&gt;
+   &lt;input id="radio3" type="radio" name="radio"&gt;
+   &lt;span&gt;&#123;&#123; __('Radio 3', 'wptd') &#125;&#125;&lt;/span&gt;
+&lt;/label&gt;
+</code>
+</pre>
+            </div>
+         </div>
+      </div>
+
       {# submit button #}
       <div class="row">
          <div class="col-12">
