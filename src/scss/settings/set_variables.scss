@@ -5,7 +5,12 @@
 // grayscale
 $c-black: #000000;
 $c-white: #ffffff;
-$c1-gray: #c8c8c8;
+$c1-gray: #333333;
+$c2-gray: #555555;
+$c3-gray: #777777;
+$c4-gray: #aaaaaa;
+$c5-gray: #cccccc;
+$c6-gray: #eeeeee;
 
 // project
 $c1-main: #2c3e50;
@@ -30,9 +35,14 @@ $c1-success: #00b878;
 $theme-colors: () !default;
 $theme-colors: map-merge(
    (
-      "c-black": #000000,
-      "c-white": #ffffff,
-      "c1-gray": #c8c8c8,
+      "c-black": $c-black,
+      "c-white": $c-white,
+      "c1-gray": $c1-gray,
+      "c2-gray": $c2-gray,
+      "c3-gray": $c3-gray,
+      "c4-gray": $c4-gray,
+      "c5-gray": $c5-gray,
+      "c6-gray": $c6-gray,
       "c1-main": $c1-main,
       "c2-main": $c2-main,
       "c3-main": $c3-main,
@@ -54,21 +64,21 @@ $theme-colors: map-merge(
    FONTS
 ******************************************************************/
 
-$f1-main: "FuturaLTPro-XBold", sans-serif;
-$f1-second: "OfficinaSansITCStd", "Helvetica", "Arial", sans-serif;
-$f2-second: "OfficinaSansITCStd-Italic", "Helvetica", "Arial", sans-serif;
-$f3-second: "OfficinaSansITCStd-Bold", "Helvetica", "Arial", sans-serif;
-$f4-second: "OfficinaSansITCStd-Bold-Italic", "Helvetica", "Arial", sans-serif;
+$f1-main: "MontserratBlack", sans-serif;
+$f2-main: "MontserratBold", sans-serif;
+$f1-second: "MerriweatherRegular", serif;
+$f2-second: "MerriweatherItalic", serif;
+$f3-second: "MerriweatherBold", serif;
 
 // usage: .f1-main, .f1-second,...
 $theme-fonts: () !default;
 $theme-fonts: map-merge(
    (
       "f1-main": $f1-main,
+      "f2-main": $f2-main,
       "f1-second": $f1-second,
       "f2-second": $f2-second,
       "f3-second": $f3-second,
-      "f4-second": $f4-second,
    ),
    $theme-fonts
 );
@@ -234,7 +244,7 @@ $container-max-widths: (
    sm: 600px,
    md: 1000px,
    lg: 1400px,
-   xl: 1600px,
+   xl: 1440px,
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -245,7 +255,7 @@ $container-widths-narrow: (
    sm: 600px,
    md: 800px,
    lg: 900px,
-   xl: 1200px,
+   xl: 1000px,
 ) !default;
 
 // Grid containers wide

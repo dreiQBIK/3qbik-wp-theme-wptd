@@ -3,16 +3,15 @@
 {% set content = post.meta('tinymce') %}
 
 {% block content %}
-   <div class="l_page" data-template="tpl-editor.twig">
+   <div class="l_page pt-400 pt-md-600 pb-600 pb-md-800" data-template="tpl-editor.twig">
 
-      <header class="container">
+      <header class="container container--narrow">
          <h1>{{ post.title }}</h1>
       </header>
 
-      <div class="container">
+      <div class="container container--narrow">
          <div class="row">
-            <div class="col col-12 col-md-8">
-               <h2>{{ __( 'Content', 'wptd' ) }}</h2>
+            <div class="col col-12">
                <div class="tinymce">{{ content }}</div>
             </div>
          </div>

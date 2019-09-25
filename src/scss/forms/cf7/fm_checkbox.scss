@@ -20,6 +20,8 @@
       }
    }
 
+
+
    // hidden input (checkbox) - interaction area
    input[type="checkbox"] {
       cursor: pointer;
@@ -80,6 +82,8 @@
 
       // label and visible checkbox
       & + span.wpcf7-list-item-label {
+         font-family: $f2-main;
+         font-size: 1rem;
          transition: color $transition-150 ease-in-out;
          color: $c1-gray;
 

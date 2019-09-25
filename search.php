@@ -12,7 +12,7 @@
 $context = Timber::context();
 $templates = array( 'search.twig', 'archive.twig', 'index.twig' );
 
-$context['title'] = 'Search results for ' . get_search_query();
+$context['title'] = 'Suchergebnisse für ' . get_search_query();
 $context['posts'] = new Timber\PostQuery();
 
 Timber::render( $templates, $context );

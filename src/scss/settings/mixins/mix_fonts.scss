@@ -66,61 +66,61 @@
       $lh-sm-default: 1.3em;
 
       //medium
-      $fz-md-default: 2.3rem;
+      $fz-md-default: 2.5rem;
       $lh-md-default: 1.3em;
 
       //large
-      $fz-lg-default: 2.5rem;
+      $fz-lg-default: 2.8rem;
       $lh-lg-default: 1.3em;
 
       //xlarge
-      $fz-xl-default: 2.6rem;
+      $fz-xl-default: 3rem;
       $lh-xl-default: 1.3em;
 
 
    // Default Use Case: H2
    } @else if $style == "fs2" {
       //base
-      $fz-xs-default: 1.6rem;
+      $fz-xs-default: 1.7rem;
       $lh-xs-default: 1.2em;
 
       //small
-      $fz-sm-default: 1.6rem;
+      $fz-sm-default: 1.7rem;
       $lh-sm-default: 1.2em;
 
       //medium
-      $fz-md-default: 1.8rem;
+      $fz-md-default: 1.9rem;
       $lh-md-default: 1.2em;
 
       //large
-      $fz-lg-default: 1.9rem;
+      $fz-lg-default: 2rem;
       $lh-lg-default: 1.2em;
 
       //xlarge
-      $fz-xl-default: 2rem;
+      $fz-xl-default: 2.2rem;
       $lh-xl-default: 1.2em;
 
 
    // Default Use Case: H3
    } @else if $style == "fs3" {
       //base
-      $fz-xs-default: 1.4rem;
+      $fz-xs-default: 1.5rem;
       $lh-xs-default: 1.5em;
 
       //small
-      $fz-sm-default: 1.4rem;
+      $fz-sm-default: 1.5rem;
       $lh-sm-default: 1.5em;
 
       //medium
-      $fz-md-default: 1.4rem;
+      $fz-md-default: 1.6rem;
       $lh-md-default: 1.5em;
 
       //large
-      $fz-lg-default: 1.5rem;
+      $fz-lg-default: 1.7rem;
       $lh-lg-default: 1.5em;
 
       //xlarge
-      $fz-xl-default: 1.6rem;
+      $fz-xl-default: 1.8rem;
       $lh-xl-default: 1.5em;
 
 
@@ -147,37 +147,37 @@
    } @else if $style == "fs5" {
       //base
       $fz-xs-default: 1.1rem;
-      $lh-xs-default: 1.5em;
+      $lh-xs-default: 1.7em;
       //small
       $fz-sm-default: 1.1rem;
-      $lh-sm-default: 1.5em;
+      $lh-sm-default: 1.7em;
       //medium
       $fz-md-default: 1.1rem;
-      $lh-md-default: 1.5em;
+      $lh-md-default: 1.7em;
       //large
       $fz-lg-default: 1.2rem;
-      $lh-lg-default: 1.5em;
+      $lh-lg-default: 1.7em;
       //xlarge
       $fz-xl-default: 1.2rem;
-      $lh-xl-default: 1.5em;
+      $lh-xl-default: 1.7em;
 
    // Default Use Case: Body small
    } @else if $style == "fs6" {
       //base
       $fz-xs-default: 1rem;
-      $lh-xs-default: 1.5em;
+      $lh-xs-default: 1.7em;
       //small
       $fz-sm-default: 1rem;
-      $lh-sm-default: 1.5em;
+      $lh-sm-default: 1.7em;
       //medium
       $fz-md-default: 1rem;
-      $lh-md-default: 1.5em;
+      $lh-md-default: 1.7em;
       //large
       $fz-lg-default: 1.1rem;
-      $lh-lg-default: 1.5em;
+      $lh-lg-default: 1.7em;
       //xlarge
       $fz-xl-default: 1.1rem;
-      $lh-xl-default: 1.5em;
+      $lh-xl-default: 1.7em;
    }
 
    @if $fz-xs {

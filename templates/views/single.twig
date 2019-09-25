@@ -1,12 +1,12 @@
 {% extends "base.twig" %}
 
 {% block content %}
-   <article class="l_article post-type-{{ post.post_type }}" id="post-{{ post.ID }}" data-template="single.twig">
+   <article class="l_article post-type-{{ post.post_type }} pt-400 pt-md-600 pb-600 pb-md-800" id="post-{{ post.ID }}" data-template="single.twig">
 
-      <header class="container">
+      <header class="container container--narrow mb-400">
          <h1>{{ post.title }}</h1>
          <div class="l_article__meta">
-            <a class="link link-second link2-second" href="{{ post.author.link }}">{{ post.author.display_name }}</a>
+            <a class="link link-second link1-main" href="{{ post.author.link }}">{{ post.author.display_name }}</a>
             <span>{{ post.date }}</span>
          </div>
       </header>
@@ -17,7 +17,7 @@
 
       {# if comments exists show comments and form #}
       {% if post.comments|length %}
-         <section class="container mb-400">
+         <section class="container container--narrow mb-400">
             <div class="l_comments" id="comments">
                {% include "/partials/layouts/l_comments.twig" %}
 
@@ -29,7 +29,7 @@
       {# else show just form #}
       {% else %}
          {% if post.comment_status == 'open' %}
-            <section class="container mb-400">
+            <section class="container container--narrow mb-400">
                <div class="l_comments" id="comments">
                      {% include "/partials/layouts/l_comment-form.twig" %}
                </div>
@@ -38,8 +38,10 @@
       {% endif %}
 
       {% if post.meta('post_related_posts').posts %}
-         <section class="container">
-            {% include "/partials/modules/m_related-posts.twig" %}
+         <section class="container container--narrow">
+            {% include "/partials/modules/m_related-posts.twig" with {
+               posts: post.meta('post_related_posts').posts,
+            } %}
          </section>
       {% endif %}
 

@@ -7,8 +7,8 @@ html {
 
 body {
    position: relative;
-   color: $c-white;
-   background-color: $c2-main;
+   color: $c1-main;
+   background-color: $c-white;
    overflow-x: hidden;
 
    @include fontstyle("fs5");
@@ -89,7 +89,7 @@ form {
    a,
    button {
       &:focus {
-         border-color: $c1-accent;
+         // border-color: $c1-accent;
          outline: 0;
          box-shadow: 0 0 0 0.2rem rgba($c1-accent, 0.5);
          border-radius: $bd-radius-3;

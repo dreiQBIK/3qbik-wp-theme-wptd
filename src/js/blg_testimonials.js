@@ -19,8 +19,8 @@ const blgTestimonials = (function($) {
        slidesToShow: 3,
        autoplay: false,
        autoplaySpeed: 6000,
-       prevArrow: '<svg class="icon icon--xlarge t-c-white slick-prev"><use href="#icon-left-arrow" xlink:href="#icon-left-arrow"/></svg>',
-       nextArrow: '<svg class="icon icon--xlarge t-c-white slick-next"><use href="#icon-right-arrow" xlink:href="#icon-right-arrow"/></svg>',
+       prevArrow: '<svg class="icon icon--xlarge t-c1-main slick-prev"><use href="#icon-left-arrow" xlink:href="#icon-left-arrow"/></svg>',
+       nextArrow: '<svg class="icon icon--xlarge t-c1-main slick-next"><use href="#icon-right-arrow" xlink:href="#icon-right-arrow"/></svg>',
        responsive: [
            {
                breakpoint: 1600,

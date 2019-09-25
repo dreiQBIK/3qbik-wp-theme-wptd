@@ -1,7 +1,7 @@
 .l_comment {
     padding: 1rem 0;
     margin-bottom: 1rem;
-    border-bottom: 2px dashed $c3-main;
+    border-bottom: 1px solid $c6-gray;
 
     @include media-breakpoint-up(sm) {
         padding-bottom: 2rem;
@@ -10,7 +10,7 @@
     .l_comment {
         margin: 2rem 0 0 4rem;
         border: 0;
-        border-bottom: 2px dashed $c3-main;
+        border-bottom: 1px solid $c6-gray;
     }
 
     & + #respond {

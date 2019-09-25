@@ -5,6 +5,11 @@ const nSite = (function($) {
 
    const $siteNavigation = $(".n_site");
    const $siteNavigationBurger = $(".h_site__burger");
+   const header = document.querySelector(".h_site-wrapper");
+   const headroom = new Headroom(header, {
+      offset: 0,
+      tolerance: 5,
+   });
 
    /******************************************************************
         EVENTS
@@ -16,6 +21,8 @@ const nSite = (function($) {
 
    // toggle nav on click on burger
    $siteNavigationBurger.on("click", toggleNav);
+
+   headroom.init();
 
 
    /******************************************************************

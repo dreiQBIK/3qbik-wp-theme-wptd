@@ -42,9 +42,11 @@ STYLESHEET: STYLE
 @import "vendor/nucleo/icons";
 @import "vendor/nucleo/nucleo";
 @import "vendor/slick/slick";
+@import "vendor/headroom/headroom";
 @import "vendor/borlabs-cookie/borlabs-cookie";
 
 // Layouts
+@import "layouts/l_main";
 @import "layouts/l_page";
 @import "layouts/l_comments";
 @import "layouts/l_comment";

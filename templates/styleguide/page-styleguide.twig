@@ -1,18 +1,17 @@
 {% extends "base.twig" %}
 
 {% block content %}
-   <div class="l_styleguide" data-template="page-modules.twig">
-      <header class="container container--narrow">
-         <div class="row">
-            <div class="col col-12">
-               <h1 class="h1">{{ __( 'Styleguide', 'wptd' ) }}</h1>
-            </div>
-         </div>
+   <div class="l_styleguide pt-400 pt-md-600 pb-600 pb-md-800" data-template="page-modules.twig">
+
+      <header class="container container--narrow mb-400">
+         <h1>Styleguide</h1>
       </header>
+
       <div class="l_builder">
       {% for module in styleguide_partials %}
          {% include module %}
       {% endfor %}
       </div>
+
    </div>
 {% endblock %}

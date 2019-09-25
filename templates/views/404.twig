@@ -1,10 +1,11 @@
 {% extends "base.twig" %}
 {% block content %}
-   <div class="l_404" data-template="404.twig">
-      <header class="container">
+   <div class="l_404 pt-400 pt-md-600 pb-600 pb-md-800" data-template="404.twig">
+      <header class="container container--narrow">
          <h1 class="h1">{{ __( '404 - Seite nicht gefunden', 'wptd' ) }}</h1>
-         <p class="p1 mb-200">{{ __( 'Es sieht so aus, dass Sie auf einen alten Link oder einen Schreibfehler in der URL der Seite gestoßen sind, die Sie erreichen wollten. Bitte gehen Sie über den Button zurück zur Startseite oder nutzen Sie die Suche, um zu finden was Sie suchen. Wir entschuldigen uns für diesen Fehler.', 'wptd' ) }}</p>
-         <a class="btn btn-main btn3-main" href="/">{{ __('Zurück zur Startseite', 'wptd')}}</a>
+         <p class="p1 mb-200">{{ __( 'Es sieht so aus, dass Sie auf einen alten Link oder einen Schreibfehler in der URL der Seite gestoßen sind, die Sie erreichen wollten. Wir entschuldigen uns für diesen Fehler.', 'wptd' ) }}</p>
+         <p class="p1 mb-200">{{ __( 'Bitte gehen Sie über den Button zurück zur Startseite oder nutzen Sie die Suche, um zu finden was Sie suchen.', 'wptd' ) }}</p>
+         <a class="btn btn-main btn1-main" href="/">{{ __('Zurück zur Startseite', 'wptd')}}</a>
       </header>
    </div>
 {% endblock %}

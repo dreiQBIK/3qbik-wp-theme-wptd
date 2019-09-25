@@ -21,40 +21,47 @@ h1,
 h2,
 .h2 {
    @include fontstyle("fs2");
-   font-family: $f1-second;
+   font-family: $f1-main;
    margin-bottom: 0.5em;
 }
 
 h3,
 .h3 {
    @include fontstyle("fs3");
-   font-family: $f1-second;
+   font-family: $f2-main;
    margin-bottom: 0.5em;
 }
 
 h4,
 .h4 {
    @include fontstyle("fs4");
-   font-family: $f1-second;
+   font-family: $f2-main;
+   margin-bottom: 0.5em;
+}
+
+h5,
+.h5 {
+   @include fontstyle("fs5");
+   font-family: $f2-main;
    margin-bottom: 0.5em;
 }
 
 .p1 {
    @include fontstyle("fs5");
    font-family: $f1-second;
-   margin-bottom: 0.5em;
+   margin-bottom: 1em;
 }
 
 .p2 {
    @include fontstyle("fs6");
    font-family: $f1-second;
-   margin-bottom: 0.5em;
+   margin-bottom: 1em;
 }
 
 p {
    @include fontstyle("fs5");
    font-family: $f1-second;
-   margin-bottom: 0.5em;
+   margin-bottom: 1em;
 
    em {
       font-family: $f2-second;

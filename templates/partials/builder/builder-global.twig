@@ -8,8 +8,8 @@
    {% if module.acf_fc_layout == 'blg_testimonials' %}
       {% include "/partials/builder/modules-global/blg_testimonials.twig" with {
          all_fields    : module.blg_testimonials,
-         margin        : module.blg_testimonials.margin,
-         id            : module.blg_testimonials.id,
+         margin        : module.blg_testimonials.tab_settings.margin,
+         id            : module.blg_testimonials.tab_settings.id,
          toggle_heading: module.blg_testimonials.toggle_heading,
          teaser        : module.blg_testimonials.teaser,
       } %}

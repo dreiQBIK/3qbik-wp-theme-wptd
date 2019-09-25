@@ -3,7 +3,7 @@
 #}
 
 {% set all_fields = post.meta('header_hero') %}
-{% set margin = all_fields.margin %}
+{% set margin = all_fields.tab_settings.margin %}
 {% set headings = all_fields.headings %}
 {% set layout_class = headings.layout == 'center' ? ' t-center' : '' %}
 {% set heading = headings.heading %}

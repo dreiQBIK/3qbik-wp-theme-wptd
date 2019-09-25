@@ -9,7 +9,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba($c-black, 0.8);
+      background-color: rgba($c-black, 0.9);
       padding: 1rem;
 
       @include media-breakpoint-up(md) {
@@ -38,29 +38,28 @@
 
    &__icon {
       color: $c-white;
+      width: 4rem;
+      height: 4rem;
+      padding: 1rem;
    }
 
    &__close {
       cursor: pointer;
-      font-size: 1.5rem;
       position: absolute;
       top: 1rem;
       right: 1rem;
       background-color: rgba($c-black, 0.5);
       border: 0;
-      border-radius: $bd-radius-3;
       color: $c-white;
-      padding: 0.5rem 1rem;
+      padding: 0;
       transition: background-color $transition-150 ease-in;
 
       @include media-breakpoint-up(md) {
          top: 2rem;
          right: 2rem;
-         padding: 0.7rem 1.2rem;
       }
       @include media-breakpoint-up(lg) {
-         top: 0.5rem;
-         right: 0.5rem;
+         right: 4rem;
       }
 
       &:hover {

@@ -3,7 +3,7 @@
 #}
 
 {% set all_fields        = post.meta('header_hero') %}
-{% set margin            = all_fields.margin %}
+{% set margin            = all_fields.tab_settings.margin %}
 {% set bg_image          = all_fields.image %}
 {% set truefalse_caption = all_fields.image_settings.truefalse_caption %}
 {% set caption           = truefalse_caption ? all_fields.image_settings.caption : false %}

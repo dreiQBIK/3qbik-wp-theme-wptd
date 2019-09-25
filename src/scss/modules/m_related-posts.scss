@@ -1,8 +1,7 @@
 .m_related-posts {
 
-   &__list {
-      background-color: $c1-main;
+   &__item {
+      background-color: $c6-gray;
       border-radius: $bd-radius-3;
-      padding: 2rem;
    }
 }

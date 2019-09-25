@@ -7,6 +7,26 @@
    justify-content: space-between;
    align-items: center;
 
+   &-wrapper {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 3000;
+
+      // TODO: adjust fixed height for every project
+      height: 100px;
+
+      &.is-active {
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background-color: $c1-main;
+      }
+   }
+
    &__burger {
       display: block;
       position: relative;
@@ -14,6 +34,9 @@
       height: 42px;
       cursor: pointer;
       transition: all $transition-150 ease-in-out;
+
+      // TODO: adjust margin-top for every project, based on height of h_site-wrapper
+      margin-top: 8px;
 
       @include media-breakpoint-up(md) {
          display: none;

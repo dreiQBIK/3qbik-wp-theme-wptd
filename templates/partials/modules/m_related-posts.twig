@@ -1,12 +1,18 @@
-{% set related_posts = post.meta('post_related_posts') %}
+{# USES:
+   {% include "/partials/modules/m_related-posts.twig" with {
+      posts: {},
+   } %}
+#}
 
 <div class="m_related-posts">
-   <h3 class="h2 f3-second">{{ __('Verwandte Beiträge', 'wptd') }}</h3>
-   <ul class="m_related-posts__list">
-      {% for item in related_posts.posts %}
-         <li class="m_related-posts__item">
-            <a href="{{ item.link }}" class="link link-second link2-second">{{ item.title }}</a>
-         </li>
+   <h3 class="h2">{{ __('Verwandte Beiträge', 'wptd') }}</h3>
+   <row class="row">
+      {% for item in posts %}
+         <div class="col-12 col-sm-6 mb-100">
+            <div class="m_related-posts__item">
+               <a href="{{ item.link }}" class="link link-second link1-second d-flex p-200">{{ item.title }}</a>
+            </div>
+         </div>
       {% endfor %}
-   </ul>
+   </row>
 </div>

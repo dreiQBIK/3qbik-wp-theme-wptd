@@ -1,13 +1,13 @@
 {% set is_editor_post = ( fn('get_page_template_slug', post.id) == 'tpl-editor.php' ) %}
 
-<section class="m_post-teaser">
+<section class="m_post-teaser p-200">
    <div class="m_post-teaser__content">
-      <h2>{{ post.title }}</h2>
+      <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
       <div class="m_post-teaser__meta">
-         <a class="m_post-teaser__author link link-main link2-main" href="{{ post.author.link }}">{{ __( 'Autor:', 'wptd' ) }}&nbsp;{{ post.author }}</a>
-         <span class="m_post-teaser__date">{{ post.date }}</span>
+         <a class="link link-main link1-main" href="{{ post.author.link }}">{{ __( 'Autor:', 'wptd' ) }}&nbsp;{{ post.author }}</a>
+         <span>{{ post.date }}</span>
       </div>
-      <p class="m_post-teaser__excerpt">{{ not is_editor_post ? post.meta('post_excerpt') : post.content|excerpt(30) }}</p>
-      <a class="btn btn-second btn3-second" href="{{ post.link }}">{{ __( 'Weiterlesen', 'wptd' ) }}</a>
+      <p class="mb-150">{{ not is_editor_post ? post.meta('post_excerpt') : post.content|excerpt(30) }}</p>
+      <a class="btn btn-second btn2-second" href="{{ post.link }}">{{ __( 'Weiterlesen', 'wptd' ) }}</a>
    </div>
 </section>

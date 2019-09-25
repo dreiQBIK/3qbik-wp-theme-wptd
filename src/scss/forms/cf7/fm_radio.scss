@@ -72,6 +72,8 @@
 
       // label and visible radio-button
       & + span.wpcf7-list-item-label {
+         font-family: $f2-main;
+         font-size: 1rem;
          transition: color $transition-150 ease-in-out;
          color: $c1-gray;
          margin: 0 2rem 0 40px;

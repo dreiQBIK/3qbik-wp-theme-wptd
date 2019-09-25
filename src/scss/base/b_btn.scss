@@ -6,16 +6,17 @@ a.btn {
    padding: 0.5em 1em;
    border: 0;
    border-radius: $bd-radius-3;
-   font-family: $f3-second;
-   font-size: 1rem;
+   font-family: $f1-main;
+   text-transform: uppercase;
+   font-size: 1.1rem;
    line-height: 1.5em;
 
    &--small {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
    }
 
    &--large {
-      font-size: 1rem;
+      font-size: 1.1rem;
 
       @include media-breakpoint-up(md) {
          font-size: 1.3rem;
@@ -55,21 +56,10 @@ a.btn {
          }
       }
    }
-   &3-main {
-      background-color: $c1-second;
-      color: $c1-main;
-
-      &:hover {
-         @include media-breakpoint-up(md) {
-            background-color: $c1-third;
-            color: $c-white;
-         }
-      }
-   }
    &-main-disabled {
       cursor: auto;
-      background-color: $c1-gray;
-      color: darken($c1-gray, 15%);
+      background-color: $c6-gray;
+      color: $c5-gray;
    }
 
    // second buttons
@@ -80,8 +70,9 @@ a.btn {
 
       &:hover {
          @include media-breakpoint-up(md) {
-            border: 2px solid $c1-main;
-            color: $c1-main;
+            border: 2px solid $c1-third;
+            background-color: $c1-third;
+            color: $c-white;
          }
       }
    }
@@ -92,27 +83,16 @@ a.btn {
 
       &:hover {
          @include media-breakpoint-up(md) {
-            border: 2px solid $c3-main;
-            color: $c3-main;
-         }
-      }
-   }
-   &3-second {
-      background-color: transparent;
-      border: 2px solid $c1-second;
-      color: $c1-second;
-
-      &:hover {
-         @include media-breakpoint-up(md) {
-            border: 2px solid $c1-third;
-            color: $c1-third;
+            border: 2px solid $c1-main;
+            background-color: $c1-main;
+            color: $c-white;
          }
       }
    }
    &-second-disabled {
       cursor: auto;
       background-color: transparent;
-      border: 2px solid $c1-gray;
-      color: darken($c1-gray, 15%);
+      border: 2px solid $c6-gray;
+      color: $c5-gray;
    }
 }

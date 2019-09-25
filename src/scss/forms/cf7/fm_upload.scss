@@ -1,4 +1,8 @@
-.wpcf7-form {
+.wpcf7-form__input-upload-wrapper {
+
+    .wpcf7-form__input-upload {
+        padding: 0;
+    }
 
     &__upload-wrapper {
         cursor: pointer;
@@ -56,5 +60,50 @@
 
     &__input-upload {
         display: none;
+    }
+
+    .jfilestyle {
+        display: flex;
+        align-items: center;
+
+        input {
+            display: inline-block;
+            width: 100% !important;
+            border-radius: 0;
+            border: none;
+            padding: 0;
+
+            &:hover {
+                border-color: $c1-main;
+            }
+        }
+
+        input[type="text"] {
+            font-family: $f3-second;
+            background: none;
+            height: auto;
+            color: $c3-main;
+
+            &::placeholder {
+                color: $c3-main;
+            }
+        }
+    }
+
+    .focus-jfilestyle {
+        display: inline-flex;
+        margin-right: 1rem;
+
+        span {
+            color: $c2-main;
+        }
+
+        label {
+            cursor: pointer;
+            font-family: $f2-main;
+            font-size: 1.1rem;
+            line-height: 1.5em;
+            text-transform: uppercase;
+        }
     }
 }

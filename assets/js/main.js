@@ -171,8 +171,8 @@ var blgTestimonials = function ($) {
     slidesToShow: 3,
     autoplay: false,
     autoplaySpeed: 6000,
-    prevArrow: '<svg class="icon icon--xlarge t-c-white slick-prev"><use href="#icon-left-arrow" xlink:href="#icon-left-arrow"/></svg>',
-    nextArrow: '<svg class="icon icon--xlarge t-c-white slick-next"><use href="#icon-right-arrow" xlink:href="#icon-right-arrow"/></svg>',
+    prevArrow: '<svg class="icon icon--xlarge t-c1-main slick-prev"><use href="#icon-left-arrow" xlink:href="#icon-left-arrow"/></svg>',
+    nextArrow: '<svg class="icon icon--xlarge t-c1-main slick-next"><use href="#icon-right-arrow" xlink:href="#icon-right-arrow"/></svg>',
     responsive: [{
       breakpoint: 1600,
       settings: {
@@ -274,6 +274,11 @@ var nSite = function ($) {
    ******************************************************************/
   var $siteNavigation = $(".n_site");
   var $siteNavigationBurger = $(".h_site__burger");
+  var header = document.querySelector(".h_site-wrapper");
+  var headroom = new Headroom(header, {
+    offset: 0,
+    tolerance: 5
+  });
   /******************************************************************
        EVENTS
    ******************************************************************/
@@ -283,6 +288,7 @@ var nSite = function ($) {
   }); // toggle nav on click on burger
 
   $siteNavigationBurger.on("click", toggleNav);
+  headroom.init();
   /******************************************************************
        FUNCTIONS
    ******************************************************************/
@@ -398,6 +404,31 @@ var oLightbox = function ($) {
         height: '100%'
       });
     }
+  }
+}(jQuery);
+"use strict";
+
+var prgPattern = function ($) {
+  // TODO: copy prg-pattern.php into the root of the website (not theme)
+
+  /******************************************************************
+      EVENTS
+  ******************************************************************/
+  $('.prg-link[data-submit]').on('click', function (e) {
+    redirect(e, $(this));
+  });
+  /******************************************************************
+      FUNCTIONS
+  ******************************************************************/
+
+  function redirect(e, $el) {
+    e.preventDefault();
+    var $this = $el,
+        $redirectForm = $('#prg-form'),
+        $redirectValue = $('#prg-data'),
+        value = $this.data('submit');
+    $redirectValue.val(value);
+    $redirectForm.submit();
   }
 }(jQuery);
 "use strict";

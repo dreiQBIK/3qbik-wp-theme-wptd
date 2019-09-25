@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 
 {% block content %}
-   <div class="l_posts" data-template="blog.twig">
+   <div class="l_posts pt-400 pt-md-600 pb-600 pb-md-800" data-template="blog.twig">
 
       {% set header_to_show = post.meta('header_hero').header_to_show %}
       {% if header_to_show == 'hero' %}
@@ -17,7 +17,7 @@
 
       <div class="container py-300">
 
-         {% if posts %}
+         {% if posts|length %}
             <ul class="l_posts__list">
             {% for post in posts %}
                <li class="l_posts__item mb-100">

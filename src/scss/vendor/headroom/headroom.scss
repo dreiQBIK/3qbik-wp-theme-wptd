@@ -1,0 +1,17 @@
+.headroom {
+   will-change: transform;
+   transition: transform $transition-150 linear;
+}
+.headroom--pinned,
+.headroom--not-top {
+   transform: translateY(0%);
+   background-color: $c1-main;
+   transform-style: preserve-3d;
+
+   &.headroom--top {
+      background: transparent;
+   }
+}
+.headroom--unpinned:not(.is-active) {
+   transform: translateY(-100%);
+}

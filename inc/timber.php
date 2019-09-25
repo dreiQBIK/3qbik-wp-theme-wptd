@@ -46,6 +46,12 @@ function wptd_add_to_twig( $twig ) {
         shuffle($array);
         return $array;
     }) );
+    $twig->addFilter(new \Twig_SimpleFilter('base64_encode', function ($string) {
+        return base64_encode($string);
+    }));
+    $twig->addFilter(new \Twig_SimpleFilter('base64_decode', function ($string) {
+        return base64_decode($string);
+    }));
 
     return $twig;
 }

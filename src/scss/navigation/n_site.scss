@@ -1,4 +1,6 @@
 .n_site {
+   font-family: $f2-main;
+
    @include media-breakpoint-up(md) {
       display: flex;
       flex: 1 0 auto;
@@ -17,9 +19,10 @@
          margin: 0;
          display: flex;
 
+         // TODO: adjust margin-top for every project, based on height of h_site-wrapper
+         margin-top: 8px;
+
          li {
-            background-color: $c2-main;
-            border-radius: $bd-radius-3;
             padding: 0.5rem 1rem;
             margin-bottom: 0;
 

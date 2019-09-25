@@ -1,7 +1,7 @@
 label {
-   font-family: $f3-second;
+   font-family: $f2-main;
    font-size: 1rem;
-   color: $c1-third;
+   color: $c1-main;
 }
 
 input[type="text"],
@@ -12,29 +12,30 @@ input[type="tel"],
 textarea {
    outline: none;
    border: 0;
-   border-top: 2px solid $c1-gray;
-   border-bottom: 2px solid $c1-gray;
+   background-color: $c6-gray;
+   // border-top: 2px solid $c5-gray;
+   border-bottom: 2px solid $c5-gray;
    color: $c1-main;
 
    // placeholder
    &::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
-      color: $c1-gray;
+      color: $c5-gray;
    }
    &::-webkit-input-placeholder {
-      color: $c1-gray;
+      color: $c5-gray;
    }
    &::-moz-placeholder {
       /* Firefox 19+ */
-      color: $c1-gray;
+      color: $c5-gray;
    }
    &:-ms-input-placeholder {
       /* IE 10+ */
-      color: $c1-gray;
+      color: $c5-gray;
    }
    &:-moz-placeholder {
       /* Firefox 18- */
-      color: $c1-gray;
+      color: $c5-gray;
    }
 }
 
@@ -45,10 +46,9 @@ input[type="number"],
 input[type="email"],
 input[type="tel"] {
    transition: $transition-150 ease-in-out;
-   background-color: $c-white;
    display: block;
    width: 100%;
-   height: 42px;
+   height: 60px;
    padding: 0 1rem;
 
    &:focus {
@@ -70,7 +70,6 @@ input[type=number] {
  }
 
 textarea {
-   background-color: $c-white;
    width: 100%;
    height: 200px;
    min-height: 200px;

@@ -1,4 +1,5 @@
-a.link {
+a.link,
+span.link {
    transition: color $transition-150 ease-in-out;
 
    &-main {
@@ -79,13 +80,13 @@ a.link {
 a.comment-reply-link,
 a#cancel-comment-reply-link {
    transition: color $transition-150 ease-in-out;
+   text-decoration: underline;
 
    &:link {
-      color: $c-white;
-      text-decoration: underline;
+      color: $c1-main;
    }
    &:visited {
-      color: $c-white;
+      color: $c1-main;
    }
    &:hover {
       @include media-breakpoint-up(md) {
@@ -93,6 +94,6 @@ a#cancel-comment-reply-link {
       }
    }
    &:active {
-      color: $c-white;
+      color: $c1-main;
    }
 }

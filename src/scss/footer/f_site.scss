@@ -1,6 +1,32 @@
 .f_site {
    background-color: $c1-main;
    color: $c-white;
+   font-family: $f2-main;
    text-align: center;
    padding: 1rem 2rem;
+
+   @include media-breakpoint-up(md) {
+      padding: 1.5rem 2rem;
+   }
+
+   &__block {
+      @include media-breakpoint-up(sm) {
+         display: inline-block;
+      }
+   }
+
+   &__spacer {
+      display: none;
+      @include media-breakpoint-up(sm) {
+         display: inline-block;
+      }
+   }
+
+   &__link {
+      cursor: pointer;
+
+      &:focus {
+         outline: 0;
+      }
+   }
 }
