@@ -42,6 +42,7 @@
     @include fontstyle("fs1");
 
 ******************************************************************/
+.tinymce h2,
 .tinymce h3,
 .tinymce h4,
 .tinymce h5,
@@ -54,6 +55,7 @@
   margin-bottom: 0.5em;
 }
 
+.tinymce h2:last-child,
 .tinymce h3:last-child,
 .tinymce h4:last-child,
 .tinymce h5:last-child,
@@ -65,6 +67,7 @@
   margin-bottom: 0;
 }
 
+.tinymce h2.center,
 .tinymce h3.center,
 .tinymce h4.center,
 .tinymce h5.center,
@@ -73,140 +76,19 @@
   text-align: center;
 }
 
-.tinymce h3 {
-  font-size: 1.6rem;
-  line-height: 1.2em;
-}
-
-@media (min-width: 481px) {
-  .tinymce h3 {
-    font-size: 1.6rem;
-    line-height: 1.2em;
-  }
-}
-
-@media (min-width: 961px) {
-  .tinymce h3 {
-    font-size: 1.8rem;
-    line-height: 1.2em;
-  }
-}
-
-@media (min-width: 1361px) {
-  .tinymce h3 {
-    font-size: 1.9rem;
-    line-height: 1.2em;
-  }
-}
-
-@media (min-width: 1921px) {
-  .tinymce h3 {
-    font-size: 2rem;
-    line-height: 1.2em;
-  }
-}
-
-.tinymce h4 {
-  font-size: 1.4rem;
-  line-height: 1.5em;
-}
-
-@media (min-width: 481px) {
-  .tinymce h4 {
-    font-size: 1.4rem;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 961px) {
-  .tinymce h4 {
-    font-size: 1.4rem;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 1361px) {
-  .tinymce h4 {
-    font-size: 1.5rem;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 1921px) {
-  .tinymce h4 {
-    font-size: 1.6rem;
-    line-height: 1.5em;
-  }
-}
-
-.tinymce h5 {
-  font-size: 1.3rem;
-  line-height: 1.5em;
-}
-
-@media (min-width: 481px) {
-  .tinymce h5 {
-    font-size: 1.3rem;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 961px) {
-  .tinymce h5 {
-    font-size: 1.3rem;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 1361px) {
-  .tinymce h5 {
-    font-size: 1.4rem;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 1921px) {
-  .tinymce h5 {
-    font-size: 1.4rem;
-    line-height: 1.5em;
-  }
-}
-
 .tinymce p {
-  font-size: 1.1rem;
-  line-height: 1.5em;
-}
-
-@media (min-width: 481px) {
-  .tinymce p {
-    font-size: 1.1rem;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 961px) {
-  .tinymce p {
-    font-size: 1.1rem;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 1361px) {
-  .tinymce p {
-    font-size: 1.2rem;
-    line-height: 1.5em;
-  }
-}
-
-@media (min-width: 1921px) {
-  .tinymce p {
-    font-size: 1.2rem;
-    line-height: 1.5em;
-  }
+  margin-bottom: 1em;
 }
 
 .tinymce p:last-of-type {
   margin-bottom: 0 !important;
+}
+
+.tinymce p + h2,
+.tinymce p + h3,
+.tinymce p + h4,
+.tinymce p + h5 {
+  padding-top: 1em;
 }
 
 .tinymce span.mce_brake {
@@ -246,14 +128,14 @@
 .tinymce ul li,
 .tinymce ol li {
   font-size: 1.1rem;
-  line-height: 1.5em;
+  line-height: 1.7em;
 }
 
 @media (min-width: 481px) {
   .tinymce ul li,
   .tinymce ol li {
     font-size: 1.1rem;
-    line-height: 1.5em;
+    line-height: 1.7em;
   }
 }
 
@@ -261,7 +143,7 @@
   .tinymce ul li,
   .tinymce ol li {
     font-size: 1.1rem;
-    line-height: 1.5em;
+    line-height: 1.7em;
   }
 }
 
@@ -269,7 +151,7 @@
   .tinymce ul li,
   .tinymce ol li {
     font-size: 1.2rem;
-    line-height: 1.5em;
+    line-height: 1.7em;
   }
 }
 
@@ -277,7 +159,7 @@
   .tinymce ul li,
   .tinymce ol li {
     font-size: 1.2rem;
-    line-height: 1.5em;
+    line-height: 1.7em;
   }
 }
 
@@ -339,7 +221,7 @@ body#tinymce h6 {
 body#tinymce p,
 body#tinymce li {
   font-size: 1rem;
-  line-height: 1.5em;
+  line-height: 1.7em;
   color: #4b6782;
 }
 
@@ -347,7 +229,7 @@ body#tinymce li {
   body#tinymce p,
   body#tinymce li {
     font-size: 1rem;
-    line-height: 1.5em;
+    line-height: 1.7em;
   }
 }
 
@@ -355,7 +237,7 @@ body#tinymce li {
   body#tinymce p,
   body#tinymce li {
     font-size: 1rem;
-    line-height: 1.5em;
+    line-height: 1.7em;
   }
 }
 
@@ -363,7 +245,7 @@ body#tinymce li {
   body#tinymce p,
   body#tinymce li {
     font-size: 1.1rem;
-    line-height: 1.5em;
+    line-height: 1.7em;
   }
 }
 
@@ -371,7 +253,7 @@ body#tinymce li {
   body#tinymce p,
   body#tinymce li {
     font-size: 1.1rem;
-    line-height: 1.5em;
+    line-height: 1.7em;
   }
 }
 
