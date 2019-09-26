@@ -1,29 +1,61 @@
+.h_site-wrapper {
+   position: fixed !important;
+   top: 0;
+   left: 0;
+   right: 0;
+   width: 100%;
+   z-index: 3000;
+
+   // TODO: adjust fixed height for every project
+   height: 100px;
+   @include media-breakpoint-up(md) {
+      height: 120px;
+   }
+
+   &.is-active {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $c1-main;
+   }
+}
+
 .h_site {
    color: $c-white;
-   min-height: 70px;
    margin-top: 0;
-   padding: 1rem 0;
    display: flex;
    justify-content: space-between;
    align-items: center;
 
-   &-wrapper {
-      position: fixed !important;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      z-index: 3000;
+   // TODO: adjust fixed height for every project
+   height: 100px;
+   @include media-breakpoint-up(md) {
+      height: 120px;
+   }
 
-      // TODO: adjust fixed height for every project
-      height: 100px;
+   &__home-link {
+      @include media-breakpoint-up(md) {
+         flex: 0 0 150px;
+      }
+   }
 
-      &.is-active {
-         top: 0;
-         left: 0;
-         right: 0;
-         bottom: 0;
-         background-color: $c1-main;
+   &__logo {
+
+      &--mobile {
+         @include media-breakpoint-up(md) {
+            display: none;
+         }
+      }
+
+      &--desktop {
+         display: none;
+
+         @include media-breakpoint-up(md) {
+            display: block;
+            width: 100%;
+            height: auto;
+         }
       }
    }
 
@@ -34,9 +66,6 @@
       height: 42px;
       cursor: pointer;
       transition: all $transition-150 ease-in-out;
-
-      // TODO: adjust margin-top for every project, based on height of h_site-wrapper
-      margin-top: 8px;
 
       @include media-breakpoint-up(md) {
          display: none;

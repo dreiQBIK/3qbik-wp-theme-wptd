@@ -6,7 +6,7 @@ const global = (function($) {
 
    /*
    * USAGE:
-   *     if (global.breakpoint.value === 'xs' || global.breakpoint.value *     === 'sm') {
+   *     if (global.breakpoint.value === 'xs' || global.breakpoint.value === 'sm') {
    *        // your code
    *     } else {
    *        // your code
@@ -85,6 +85,20 @@ const global = (function($) {
    }
 
 
+   /*
+   * USAGE:
+   *     global.scrollToSection($(this));
+   */
+   function scrollToSection($sectionName) {
+      $("html, body").animate(
+         {
+            scrollTop: $sectionName.offset().top,
+         },
+         "swing"
+      );
+   }
+
+
    /** ****************************************************************
          PUBLIC_FUNCTIONS
      ******************************************************************/
@@ -94,6 +108,7 @@ const global = (function($) {
       getRandomInt,
       breakpoint,
       triggerCardClick,
+      scrollToSection,
    };
 
 })(jQuery);

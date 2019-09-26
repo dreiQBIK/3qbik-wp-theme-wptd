@@ -1,12 +1,23 @@
+{# USES
+   {% include "/partials/header/h_site.twig" %}
+#}
+
+{% set settings     = fn('get_field', 'options_page_settings_general', 'acf-global-options') %}
+{% set logo_mobile  = settings.logos.logo_small %}
+{% set logo_desktop = settings.logos.logo_large %}
+
 <header class="h_site-wrapper bg-c1-main position-relative">
    <div class="container">
       <div class="h_site">
-         <a href="/">
-            {# TODO: set alt tag #}
+         <a href="/" class="h_site__home-link">
             <img
-               src="{{ theme.link }}/assets/img/dreiqbik-logo-mobile.svg"
-               alt="wptd_placeholder"
-               class="h_site__logo">
+               src="{{ logo_mobile.url }}"
+               alt="{{ logo_mobile.alt }}"
+               class="h_site__logo h_site__logo--mobile">
+            <img
+               src="{{ logo_desktop.url }}"
+               alt="{{ logo_desktop.alt }}"
+               class="h_site__logo h_site__logo--desktop">
          </a>
          <div class="h_site__burger">
             <span class='h_site__burger-bar'></span>

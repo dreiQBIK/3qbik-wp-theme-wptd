@@ -41,4 +41,4 @@ $args = array(
     "show_in_quick_edit" => false,
     "meta_box_cb"        => false,
 );
-register_taxonomy( "wptd_event_category", array( "wptd_event" ), $args );
+// register_taxonomy( "wptd_event_category", array( "wptd_event" ), $args );

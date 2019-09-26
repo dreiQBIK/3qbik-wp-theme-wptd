@@ -1,3 +1,7 @@
+{# USES
+   {% include "/partials/navigation/n_navigation.twig" %}
+#}
+
 <footer class="n_pagination" itemprop="pagination">
    {% if pagination.prev %}
       <a id="prev_post" class="n_pagination__link n_pagination__link--btn" href="{{ pagination.prev.link }}" title="{{ __( 'Vorherige Seite', 'wptd' ) }}"><i class="btn--prev"><svg class="icon"><use href="#icon-left-arrow" xlink:href="#icon-left-arrow"/></svg></i></a>

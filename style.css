@@ -9102,8 +9102,44 @@ body {
   }
 }
 
+@media (min-width: 1921px) {
+  body {
+    max-width: 2200px;
+    margin: 0 auto;
+  }
+}
+
 body.no-scroll {
   overflow: hidden;
+}
+
+body:before {
+  content: "xs";
+  display: none;
+}
+
+@media (min-width: 481px) {
+  body:before {
+    content: "sm";
+  }
+}
+
+@media (min-width: 961px) {
+  body:before {
+    content: "md";
+  }
+}
+
+@media (min-width: 1361px) {
+  body:before {
+    content: "lg";
+  }
+}
+
+@media (min-width: 1921px) {
+  body:before {
+    content: "xl";
+  }
 }
 
 @-ms-viewport {
@@ -9170,7 +9206,7 @@ form input:focus,
 form select:focus,
 form .choices:focus,
 form textarea:focus,
-form a:focus,
+form a:not(.btn):focus,
 form button:focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(150, 169, 187, 0.5);
@@ -9179,6 +9215,11 @@ form button:focus {
 
 figure {
   margin: 0;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
 }
 
 ul,
@@ -10863,10 +10904,8 @@ Stroke effects - Nucleo outline icons
     padding-left: 0;
     margin: 0;
     display: flex;
-    margin-top: 8px;
   }
   .n_site ul li {
-    padding: 0.5rem 1rem;
     margin-bottom: 0;
   }
   .n_site ul li:before {
@@ -10880,6 +10919,7 @@ Stroke effects - Nucleo outline icons
   }
   .n_site ul a {
     color: #ffffff;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -11113,16 +11153,6 @@ Stroke effects - Nucleo outline icons
   }
 }
 
-.h_site {
-  color: #ffffff;
-  min-height: 70px;
-  margin-top: 0;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .h_site-wrapper {
   position: fixed !important;
   top: 0;
@@ -11133,12 +11163,57 @@ Stroke effects - Nucleo outline icons
   height: 100px;
 }
 
+@media (min-width: 961px) {
+  .h_site-wrapper {
+    height: 120px;
+  }
+}
+
 .h_site-wrapper.is-active {
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: #2c3e50;
+}
+
+.h_site {
+  color: #ffffff;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+@media (min-width: 961px) {
+  .h_site {
+    height: 120px;
+  }
+}
+
+@media (min-width: 961px) {
+  .h_site__home-link {
+    flex: 0 0 150px;
+  }
+}
+
+@media (min-width: 961px) {
+  .h_site__logo--mobile {
+    display: none;
+  }
+}
+
+.h_site__logo--desktop {
+  display: none;
+}
+
+@media (min-width: 961px) {
+  .h_site__logo--desktop {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .h_site__burger {
@@ -11148,7 +11223,6 @@ Stroke effects - Nucleo outline icons
   height: 42px;
   cursor: pointer;
   transition: all 0.15s ease-in-out;
-  margin-top: 8px;
 }
 
 @media (min-width: 961px) {
@@ -11399,20 +11473,10 @@ Stroke effects - Nucleo outline icons
 }
 
 .f_site {
-  background-color: #2c3e50;
-  color: #ffffff;
   font-family: "MontserratBold", sans-serif;
-  text-align: center;
-  padding: 1rem 2rem;
 }
 
 @media (min-width: 961px) {
-  .f_site {
-    padding: 1.5rem 2rem;
-  }
-}
-
-@media (min-width: 481px) {
   .f_site__block {
     display: inline-block;
   }
@@ -11422,7 +11486,7 @@ Stroke effects - Nucleo outline icons
   display: none;
 }
 
-@media (min-width: 481px) {
+@media (min-width: 961px) {
   .f_site__spacer {
     display: inline-block;
   }
@@ -11434,6 +11498,24 @@ Stroke effects - Nucleo outline icons
 
 .f_site__link:focus {
   outline: 0;
+}
+
+.f_site__contact {
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (min-width: 961px) {
+  .f_site__contact {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.f_site__copy {
+  text-align: center;
+  color: #ffffff;
 }
 
 label {

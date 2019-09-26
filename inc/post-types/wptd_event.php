@@ -47,4 +47,4 @@ $events_args = array(
     "supports"            => array( "title", "editor", "thumbnail", "custom-fields", "revisions" ),
     "taxonomies"          => array( "wptd_event_category", "wptd_event_rubrik" ),
 );
-register_post_type( "wptd_event", $events_args );
+// register_post_type( "wptd_event", $events_args );

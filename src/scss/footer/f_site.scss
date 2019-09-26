@@ -1,23 +1,15 @@
 .f_site {
-   background-color: $c1-main;
-   color: $c-white;
    font-family: $f2-main;
-   text-align: center;
-   padding: 1rem 2rem;
-
-   @include media-breakpoint-up(md) {
-      padding: 1.5rem 2rem;
-   }
 
    &__block {
-      @include media-breakpoint-up(sm) {
+      @include media-breakpoint-up(md) {
          display: inline-block;
       }
    }
 
    &__spacer {
       display: none;
-      @include media-breakpoint-up(sm) {
+      @include media-breakpoint-up(md) {
          display: inline-block;
       }
    }
@@ -28,5 +20,21 @@
       &:focus {
          outline: 0;
       }
+   }
+
+   &__contact {
+      text-align: center;
+      color: $c-white;
+
+      @include media-breakpoint-up(md) {
+         text-align: left;
+         display: flex;
+         justify-content: space-between;
+      }
+   }
+
+   &__copy {
+      text-align: center;
+      color: $c-white;
    }
 }

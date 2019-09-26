@@ -19,11 +19,7 @@
          margin: 0;
          display: flex;
 
-         // TODO: adjust margin-top for every project, based on height of h_site-wrapper
-         margin-top: 8px;
-
          li {
-            padding: 0.5rem 1rem;
             margin-bottom: 0;
 
             &:before {
@@ -41,6 +37,7 @@
 
          a {
             color: $c-white;
+            padding: 0.5rem 1rem;
          }
       }
    }

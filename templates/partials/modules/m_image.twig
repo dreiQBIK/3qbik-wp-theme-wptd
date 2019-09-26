@@ -1,13 +1,8 @@
-
 {# USES
-   image => type: object
-   show_lightbox => type: boolean
-   show_caption => type: boolean
-   ---
    {% include "/partials/modules/m_image.twig" with {
-      image: image,
-      show_lightbox: show_lightbox,
-      show_caption: show_caption,
+      image: {},
+      show_lightbox: false,
+      show_caption: false,
    } %}
 #}
 

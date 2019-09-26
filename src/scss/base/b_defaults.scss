@@ -14,8 +14,31 @@ body {
    @include fontstyle("fs5");
    font-family: $f1-second;
 
+   @include media-breakpoint-up(xl) {
+      max-width: 2200px;
+      margin: 0 auto;
+   }
+
    &.no-scroll {
       overflow: hidden;
+   }
+
+   &:before {
+      content: "xs";
+      display: none;
+
+      @include media-breakpoint-up(sm) {
+         content: "sm";
+      }
+      @include media-breakpoint-up(md) {
+         content: "md";
+      }
+      @include media-breakpoint-up(lg) {
+         content: "lg";
+      }
+      @include media-breakpoint-up(xl) {
+         content: "xl";
+      }
    }
 }
 
@@ -86,7 +109,7 @@ form {
    select,
    .choices,
    textarea,
-   a,
+   a:not(.btn),
    button {
       &:focus {
          // border-color: $c1-accent;
@@ -99,6 +122,11 @@ form {
 
 figure {
    margin: 0;
+
+   img {
+      width: 100%;
+      height: auto;
+   }
 }
 
 ul,

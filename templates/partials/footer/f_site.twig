@@ -1,26 +1,74 @@
+{# USES
+   {% include "/partials/footer/f_site.twig" %}
+#}
+
+{% set settings = fn('get_field', 'options_page_settings_contact', 'acf-global-options') %}
+{% set address  = settings.contact.address %}
+{% set phone    = settings.contact.phone %}
+{% set button_1 = settings.contact.button_1 %}
+
 <footer class="f_site">
-   <div class="f_site__copy">
-      <div class="f_site__block">
-         <span class="f_site__date">&copy;{{"now"|date('Y')}}</span>
-         <span>dreiQBIK GmbH</span>
-         <span class="f_site__spacer">&nbsp;|&nbsp;</span>
+
+   <div class="container-wrapper bg-c2-main">
+      <div class="container">
+         <div class="f_site__contact py-250 py-md-400">
+            <div class="f_site__block mb-200 mb-md-0">
+               <p class="h4">{{ __( 'Kontakt', 'wptd' ) }}</p>
+               <address class="f_site__address">{{ address }}</address>
+               <a href="tel:{{ phone }}" class="f_site__link link link-second link2-second">{{ phone }}</a>
+            </div>
+            {% if button_1 %}
+               <div class="f_site__block mb-200 mb-md-0">
+                  <p class="h4">{{ __( 'Links', 'wptd' ) }}</p>
+                  <a href="{{ button_1.url }}" class="btn btn1-second" target="{{ button_1.target }}"><span class="btn-text">{{ button_1.title }}</span></a>
+               </div>
+            {% endif %}
+            {% if settings.social %}
+               <div class="f_site__block">
+                  <p class="h4">{{ __( 'Social Media', 'wptd' ) }}</p>
+                  {% for item in settings.social %}
+                     <a href="{{ item.link.url }}" target="{{ item.link.target }}" class="btn btn2-main" aria-label="{{ __( 'Dieses Icon verlinkt auf unsere Social Media Kanäle', 'wptd' ) }}" rel="noopener" rel="noreferrer"><span class="btn-text"><svg class="icon icon--medium t-c-white"><use href="{{ item.icon }}" xlink:href="{{ item.icon }}"/></svg></span></a>
+                  {% endfor %}
+               </div>
+            {% endif %}
+         </div>
       </div>
-      <div class="f_site__block">
-         {% if fn('is_front_page') %}
-            <a class="f_site__link link link-second link2-second" href="/impressum/">Impressum</a>
-         {% else %}
-            {# TODO: add final project URL to attribute data-submit #}
-            <span class="f_site__link link link-second link2-second prg-link" tabindex="0" data-submit="{{ 'https://dreiqbik.de/impressum/'|base64_encode }}">Impressum</span>
-         {% endif %}
-         <span class="f_site__spacer">&nbsp;|&nbsp;</span>
-      </div>
-      <div class="f_site__block">
-         {% if fn('is_front_page') %}
-            <a class="f_site__link link link-second link2-second" href="/datenschutz/">Datenschutzerklärung</a>
-         {% else %}
-            {# TODO: add final project URL to attribute data-submit #}
-            <span class="f_site__link link link-second link2-second prg-link" tabindex="0" data-submit="{{ 'https://dreiqbik.de/datenschutz/'|base64_encode }}">Datenschutzerklärung</span>
+   </div>
+
+   <div class="container-wrapper bg-c1-main">
+      <div class="container">
+         <div class="f_site__copy py-150">
+            <div class="f_site__block">
+               <span class="f_site__date">&copy;{{"now"|date('Y')}}</span>
+               <span>dreiQBIK GmbH</span>
+               <span class="f_site__spacer">&nbsp;|&nbsp;</span>
+            </div>
+            <div class="f_site__block">
+               {% if fn('is_front_page') %}
+                  <a class="f_site__link link link-second link2-second" href="/impressum/">Impressum</a>
+               {% else %}
+                  {# TODO: prg-pattern: add final project URL to attribute data-submit #}
+                  <span class="f_site__link link link-second link2-second prg-link" tabindex="0" data-submit="{{ 'https://dreiqbik.de/impressum/'|base64_encode }}">Impressum</span>
+               {% endif %}
+               <span class="f_site__spacer">&nbsp;|&nbsp;</span>
+            </div>
+            <div class="f_site__block">
+               {% if fn('is_front_page') %}
+                  <a class="f_site__link link link-second link2-second" href="/datenschutz/">Datenschutzerklärung</a>
+               {% else %}
+                  {# TODO: prg-pattern: add final project URL to attribute data-submit #}
+                  <span class="f_site__link link link-second link2-second prg-link" tabindex="0" data-submit="{{ 'https://dreiqbik.de/datenschutz/'|base64_encode }}">Datenschutzerklärung</span>
+               {% endif %}
+            </div>
+         </div>
+
+         {# prg-pattern: hidden form #}
+         {% if not fn('is_front_page') %}
+            <form id="prg-form" action="/prg-pattern.php" method="post">
+               <input type="hidden" name="prg-data" id="prg-data">
+            </form>
          {% endif %}
       </div>
    </div>
+
 </footer>

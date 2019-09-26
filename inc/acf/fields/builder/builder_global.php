@@ -27,6 +27,18 @@ $builder_global
       ]
    )
 
+   ->addLayout(wptd_acf_get_module_global('blg_text'))
+   // ->addLayout(wptd_acf_get_module_global('blg_contact'))
+   // ->addLayout(wptd_acf_get_module_global('blg_team_teaser'))
+   // ->addLayout(wptd_acf_get_module_global('blg_team_teaser_big'))
+   // ->addLayout(wptd_acf_get_module_global('blg_logos'))
+   // ->addLayout(wptd_acf_get_module_global('blg_card_teaser'))
+   // ->addLayout(wptd_acf_get_module_global('blg_flip_cards'))
+   // ->addLayout(wptd_acf_get_module_global('blg_project_teaser'))
+   // ->addLayout(wptd_acf_get_module_global('blg_images_styleguide'))
+   // ->addLayout(wptd_acf_get_module_global('blg_images_frontend'))
+   // ->addLayout(wptd_acf_get_module_global('blg_intro_box_client'))
+   // ->addLayout(wptd_acf_get_module_global('blg_intro_box'))
    ->addLayout(wptd_acf_get_module_global('blg_testimonials'));
 
 return $builder_global;

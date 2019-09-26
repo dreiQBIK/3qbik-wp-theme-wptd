@@ -7,7 +7,7 @@ var global = function ($) {
 
   /*
   * USAGE:
-  *     if (global.breakpoint.value === 'xs' || global.breakpoint.value *     === 'sm') {
+  *     if (global.breakpoint.value === 'xs' || global.breakpoint.value === 'sm') {
   *        // your code
   *     } else {
   *        // your code
@@ -84,6 +84,17 @@ var global = function ($) {
 
     window.open(linkHref, linkTarget);
   }
+  /*
+  * USAGE:
+  *     global.scrollToSection($(this));
+  */
+
+
+  function scrollToSection($sectionName) {
+    $("html, body").animate({
+      scrollTop: $sectionName.offset().top
+    }, "swing");
+  }
   /** ****************************************************************
         PUBLIC_FUNCTIONS
     ******************************************************************/
@@ -93,7 +104,8 @@ var global = function ($) {
     debounce: debounce,
     getRandomInt: getRandomInt,
     breakpoint: breakpoint,
-    triggerCardClick: triggerCardClick
+    triggerCardClick: triggerCardClick,
+    scrollToSection: scrollToSection
   };
 }(jQuery);
 "use strict";
@@ -284,7 +296,9 @@ var nSite = function ($) {
    ******************************************************************/
 
   $(window).resize(function () {
-    toggleNavAtBreakpoint();
+    if (global.breakpoint.value === 'md' || global.breakpoint.value === 'lg' || global.breakpoint.value === 'xl') {
+      hideNav();
+    }
   }); // toggle nav on click on burger
 
   $siteNavigationBurger.on("click", toggleNav);
@@ -306,15 +320,6 @@ var nSite = function ($) {
   function hideNav() {
     $siteNavigationBurger.removeClass("is-active");
     $siteNavigation.removeClass("is-active");
-  } // toggle nav on mobile/desktop
-
-
-  function toggleNavAtBreakpoint() {
-    if (global.breakpoint.value === 'xs' || global.breakpoint.value === 'sm') {
-      showNav();
-    } else {
-      hideNav();
-    }
   }
   /******************************************************************
        PUBLIC_FUNCTIONS

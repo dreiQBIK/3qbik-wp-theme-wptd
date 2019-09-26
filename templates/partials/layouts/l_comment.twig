@@ -1,3 +1,7 @@
+{# USES
+   {% include "/partials/layouts/l_comment.twig" %}
+#}
+
 {% if comment.author.ID %}
 	{% set author_image = fn('get_field', 'user_roles_info', 'user_' ~ comment.author.ID).image %}
 {% else %}

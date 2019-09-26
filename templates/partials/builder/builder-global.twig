@@ -1,10 +1,11 @@
 {# USES
    {% include '/partials/builder/builder-global.twig' %}
 #}
+
 {% set modules = post.meta('builder_global_content') %}
 {% for module in modules %}
 
-   {# Testimonials #}
+   {# Module: TESTIMONIALS #}
    {% if module.acf_fc_layout == 'blg_testimonials' %}
       {% include "/partials/builder/modules-global/blg_testimonials.twig" with {
          all_fields    : module.blg_testimonials,
