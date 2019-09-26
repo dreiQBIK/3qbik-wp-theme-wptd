@@ -1,0 +1,66 @@
+{# USES
+   {% include "/partials/builder/modules-global/blg_intro-box-client.twig" with {
+      all_fields    : {},
+      padding       : '',
+      id            : '',
+      toggle_heading: false,
+      section_arrow : false,
+      label         : '',
+      client        : '',
+      launch        : '',
+      text          : '',
+      button        : {},
+   } %}
+#}
+{% if toggle_heading %}
+   {% set section_heading = all_fields.headings.heading %}
+   {% set section_heading_type = all_fields.headings.heading_type %}
+   {% set section_label        = all_fields.headings.toggle_label ? all_fields.headings.label.choices : false %}
+{% endif %}
+
+<div class="container-wrapper position-relative {{ padding }}{% if section_arrow %} mb-large{% endif %}">
+   <div class="container container--narrow" {% if id %}id="{{ id }}"{% endif %}>
+
+      <section class="blg_intro-box-client">
+         {% if toggle_heading %}
+            {% include "/partials/modules/m_section-heading.twig" with {
+               heading: section_heading,
+               heading_type: section_heading_type,
+               label: section_label,
+            } %}
+         {% endif %}
+
+         <div class="blg_intro-box-client__content pt-200 pt-md-250 pb-250 pb-md-300 px-200 px-sm-300 px-md-350 sr-1">
+            <header class="blg_intro-box-client__header">
+               <div>
+                  <span class="h4 t-c3-main mb-0">{{ __( 'Kunde', 'wptd' ) }}</span>
+                  <p class="h2">{{ client }}</p>
+               </div>
+               <div>
+                  <span class="h4 t-c3-main mb-0">{{ __( 'Launch', 'wptd' ) }}</span>
+                  <p class="h2">{{ launch }}</p>
+               </div>
+            </header>
+            <div class="blg_intro-box-client__text tinymce mb-200">{{ text }}</div>
+            {% if button.url %}
+               <a href="{{ button.url }}" target="{{ button.target }}" class="btn btn1-main"><span class="btn-text">{{ button.title }}</span></a>
+            {% endif %}
+
+            <div class="m_shadow m_shadow--front-c2-main m_shadow--back-c4-main"></div>
+         </div>
+
+         {% if section_arrow %}
+            {% include "/partials/modules/m_section-arrow.twig" with {
+               anchor: all_fields.section_arrow_anchor,
+               icon_light: true,
+            } %}
+         {% endif %}
+      </section>
+
+   </div>
+   {% include "/partials/modules/m_section-bg-image.twig" with {
+      bg_image_large: bg_image_large,
+      bg_image_medium: bg_image_medium,
+      bg_image_small: bg_image_small,
+   } %}
+</div>

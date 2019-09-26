@@ -1,0 +1,43 @@
+{# USES
+   {% include "/partials/builder/modules-global/blg_text.twig" with {
+      all_fields    : {},
+      padding        : '',
+      id            : '',
+      toggle_heading: false,
+      text: '',
+   } %}
+#}
+{% if toggle_heading %}
+   {% set section_heading      = all_fields.headings.heading %}
+   {% set section_heading_type = all_fields.headings.heading_type %}
+{% endif %}
+
+<div class="container-wrapper position-relative {{ padding }}">
+   <div class="container container--narrow" {% if id %}id="{{ id }}"{% endif %}>
+
+      <section class="blg_text">
+         <div class="row">
+            <div class="col-12">
+
+               {% if toggle_heading %}
+                  {% include "/partials/modules/m_heading.twig" with {
+                     wrapper_classes: 'mb-100 mb-md-200',
+                     heading_classes: '',
+                     heading: section_heading,
+                     heading_type: section_heading_type,
+                  } %}
+               {% endif %}
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-12">
+               <div class="blg_text__box tinymce">
+                  {{ text }}
+               </div>
+            </div>
+         </div>
+      </section>
+
+   </div>
+</div>

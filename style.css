@@ -9102,13 +9102,6 @@ body {
   }
 }
 
-@media (min-width: 1921px) {
-  body {
-    max-width: 2200px;
-    margin: 0 auto;
-  }
-}
-
 body.no-scroll {
   overflow: hidden;
 }
@@ -11077,7 +11070,7 @@ Stroke effects - Nucleo outline icons
 
 .o_lightbox.is-open {
   display: block;
-  z-index: 200;
+  z-index: 4000;
   position: fixed;
   top: 0;
   left: 0;
@@ -11283,6 +11276,10 @@ Stroke effects - Nucleo outline icons
 
 .h_site__burger.is-active span:after {
   transform: rotate(-45deg);
+}
+
+.h_base {
+  text-align: center;
 }
 
 .h_hero {

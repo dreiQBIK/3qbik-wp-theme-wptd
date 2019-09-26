@@ -5,8 +5,18 @@
 {% set modules = post.meta('builder_global_content') %}
 {% for module in modules %}
 
+   {# Module: TEXT #}
+   {% if module.acf_fc_layout == 'blg_text' %}
+      {% include "/partials/builder/modules-global/blg_text.twig" with {
+         all_fields    : module.blg_text,
+         margin        : module.blg_text.tab_settings.margin,
+         id            : module.blg_text.tab_settings.id,
+         toggle_heading: module.blg_text.toggle_heading,
+         text          : module.blg_text.text,
+      } %}
+
    {# Module: TESTIMONIALS #}
-   {% if module.acf_fc_layout == 'blg_testimonials' %}
+   {% elseif module.acf_fc_layout == 'blg_testimonials' %}
       {% include "/partials/builder/modules-global/blg_testimonials.twig" with {
          all_fields    : module.blg_testimonials,
          margin        : module.blg_testimonials.tab_settings.margin,

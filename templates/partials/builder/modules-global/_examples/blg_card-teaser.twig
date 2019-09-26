@@ -1,0 +1,81 @@
+{# USES
+   {% include "/partials/builder/modules-global/blg_card-teaser.twig" with {
+      all_fields    : {},
+      padding        : '',
+      id            : '',
+      toggle_heading: false,
+      section_arrow: false,
+      teaser        : {},
+      toggle_page_link: false,
+   } %}
+#}
+{% if toggle_heading %}
+   {% set section_heading = all_fields.headings.heading %}
+   {% set section_heading_type = all_fields.headings.heading_type %}
+   {% set section_label        = all_fields.headings.toggle_label ? all_fields.headings.label.choices : false %}
+{% endif %}
+{% if toggle_page_link %}
+   {% set page_link = all_fields.page_link %}
+{% endif %}
+
+<div class="container-wrapper position-relative {{ padding }}{% if section_arrow %} mb-large{% endif %}">
+   <div class="container" {% if id %}id="{{ id }}"{% endif %}>
+
+      <section class="blg_card-teaser">
+         <div class="row">
+            <div class="col-12">
+               {% if toggle_heading %}
+                  {% include "/partials/modules/m_section-heading.twig" with {
+                     heading: section_heading,
+                     heading_type: section_heading_type,
+                     label: section_label,
+                  } %}
+               {% endif %}
+            </div>
+         </div>
+
+         <div class="row">
+            {% for item in teaser %}
+               {% set text = item.text %}
+               {% set link = item.link %}
+               <div class="col-12 col-md-6 mb-200{% if link %} mb-sm-300{% endif %} d-flex align-items-stretch">
+
+                  <div class="blg_card-teaser__content pt-200 pt-md-250 pb-250 pb-md-300 px-200 px-sm-300 px-md-350 sr-1">
+                     <{{ item.heading_type|default("h3") }} class="blg_card-teaser__heading">
+                        <span>{{ item.heading }}</span>
+                     </{{ item.heading_type|default("h3") }}>
+                     <div class="tinymce{% if link %} mb-200 mb-md-250{% endif %}">{{ text }}</div>
+                     {% if link %}
+                        <a href="{{ link.url }}" target="{{ link.target }}" class="btn btn1-main"><span class="btn-text">{{ link.title }}</span></a>
+                     {% endif %}
+
+                     <div class="m_shadow m_shadow--front-c2-main m_shadow--back-c4-main"></div>
+                  </div>
+
+               </div>
+            {% endfor %}
+         </div>
+
+         {% if page_link %}
+            <div class="row mt-200 mt-md-300 mt-lg-400">
+               <div class="col-12 t-center sr-1">
+                  <a href="{{ page_link.url }}" target="{{ page_link.target }}" class="btn btn1-main btn--large"><span class="btn-text">{{ page_link.title }}</span></a>
+               </div>
+            </div>
+         {% endif %}
+
+         {% if section_arrow %}
+            {% include "/partials/modules/m_section-arrow.twig" with {
+               anchor: all_fields.section_arrow_anchor,
+               icon_light: true,
+            } %}
+         {% endif %}
+      </section>
+
+   </div>
+   {% include "/partials/modules/m_section-bg-image.twig" with {
+      bg_image_large: bg_image_large,
+      bg_image_medium: bg_image_medium,
+      bg_image_small: bg_image_small,
+   } %}
+</div>

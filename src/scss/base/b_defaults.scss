@@ -14,10 +14,10 @@ body {
    @include fontstyle("fs5");
    font-family: $f1-second;
 
-   @include media-breakpoint-up(xl) {
-      max-width: 2200px;
-      margin: 0 auto;
-   }
+   // @include media-breakpoint-up(xl) {
+   //    max-width: 2200px;
+   //    margin: 0 auto;
+   // }
 
    &.no-scroll {
       overflow: hidden;
