@@ -10,14 +10,15 @@ foreach ( $acf_field_group_definition_file_paths_globals as $globals_file_path )
     include( $globals_file_path );
 }
 
-$blg_site_teaser = new FieldsBuilder('blg_site_teaser', [
-    'title' => 'Seiten-Teaser',
+$blg_site_teaser_carousel = new FieldsBuilder('blg_site_teaser_carousel', [
+    'title' => 'Seiten-Teaser (Karussell)',
 ]);
 
-$blg_site_teaser
-    ->addGroup('blg_site_teaser', [
+$blg_site_teaser_carousel
+    ->addGroup('blg_site_teaser_carousel', [
         'label' => '',
     ])
+        // ->addFields($backend_layout)
 
         ->addTab('settings', [
             'label' => 'Einstellungen',
@@ -88,16 +89,6 @@ $blg_site_teaser
                 ->addGroup('intro', [
                     'label' => 'Allgemeines für diese Kachel',
                 ])
-                    ->addTrueFalse('toggle_tip', [
-                        'label' => 'Info-Label',
-                        'default_value' => 0,
-                        'ui' => 1,
-                    ])
-                    ->addText('tip_text', [
-                        'label' => 'Text für das Label',
-                        'required' => 1,
-                    ])
-                        ->conditional('toggle_tip', '==', 1)
                     ->addImage('image', [
                         'label' => 'Bild',
                         'preview_size' => 'thumbnail',
@@ -106,26 +97,6 @@ $blg_site_teaser
                     ])
                     ->addGroup('image_settings', [
                         'label' => 'Bild-Einstellungen',
-                        'wrapper' => ['width' => 35],
-                    ])
-                        ->addTrueFalse('truefalse_caption', [
-                            'label' => 'alternatives Alt-Tag',
-                            'ui' => 1,
-                        ])
-                        ->addText('caption', [
-                            'label' => '',
-                            'instructions' => 'Alt-Tag angeben',
-                        ])
-                            ->conditional('truefalse_caption', '==', 1)
-                    ->endGroup()
-                    ->addImage('logo', [
-                        'label' => 'Logo (optional)',
-                        'preview_size' => 'thumbnail',
-                        'wrapper' => ['width' => 65],
-                        'required' => 0,
-                    ])
-                    ->addGroup('logo_settings', [
-                        'label' => 'Logo-Einstellungen',
                         'wrapper' => ['width' => 35],
                     ])
                         ->addTrueFalse('truefalse_caption', [
@@ -174,4 +145,4 @@ $blg_site_teaser
 
     ->endGroup();
 
-return $blg_site_teaser;
+return $blg_site_teaser_carousel;

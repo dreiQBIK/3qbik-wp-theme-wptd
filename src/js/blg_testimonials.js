@@ -7,6 +7,8 @@ const blgTestimonials = (function($) {
 
    const $testimonialSlider = $('.blg_testimonials__slider');
 
+   if (!$testimonialSlider.length) return;
+
 
    /******************************************************************
        EVENTS

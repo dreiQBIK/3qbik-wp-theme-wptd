@@ -18,6 +18,7 @@ $blg_testimonials
     ->addGroup('blg_testimonials', [
         'label' => '',
     ])
+        // ->addFields($backend_layout)
 
         ->addTab('settings', [
             'label' => 'Einstellungen',

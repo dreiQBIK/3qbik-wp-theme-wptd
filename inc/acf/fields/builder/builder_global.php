@@ -28,6 +28,7 @@ $builder_global
    )
 
    ->addLayout(wptd_acf_get_module_global('blg_text'))
+   ->addLayout(wptd_acf_get_module_global('blg_site_teaser_carousel'))
    // ->addLayout(wptd_acf_get_module_global('blg_contact'))
    // ->addLayout(wptd_acf_get_module_global('blg_team_teaser'))
    // ->addLayout(wptd_acf_get_module_global('blg_team_teaser_big'))

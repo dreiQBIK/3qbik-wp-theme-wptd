@@ -15,6 +15,16 @@
          text          : module.blg_text.text,
       } %}
 
+   {# Module: SITE-TEASER #}
+   {% elseif module.acf_fc_layout == 'blg_site_teaser_carousel' %}
+      {% include "/partials/builder/modules-global/blg_site-teaser-carousel.twig" with {
+         all_fields    : module.blg_site_teaser_carousel,
+         margin        : module.blg_site_teaser_carousel.tab_settings.margin,
+         id            : module.blg_site_teaser_carousel.tab_settings.id,
+         toggle_heading: module.blg_site_teaser_carousel.toggle_heading,
+         teaser        : module.blg_site_teaser_carousel.teaser,
+      } %}
+
    {# Module: TESTIMONIALS #}
    {% elseif module.acf_fc_layout == 'blg_testimonials' %}
       {% include "/partials/builder/modules-global/blg_testimonials.twig" with {

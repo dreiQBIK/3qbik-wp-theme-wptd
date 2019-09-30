@@ -18,6 +18,7 @@ $blg_text
     ->addGroup('blg_text', [
         'label' => '',
     ])
+        // ->addFields($backend_layout)
 
         ->addTab('settings', [
             'label' => 'Einstellungen',

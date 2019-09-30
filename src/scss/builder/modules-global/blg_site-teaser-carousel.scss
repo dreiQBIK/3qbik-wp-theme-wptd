@@ -1,11 +1,19 @@
-.blg_site-teaser {
+.blg_site-teaser-carousel {
+
+   &__card-wrapper {
+
+      &:focus {
+         outline: 0;
+      }
+   }
 
    &__card {
       display: block;
       position: relative;
       width: 100%;
-      border-radius: $bd-radius-25;
+      border-radius: $bd-radius-5;
       box-shadow: $drop-shadow-card;
+      // background-color: $c6-gray;
 
       @include media-breakpoint-up(md) {
          transition:
@@ -23,13 +31,8 @@
          }
       }
 
-      &--no-logo {
-         .blg_site-teaser__text-wrapper {
-            padding-top: 2rem;
-         }
-      }
       &--no-link {
-         .blg_site-teaser__text-wrapper {
+         .blg_site-teaser-carousel__text-wrapper {
             padding-bottom: 1rem;
          }
       }
@@ -45,8 +48,8 @@
       display: block;
       overflow: hidden;
       width: 100%;
-      border-top-left-radius: $bd-radius-25;
-      border-top-right-radius: $bd-radius-25;
+      border-top-left-radius: $bd-radius-5;
+      border-top-right-radius: $bd-radius-5;
       height: 200px;
 
       @include media-breakpoint-up(md) {
@@ -62,7 +65,8 @@
 
    &__text-wrapper {
       position: relative;
-      padding: 4rem 0 5rem;
+      width: 100%;
+      flex: 0 0 100%;
    }
 
    &__logo-wrapper {
@@ -72,7 +76,7 @@
       justify-content: flex-start;
       align-items: center;
       padding: 0.5rem 2rem 0.5rem 1.5rem;
-      border-top-right-radius: $bd-radius-70;
+      border-top-right-radius: $bd-radius-5;
       background-color: $c-white;
       position: absolute;
       left: 0;
@@ -83,18 +87,7 @@
       }
    }
 
-   &__logo {
-      width: 100%;
-      display: block;
-   }
-
-   &__link-text {
-      position: absolute;
-      left: 1.5rem;
-      bottom: 2rem;
-   }
-
-   //slick slider styling for this module
+   // slick slider styling for this module
    &__slider.slick-initialized {
 
       .slick-slide {
@@ -102,8 +95,8 @@
 
          & > div {
             display: flex;
+            flex-wrap: wrap;
             align-items: stretch;
-            height: 100%;
          }
 
          @include media-breakpoint-only(sm) {
@@ -117,6 +110,10 @@
 
       .slick-track {
          height: 100%;
+      }
+
+      .slick-dots {
+         bottom: -2rem;
       }
    }
 }

@@ -462,6 +462,9 @@ template {
    TRANSITIONS_TIMING
 ******************************************************************/
 /******************************************************************
+   SHADOWS
+******************************************************************/
+/******************************************************************
    SPACERS
 ******************************************************************/
 /******************************************************************
@@ -8403,14 +8406,14 @@ Generated using nucleoapp.com
   width: 20px;
   height: 20px;
   text-align: center;
-  color: #ffffff;
+  color: #2c3e50;
   opacity: 0.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .slick-dots li.slick-active button:before {
-  color: #ffffff;
+  color: #2c3e50;
   opacity: 1;
 }
 
@@ -10298,101 +10301,94 @@ Stroke effects - Nucleo outline icons
 }
 
 .px-small {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
-@media (min-width: 481px) {
-  .px-small {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
-@media (min-width: 961px) {
-  .px-small {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-}
-
-@media (min-width: 1361px) {
-  .px-small {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (min-width: 1921px) {
-  .px-small {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-.px-medium {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-@media (min-width: 481px) {
-  .px-medium {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (min-width: 961px) {
-  .px-medium {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media (min-width: 1361px) {
-  .px-medium {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-@media (min-width: 1921px) {
-  .px-medium {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-}
-
-.px-large {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 @media (min-width: 481px) {
-  .px-large {
+  .px-small {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 }
 
 @media (min-width: 961px) {
-  .px-large {
+  .px-small {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1361px) {
+  .px-small {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 }
 
-@media (min-width: 1361px) {
-  .px-large {
+@media (min-width: 1921px) {
+  .px-small {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.px-medium {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 481px) {
+  .px-medium {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
 }
 
-@media (min-width: 1921px) {
-  .px-large {
+@media (min-width: 961px) {
+  .px-medium {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1361px) {
+  .px-medium {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1921px) {
+  .px-medium {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.px-large {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+@media (min-width: 481px) {
+  .px-large {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+
+@media (min-width: 961px) {
+  .px-large {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1921px) {
+  .px-large {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 
@@ -10818,7 +10814,6 @@ Stroke effects - Nucleo outline icons
   width: 180px;
   height: 180px;
   margin: 0 auto;
-  border: 4px solid #ffffff;
   transition: all 0.3s;
 }
 
@@ -10874,6 +10869,116 @@ Stroke effects - Nucleo outline icons
   color: #2c3e50;
   background-color: transparent;
   border-radius: 0;
+}
+
+.blg_site-teaser-carousel__card-wrapper:focus {
+  outline: 0;
+}
+
+.blg_site-teaser-carousel__card {
+  display: block;
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 1.8rem rgba(51, 51, 51, 0.1);
+}
+
+@media (min-width: 961px) {
+  .blg_site-teaser-carousel__card {
+    transition: box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
+  }
+}
+
+@media (min-width: 961px) {
+  .blg_site-teaser-carousel__card--link:hover {
+    box-shadow: 0 0 3rem rgba(119, 119, 119, 0.9);
+    transform: translateY(-5px);
+  }
+}
+
+.blg_site-teaser-carousel__card--no-link .blg_site-teaser-carousel__text-wrapper {
+  padding-bottom: 1rem;
+}
+
+.blg_site-teaser-carousel__info-label {
+  position: absolute;
+  top: 3rem;
+  right: -1rem;
+}
+
+.blg_site-teaser-carousel__img-wrapper {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 200px;
+}
+
+@media (min-width: 961px) {
+  .blg_site-teaser-carousel__img-wrapper {
+    height: 250px;
+  }
+}
+
+.blg_site-teaser-carousel__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.blg_site-teaser-carousel__text-wrapper {
+  position: relative;
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+.blg_site-teaser-carousel__logo-wrapper {
+  width: 50%;
+  height: 120px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 2rem 0.5rem 1.5rem;
+  border-top-right-radius: 5px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: -60px;
+}
+
+@media (min-width: 1361px) {
+  .blg_site-teaser-carousel__logo-wrapper {
+    padding: 1.5rem 3rem 1.5rem 1.5rem;
+  }
+}
+
+.blg_site-teaser-carousel__slider.slick-initialized .slick-slide {
+  max-width: 98vw;
+}
+
+.blg_site-teaser-carousel__slider.slick-initialized .slick-slide > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+@media (min-width: 481px) and (max-width: 960.98px) {
+  .blg_site-teaser-carousel__slider.slick-initialized .slick-slide {
+    max-width: 360px;
+  }
+}
+
+.blg_site-teaser-carousel__slider.slick-initialized .slick-list {
+  padding: 2rem 0 !important;
+}
+
+.blg_site-teaser-carousel__slider.slick-initialized .slick-track {
+  height: 100%;
+}
+
+.blg_site-teaser-carousel__slider.slick-initialized .slick-dots {
+  bottom: -2rem;
 }
 
 .n_site {

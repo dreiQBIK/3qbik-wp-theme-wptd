@@ -1,0 +1,110 @@
+{# USES
+   {% include "/partials/builder/modules-global/blg_site-teaser-carousel.twig" with {
+      all_fields: {},
+      margin: '',
+      id: '',
+      toggle_heading: false,
+      teaser: {},
+   } %}
+#}
+
+<div class="container {{ margin }}" {% if id %}id="{{ id }}"{% endif %}>
+   <div class="blg_site-teaser-carousel pb-100">
+
+      {% if toggle_heading %}
+         {% include "/partials/modules/m_heading.twig" with {
+            wrapper_classes: 'mb-100 mb-md-300',
+            heading_classes: 't-center',
+            heading: all_fields.headings.heading,
+            heading_type: all_fields.headings.heading_type,
+            heading_sub: all_fields.headings.heading_sub,
+            heading_sub_type: all_fields.headings.heading_sub_type,
+         } %}
+      {% endif %}
+
+      <div class="row d-flex align-items-stretch blg_site-teaser-carousel__slider">
+         {% for item in teaser %}
+            {% set intro             = item.intro                             %}
+            {% set toggle_tip        = intro.toggle_tip                       %}
+            {% set toggle_tip_text   = intro.tip_text                         %}
+            {% set image             = intro.image                            %}
+            {% set caption_image     = intro.image_settings.truefalse_caption ? intro.image_settings.caption: image.alt %}
+            {% set logo              = intro.logo                             %}
+            {% set caption_logo      = intro.logo_settings.truefalse_caption ? intro.logo_settings.caption  : logo.alt %}
+            {% set item_heading      = intro.heading                          %}
+            {% set item_heading_type = intro.heading_type                     %}
+            {% set item_text         = intro.text                             %}
+            {% set link              = item.links.link                        %}
+
+            {# get count of site-teasers and set width dimensions via columns #}
+            {% if teaser|length == 2 %}
+               {% set col_logic = "col-md-5" %}
+            {% else %}
+               {% set col_logic = "col-md-4" %}
+            {% endif %}
+            {# if-condition offsets the 1. card by "2 grid" and the 2. "0 grid" if there are 2 of them #}
+            {% if loop.index == 1 and teaser|length == 2 %}
+               {% set card_hor_offset = 'offset-md-1' %}
+            {% elseif loop.index == 2 and teaser|length == 2 %}
+               {% set card_hor_offset = '' %}
+            {% endif %}
+            {# if-condition offsets the outer two cards down if there are 3 of them #}
+            {% if (loop.index == 1 or loop.index == 3) and teaser|length == 3 %}
+               {% set card_vert_offset = 'pt-md-250' %}
+            {% else %}
+               {% set card_vert_offset = 'pb-md-250' %}
+            {% endif %}
+            {# set card tag and set no-link class to content-wrapper #}
+            {% if not link %}
+               {% set class_no_link = "blg_site-teaser-carousel__card--no-link" %}
+            {% else %}
+               {% set class_no_link = "blg_site-teaser-carousel__card--link" %}
+            {% endif %}
+
+            <div class="blg_site-teaser-carousel__card-wrapper d-flex align-items-stretch {{ col_logic }} {{ card_vert_offset }} {{ card_hor_offset }}">
+               <div class="blg_site-teaser-carousel__card {{ class_no_link }} {{ class_no_logo }}">
+                  {% if toggle_tip %}
+                     <div class="blg_site-teaser-carousel__info-label label1-second-wrapper">
+                        <span class="label label-second label1-second">{{ toggle_tip_text }}</span>
+                        <span class="label1-second-flag"></span>
+                     </div>
+                  {% endif %}
+                  <figure class="blg_site-teaser-carousel__img-wrapper">
+                     <img
+                        class="blg_site-teaser-carousel__img lazyload img-cover"
+                        alt="{{ caption_image }}"
+                        src="{{ theme.link }}/assets/img/placeholder-wide-medium.png"
+                        data-src="{{ image.sizes.medium }}"
+                        data-srcset="{{ fn('wp_get_attachment_image_srcset', image.id) }}"
+                        data-sizes="auto"
+                        data-pos-x="2"
+                        data-pos-y="2"
+                     />
+                  </figure>
+                  <div class="blg_site-teaser-carousel__text-wrapper px-small py-200 py-md-250">
+                     {% if logo %}
+                        <figure class="blg_site-teaser-carousel__logo-wrapper">
+                           <img
+                              class="blg_site-teaser-carousel__logo lazyload"
+                              alt="{{ caption_logo }}"
+                              src="{{ theme.link }}/assets/img/placeholder-wide-medium.png"
+                              data-src="{{ logo.sizes.medium }}"
+                              data-srcset="{{ fn('wp_get_attachment_image_srcset', logo.id) }}"
+                              data-sizes="auto"
+                           />
+                        </figure>
+                     {% endif %}
+                     <{{ item_heading_type|default("h3") }} class="h3">{{ item_heading }}</{{ item_heading_type|default("h3") }}>
+                     <p>{{ item_text }}</p>
+                     {% if link %}
+                        <a class="blg_site-teaser-carousel__link-text link link-second link1-second" href="{{ link.url }}" {% if link.target %}target="{{ link.target }}"{% endif %}>{{ link.title }}</a>
+                     {% endif %}
+                  </div>
+               </div>
+            </div>
+
+         {% endfor %}
+      </div>
+
+   </div>
+</div>

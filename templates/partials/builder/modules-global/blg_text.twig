@@ -1,7 +1,7 @@
 {# USES
    {% include "/partials/builder/modules-global/blg_text.twig" with {
       all_fields    : {},
-      padding        : '',
+      margin        : '',
       id            : '',
       toggle_heading: false,
       text: '',
@@ -12,7 +12,7 @@
    {% set section_heading_type = all_fields.headings.heading_type %}
 {% endif %}
 
-<div class="container-wrapper position-relative {{ padding }}">
+<div class="container-wrapper position-relative {{ margin }}">
    <div class="container container--narrow" {% if id %}id="{{ id }}"{% endif %}>
 
       <section class="blg_text">

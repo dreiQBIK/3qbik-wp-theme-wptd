@@ -24,7 +24,7 @@ $tab_settings
 
       ->addText('id', [
          'label' => 'ID vergeben (optional)',
-         'instructions' => 'Diese ID kann als Sprungmarke in einem Link verwendet werden, z.B. "https://gloeckle.de#ID"',
+         'instructions' => 'Diese ID kann als Sprungmarke in einem Link verwendet werden, z.B. "https://meine-website.de#ID"',
          'wrapper' => ['width' => 50],
       ])
 

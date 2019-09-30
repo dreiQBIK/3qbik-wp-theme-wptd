@@ -213,14 +213,14 @@
                width: 20px;
                height: 20px;
                text-align: center;
-               color: $c-white;
+               color: $c1-main;
                opacity: 0.5;
                -webkit-font-smoothing: antialiased;
                -moz-osx-font-smoothing: grayscale;
            }
        }
        &.slick-active button:before {
-           color: $c-white;
+           color: $c1-main;
            opacity: 1;
        }
    }
