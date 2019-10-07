@@ -29,6 +29,7 @@ $blg_testimonials
                 'instructions' => 'Diese Überschrift wird zentriert über dem Baustein angezeigt. Eine Sub-Überschrift kann optional mit angegeben werden.',
                 'message' => 'Aktivieren/Deaktivieren',
                 'default_value' => 1,
+                'wrapper' => ['width' => 50],
                 'ui' => 1,
             ])
 
@@ -39,6 +40,7 @@ $blg_testimonials
                 'label' => 'Baustein-Überschrift',
             ])
                 ->conditional('toggle_heading', '==', 1)
+
                 ->addText('heading', [
                     'label' => 'Überschrift',
                     'wrapper' => ['width' => 80],
@@ -56,6 +58,7 @@ $blg_testimonials
                     ->addChoice('H5', 'H5')
                     ->addChoice('H6', 'H6')
                     ->addChoice('P', 'P')
+
                 ->addText('heading_sub', [
                     'label' => 'Sub-Überschrift (optional)',
                     'wrapper' => ['width' => 80],
@@ -72,6 +75,7 @@ $blg_testimonials
                     ->addChoice('H5', 'H5')
                     ->addChoice('H6', 'H6')
                     ->addChoice('P', 'P')
+
             ->endGroup()
 
             ->addRepeater('teaser', [

@@ -1,0 +1,54 @@
+{# USES
+   {% include "/partials/builder/modules-global/blg_card-teaser.twig" with {
+      all_fields    : {},
+      margin        : '',
+      id            : '',
+      toggle_heading: false,
+      teaser        : {},
+   } %}
+#}
+
+<div class="container-wrapper {{ margin }}">
+   <div class="container" {% if id %}id="{{ id }}"{% endif %}>
+
+      <section class="blg_card-teaser">
+
+         <div class="row">
+            <div class="col-12">
+               {% if toggle_heading %}
+                  {% include "/partials/modules/m_heading.twig" with {
+                     wrapper_classes: 'mb-100 mb-md-200',
+                     heading_classes: 't-center',
+                     heading: all_fields.headings.heading,
+                     heading_type: all_fields.headings.heading_type,
+                     heading_sub: all_fields.headings.heading_sub,
+                     heading_sub_type: all_fields.headings.heading_sub_type,
+                  } %}
+               {% endif %}
+            </div>
+         </div>
+
+         <div class="row">
+            {% for item in teaser %}
+               {% set text = item.text %}
+               {% set link = item.link %}
+               <div class="col-12 col-md-6 mb-200{% if link %} mb-sm-300{% endif %} d-flex align-items-stretch">
+
+                  <div class="blg_card-teaser__content pt-200 pt-md-250 pb-250 pb-md-300 px-200 px-sm-300 px-md-350 sr-1">
+                     <{{ item.heading_type|default("h3") }} class="blg_card-teaser__heading">
+                        <span>{{ item.heading }}</span>
+                     </{{ item.heading_type|default("h3") }}>
+                     <div class="tinymce{% if link %} mb-200 mb-md-250{% endif %}">{{ text }}</div>
+                     {% if link %}
+                        <a href="{{ link.url }}" target="{{ link.target }}" class="btn btn1-main"><span class="btn-text">{{ link.title }}</span></a>
+                     {% endif %}
+                  </div>
+
+               </div>
+            {% endfor %}
+         </div>
+
+      </section>
+
+   </div>
+</div>

@@ -29,6 +29,7 @@ $blg_site_teaser_carousel
                 'instructions' => 'Diese Überschrift wird zentriert über dem Baustein angezeigt. Eine Sub-Überschrift kann optional mit angegeben werden.',
                 'message' => 'Aktivieren/Deaktivieren',
                 'default_value' => 1,
+                'wrapper' => ['width' => 50],
                 'ui' => 1,
             ])
 

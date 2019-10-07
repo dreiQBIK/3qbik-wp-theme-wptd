@@ -26,7 +26,7 @@ $blg_text
             ->addFields($tab_settings)
             ->addTrueFalse('toggle_heading', [
                 'label' => 'Baustein-Überschrift',
-                'instructions' => 'Diese Überschrift wird zentriert über dem Baustein angezeigt.',
+                'instructions' => 'Diese Überschrift wird zentriert über dem Baustein angezeigt. Eine Sub-Überschrift kann optional mit angegeben werden.',
                 'message' => 'Aktivieren/Deaktivieren',
                 'default_value' => 1,
                 'wrapper' => ['width' => 50],
@@ -40,6 +40,7 @@ $blg_text
                 'label' => 'Baustein-Überschrift',
             ])
                 ->conditional('toggle_heading', '==', 1)
+
                 ->addText('heading', [
                     'label' => 'Überschrift',
                     'wrapper' => ['width' => 80],
@@ -57,6 +58,24 @@ $blg_text
                     ->addChoice('H5', 'H5')
                     ->addChoice('H6', 'H6')
                     ->addChoice('P', 'P')
+
+                ->addText('heading_sub', [
+                    'label' => 'Sub-Überschrift (optional)',
+                    'wrapper' => ['width' => 80],
+                ])
+                ->addSelect('heading_sub_type', [
+                    'label' => 'Hierarchie/Typ',
+                    'default_value' => 'H3',
+                    'wrapper' => ['width' => 20],
+                ])
+                    ->addChoice('H1', 'H1')
+                    ->addChoice('H2', 'H2')
+                    ->addChoice('H3', 'H3')
+                    ->addChoice('H4', 'H4')
+                    ->addChoice('H5', 'H5')
+                    ->addChoice('H6', 'H6')
+                    ->addChoice('P', 'P')
+
             ->endGroup()
 
             ->addWysiwyg('text', [

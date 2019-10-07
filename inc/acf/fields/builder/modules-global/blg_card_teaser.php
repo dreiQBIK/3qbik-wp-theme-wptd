@@ -10,14 +10,15 @@ foreach ( $acf_field_group_definition_file_paths_globals as $globals_file_path )
     include( $globals_file_path );
 }
 
-$blg_intro_box = new FieldsBuilder('blg_intro_box', [
-    'title' => 'Intro-Box',
+$blg_card_teaser = new FieldsBuilder('blg_card_teaser', [
+    'title' => 'Card-Teaser',
 ]);
 
-$blg_intro_box
-    ->addGroup('blg_intro_box', [
+$blg_card_teaser
+    ->addGroup('blg_card_teaser', [
         'label' => '',
     ])
+        // ->addFields($backend_layout)
 
         ->addTab('settings', [
             'label' => 'Einstellungen',
@@ -31,16 +32,6 @@ $blg_intro_box
                 'wrapper' => ['width' => 50],
                 'ui' => 1,
             ])
-            ->addTrueFalse('section_arrow', [
-                'label' => 'mit Pfeil',
-                'wrapper' => ['width' => 25],
-                'ui' => 1,
-            ])
-            ->addText('section_arrow_anchor', [
-                'label' => 'Pfeil-Anchor (ID)',
-                'wrapper' => ['width' => 25],
-            ])
-                ->conditional('section_arrow', '==', 1)
 
         ->addTab('content', [
             'label' => 'Inhalt',
@@ -49,49 +40,7 @@ $blg_intro_box
                 'label' => 'Baustein-Überschrift',
             ])
                 ->conditional('toggle_heading', '==', 1)
-                ->addText('heading', [
-                    'label' => 'Überschrift',
-                    'wrapper' => ['width' => 80],
-                    'required' => 1,
-                ])
-                ->addSelect('heading_type', [
-                    'label' => 'Hierarchie/Typ',
-                    'default_value' => 'H2',
-                    'wrapper' => ['width' => 20],
-                ])
-                    ->addChoice('H1', 'H1')
-                    ->addChoice('H2', 'H2')
-                    ->addChoice('H3', 'H3')
-                    ->addChoice('H4', 'H4')
-                    ->addChoice('H5', 'H5')
-                    ->addChoice('H6', 'H6')
-                    ->addChoice('P', 'P')
-                ->addTrueFalse('toggle_label', [
-                    'label' => 'mit Label',
-                    'wrapper' => ['width' => 25],
-                    'ui' => 1,
-                ])
-                ->addGroup('label', [
-                    'label' => 'Label',
-                    'wrapper' => ['width' => 75],
-                ])
-                    ->conditional('toggle_label', '==', 1)
-                    ->addButtonGroup('choices', [
-                        'label' => 'Label wählen',
-                        'default_value' => '#icon-label-massgeschneidert'
-                    ])
-                        ->addChoice('#icon-label-abbaubar', '<i class="icon icon-xl icon-label-abbaubar"></i>')
-                        ->addChoice('#icon-label-nachhaltig', '<i class="icon icon-xl icon-label-nachhaltig"></i>')
-                        ->addChoice('#icon-label-organisch', '<i class="icon icon-xl icon-label-organisch"></i>')
-                        ->addChoice('#icon-label-massgeschneidert', '<i class="icon icon-xl icon-label-massgeschneidert"></i>')
-                        ->addChoice('#icon-label-fair', '<i class="icon icon-xl icon-label-fair"></i>')
-                        ->addChoice('#icon-label-tierversuche', '<i class="icon icon-xl icon-label-tierversuche"></i>')
-                ->endGroup()
-            ->endGroup()
 
-            ->addGroup('box', [
-                'label' => 'Intro',
-            ])
                 ->addText('heading', [
                     'label' => 'Überschrift',
                     'wrapper' => ['width' => 80],
@@ -109,13 +58,40 @@ $blg_intro_box
                     ->addChoice('H5', 'H5')
                     ->addChoice('H6', 'H6')
                     ->addChoice('P', 'P')
+
                 ->addText('heading_sub', [
                     'label' => 'Sub-Überschrift (optional)',
                     'wrapper' => ['width' => 80],
                 ])
                 ->addSelect('heading_sub_type', [
                     'label' => 'Hierarchie/Typ',
-                    'default_value' => 'P',
+                    'default_value' => 'H3',
+                    'wrapper' => ['width' => 20],
+                ])
+                    ->addChoice('H1', 'H1')
+                    ->addChoice('H2', 'H2')
+                    ->addChoice('H3', 'H3')
+                    ->addChoice('H4', 'H4')
+                    ->addChoice('H5', 'H5')
+                    ->addChoice('H6', 'H6')
+                    ->addChoice('P', 'P')
+
+            ->endGroup()
+
+            ->addRepeater('teaser', [
+                'label' => 'Teaser',
+                'button_label' => 'Teaser hinzufügen',
+                'min' => 2,
+                'max' => 4,
+                'layout' => 'block',
+            ])
+                ->addText('heading', [
+                    'label' => 'Überschrift',
+                    'wrapper' => ['width' => 80],
+                ])
+                ->addSelect('heading_type', [
+                    'label' => 'Hierarchie/Typ',
+                    'default_value' => 'H3',
                     'wrapper' => ['width' => 20],
                 ])
                     ->addChoice('H1', 'H1')
@@ -127,21 +103,15 @@ $blg_intro_box
                     ->addChoice('P', 'P')
                 ->addWysiwyg('text', [
                     'label' => 'Text',
-                    'delay' => 0,
                     'media_upload' => 0,
+                    'delay' => 0,
+                    'required' => 1,
                 ])
-                ->addGroup('buttons', [
-                    'label' => 'Buttons',
+                ->addLink('link', [
+                    'label' => 'Link',
                 ])
-                    ->addLink('button_1', [
-                        'label' => 'Button 1',
-                    ])
-                    ->addLink('button_2', [
-                        'label' => 'Button 2',
-                    ])
-                ->endGroup()
-            ->endGroup()
+            ->endRepeater()
 
     ->endGroup();
 
-return $blg_intro_box;
+return $blg_card_teaser;

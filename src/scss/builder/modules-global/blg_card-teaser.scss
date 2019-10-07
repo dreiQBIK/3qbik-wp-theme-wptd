@@ -1,0 +1,33 @@
+.blg_card-teaser {
+
+   &__content {
+      background-color: $c2-main;
+      position: relative;
+      flex: 0 0 100%;
+      max-width: 100%;
+
+      &--light {
+         background-color: $c-white;
+      }
+
+      .btn {
+         @include media-breakpoint-up(sm) {
+            position: absolute;
+            bottom: 0;
+            left: 3rem;
+            transform: translateY(50%);
+         }
+
+         @include media-breakpoint-up(md) {
+            left: auto;
+            right: 3rem;
+         }
+      }
+   }
+
+   &__heading {
+      font-family: $f1-main;
+      text-transform: uppercase;
+      @include fontstyle("fs5");
+   }
+}
