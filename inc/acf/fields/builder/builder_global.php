@@ -40,6 +40,7 @@ $builder_global
    // ->addLayout(wptd_acf_get_module_global('blg_images_frontend'))
    // ->addLayout(wptd_acf_get_module_global('blg_intro_box_client'))
    // ->addLayout(wptd_acf_get_module_global('blg_intro_box'))
-   ->addLayout(wptd_acf_get_module_global('blg_testimonials'));
+   ->addLayout(wptd_acf_get_module_global('blg_testimonials'))
+   ->addLayout(wptd_acf_get_module_global('blg_icon_teaser'));
 
 return $builder_global;
