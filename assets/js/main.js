@@ -110,6 +110,85 @@ var global = function ($) {
 }(jQuery);
 "use strict";
 
+/*
+ * USAGE: add class `img-cover` and
+ *   - `data-pos-y="0" => standard / top`
+ *   - `data-pos-y="1" => bottom`
+ *   - `data-pos-y="2" => center`
+ *   - `data-pos-y=">2" => to top`
+ *   - `data-pos-x="0" => standard / left`
+ *   - `data-pos-x="1" => right`
+ *   - `data-pos-x="2" => center`
+ *   - `data-pos-x=">2" => to left`
+ */
+var imgCover = function ($) {
+  /******************************************************************
+      EVENTS
+  ******************************************************************/
+  $(document).on('lazyloaded', function (e) {
+    // no img-cover
+    if (!$(e.target).hasClass('img-cover')) return;
+    makeImgCover($(e.target));
+    setTimeout(function () {
+      makeImgCover($(e.target));
+    }, 100);
+  });
+  $(window).on('resize', function (e) {
+    setTimeout(function () {
+      makeImgCover($('.img-cover'));
+    }, 100); // trigger again to further improve it
+
+    setTimeout(function () {
+      makeImgCover($('.img-cover'));
+    }, 500);
+  });
+  /******************************************************************
+      FUNCTIONS
+  ******************************************************************/
+
+  function makeImgCover($img) {
+    $img.each(function () {
+      var $this = $(this);
+      var $container = $this.parent();
+      var containerWidth = $container.outerWidth();
+      var containerHeight = $container.outerHeight();
+      var imgWidth = $this.width();
+      var imgHeight = $this.height();
+      var containerRatio = containerWidth / containerHeight;
+      var imgRatio = imgWidth / imgHeight;
+      var horizontalStretch = containerRatio >= imgRatio;
+      var centerHeight;
+      var centerWidth; // get data attributes from image
+
+      var posY = parseInt($this.data('pos-y'), 10);
+      var posX = parseInt($this.data('pos-x'), 10);
+
+      if (horizontalStretch) {
+        $this.css({
+          width: '100%',
+          height: 'auto'
+        });
+        centerHeight = ($this.height() - containerHeight) * (1 / posY);
+        $this.css({
+          marginLeft: '0',
+          marginTop: -centerHeight + 'px'
+        });
+      } else {
+        $this.css({
+          width: 'auto',
+          height: '100%'
+        });
+        centerWidth = ($this.width() - containerWidth) * (1 / posX);
+        $this.css({
+          marginTop: '0px',
+          marginLeft: -centerWidth + 'px'
+        });
+      }
+    });
+  }
+}(jQuery);
+"use strict";
+
 var bldGallery = function ($) {
   /******************************************************************
       VARS
@@ -479,84 +558,5 @@ var prgPattern = function ($) {
         value = $this.data('submit');
     $redirectValue.val(value);
     $redirectForm.submit();
-  }
-}(jQuery);
-"use strict";
-
-/*
- * USAGE: add class `img-cover` and
- *   - `data-pos-y="0" => standard / top`
- *   - `data-pos-y="1" => bottom`
- *   - `data-pos-y="2" => center`
- *   - `data-pos-y=">2" => to top`
- *   - `data-pos-x="0" => standard / left`
- *   - `data-pos-x="1" => right`
- *   - `data-pos-x="2" => center`
- *   - `data-pos-x=">2" => to left`
- */
-var imgCover = function ($) {
-  /******************************************************************
-      EVENTS
-  ******************************************************************/
-  $(document).on('lazyloaded', function (e) {
-    // no img-cover
-    if (!$(e.target).hasClass('img-cover')) return;
-    makeImgCover($(e.target));
-    setTimeout(function () {
-      makeImgCover($(e.target));
-    }, 100);
-  });
-  $(window).on('resize', function (e) {
-    setTimeout(function () {
-      makeImgCover($('.img-cover'));
-    }, 100); // trigger again to further improve it
-
-    setTimeout(function () {
-      makeImgCover($('.img-cover'));
-    }, 500);
-  });
-  /******************************************************************
-      FUNCTIONS
-  ******************************************************************/
-
-  function makeImgCover($img) {
-    $img.each(function () {
-      var $this = $(this);
-      var $container = $this.parent();
-      var containerWidth = $container.outerWidth();
-      var containerHeight = $container.outerHeight();
-      var imgWidth = $this.width();
-      var imgHeight = $this.height();
-      var containerRatio = containerWidth / containerHeight;
-      var imgRatio = imgWidth / imgHeight;
-      var horizontalStretch = containerRatio >= imgRatio;
-      var centerHeight;
-      var centerWidth; // get data attributes from image
-
-      var posY = parseInt($this.data('pos-y'), 10);
-      var posX = parseInt($this.data('pos-x'), 10);
-
-      if (horizontalStretch) {
-        $this.css({
-          width: '100%',
-          height: 'auto'
-        });
-        centerHeight = ($this.height() - containerHeight) * (1 / posY);
-        $this.css({
-          marginLeft: '0',
-          marginTop: -centerHeight + 'px'
-        });
-      } else {
-        $this.css({
-          width: 'auto',
-          height: '100%'
-        });
-        centerWidth = ($this.width() - containerWidth) * (1 / posX);
-        $this.css({
-          marginTop: '0px',
-          marginLeft: -centerWidth + 'px'
-        });
-      }
-    });
   }
 }(jQuery);
