@@ -1,0 +1,45 @@
+{# USES
+   {% include "/partials/builder/modules-global/blg_imgage-text.twig" with {
+      all_fields    : {},
+      margin        : '',
+      id            : '',
+      toggle_heading: false,
+      position: '',
+      image: {},
+      text: '',
+   } %}
+#}
+
+<div class="container-wrapper {{ margin }}">
+   <div class="container" {% if id %}id="{{ id }}"{% endif %}>
+      <section class="blg_image-text">
+
+         {% if position == 'right' %}
+            {% set classes = ' flex-row-reverse' %}
+         {% endif %}
+
+         <div class="row{{ classes }} mb-800">
+            {% set gridclasses = 'col-12 col-md-6' %}
+            <div class="{{ gridclasses }}">
+               <figure>
+                  <img
+                     class="lazyload img-cover"
+                     alt="{{ image.alt }}"
+                     src="{{ image.link }}/assets/img/placeholder-wide-large.png"
+                     data-src="{{ image.sizes.medium_large}}"
+                     data-srcset="{{ fn('wp_get_attachment_image_srcset', image.id) }}"
+                     data-sizes="auto"
+                     data-pos-x="2"
+                     data-pos-y="2"
+                  />
+               </figure>
+            </div>
+            <div class="{{ gridclasses }}">
+               <div class="blg_image-text__box tinymce">
+                  {{ text }}
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+</div>

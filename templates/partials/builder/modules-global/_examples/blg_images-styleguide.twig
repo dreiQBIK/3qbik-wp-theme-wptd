@@ -1,0 +1,145 @@
+{# USES
+   {% include "/partials/builder/modules-global/blg_images-styleguide.twig" with {
+      all_fields    : {},
+      padding       : '',
+      id            : '',
+      toggle_heading: false,
+      section_arrow : false,
+      image_1       : {},
+      image_2       : {},
+      image_3       : {},
+      image_4       : {},
+      image_5       : {},
+   } %}
+#}
+{% if toggle_heading %}
+   {% set section_heading = all_fields.headings.heading %}
+   {% set section_heading_type = all_fields.headings.heading_type %}
+   {% set section_label        = all_fields.headings.toggle_label ? all_fields.headings.label.choices : false %}
+{% endif %}
+
+<div class="container-wrapper position-relative {{ padding }}{% if section_arrow %} mb-large{% endif %}">
+   <section class="blg_images-styleguide" {% if id %}id="{{ id }}"{% endif %}>
+
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               {% if toggle_heading %}
+                  {% include "/partials/modules/m_section-heading.twig" with {
+                     heading: section_heading,
+                     heading_type: section_heading_type,
+                     label: section_label,
+                  } %}
+               {% endif %}
+            </div>
+         </div>
+      </div>
+
+      <div class="container">
+         <div class="row">
+            <div class="col-12 mb-200">
+
+               {% set image_1_caption = image_1_settings.truefalse_caption ? image_1_settings.caption : image.alt %}
+               <figure class="blg_images-styleguide__figure sr-1">
+                  <img
+                     class="lazyload"
+                     alt="{{ image_1_caption }}"
+                     src="{{ theme.link }}/assets/img/placeholder-wide-medium.png"
+                     data-src="{{ image_1.sizes.large }}"
+                     data-srcset="{{ fn('wp_get_attachment_image_srcset', image_1.id) }}"
+                     data-sizes="auto"
+                  />
+               </figure>
+
+            </div>
+         </div>
+      </div>
+
+      <div class="container container--wide">
+         <div class="row">
+            <div class="d-flex align-items-stretch col-12 col-md-6 mb-200">
+
+               {% set image_2_caption = image_2_settings.truefalse_caption ? image_2_settings.caption : image.alt %}
+               <figure class="blg_images-styleguide__figure sr-1">
+                  <img
+                     class="lazyload"
+                     alt="{{ image_2_caption }}"
+                     src="{{ theme.link }}/assets/img/placeholder-wide-medium.png"
+                     data-src="{{ image_2.sizes.large }}"
+                     data-srcset="{{ fn('wp_get_attachment_image_srcset', image_2.id) }}"
+                     data-sizes="auto"
+                  />
+               </figure>
+
+            </div>
+            <div class="d-flex align-items-stretch col-12 col-md-6 mb-200">
+
+               {% set image_3_caption = image_3_settings.truefalse_caption ? image_3_settings.caption : image.alt %}
+               <figure class="blg_images-styleguide__figure sr-1">
+                  <img
+                     class="lazyload"
+                     alt="{{ image_3_caption }}"
+                     src="{{ theme.link }}/assets/img/placeholder-wide-medium.png"
+                     data-src="{{ image_3.sizes.large }}"
+                     data-srcset="{{ fn('wp_get_attachment_image_srcset', image_3.id) }}"
+                     data-sizes="auto"
+                  />
+               </figure>
+
+            </div>
+         </div>
+      </div>
+
+      {% if image_4.id and image_5.id %}
+      <div class="container">
+         <div class="row">
+            <div class="d-flex align-items-stretch col-12 col-md-6 mb-200">
+
+               {% set image_4_caption = image_4_settings.truefalse_caption ? image_4_settings.caption : image.alt %}
+               <figure class="blg_images-styleguide__figure sr-1">
+                  <img
+                     class="lazyload"
+                     alt="{{ image_4_caption }}"
+                     src="{{ theme.link }}/assets/img/placeholder-wide-medium.png"
+                     data-src="{{ image_4.sizes.large }}"
+                     data-srcset="{{ fn('wp_get_attachment_image_srcset', image_4.id) }}"
+                     data-sizes="auto"
+                  />
+               </figure>
+
+            </div>
+            <div class="d-flex align-items-stretch col-12 col-md-6 mb-200">
+
+               {% set image_5_caption = image_5_settings.truefalse_caption ? image_5_settings.caption : image.alt %}
+               <figure class="blg_images-styleguide__figure sr-1">
+                  <img
+                     class="lazyload"
+                     alt="{{ image_5_caption }}"
+                     src="{{ theme.link }}/assets/img/placeholder-wide-medium.png"
+                     data-src="{{ image_5.sizes.large }}"
+                     data-srcset="{{ fn('wp_get_attachment_image_srcset', image_5.id) }}"
+                     data-sizes="auto"
+                  />
+               </figure>
+
+            </div>
+         </div>
+      </div>
+      {% endif %}
+
+      <div class="container">
+         {% if section_arrow %}
+            {% include "/partials/modules/m_section-arrow.twig" with {
+               anchor: all_fields.section_arrow_anchor,
+               icon_light: true,
+            } %}
+         {% endif %}
+      </div>
+
+   </section>
+   {% include "/partials/modules/m_section-bg-image.twig" with {
+      bg_image_large: bg_image_large,
+      bg_image_medium: bg_image_medium,
+      bg_image_small: bg_image_small,
+   } %}
+</div>

@@ -28,21 +28,28 @@ h2,
 h3,
 .h3 {
    @include fontstyle("fs3");
-   font-family: $f2-main;
+   font-family: $f1-main;
    margin-bottom: 0.5em;
 }
 
 h4,
 .h4 {
    @include fontstyle("fs4");
-   font-family: $f2-main;
+   font-family: $f1-main;
    margin-bottom: 0.5em;
 }
 
 h5,
 .h5 {
    @include fontstyle("fs5");
-   font-family: $f2-main;
+   font-family: $f1-main;
+   margin-bottom: 0.5em;
+}
+
+h6,
+.h6 {
+   @include fontstyle("fs6");
+   font-family: $f1-main;
    margin-bottom: 0.5em;
 }
 
@@ -54,6 +61,12 @@ h5,
 
 .p2 {
    @include fontstyle("fs6");
+   font-family: $f1-second;
+   margin-bottom: 1em;
+}
+
+.p3 {
+   @include fontstyle("fs7");
    font-family: $f1-second;
    margin-bottom: 1em;
 }

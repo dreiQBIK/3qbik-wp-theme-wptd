@@ -143,7 +143,7 @@
       $lh-xl-default: 1.5em;
 
 
-   // Default Use Case: Body
+   // Default Use Case: H5, Body
    } @else if $style == "fs5" {
       //base
       $fz-xs-default: 1.1rem;
@@ -161,7 +161,7 @@
       $fz-xl-default: 1.2rem;
       $lh-xl-default: 1.7em;
 
-   // Default Use Case: Body small
+   // Default Use Case: H6, Body small
    } @else if $style == "fs6" {
       //base
       $fz-xs-default: 1rem;
@@ -177,6 +177,24 @@
       $lh-lg-default: 1.7em;
       //xlarge
       $fz-xl-default: 1.1rem;
+      $lh-xl-default: 1.7em;
+
+   // Default Use Case: Body x-small
+   } @else if $style == "fs7" {
+      //base
+      $fz-xs-default: 0.9rem;
+      $lh-xs-default: 1.7em;
+      //small
+      $fz-sm-default: 0.9rem;
+      $lh-sm-default: 1.7em;
+      //medium
+      $fz-md-default: 0.9rem;
+      $lh-md-default: 1.7em;
+      //large
+      $fz-lg-default: 1rem;
+      $lh-lg-default: 1.7em;
+      //xlarge
+      $fz-xl-default: 1rem;
       $lh-xl-default: 1.7em;
    }
 

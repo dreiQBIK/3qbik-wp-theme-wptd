@@ -45,6 +45,28 @@
          teaser        : module.blg_testimonials.teaser,
       } %}
 
+   {# Module: IMAGE-TEXT #}
+   {% elseif module.acf_fc_layout == 'blg_image_text' %}
+      {% include "/partials/builder/modules-global/blg_image-text.twig" with {
+         all_fields    : module.blg_image_text,
+         margin        : module.blg_image_text.tab_settings.margin,
+         id            : module.blg_image_text.tab_settings.id,
+         position      : module.blg_image_text.position,
+         text          : module.blg_image_text.text,
+         image         : module.blg_image_text.image,
+      } %}
+
+   {# Module: CTA-CENTER #}
+   {% elseif module.acf_fc_layout == 'blg_cta_center' %}
+      {% include "/partials/builder/modules-global/blg_cta-center.twig" with {
+         all_fields: module.blg_cta_center,
+         margin    : module.blg_cta_center.tab_settings.margin,
+         id        : module.blg_cta_center.tab_settings.id,
+         headings  : module.blg_cta_center.headings,
+         link      : module.blg_cta_center.link,
+         bg_choices: module.blg_cta_center.bg_choices,
+      } %}
+
    {% endif %}
 
 {% endfor %}

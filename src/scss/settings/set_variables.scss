@@ -6,23 +6,22 @@
 $c-black: #000000;
 $c-white: #ffffff;
 $c1-gray: #333333;
-$c2-gray: #555555;
-$c3-gray: #777777;
-$c4-gray: #aaaaaa;
-$c5-gray: #cccccc;
+$c2-gray: #666666;
+$c3-gray: #999999;
+$c4-gray: #cccccc;
+$c5-gray: #dddddd;
 $c6-gray: #eeeeee;
 
 // project
-$c1-main: #2c3e50;
-$c2-main: #384d62;
-$c3-main: #879cb1;
+$c1-main: $c1-gray;
+$c2-main: $c2-gray;
+$c3-main: $c3-gray;
 
-$c1-second: #fff191;
-$c2-second: #eede70;
+$c1-second: $c4-gray;
+$c2-second: $c5-gray;
 
-$c1-third: #ec764d;
-$c2-third: #d96a44;
-$c3-third: #ff855b;
+$c1-third: $c3-gray;
+$c2-third: $c4-gray;
 
 // specials
 $c1-accent: lighten($c3-main, 5%);
@@ -50,7 +49,6 @@ $theme-colors: map-merge(
       "c2-second": $c2-second,
       "c1-third": $c1-third,
       "c2-third": $c2-third,
-      "c3-third": $c3-third,
       "c1-accent": $c1-accent,
       "c1-hint": $c1-hint,
       "c1-error": $c1-error,
@@ -64,9 +62,9 @@ $theme-colors: map-merge(
    FONTS
 ******************************************************************/
 
-$f1-main: "MontserratBlack", sans-serif;
-$f2-main: "MontserratBold", sans-serif;
-$f1-second: "MerriweatherRegular", serif;
+$f1-main: "RobotoBold", sans-serif;
+$f2-main: "RobotoRegular", sans-serif;
+$f1-second: "MerriweatherLight", serif;
 $f2-second: "MerriweatherItalic", serif;
 $f3-second: "MerriweatherBold", serif;
 

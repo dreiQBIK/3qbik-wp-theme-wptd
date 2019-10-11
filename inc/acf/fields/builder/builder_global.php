@@ -31,6 +31,8 @@ $builder_global
    ->addLayout(wptd_acf_get_module_global('blg_text'))
    ->addLayout(wptd_acf_get_module_global('blg_site_teaser_carousel'))
    ->addLayout(wptd_acf_get_module_global('blg_card_teaser'))
-   ->addLayout(wptd_acf_get_module_global('blg_testimonials'));
+   ->addLayout(wptd_acf_get_module_global('blg_testimonials'))
+   ->addLayout(wptd_acf_get_module_global('blg_image_text'))
+   ->addLayout(wptd_acf_get_module_global('blg_cta_center'));
 
 return $builder_global;

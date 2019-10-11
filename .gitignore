@@ -13,3 +13,6 @@ maps/
 /sitemap.xml
 /sitemap.xml.gz
 .vscode
+
+# Specific
+package-lock.json

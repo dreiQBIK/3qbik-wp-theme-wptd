@@ -1,0 +1,28 @@
+{# USES
+   {% include "/partials/modules/m_post-teaser.twig" %}
+#}
+
+<section class="m_post-teaser-big">
+      <figure class="m_post-teaser-big__img-wrapper">
+         <img
+            class="lazyload img-cover"
+            alt="{{ post.thumbnail.alt }}"
+            src="{{ theme.link }}/assets/img/placeholder-wide-large.png"
+            data-src="{{ post.thumbnail.src('medium_large') }}"
+            data-srcset="{{ fn('wp_get_attachment_image_srcset', post.thumbnail.id) }}"
+            data-sizes="auto"
+            data-pos-x="2"
+            data-pos-y="2"
+         />
+      </figure>
+      <div class="m_post-teaser-big__content p-200">
+         <h3 class="h4"><a href="{{ post.link }}" data-link="true">{{ post.title }}</a></h3>
+         <p class="p3 mb-150">{{ post.preview.read_more('')|excerpt(30) }}
+            <a class="link link-main link1-main" href="{{ post.link }}">{{ __( 'Weiterlesen', 'wptd' ) }}</a>
+         </p>
+         <div class="m_post-teaser-big__meta h6">
+            <a class="link link-main link1-main" href="{{ post.author.link }}">{{ __( 'Autor:', 'wptd' ) }}&nbsp;{{ post.author }}</a>
+            <span class="m_post-teaser-big__date">{{ post.date("d.m.Y") }}</span>
+         </div>
+      </div>
+</section>

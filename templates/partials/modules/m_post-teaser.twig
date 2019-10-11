@@ -2,16 +2,27 @@
    {% include "/partials/modules/m_post-teaser.twig" %}
 #}
 
-{% set is_editor_post = ( fn('get_page_template_slug', post.id) == 'tpl-editor.php' ) %}
-
-<section class="m_post-teaser p-200">
-   <div class="m_post-teaser__content">
-      <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
-      <div class="m_post-teaser__meta">
+<section class="m_post-teaser">
+   <figure class="m_post-teaser__img-wrapper">
+      <img
+         class="lazyload img-cover"
+         alt="{{ post.thumbnail.alt }}"
+         src="{{ theme.link }}/assets/img/placeholder-wide-large.png"
+         data-src="{{ post.thumbnail.src('medium_large') }}"
+         data-srcset="{{ fn('wp_get_attachment_image_srcset', post.thumbnail.id) }}"
+         data-sizes="auto"
+         data-pos-x="2"
+         data-pos-y="2"
+      />
+   </figure>
+   <div class="p-200">
+      <h3 class="h4"><a href="{{ post.link }}" data-link="true">{{ post.title }}</a></h3>
+      <p class="m_post-teaser__preview mb-150 p3">{{ post.preview.read_more('')|excerpt(15) }}
+         <a class="m_post-teaser__preview-read-more link link-main link1-main" href="{{ post.link }}">{{ __( 'Weiterlesen', 'wptd' ) }}</a>
+      </p>
+      <div class="m_post-teaser__meta h6">
          <a class="link link-main link1-main" href="{{ post.author.link }}">{{ __( 'Autor:', 'wptd' ) }}&nbsp;{{ post.author }}</a>
-         <span>{{ post.date }}</span>
+         <span class="m_post-teaser__date">{{ post.date("d.m.Y") }}</span>
       </div>
-      <p class="mb-150">{{ not is_editor_post ? post.meta('post_excerpt') : post.content|excerpt(30) }}</p>
-      <a class="btn btn-second btn2-second" href="{{ post.link }}">{{ __( 'Weiterlesen', 'wptd' ) }}</a>
    </div>
 </section>

@@ -3,13 +3,21 @@
 {% block content %}
    <div class="l_page pt-400 pt-md-600 pb-600 pb-md-800" data-template="page.twig">
 
-      <header class="container">
-         <h1>{{ post.title }}</h1>
-      </header>
+      {% set header_to_show = post.meta('header_hero').header_to_show %}
+      {% if header_to_show == 'hero' %}
+         {% include "/partials/header/h_hero.twig" %}
+      {% elseif header_to_show == 'base' %}
+         {% include "/partials/header/h_base.twig" %}
+      {% elseif header_to_show == 'none' %}
+      {% else %}
+         <header class="container">
+            <h1>{{ post.title }}</h1>
+         </header>
+      {% endif %}
 
-      <section class="container">
-         <div>{{ post.content }}</div>
-      </section>
-
+      <div class="l_builder">
+         {% include '/partials/builder/builder-global.twig' %}
+      </div>
    </div>
+
 {% endblock %}
