@@ -11194,6 +11194,11 @@ Stroke effects - Nucleo outline icons
   z-index: 1;
 }
 
+.blg_icon-teaser__icon {
+  width: 4em;
+  height: 4em;
+}
+
 .n_site {
   font-family: "RobotoRegular", sans-serif;
 }

@@ -29,24 +29,30 @@
          </div>
 
          <div class="row">
-            {% if teaser|length = 1 %}
-               {% set col_classes = '' %}
-            {% elseif teaser|length = 2 %}
-               {% set col_classes = '' %}
-            {% elseif teaser|length = 3 %}
-               {% set col_classes = '' %}
-            {% elseif teaser|length = 4 %}
-               {% set col_classes = '' %}
+            {% if teaser|length == 1 %}
+               {% set col_classes = 'col-lg-3' %}
+            {% elseif teaser|length == 2 %}
+               {% set col_classes = 'col-lg-3' %}
+            {% elseif teaser|length == 3 %}
+               {% set col_classes = 'col-lg-3' %}
+            {% elseif teaser|length == 4 %}
+               {% set col_classes = 'col-lg-3' %}
             {% endif %}
 
             {% for item in teaser %}
-               {% set heading = item.heading %}
-               {% set heading_type = item.heading_type %}
-               {% set icon = item.icon %}
-               {% set teaser_text = item.teaser_text %}
+               {% set heading = item.intro.heading %}
+               {% set heading_type = item.intro.heading_type %}
+               {% set icon = item.intro.icon %}
+               {% set teaser_text = item.intro.teaser_text %}
                
                <div class="{{ col_classes }}">
-               
+                  <div class="bgl_icon-teaser__heading-wrapper d-flex flex-row align-items-center">
+                     <svg class="icon blg_icon-teaser__icon"><use href="{{ icon }}" xlink:href="{{ icon }}"/></svg>
+                     <{{ heading_type|default("h4") }} class="h4 mb-0">{{ heading }}</{{ heading_type|default("h4") }}>
+                  </div>
+                  <div class="bgl_icon-teaser__teaser-text tinymce">
+                     {{ teaser_text }}
+                  </div>
                </div>
 
             {% endfor %}
