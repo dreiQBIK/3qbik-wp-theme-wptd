@@ -66,6 +66,16 @@
          link      : module.blg_cta_center.link,
          bg_choices: module.blg_cta_center.bg_choices,
       } %}
+      
+   {# Module: ICON-TEASER #}
+   {% elseif module.acf_fc_layout == 'blg_icon_teaser' %}
+      {% include "/partials/builder/modules-global/blg_icon-teaser.twig" with {
+         all_fields     : module.blg_icon_teaser,
+         margin         : module.blg_icon_teaser.tab_settings.margin,
+         id             : module.blg_icon_teaser.tab_settings.id,
+         toggle_heading : module.blg_icon_teaser.toggle_heading,
+         teaser         : module.blg_icon_teaser.teaser,
+      } %}
 
    {% endif %}
 

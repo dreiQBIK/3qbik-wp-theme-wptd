@@ -48,7 +48,7 @@
 body:after {
   content: "xs";
   display: inline-block;
-  background: #ec764d;
+  background: #999999;
   position: fixed;
   bottom: 0;
   right: 0;

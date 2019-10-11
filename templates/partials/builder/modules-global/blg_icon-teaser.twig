@@ -1,0 +1,58 @@
+{# USES
+   {% include "/partials/builder/modules-global/blg_icon-teaser.twig" with {
+         all_fields     : {},
+         margin         : '',
+         id             : '',
+         toggle_heading : bool,
+         teaser         : {},
+      } %}
+#}
+
+<div class="container-wrapper {{ margin }}">
+   <div class="container" {% if id %}id="{{ id }}"{% endif %}>
+
+      <section class="blg_icon-teaser">
+
+         <div class="row">
+            <div class="col-12">
+               {% if toggle_heading %}
+                  {% include "/partials/modules/m_heading.twig" with {
+                     wrapper_classes: 'mb-100 mb-md-200',
+                     heading_classes: 't-center',
+                     heading: all_fields.headings.heading,
+                     heading_type: all_fields.headings.heading_type,
+                     heading_sub: all_fields.headings.heading_sub,
+                     heading_sub_type: all_fields.headings.heading_sub_type,
+                  } %}
+               {% endif %}
+            </div>
+         </div>
+
+         <div class="row">
+            {% if teaser|length = 1 %}
+               {% set col_classes = '' %}
+            {% elseif teaser|length = 2 %}
+               {% set col_classes = '' %}
+            {% elseif teaser|length = 3 %}
+               {% set col_classes = '' %}
+            {% elseif teaser|length = 4 %}
+               {% set col_classes = '' %}
+            {% endif %}
+
+            {% for item in teaser %}
+               {% set heading = item.heading %}
+               {% set heading_type = item.heading_type %}
+               {% set icon = item.icon %}
+               {% set teaser_text = item.teaser_text %}
+               
+               <div class="{{ col_classes }}">
+               
+               </div>
+
+            {% endfor %}
+         </div>
+
+      </section>
+
+   </div>
+</div>

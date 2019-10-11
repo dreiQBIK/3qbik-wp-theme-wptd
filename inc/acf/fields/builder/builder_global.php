@@ -34,6 +34,6 @@ $builder_global
    ->addLayout(wptd_acf_get_module_global('blg_testimonials'))
    ->addLayout(wptd_acf_get_module_global('blg_image_text'))
    ->addLayout(wptd_acf_get_module_global('blg_cta_center'))
-   ->addLayout(wptd_acf_get_module_global('blg_icon_teaser'))
+   ->addLayout(wptd_acf_get_module_global('blg_icon_teaser'));
 
 return $builder_global;

@@ -91,7 +91,7 @@ $blg_icon_teaser
                     ])
                     ->addSelect('heading_type', [
                         'label' => 'Hierarchie/Typ',
-                        'default_value' => 'H2',
+                        'default_value' => 'H4',
                         'wrapper' => ['width' => 20],
                     ])
                         ->addChoice('H1', 'H1')
@@ -122,11 +122,10 @@ $blg_icon_teaser
                         ->addChoice('#icon-heart-1', '<i class="icon icon-heart-1"></i>')
                         ->addChoice('#icon-pin-3-1', '<i class="icon icon-pin-3-1"></i>')
 
-                        ->addTextarea('text', [
+                        ->addWysiwyg('teaser_text', [
                             'label' => 'Teaser Text',
                             'instructions' => 'Der Text sollte nicht länger als --- Zeichen sein.',
                             'required' => 1,
-                            'rows' => '3',
                         ])
                 ->endGroup()
 
