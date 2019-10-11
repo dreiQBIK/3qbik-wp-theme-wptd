@@ -10,6 +10,7 @@ $builder_detail = new FieldsBuilder('builder_detail', [
       'hide_on_screen' => array(
          0 => 'the_content',
       ),
+      'style' => 'seamless',
    ]
 );
 

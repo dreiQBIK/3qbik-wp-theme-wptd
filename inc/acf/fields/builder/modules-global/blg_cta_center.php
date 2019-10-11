@@ -10,12 +10,12 @@ foreach ( $acf_field_group_definition_file_paths_globals as $globals_file_path )
     include( $globals_file_path );
 }
 
-$blg_text = new FieldsBuilder('blg_text', [
-    'title' => 'Text',
+$blg_cta_center = new FieldsBuilder('blg_cta_center', [
+    'title' => 'CTA: Center',
 ]);
 
-$blg_text
-    ->addGroup('blg_text', [
+$blg_cta_center
+    ->addGroup('blg_cta_center', [
         'label' => '',
     ])
         // ->addFields($backend_layout)
@@ -24,22 +24,14 @@ $blg_text
             'label' => 'Einstellungen',
         ])
             ->addFields($tab_settings)
-            ->addTrueFalse('toggle_heading', [
-                'label' => 'Baustein-Überschrift',
-                'instructions' => 'Diese Überschrift wird zentriert über dem Baustein angezeigt. Eine Sub-Überschrift kann optional mit angegeben werden.',
-                'message' => 'Aktivieren/Deaktivieren',
-                'default_value' => 1,
-                'wrapper' => ['width' => 50],
-                'ui' => 1,
-            ])
 
         ->addTab('content', [
-            'label' => 'Inhalt',
+            'label' => 'Vordergrund',
         ])
+
             ->addGroup('headings', [
                 'label' => 'Baustein-Überschrift',
             ])
-                ->conditional('toggle_heading', '==', 1)
 
                 ->addText('heading', [
                     'label' => 'Überschrift',
@@ -63,9 +55,10 @@ $blg_text
                     'label' => 'Sub-Überschrift (optional)',
                     'wrapper' => ['width' => 80],
                 ])
+
                 ->addSelect('heading_sub_type', [
                     'label' => 'Hierarchie/Typ',
-                    'default_value' => 'H3',
+                    'default_value' => 'P',
                     'wrapper' => ['width' => 20],
                 ])
                     ->addChoice('H1', 'H1')
@@ -78,12 +71,33 @@ $blg_text
 
             ->endGroup()
 
-            ->addWysiwyg('text', [
-                'label' => 'Text',
-                'media_upload' => 0,
-                'delay' => 0,
-             ])
+            ->addLink('link', [
+                'label' => 'Button',
+            ])
+
+        ->addTab('background', [
+            'label' => 'Hintergrund',
+        ])
+
+            ->addButtonGroup('bg_choices', [
+                'label' => 'Hintergrundauswahl',
+            ])
+                ->addChoice('color', 'Farbe')
+                ->addChoice('image', 'Bild')
+
+            ->addButtonGroup('color', [
+                'label' => 'Farbe',
+            ])
+                ->conditional('bg_choices', '==', 'color')
+                ->addChoice('bg-c1-main', 'C1')
+                ->addChoice('bg-c1-second', 'C2')
+                ->addChoice('bg-c1-third', 'C3')
+
+            ->addImage('bg_image', [
+                'label' => 'Hintergrundbild',
+            ])
+                ->conditional('bg_choices', '==', 'image')
 
     ->endGroup();
 
-return $blg_text;
+return $blg_cta_center;

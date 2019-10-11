@@ -1,14 +1,24 @@
 .m_post-teaser {
    background-color: $c6-gray;
    border-radius: $bd-radius-3;
+   width: 100%;
+   cursor: pointer;
+
+   &__img-wrapper {
+      display: none;
+
+      @include media-breakpoint-up(md) {
+         display: block;
+         height: 200px;
+         overflow: hidden;
+       }
+   }
 
    &__meta {
-      display: inline-flex;
+      display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
       margin-bottom: 0.5rem;
-
-      > a {
-         margin-right: 0.5rem;
-      }
+      width: 100%;
    }
 }

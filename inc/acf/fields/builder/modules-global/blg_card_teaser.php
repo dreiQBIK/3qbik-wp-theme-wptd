@@ -10,12 +10,12 @@ foreach ( $acf_field_group_definition_file_paths_globals as $globals_file_path )
     include( $globals_file_path );
 }
 
-$blg_site_teaser_carousel = new FieldsBuilder('blg_site_teaser_carousel', [
-    'title' => 'Seiten-Teaser (Karussell)',
+$blg_card_teaser = new FieldsBuilder('blg_card_teaser', [
+    'title' => 'Card-Teaser',
 ]);
 
-$blg_site_teaser_carousel
-    ->addGroup('blg_site_teaser_carousel', [
+$blg_card_teaser
+    ->addGroup('blg_card_teaser', [
         'label' => '',
     ])
         // ->addFields($backend_layout)
@@ -46,10 +46,9 @@ $blg_site_teaser_carousel
                     'wrapper' => ['width' => 80],
                     'required' => 1,
                 ])
-
                 ->addSelect('heading_type', [
                     'label' => 'Hierarchie/Typ',
-                    'default_value' => 'H3',
+                    'default_value' => 'H2',
                     'wrapper' => ['width' => 20],
                 ])
                     ->addChoice('H1', 'H1')
@@ -64,10 +63,9 @@ $blg_site_teaser_carousel
                     'label' => 'Sub-Überschrift (optional)',
                     'wrapper' => ['width' => 80],
                 ])
-
                 ->addSelect('heading_sub_type', [
                     'label' => 'Hierarchie/Typ',
-                    'default_value' => 'H4',
+                    'default_value' => 'H3',
                     'wrapper' => ['width' => 20],
                 ])
                     ->addChoice('H1', 'H1')
@@ -81,69 +79,39 @@ $blg_site_teaser_carousel
             ->endGroup()
 
             ->addRepeater('teaser', [
-                'label' => 'Kacheln',
-                'button_label' => 'Kachel hinzufügen',
+                'label' => 'Teaser',
+                'button_label' => 'Teaser hinzufügen',
                 'min' => 2,
-                'max' => 3,
+                'max' => 4,
                 'layout' => 'block',
             ])
-                ->addGroup('intro', [
-                    'label' => 'Allgemeines für diese Kachel',
+                ->addText('heading', [
+                    'label' => 'Überschrift',
+                    'wrapper' => ['width' => 80],
                 ])
-                    ->addImage('image', [
-                        'label' => 'Bild',
-                        'preview_size' => 'thumbnail',
-                        'wrapper' => ['width' => 65],
-                        'required' => 1,
-                    ])
-                    ->addGroup('image_settings', [
-                        'label' => 'Bild-Einstellungen',
-                        'wrapper' => ['width' => 35],
-                    ])
-                        ->addTrueFalse('truefalse_caption', [
-                            'label' => 'alternatives Alt-Tag',
-                            'ui' => 1,
-                        ])
-                        ->addText('caption', [
-                            'label' => '',
-                            'instructions' => 'Alt-Tag angeben',
-                        ])
-                            ->conditional('truefalse_caption', '==', 1)
-                    ->endGroup()
-
-                    ->addText('heading', [
-                        'label' => 'Überschrift',
-                        'wrapper' => ['width' => 80],
-                        'required' => 1,
-                    ])
-                    ->addSelect('heading_type', [
-                        'label' => 'Hierarchie/Typ',
-                        'default_value' => 'H4',
-                        'wrapper' => ['width' => 20],
-                    ])
-                        ->addChoice('H1', 'H1')
-                        ->addChoice('H2', 'H2')
-                        ->addChoice('H3', 'H3')
-                        ->addChoice('H4', 'H4')
-                        ->addChoice('H5', 'H5')
-                        ->addChoice('H6', 'H6')
-                        ->addChoice('P', 'P')
-                    ->addText('text', [
-                        'label' => 'Text',
-                        'required' => 1,
-                    ])
-                ->endGroup()
-
-                ->addGroup('links', [
-                    'label' => 'Link für diese Kachel',
+                ->addSelect('heading_type', [
+                    'label' => 'Hierarchie/Typ',
+                    'default_value' => 'H3',
+                    'wrapper' => ['width' => 20],
                 ])
-                    ->addLink('link', [
-                        'label' => 'Link',
-                    ])
-                ->endGroup()
-
+                    ->addChoice('H1', 'H1')
+                    ->addChoice('H2', 'H2')
+                    ->addChoice('H3', 'H3')
+                    ->addChoice('H4', 'H4')
+                    ->addChoice('H5', 'H5')
+                    ->addChoice('H6', 'H6')
+                    ->addChoice('P', 'P')
+                ->addWysiwyg('text', [
+                    'label' => 'Text',
+                    'media_upload' => 0,
+                    'delay' => 0,
+                    'required' => 1,
+                ])
+                ->addLink('link', [
+                    'label' => 'Link',
+                ])
             ->endRepeater()
 
     ->endGroup();
 
-return $blg_site_teaser_carousel;
+return $blg_card_teaser;

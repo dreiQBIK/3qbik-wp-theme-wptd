@@ -42,7 +42,7 @@ a.btn {
 
       &:hover {
          @include media-breakpoint-up(md) {
-            background-color: $c3-third;
+            background-color: $c2-third;
          }
       }
    }

@@ -12,10 +12,11 @@
    {% set section_heading_type = all_fields.headings.heading_type %}
 {% endif %}
 
-<div class="container-wrapper position-relative {{ margin }}">
+<div class="container-wrapper {{ margin }}">
    <div class="container container--narrow" {% if id %}id="{{ id }}"{% endif %}>
 
       <section class="blg_text">
+
          <div class="row">
             <div class="col-12">
 
@@ -25,6 +26,8 @@
                      heading_classes: '',
                      heading: section_heading,
                      heading_type: section_heading_type,
+                     heading_sub: all_fields.headings.heading_sub,
+                     heading_sub_type: all_fields.headings.heading_sub_type,
                   } %}
                {% endif %}
             </div>
@@ -37,6 +40,7 @@
                </div>
             </div>
          </div>
+
       </section>
 
    </div>

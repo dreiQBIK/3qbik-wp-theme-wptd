@@ -1,0 +1,44 @@
+{# USES
+   {% include "/partials/builder/modules-global/blg_cta-center.twig" with {
+      all_fields: {},
+      margin    : '',
+      id        : '',
+      headings  : {},
+      link      : {},
+      bg_choices: "";
+   } %}
+#}
+
+{% if bg_choices == "color" %}
+   {% set class = all_fields.color %}
+{% else %}
+   {% set bg_url = all_fields.bg_image.url %}
+   {% set class = "bg-image" %}
+{% endif %}
+
+<div class="container-wrapper {{ class }} {{ margin }} pt-600 pb-600"{% if bg_url %} style="background-image: url({{ bg_url }}){% endif %}">
+   <div class="container" {% if id %} id="{{ id }}" {% endif %}>
+      <section class="blg_cta-center">
+         <div class="row">
+            <div class="col-12">
+
+               {% include "/partials/modules/m_heading.twig" with {
+                  wrapper_classes: 'mb-100 mb-md-200 t-center',
+                  heading_classes: 't-c-white',
+                  heading: headings.heading,
+                  heading_type: headings.heading_type,
+                  heading_sub: headings.heading_sub,
+                  heading_sub_type: headings.heading_sub_type,
+               } %}
+
+            </div>
+         </div>
+         <div class="row t-center">
+            <div class="col-12">
+               <a class="btn btn1-main" href="{{ link.url }}" {% if link.target %} target="{{ link.target }}" {% endif %}>{{ link.title }}</a>
+            </div>
+         </div>
+
+      </section>
+   </div>
+</div>

@@ -1,0 +1,44 @@
+.m_post-teaser-big {
+  background-color: $c6-gray;
+  border-radius: $bd-radius-3;
+  cursor: pointer;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+
+  &__img-wrapper {
+     height: 200px;
+     overflow: hidden;
+
+    @include media-breakpoint-up(sm) {
+      height: 300px;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 50%;
+      height: 350px;
+    }
+  }
+
+  &__content {
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0.5rem;
+
+    @include media-breakpoint-up(md) {
+      align-self: flex-end;
+    }
+  }
+}

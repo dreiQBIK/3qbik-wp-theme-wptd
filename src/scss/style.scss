@@ -37,6 +37,7 @@ STYLESHEET: STYLE
 @import "settings/utilities/ut_position";
 @import "settings/utilities/ut_text";
 @import "settings/utilities/ut_animations";
+@import "settings/utilities/ut_backgrounds";
 
 // Vendor
 @import "vendor/nucleo/icons";
@@ -78,6 +79,7 @@ STYLESHEET: STYLE
 @import "modules/m_editor";
 @import "modules/m_image";
 @import "modules/m_post-teaser";
+@import "modules/m_post-teaser-big";
 @import "modules/m_related-posts";
 
 // Builder Detail Modules
@@ -89,6 +91,9 @@ STYLESHEET: STYLE
 // Builder Global Modules
 @import "builder/modules-global/blg_testimonials";
 @import "builder/modules-global/blg_site-teaser-carousel";
+@import "builder/modules-global/blg_card-teaser";
+@import "builder/modules-global/blg_image-text";
+@import "builder/modules-global/blg_cta-center";
 
 // Navigation
 @import "navigation/n_site";
