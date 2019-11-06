@@ -11131,26 +11131,7 @@ Stroke effects - Nucleo outline icons
   position: relative;
   flex: 0 0 100%;
   max-width: 100%;
-}
-
-.blg_card-teaser__content--light {
-  background-color: #ffffff;
-}
-
-@media (min-width: 481px) {
-  .blg_card-teaser__content .btn {
-    position: absolute;
-    bottom: 0;
-    left: 3rem;
-    transform: translateY(50%);
-  }
-}
-
-@media (min-width: 961px) {
-  .blg_card-teaser__content .btn {
-    left: auto;
-    right: 3rem;
-  }
+  color: #ffffff;
 }
 
 .blg_card-teaser__heading {
